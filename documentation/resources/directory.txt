@@ -2,3 +2,57 @@ Directory/Index of all files. Please have:
 1) File Name
 2) Source
 3) Brief summary and relevance to project
+
+
+1)  Andy's Arcade
+ID: htay
+Link: http://www.andysarcade.de/battlezone.html#roms
+Summary: Database containing datasheets/tech info
+for Battlezone, including ROMs. Also has links to
+information on Vector Generators.
+
+2)  NESHQ
+ID: htay
+Link: http://www.neshq.com/6502program/
+Summary: Resources for programming on the 6502,
+including the instruction set, disassemblers and
+simulators.
+
+3) BattleZone VM Driver Source
+ID: htay
+Link: http://tech.quarterarcade.com/tech/MAME/src/bzone.c.html.aspx?g=276
+Summary: apparently a c source for a Battlezone
+VM. May or may not contain accurate memory mappings.
+Could be useful as a resource for cross-referencing
+our own disassembly.
+
+4) Easy 6502
+ID: htay
+Link: http://skilldrick.github.io/easy6502/index.html
+Summary: Tutorial on 6502 assembly programming.
+Of debtable usefulness, but might help in 
+understanding how the original ROM behaved.
+
+5) Atari 6502 Disassembler
+ID: htay
+Link: http://www.atarimax.com/dis6502/type.htm
+Summary: Disassembly program for Atari ROMs. 
+Might be useable with MAME Roms to reverse
+engineer memory locations and op codes.
+
+6) MAME Emulator
+ID: htay
+Link: http://www.mame.net/
+Summary: Emulator for ROMs that apparently
+preserves the original hardware structure in
+the arcade machine. I have been able to get
+BattleZone running on the emulator in debug
+mode currently.
+
+7) MAME Debugger Tutorial (letshack)
+ID: htay
+Link: http://letshackarcadegames.com/?p=338
+Summary: Quick tutorial on how to use the MAME
+debugger to step through a ROM. At the very least
+we can see what op codes and memory locations
+are used through this.
