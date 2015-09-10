@@ -1,0 +1,53 @@
+1)  NESHQ
+ID: htay
+Link: http://www.neshq.com/6502program/
+Summary: Resources for programming on the 6502,
+including the instruction set, disassemblers and
+simulators.
+
+2) Easy 6502
+ID: htay
+Link: http://skilldrick.github.io/easy6502/index.html
+Summary: Tutorial on 6502 assembly programming.
+Of debtable usefulness, but might help in 
+understanding how the original ROM behaved.
+
+3) Atari 6502 Disassembler
+ID: htay
+Link: http://www.atarimax.com/dis6502/type.htm
+Summary: Disassembly program for Atari ROMs. 
+Might be useable with MAME Roms to reverse
+engineer memory locations and op codes.
+
+4) OpenCore 6502 Core
+ID: htay
+Link: http://opencores.org/project,cpu6502_true_cycle
+Summary: OpenCore 6502 Core for the FPGA. Untested
+and unverified, but might be a good place to
+take. Is dated fof 2010 though.
+
+5) 6502 Testbench
+ID: htay
+Link: https://github.com/Klaus2m5/6502_65C02_functional_tests
+Summary: 6502 Testbench used by the F14 Atari
+group for debugging/verifying their 6502 implementation.
+I would also strongly recommend reading their
+report, as it contains an excellent breakdown of
+the 6502's behavior.
+
+6) P65 Assembler
+ID: htay
+Link: https://hkn.eecs.berkeley.edu/~mcmartin/P65/
+Summary: Assembler used by the F08 NES group
+to write 6502 code for use on their 6502 core.
+May or may not be relevant for us, since we 
+are not building the 6502 specifically, but could
+be helpful for debugging/verification.
+
+7) Virtual 6502 Simulator
+ID: htay
+Link: http://e-tradition.net/bytes/6502/
+Summary: Online 6502 simulator used by the F08
+NES group to verify behavior of their 6502
+implementation. Once again, of possible use to
+debugging.
