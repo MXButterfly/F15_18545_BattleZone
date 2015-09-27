@@ -29,16 +29,20 @@ module fb_top(
     logic[8:0] row;
     logic[9:0] col;
     logic[18:0] w_addr;
-    logic[3:0] color_in;
-    logic done, en_w, ready;
+    logic[3:0] color_in, lineColor;
+    logic[10:0] startX, endX, startY, endY;
+    logic done, en_w, readyFrame, readyLine, rastReady;
     
     VGA_fsm vfsm(clk, btnCpuReset, row, col, Hsync, Vsync);
     //vgaTestDisplay colorBars(row, col, vgaRed, vgaGreen, vgaBlue);
     fb_controller fbc(w_addr, en_w, done, clk, ~btnCpuReset, row, col, color_in,
-                      vgaRed, vgaBlue, vgaGreen, ready);
+                      vgaRed, vgaBlue, vgaGreen, readyFrame);
                         
-    fb_test fbt(clk,~btnCpuReset, ready, row, col, w_addr, color_in, en_w, done);
-    
+    //fb_test fbt(clk,~btnCpuReset, ready, row, col, w_addr, color_in, en_w, done);
+    shapes_tb stb(startX, endX,startY, endY, readyLine, lineColor, rastReady, clk, ~btnCpuReset, readyFrame);
+    rasterizer rast(startX, endX, startY, endY, lineColor, clk, ~btnCpuReset, 
+                    readyLine, w_addr, 
+                    pixelX, pixelY, color_in, en_w, lineDone, rastReady);
 endmodule
 
 

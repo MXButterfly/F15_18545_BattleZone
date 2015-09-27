@@ -135,14 +135,14 @@ module fb_controller(
     
     //bram state output
     always_comb begin
-        ready = (state[1] == 1'b1) && nextState[1] == 1'b0; //done state and changing
+        ready = (state[1] == 1'b1) && (nextState[1] == 1'b0); //done state and changing
     end
     
     //bram nextState logic
     always_comb begin
         case(state)
             WRITE_A: begin
-                if(done == 1'b1) begin
+                if(done == 1'b1 || (row == 479 && col == 639)) begin
                     nextState = DONE_A;
                     set_clear = 1'b1;
                 end
@@ -162,7 +162,7 @@ module fb_controller(
                 end
             end
             WRITE_B: begin
-                if(done == 1'b1) begin
+                if(done == 1'b1 || (row == 479 && col == 639)) begin
                     nextState = DONE_B;
                     set_clear = 1'b1;
                 end
