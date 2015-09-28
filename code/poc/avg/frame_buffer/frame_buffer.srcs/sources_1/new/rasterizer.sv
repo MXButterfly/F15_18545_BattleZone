@@ -1,8 +1,4 @@
 `timescale 1ns / 1ps
-/*
- * Currently does not signal pixels with x>=640 or y>=480 as being bad pixels
- * If this is a problem, fix ASAP
- */
 
 
 
@@ -14,11 +10,11 @@
 module rasterizer
   (input logic [10:0]  startX, endX,
    input logic [10:0]  startY, endY,
-   input logic [3:0] lineColor,
+   input logic [3:0]   lineColor,
    input logic 	       clk, rst, readyIn,
    output logic [18:0] addressOut,
    output logic [10:0] pixelX, pixelY,
-   output logic [3:0] pixelColor,
+   output logic [3:0]  pixelColor,
    output logic        goodPixel, done, rastReady);
 
    logic 	       inc, xZone, bZone, yZone;
@@ -34,8 +30,11 @@ module rasterizer
 
    logic [10:0]        leftX, topY;
 
+   logic 	       goodTime, goodX, goodY;
+   
+
    m_register #(4) colorBank(pixelColor, lineColor, rst, readyIn, clk);
-       
+   
    
    m_register #(11) startXBank(adjStartX, startX + `HALF_WIDTH, rst, readyIn, clk);
    m_register #(11) endXBank(adjEndX, endX + `HALF_WIDTH, rst, readyIn, clk);
@@ -61,7 +60,7 @@ module rasterizer
 
    bresenhamCore rasterCore(.numerator(numerator), .denominator(denominator), .clk(clk), .rst(rst|readyIn), .en(loopEn), .inc(inc));
 
-   rasterFSM rasterControl(.readyIn(readyIn), .denominator(denominator), .majCnt(majCnt), .clk(clk), .rst(rst), .loopEn(loopEn), .done(done), .good(goodPixel), .rastReady(rastReady));
+   rasterFSM rasterControl(.readyIn(readyIn), .denominator(denominator), .majCnt(majCnt), .clk(clk), .rst(rst), .loopEn(loopEn), .done(done), .good(goodTime), .rastReady(rastReady));
 
 
    m_mux2to1 #(11) leftXMux(.Y(leftX), .Sel(xZone ? xNeg : yNeg), .I0(adjEndX), .I1(adjStartX));
@@ -72,7 +71,13 @@ module rasterizer
    assign pixelY = topY + (yZone ? majCnt : minCnt);
    
    coordinateIndexer addresser(.x(pixelX[9:0]), .y(pixelY[8:0]), .index(addressOut));
+
+   m_range_check #(11) xRangeCheck(.val(pixelX), .low(11'd0), .high(11'd640), .is_between(goodX));
+   m_range_check #(11) yRangeCheck(.val(pixelY), .low(11'd0), .high(11'd480), .is_between(goodY));
+
+   assign goodPixel = goodX & goodY & goodTime;
    
+				   
    
    
 endmodule: rasterizer
@@ -81,7 +86,7 @@ endmodule: rasterizer
 
 module coordinateIndexer
   (input logic [9:0] x,
-   input logic [8:0] y,
+   input logic [8:0]   y,
    output logic [18:0] index
    );
    
@@ -93,11 +98,11 @@ endmodule: coordinateIndexer
 module rasterFSM
   (input logic readyIn,
    input logic [10:0] denominator, majCnt,
-   input logic 	clk, rst,
-   output logic loopEn, good, done, rastReady
+   input logic 	      clk, rst,
+   output logic       loopEn, good, done, rastReady
    );
 
-   typedef enum {IDLE, ITER, DONE} state;
+   typedef enum       {IDLE, ITER, DONE} state;
 
    state next, current;
    
@@ -304,7 +309,7 @@ module sanityBench();
    initial begin
 
       $monitor("%d: (%d, %d) - %b", $time, pixelX, pixelY, goodPixel);
- 
+      
       startY = 11'd50;
       endY = 11'd250;
       startX = -11'd25;
