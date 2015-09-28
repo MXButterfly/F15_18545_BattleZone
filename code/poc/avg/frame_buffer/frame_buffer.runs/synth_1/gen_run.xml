@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1443383561">
+<GenRun Id="synth_1" LaunchPart="xc7a100tcsg324-1" LaunchTime="1443476482">
   <File Type="VDS-TIMING-PB" Name="fb_top_timing_summary_synth.pb"/>
   <File Type="VDS-TIMINGSUMMARY" Name="fb_top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="fb_top.dcp"/>
@@ -63,6 +63,13 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/rasterizer.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/animation_tb.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

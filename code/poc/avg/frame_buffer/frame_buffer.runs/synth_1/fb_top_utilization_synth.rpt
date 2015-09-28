@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Sun Sep 27 15:54:43 2015
+| Date         : Mon Sep 28 17:43:17 2015
 | Host         : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
 | Command      : report_utilization -file fb_top_utilization_synth.rpt -pb fb_top_utilization_synth.pb
 | Design       : fb_top
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  510 |     0 |     63400 |  0.80 |
-|   LUT as Logic          |  510 |     0 |     63400 |  0.80 |
+| Slice LUTs*             |  588 |     0 |     63400 |  0.93 |
+|   LUT as Logic          |  588 |     0 |     63400 |  0.93 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  143 |     0 |    126800 |  0.11 |
-|   Register as Flip Flop |  140 |     0 |    126800 |  0.11 |
+| Slice Registers         |  166 |     0 |    126800 |  0.13 |
+|   Register as Flip Flop |  163 |     0 |    126800 |  0.13 |
 |   Register as Latch     |    3 |     0 |    126800 | <0.01 |
 | F7 Muxes                |    8 |     0 |     31700 |  0.03 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 77    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 66    |          Yes |       Reset |            - |
+| 89    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,18 +150,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  201 |                 LUT |
-| LUT5     |  101 |                 LUT |
-| LUT2     |   94 |                 LUT |
-| LUT3     |   91 |                 LUT |
+| LUT6     |  223 |                 LUT |
+| LUT3     |  139 |                 LUT |
+| LUT5     |  114 |                 LUT |
+| LUT4     |  100 |                 LUT |
+| FDRE     |   89 |        Flop & Latch |
 | FDCE     |   74 |        Flop & Latch |
 | RAMB36E1 |   72 |        Block Memory |
-| FDRE     |   66 |        Flop & Latch |
-| LUT4     |   59 |                 LUT |
-| CARRY4   |   39 |          CarryLogic |
+| LUT2     |   65 |                 LUT |
+| CARRY4   |   48 |          CarryLogic |
 | OBUF     |   14 |                  IO |
+| LUT1     |   10 |                 LUT |
 | MUXF7    |    8 |               MuxFx |
-| LUT1     |    8 |                 LUT |
 | RAMB18E1 |    6 |        Block Memory |
 | LDCE     |    3 |        Flop & Latch |
 | IBUF     |    2 |                  IO |

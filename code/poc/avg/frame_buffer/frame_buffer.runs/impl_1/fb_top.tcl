@@ -51,7 +51,7 @@ set rc [catch {
   set_param xicom.use_bs_reader 1
   debug::add_scope template.lib 1
   open_checkpoint fb_top_routed.dcp
-  set_property webtalk.parent_dir /afs/ece.cmu.edu/usr/htay/frame_buffer/frame_buffer.cache/wt [current_project]
+  set_property webtalk.parent_dir /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.cache/wt [current_project]
   write_bitstream -force fb_top.bit 
   catch { write_sysdef -hwdef fb_top.hwdef -bitfile fb_top.bit -meminfo fb_top.mmi -ltxfile debug_nets.ltx -file fb_top.sysdef }
   close_msg_db -file write_bitstream.pb

@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date             : Sun Sep 27 15:56:25 2015
+| Date             : Mon Sep 28 17:44:57 2015
 | Host             : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
 | Command          : report_power -file fb_top_power_routed.rpt -pb fb_top_power_summary_routed.pb
 | Design           : fb_top
@@ -30,8 +30,8 @@ Table of Contents
 ----------
 
 +--------------------------+--------+
-| Total On-Chip Power (W)  | 0.142  |
-| Dynamic (W)              | 0.042  |
+| Total On-Chip Power (W)  | 0.133  |
+| Dynamic (W)              | 0.033  |
 | Device Static (W)        | 0.100  |
 | Effective TJA (C/W)      | 4.6    |
 | Max Ambient (C)          | 84.4   |
@@ -50,18 +50,18 @@ Table of Contents
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
 | Clocks         |     0.003 |        3 |       --- |             --- |
-| Slice Logic    |     0.002 |      876 |       --- |             --- |
-|   LUT as Logic |     0.002 |      496 |     63400 |            0.78 |
-|   CARRY4       |    <0.001 |       39 |     15850 |            0.25 |
-|   Register     |    <0.001 |      143 |    126800 |            0.11 |
+| Slice Logic    |    <0.001 |     1003 |       --- |             --- |
+|   LUT as Logic |    <0.001 |      573 |     63400 |            0.90 |
+|   CARRY4       |    <0.001 |       48 |     15850 |            0.30 |
+|   Register     |    <0.001 |      166 |    126800 |            0.13 |
 |   F7/F8 Muxes  |    <0.001 |        6 |     63400 |           <0.01 |
-|   Others       |     0.000 |      148 |       --- |             --- |
-| Signals        |     0.008 |      673 |       --- |             --- |
+|   Others       |     0.000 |      146 |       --- |             --- |
+| Signals        |     0.002 |      758 |       --- |             --- |
 | Block RAM      |     0.011 |       57 |       135 |           42.22 |
 | DSPs           |    <0.001 |        1 |       240 |            0.42 |
-| I/O            |     0.017 |       16 |       210 |            7.62 |
+| I/O            |     0.015 |       16 |       210 |            7.62 |
 | Static Power   |     0.100 |          |           |                 |
-| Total          |     0.142 |          |           |                 |
+| Total          |     0.133 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.041 |       0.024 |      0.016 |
+| Vccint    |       1.000 |     0.033 |       0.016 |      0.016 |
 | Vccaux    |       1.800 |     0.019 |       0.001 |      0.018 |
-| Vcco33    |       3.300 |     0.009 |       0.005 |      0.004 |
+| Vcco33    |       3.300 |     0.008 |       0.004 |      0.004 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -140,15 +140,18 @@ Table of Contents
 +---------------------------------------------+-----------+
 | Name                                        | Power (W) |
 +---------------------------------------------+-----------+
-| fb_top                                      |     0.042 |
-|   fbc                                       |     0.021 |
-|     bramA                                   |     0.010 |
-|       blockRam_i                            |     0.007 |
-|         blk_mem_gen_0                       |     0.007 |
-|           U0                                |     0.007 |
-|             inst_blk_mem_gen                |     0.007 |
-|               gnativebmg.native_blk_mem_gen |     0.007 |
-|                 valid.cstr                  |     0.007 |
+| fb_top                                      |     0.033 |
+|   atb                                       |    <0.001 |
+|     countFrames                             |    <0.001 |
+|     countPixel                              |    <0.001 |
+|   fbc                                       |     0.015 |
+|     bramA                                   |     0.007 |
+|       blockRam_i                            |     0.006 |
+|         blk_mem_gen_0                       |     0.006 |
+|           U0                                |     0.006 |
+|             inst_blk_mem_gen                |     0.006 |
+|               gnativebmg.native_blk_mem_gen |     0.006 |
+|                 valid.cstr                  |     0.006 |
 |                   has_mux_a.A               |    <0.001 |
 |                   ramloop[0].ram.r          |    <0.001 |
 |                     prim_init.ram           |    <0.001 |
@@ -196,13 +199,13 @@ Table of Contents
 |                     prim_init.ram           |    <0.001 |
 |                   ramloop[9].ram.r          |    <0.001 |
 |                     prim_init.ram           |    <0.001 |
-|     bramB                                   |     0.010 |
-|       blockRam_i                            |     0.007 |
-|         blk_mem_gen_0                       |     0.007 |
-|           U0                                |     0.007 |
-|             inst_blk_mem_gen                |     0.007 |
-|               gnativebmg.native_blk_mem_gen |     0.007 |
-|                 valid.cstr                  |     0.007 |
+|     bramB                                   |     0.007 |
+|       blockRam_i                            |     0.006 |
+|         blk_mem_gen_0                       |     0.006 |
+|           U0                                |     0.006 |
+|             inst_blk_mem_gen                |     0.006 |
+|               gnativebmg.native_blk_mem_gen |     0.006 |
+|                 valid.cstr                  |     0.006 |
 |                   has_mux_a.A               |    <0.001 |
 |                   ramloop[0].ram.r          |    <0.001 |
 |                     prim_init.ram           |    <0.001 |
@@ -250,11 +253,11 @@ Table of Contents
 |                     prim_init.ram           |    <0.001 |
 |                   ramloop[9].ram.r          |    <0.001 |
 |                     prim_init.ram           |    <0.001 |
-|   rast                                      |     0.003 |
+|   rast                                      |    <0.001 |
 |     colorBank                               |    <0.001 |
 |     endXBank                                |    <0.001 |
 |     endYBank                                |    <0.001 |
-|     majorCounter                            |     0.001 |
+|     majorCounter                            |    <0.001 |
 |     minorCounter                            |    <0.001 |
 |     rasterControl                           |    <0.001 |
 |     rasterCore                              |    <0.001 |
@@ -263,13 +266,10 @@ Table of Contents
 |       errSubtract                           |    <0.001 |
 |     startXBank                              |    <0.001 |
 |     startYBank                              |    <0.001 |
-|     xSub                                    |     0.000 |
-|       subtraction                           |     0.000 |
+|     xSub                                    |    <0.001 |
+|       subtraction                           |    <0.001 |
 |     ySub                                    |    <0.001 |
 |       subtraction                           |    <0.001 |
-|   stb                                       |     0.001 |
-|     countFrames                             |    <0.001 |
-|     countPixel                              |    <0.001 |
 |   vfsm                                      |    <0.001 |
 |     hCounter                                |    <0.001 |
 |     hReg                                    |    <0.001 |

@@ -39,7 +39,8 @@ module fb_top(
                       vgaRed, vgaBlue, vgaGreen, readyFrame);
                         
     //fb_test fbt(clk,~btnCpuReset, ready, row, col, w_addr, color_in, en_w, done);
-    shapes_tb stb(startX, endX,startY, endY, readyLine, lineColor, rastReady, clk, ~btnCpuReset, readyFrame);
+    //shapes_tb stb(startX, endX,startY, endY, readyLine, lineColor, rastReady, clk, ~btnCpuReset, readyFrame);
+    animation_tb atb(startX, endX,startY, endY, readyLine, lineColor, rastReady, clk, ~btnCpuReset, readyFrame, Vsync);
     rasterizer rast(startX, endX, startY, endY, lineColor, clk, ~btnCpuReset, 
                     readyLine, w_addr, 
                     pixelX, pixelY, color_in, en_w, lineDone, rastReady);

@@ -7,16 +7,16 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/afs/ece/support/xilinx/xilinx.release/Vivado/ids_lite/ISE/bin/lin64:/afs/ece/support/xilinx/xilinx.release/Vivado/bin
+  PATH=/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/SDK/2015.2/bin:/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/ids_lite/ISE/bin/lin64:/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/bin
 else
-  PATH=/afs/ece/support/xilinx/xilinx.release/Vivado/ids_lite/ISE/bin/lin64:/afs/ece/support/xilinx/xilinx.release/Vivado/bin:$PATH
+  PATH=/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/SDK/2015.2/bin:/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/ids_lite/ISE/bin/lin64:/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/bin:$PATH
 fi
 export PATH
 
 if [ -z "$LD_LIBRARY_PATH" ]; then
-  LD_LIBRARY_PATH=/afs/ece/support/xilinx/xilinx.release/Vivado/ids_lite/ISE/lib/lin64
+  LD_LIBRARY_PATH=/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/ids_lite/ISE/lib/lin64
 else
-  LD_LIBRARY_PATH=/afs/ece/support/xilinx/xilinx.release/Vivado/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
+  LD_LIBRARY_PATH=/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/ids_lite/ISE/lib/lin64:$LD_LIBRARY_PATH
 fi
 export LD_LIBRARY_PATH
 

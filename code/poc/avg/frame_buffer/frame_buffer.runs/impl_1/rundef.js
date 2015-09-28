@@ -12,9 +12,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "/afs/ece/support/xilinx/xilinx.release/Vivado/ids_lite/ISE/bin/lin64;/afs/ece/support/xilinx/xilinx.release/Vivado/ids_lite/ISE/lib/lin64;/afs/ece/support/xilinx/xilinx.release/Vivado/bin;";
+  PathVal = "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/SDK/2015.2/bin:/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/ids_lite/ISE/bin/lin64;/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/ids_lite/ISE/lib/lin64;/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/bin;";
 } else {
-  PathVal = "/afs/ece/support/xilinx/xilinx.release/Vivado/ids_lite/ISE/bin/lin64;/afs/ece/support/xilinx/xilinx.release/Vivado/ids_lite/ISE/lib/lin64;/afs/ece/support/xilinx/xilinx.release/Vivado/bin;" + PathVal;
+  PathVal = "/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/SDK/2015.2/bin:/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/ids_lite/ISE/bin/lin64;/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/ids_lite/ISE/lib/lin64;/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
