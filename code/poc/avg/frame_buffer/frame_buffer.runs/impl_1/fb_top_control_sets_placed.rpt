@@ -1,0 +1,67 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sun Sep 27 15:55:36 2015
+| Host         : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
+| Command      : report_control_sets -verbose -file fb_top_control_sets_placed.rpt
+| Design       : fb_top
+| Device       : xc7a100t
+-----------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Flip-Flop Distribution
+3. Detailed Control Set Information
+
+1. Summary
+----------
+
++-------------------------------------------------------------------+-------+
+|                               Status                              | Count |
++-------------------------------------------------------------------+-------+
+| Number of unique control sets                                     |    14 |
+| Minimum Number of register sites lost to control set restrictions |    49 |
++-------------------------------------------------------------------+-------+
+
+
+2. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               5 |            2 |
+| No           | No                    | Yes                    |              45 |           16 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              28 |           13 |
+| Yes          | No                    | Yes                    |              29 |           11 |
+| Yes          | Yes                   | No                     |              36 |           15 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+3. Detailed Control Set Information
+-----------------------------------
+
++----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+------------------+----------------+
+|              Clock Signal              |                                                                                Enable Signal                                                                                |       Set/Reset Signal      | Slice Load Count | Bel Load Count |
++----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+------------------+----------------+
+|  vfsm/clk_50                           |                                                                                                                                                                             | stb/countFrames/Q_reg[27]_0 |                1 |              1 |
+|  clk_IBUF_BUFG                         |                                                                                                                                                                             |                             |                1 |              2 |
+|  rast/rasterControl/loopEn_reg_i_2_n_0 |                                                                                                                                                                             |                             |                1 |              3 |
+|  clk_IBUF_BUFG                         | fbc/bramA/en_a                                                                                                                                                              |                             |                4 |              7 |
+|  clk_IBUF_BUFG                         | fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1[6]_i_1_n_0 |                             |                3 |              7 |
+|  clk_IBUF_BUFG                         | fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1[6]_i_1_n_0 |                             |                3 |              7 |
+|  clk_IBUF_BUFG                         | fbc/bramB/blockRam_i_i_23__0_n_0                                                                                                                                            |                             |                3 |              7 |
+|  clk_IBUF_BUFG                         | stb/state                                                                                                                                                                   | stb/countFrames/Q_reg[27]_0 |                4 |              8 |
+|  clk_IBUF_BUFG                         | rast/rasterCore/errAdder/CO[0]                                                                                                                                              | stb/SR[0]                   |                4 |             10 |
+|  vfsm/clk_25_reg_n_0                   | vfsm/hCounter/E[0]                                                                                                                                                          | stb/countFrames/Q_reg[27]_0 |                6 |             10 |
+|  vfsm/clk_25_reg_n_0                   |                                                                                                                                                                             | stb/countFrames/Q_reg[27]_0 |                4 |             12 |
+|  clk_IBUF_BUFG                         | rast/rasterControl/E[0]                                                                                                                                                     | stb/SR[0]                   |                7 |             18 |
+|  clk_IBUF_BUFG                         | vfsm/vCounter/Q_reg[0]_0                                                                                                                                                    | stb/countFrames/Q_reg[27]_0 |                5 |             19 |
+|  clk_IBUF_BUFG                         |                                                                                                                                                                             | stb/countFrames/Q_reg[27]_0 |               11 |             32 |
++----------------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------------------+------------------+----------------+
+
+

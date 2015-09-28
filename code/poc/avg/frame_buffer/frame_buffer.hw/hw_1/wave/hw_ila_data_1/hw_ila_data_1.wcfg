@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<wave_config>
+	<wave_state>
+	</wave_state>
+	<db_ref_list>
+		<db_ref path="/afs/ece.cmu.edu/usr/htay/frame_buffer/frame_buffer.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1" type="auto">
+			<top_modules>
+				<top_module name="top">
+				</top_module>
+			</top_modules>
+		</db_ref>
+	</db_ref_list>
+	<WVObjectSize size="18">
+	</WVObjectSize>
+	<wvobject fp_name="fbc/bramA/blockRam_i/addr_a_1" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/bramA/blockRam_i/addr_a_1[18:0]</obj_property>
+		<obj_property name="ObjectShortName">fbc/bramA/blockRam_i/addr_a_1[18:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/vgaRed_OBUF" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/vgaRed_OBUF[0:0]</obj_property>
+		<obj_property name="ObjectShortName">fbc/vgaRed_OBUF[0:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/vgaGreen_OBUF" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/vgaGreen_OBUF[0:0]</obj_property>
+		<obj_property name="ObjectShortName">fbc/vgaGreen_OBUF[0:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/color_in" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/color_in[1:0]</obj_property>
+		<obj_property name="ObjectShortName">fbc/color_in[1:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/vgaBlue_OBUF" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/vgaBlue_OBUF[0:0]</obj_property>
+		<obj_property name="ObjectShortName">fbc/vgaBlue_OBUF[0:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/addr_b" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/addr_b[18:0]</obj_property>
+		<obj_property name="ObjectShortName">fbc/addr_b[18:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/bramB/blockRam_i/blk_mem_gen_0_douta" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/bramB/blockRam_i/blk_mem_gen_0_douta[3:0]</obj_property>
+		<obj_property name="ObjectShortName">fbc/bramB/blockRam_i/blk_mem_gen_0_douta[3:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/bramB/blockRam_i/addr_a_1" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/bramB/blockRam_i/addr_a_1[18:0]</obj_property>
+		<obj_property name="ObjectShortName">fbc/bramB/blockRam_i/addr_a_1[18:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/bramA/blockRam_i/blk_mem_gen_0_douta" type="array" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/bramA/blockRam_i/blk_mem_gen_0_douta[3:0]</obj_property>
+		<obj_property name="ObjectShortName">fbc/bramA/blockRam_i/blk_mem_gen_0_douta[3:0]</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/bramB/blockRam_i/en_1" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/bramB/blockRam_i/en_1</obj_property>
+		<obj_property name="ObjectShortName">fbc/bramB/blockRam_i/en_1</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/bramA/blockRam_i/en_1" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/bramA/blockRam_i/en_1</obj_property>
+		<obj_property name="ObjectShortName">fbc/bramA/blockRam_i/en_1</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/bramA/blockRam_i/write_en_1" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/bramA/blockRam_i/write_en_1</obj_property>
+		<obj_property name="ObjectShortName">fbc/bramA/blockRam_i/write_en_1</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/bramB/blockRam_i/write_en_1" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/bramB/blockRam_i/write_en_1</obj_property>
+		<obj_property name="ObjectShortName">fbc/bramB/blockRam_i/write_en_1</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="nextState" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">nextState</obj_property>
+		<obj_property name="ObjectShortName">nextState</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="state" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">state</obj_property>
+		<obj_property name="ObjectShortName">state</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/done" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/done</obj_property>
+		<obj_property name="ObjectShortName">fbc/done</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/en_a" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/en_a</obj_property>
+		<obj_property name="ObjectShortName">fbc/en_a</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+	<wvobject fp_name="fbc/en_b" type="logic" db_ref_id="1">
+		<obj_property name="ElementShortName">fbc/en_b</obj_property>
+		<obj_property name="ObjectShortName">fbc/en_b</obj_property>
+		<obj_property name="Radix">HEXRADIX</obj_property>
+	</wvobject>
+</wave_config>
+

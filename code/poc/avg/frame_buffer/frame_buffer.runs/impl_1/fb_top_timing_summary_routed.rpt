@@ -1,0 +1,1727 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Sun Sep 27 15:56:24 2015
+| Host         : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file fb_top_timing_summary_routed.rpt -rpx fb_top_timing_summary_routed.rpx
+| Design       : fb_top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.14 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 3 register/latch pins with no clock driven by root clock pin: rast/rasterControl/current_reg[0]/C (HIGH)
+
+ There are 3 register/latch pins with no clock driven by root clock pin: rast/rasterControl/current_reg[1]/C (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: vfsm/clk_25_reg/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: vfsm/clk_50_reg/C (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 14 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -5.590    -1504.269                    813                 1447        0.158        0.000                      0                 1447        4.500        0.000                       0                   238  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin        -5.590    -1504.269                    813                 1447        0.158        0.000                      0                 1447        4.500        0.000                       0                   238  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :          813  Failing Endpoints,  Worst Slack       -5.590ns,  Total Violation    -1504.269ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.158ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -5.590ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.201ns  (logic 5.113ns (33.635%)  route 10.088ns (66.365%))
+  Logic Levels:           18  (CARRY4=7 LUT3=2 LUT4=3 LUT5=4 LUT6=2)
+  Clock Path Skew:        0.089ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.880ns = ( 14.880 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.181ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    14.018 r  rast/majorCounter/blockRam_i_i_27/O[1]
+                         net (fo=2, routed)           0.649    14.667    fbc/bramA/w_addr[9]
+    SLICE_X69Y131        LUT3 (Prop_lut3_I2_O)        0.303    14.970 r  fbc/bramA/blockRam_i_i_4/O
+                         net (fo=35, routed)          0.831    15.801    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/addra[15]
+    SLICE_X65Y140        LUT3 (Prop_lut3_I1_O)        0.124    15.925 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_i_2/O
+                         net (fo=18, routed)          1.152    17.078    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0
+    SLICE_X65Y152        LUT6 (Prop_lut6_I1_O)        0.124    17.202 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12/O
+                         net (fo=1, routed)           0.613    17.815    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12_n_0
+    SLICE_X65Y157        LUT5 (Prop_lut5_I0_O)        0.124    17.939 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4/O
+                         net (fo=1, routed)           0.940    18.879    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4_n_0
+    SLICE_X65Y159        LUT6 (Prop_lut6_I2_O)        0.124    19.003 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1/O
+                         net (fo=6, routed)           1.170    20.173    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/r_addr
+    RAMB36_X1Y35         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.694    14.880    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/clka
+    RAMB36_X1Y35         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+                         clock pessimism              0.181    15.061    
+                         clock uncertainty           -0.035    15.025    
+    RAMB36_X1Y35         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.582    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B
+  -------------------------------------------------------------------
+                         required time                         14.582    
+                         arrival time                         -20.173    
+  -------------------------------------------------------------------
+                         slack                                 -5.590    
+
+Slack (VIOLATED) :        -5.574ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.104ns  (logic 5.017ns (33.217%)  route 10.087ns (66.783%))
+  Logic Levels:           18  (CARRY4=7 LUT2=1 LUT3=2 LUT4=3 LUT5=3 LUT6=2)
+  Clock Path Skew:        0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.806ns = ( 14.806 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    13.923 r  rast/majorCounter/blockRam_i_i_27/O[2]
+                         net (fo=2, routed)           0.564    14.487    fbc/bramA/w_addr[10]
+    SLICE_X67Y135        LUT3 (Prop_lut3_I2_O)        0.302    14.789 r  fbc/bramA/blockRam_i_i_3/O
+                         net (fo=15, routed)          1.059    15.848    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/addra[16]
+    SLICE_X69Y123        LUT2 (Prop_lut2_I0_O)        0.124    15.972 f  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_6__0/O
+                         net (fo=8, routed)           0.930    16.902    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_6__0_n_0
+    SLICE_X72Y118        LUT6 (Prop_lut6_I5_O)        0.124    17.026 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__2/O
+                         net (fo=1, routed)           0.655    17.681    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__2_n_0
+    SLICE_X73Y118        LUT6 (Prop_lut6_I1_O)        0.124    17.805 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4__0/O
+                         net (fo=1, routed)           0.298    18.103    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4__0_n_0
+    SLICE_X73Y116        LUT3 (Prop_lut3_I2_O)        0.124    18.227 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1__0/O
+                         net (fo=6, routed)           1.848    20.075    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/ENA
+    RAMB36_X2Y13         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.621    14.806    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/clka
+    RAMB36_X2Y13         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+                         clock pessimism              0.173    14.979    
+                         clock uncertainty           -0.035    14.944    
+    RAMB36_X2Y13         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.501    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B
+  -------------------------------------------------------------------
+                         required time                         14.501    
+                         arrival time                         -20.075    
+  -------------------------------------------------------------------
+                         slack                                 -5.574    
+
+Slack (VIOLATED) :        -5.574ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.179ns  (logic 5.113ns (33.686%)  route 10.066ns (66.314%))
+  Logic Levels:           18  (CARRY4=7 LUT3=2 LUT4=3 LUT5=4 LUT6=2)
+  Clock Path Skew:        0.083ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.874ns = ( 14.874 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.181ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    14.018 r  rast/majorCounter/blockRam_i_i_27/O[1]
+                         net (fo=2, routed)           0.649    14.667    fbc/bramA/w_addr[9]
+    SLICE_X69Y131        LUT3 (Prop_lut3_I2_O)        0.303    14.970 r  fbc/bramA/blockRam_i_i_4/O
+                         net (fo=35, routed)          0.831    15.801    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/addra[15]
+    SLICE_X65Y140        LUT3 (Prop_lut3_I1_O)        0.124    15.925 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_i_2/O
+                         net (fo=18, routed)          1.152    17.078    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0
+    SLICE_X65Y152        LUT6 (Prop_lut6_I1_O)        0.124    17.202 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12/O
+                         net (fo=1, routed)           0.613    17.815    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12_n_0
+    SLICE_X65Y157        LUT5 (Prop_lut5_I0_O)        0.124    17.939 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4/O
+                         net (fo=1, routed)           0.940    18.879    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4_n_0
+    SLICE_X65Y159        LUT6 (Prop_lut6_I2_O)        0.124    19.003 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1/O
+                         net (fo=6, routed)           1.147    20.150    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/ENA
+    RAMB36_X1Y34         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.688    14.874    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/clka
+    RAMB36_X1Y34         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+                         clock pessimism              0.181    15.055    
+                         clock uncertainty           -0.035    15.019    
+    RAMB36_X1Y34         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.576    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T
+  -------------------------------------------------------------------
+                         required time                         14.576    
+                         arrival time                         -20.150    
+  -------------------------------------------------------------------
+                         slack                                 -5.574    
+
+Slack (VIOLATED) :        -5.572ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.175ns  (logic 5.113ns (33.694%)  route 10.062ns (66.306%))
+  Logic Levels:           18  (CARRY4=7 LUT3=2 LUT4=3 LUT5=4 LUT6=2)
+  Clock Path Skew:        0.081ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.800ns = ( 14.800 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    14.018 r  rast/majorCounter/blockRam_i_i_27/O[1]
+                         net (fo=2, routed)           0.649    14.667    fbc/bramA/w_addr[9]
+    SLICE_X69Y131        LUT3 (Prop_lut3_I2_O)        0.303    14.970 r  fbc/bramA/blockRam_i_i_4/O
+                         net (fo=35, routed)          0.831    15.801    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/addra[15]
+    SLICE_X65Y140        LUT3 (Prop_lut3_I1_O)        0.124    15.925 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_i_2/O
+                         net (fo=18, routed)          1.152    17.078    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0
+    SLICE_X65Y152        LUT6 (Prop_lut6_I1_O)        0.124    17.202 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12/O
+                         net (fo=1, routed)           0.613    17.815    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12_n_0
+    SLICE_X65Y157        LUT5 (Prop_lut5_I0_O)        0.124    17.939 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4/O
+                         net (fo=1, routed)           0.940    18.879    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4_n_0
+    SLICE_X65Y159        LUT6 (Prop_lut6_I2_O)        0.124    19.003 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1/O
+                         net (fo=6, routed)           1.143    20.146    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/ENA
+    RAMB36_X2Y28         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.615    14.800    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X2Y28         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+                         clock pessimism              0.252    15.053    
+                         clock uncertainty           -0.035    15.017    
+    RAMB36_X2Y28         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.574    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B
+  -------------------------------------------------------------------
+                         required time                         14.574    
+                         arrival time                         -20.146    
+  -------------------------------------------------------------------
+                         slack                                 -5.572    
+
+Slack (VIOLATED) :        -5.525ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.141ns  (logic 5.113ns (33.770%)  route 10.028ns (66.230%))
+  Logic Levels:           18  (CARRY4=7 LUT3=2 LUT4=3 LUT5=4 LUT6=2)
+  Clock Path Skew:        0.094ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.885ns = ( 14.885 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.181ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    14.018 r  rast/majorCounter/blockRam_i_i_27/O[1]
+                         net (fo=2, routed)           0.649    14.667    fbc/bramA/w_addr[9]
+    SLICE_X69Y131        LUT3 (Prop_lut3_I2_O)        0.303    14.970 r  fbc/bramA/blockRam_i_i_4/O
+                         net (fo=35, routed)          0.831    15.801    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/addra[15]
+    SLICE_X65Y140        LUT3 (Prop_lut3_I1_O)        0.124    15.925 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_i_2/O
+                         net (fo=18, routed)          1.152    17.078    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0
+    SLICE_X65Y152        LUT6 (Prop_lut6_I1_O)        0.124    17.202 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12/O
+                         net (fo=1, routed)           0.613    17.815    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12_n_0
+    SLICE_X65Y157        LUT5 (Prop_lut5_I0_O)        0.124    17.939 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4/O
+                         net (fo=1, routed)           0.940    18.879    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4_n_0
+    SLICE_X65Y159        LUT6 (Prop_lut6_I2_O)        0.124    19.003 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1/O
+                         net (fo=6, routed)           1.109    20.112    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/r_addr
+    RAMB36_X1Y36         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.699    14.885    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/clka
+    RAMB36_X1Y36         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+                         clock pessimism              0.181    15.066    
+                         clock uncertainty           -0.035    15.030    
+    RAMB36_X1Y36         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.587    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[7].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T
+  -------------------------------------------------------------------
+                         required time                         14.587    
+                         arrival time                         -20.112    
+  -------------------------------------------------------------------
+                         slack                                 -5.525    
+
+Slack (VIOLATED) :        -5.519ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.042ns  (logic 5.017ns (33.353%)  route 10.025ns (66.647%))
+  Logic Levels:           18  (CARRY4=7 LUT2=1 LUT3=2 LUT4=3 LUT5=3 LUT6=2)
+  Clock Path Skew:        0.002ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.800ns = ( 14.800 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    13.923 r  rast/majorCounter/blockRam_i_i_27/O[2]
+                         net (fo=2, routed)           0.564    14.487    fbc/bramA/w_addr[10]
+    SLICE_X67Y135        LUT3 (Prop_lut3_I2_O)        0.302    14.789 r  fbc/bramA/blockRam_i_i_3/O
+                         net (fo=15, routed)          1.059    15.848    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/addra[16]
+    SLICE_X69Y123        LUT2 (Prop_lut2_I0_O)        0.124    15.972 f  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_6__0/O
+                         net (fo=8, routed)           0.930    16.902    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_6__0_n_0
+    SLICE_X72Y118        LUT6 (Prop_lut6_I5_O)        0.124    17.026 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__2/O
+                         net (fo=1, routed)           0.655    17.681    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__2_n_0
+    SLICE_X73Y118        LUT6 (Prop_lut6_I1_O)        0.124    17.805 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4__0/O
+                         net (fo=1, routed)           0.298    18.103    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4__0_n_0
+    SLICE_X73Y116        LUT3 (Prop_lut3_I2_O)        0.124    18.227 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1__0/O
+                         net (fo=6, routed)           1.786    20.013    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/ENA
+    RAMB36_X2Y14         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.615    14.800    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/clka
+    RAMB36_X2Y14         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+                         clock pessimism              0.173    14.973    
+                         clock uncertainty           -0.035    14.938    
+    RAMB36_X2Y14         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.495    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T
+  -------------------------------------------------------------------
+                         required time                         14.495    
+                         arrival time                         -20.013    
+  -------------------------------------------------------------------
+                         slack                                 -5.519    
+
+Slack (VIOLATED) :        -5.505ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.116ns  (logic 5.113ns (33.825%)  route 10.003ns (66.175%))
+  Logic Levels:           18  (CARRY4=7 LUT3=3 LUT4=3 LUT5=3 LUT6=2)
+  Clock Path Skew:        0.089ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.808ns = ( 14.808 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    14.018 f  rast/majorCounter/blockRam_i_i_27/O[1]
+                         net (fo=2, routed)           0.605    14.623    fbc/bramB/w_addr[9]
+    SLICE_X68Y136        LUT3 (Prop_lut3_I0_O)        0.303    14.926 f  fbc/bramB/blockRam_i_i_4__0/O
+                         net (fo=35, routed)          1.213    16.139    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/addra[15]
+    SLICE_X75Y128        LUT3 (Prop_lut3_I1_O)        0.124    16.263 f  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_5__0/O
+                         net (fo=8, routed)           0.864    17.127    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_5__0_n_0
+    SLICE_X74Y127        LUT6 (Prop_lut6_I3_O)        0.124    17.251 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__2/O
+                         net (fo=1, routed)           0.792    18.043    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__2_n_0
+    SLICE_X76Y127        LUT6 (Prop_lut6_I1_O)        0.124    18.167 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4__0/O
+                         net (fo=1, routed)           0.483    18.651    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4__0_n_0
+    SLICE_X77Y127        LUT3 (Prop_lut3_I2_O)        0.124    18.775 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1__0/O
+                         net (fo=6, routed)           1.313    20.087    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/ENA
+    RAMB36_X3Y20         RAMB36E1                                     r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.623    14.808    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/clka
+    RAMB36_X3Y20         RAMB36E1                                     r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+                         clock pessimism              0.252    15.061    
+                         clock uncertainty           -0.035    15.025    
+    RAMB36_X3Y20         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.582    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B
+  -------------------------------------------------------------------
+                         required time                         14.582    
+                         arrival time                         -20.087    
+  -------------------------------------------------------------------
+                         slack                                 -5.505    
+
+Slack (VIOLATED) :        -5.466ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.070ns  (logic 5.113ns (33.929%)  route 9.957ns (66.071%))
+  Logic Levels:           18  (CARRY4=7 LUT3=2 LUT4=3 LUT5=4 LUT6=2)
+  Clock Path Skew:        0.082ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.801ns = ( 14.801 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    14.018 r  rast/majorCounter/blockRam_i_i_27/O[1]
+                         net (fo=2, routed)           0.649    14.667    fbc/bramA/w_addr[9]
+    SLICE_X69Y131        LUT3 (Prop_lut3_I2_O)        0.303    14.970 r  fbc/bramA/blockRam_i_i_4/O
+                         net (fo=35, routed)          0.831    15.801    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/addra[15]
+    SLICE_X65Y140        LUT3 (Prop_lut3_I1_O)        0.124    15.925 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_i_2/O
+                         net (fo=18, routed)          1.152    17.078    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0
+    SLICE_X65Y152        LUT6 (Prop_lut6_I1_O)        0.124    17.202 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12/O
+                         net (fo=1, routed)           0.613    17.815    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_12_n_0
+    SLICE_X65Y157        LUT5 (Prop_lut5_I0_O)        0.124    17.939 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4/O
+                         net (fo=1, routed)           0.940    18.879    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4_n_0
+    SLICE_X65Y159        LUT6 (Prop_lut6_I2_O)        0.124    19.003 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1/O
+                         net (fo=6, routed)           1.038    20.041    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/ENA
+    RAMB36_X2Y29         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.616    14.801    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/clka
+    RAMB36_X2Y29         RAMB36E1                                     r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+                         clock pessimism              0.252    15.054    
+                         clock uncertainty           -0.035    15.018    
+    RAMB36_X2Y29         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.575    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T
+  -------------------------------------------------------------------
+                         required time                         14.575    
+                         arrival time                         -20.041    
+  -------------------------------------------------------------------
+                         slack                                 -5.466    
+
+Slack (VIOLATED) :        -5.431ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.040ns  (logic 5.113ns (33.997%)  route 9.927ns (66.003%))
+  Logic Levels:           18  (CARRY4=7 LUT3=3 LUT4=3 LUT5=3 LUT6=2)
+  Clock Path Skew:        0.087ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.806ns = ( 14.806 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    14.018 f  rast/majorCounter/blockRam_i_i_27/O[1]
+                         net (fo=2, routed)           0.605    14.623    fbc/bramB/w_addr[9]
+    SLICE_X68Y136        LUT3 (Prop_lut3_I0_O)        0.303    14.926 f  fbc/bramB/blockRam_i_i_4__0/O
+                         net (fo=35, routed)          1.213    16.139    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/addra[15]
+    SLICE_X75Y128        LUT3 (Prop_lut3_I1_O)        0.124    16.263 f  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_5__0/O
+                         net (fo=8, routed)           0.864    17.127    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_5__0_n_0
+    SLICE_X74Y127        LUT6 (Prop_lut6_I3_O)        0.124    17.251 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__2/O
+                         net (fo=1, routed)           0.792    18.043    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__2_n_0
+    SLICE_X76Y127        LUT6 (Prop_lut6_I1_O)        0.124    18.167 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4__0/O
+                         net (fo=1, routed)           0.483    18.651    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_4__0_n_0
+    SLICE_X77Y127        LUT3 (Prop_lut3_I2_O)        0.124    18.775 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[21].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1__0/O
+                         net (fo=6, routed)           1.237    20.011    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/ENA
+    RAMB36_X3Y21         RAMB36E1                                     r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.621    14.806    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/clka
+    RAMB36_X3Y21         RAMB36E1                                     r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+                         clock pessimism              0.252    15.059    
+                         clock uncertainty           -0.035    15.023    
+    RAMB36_X3Y21         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.580    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T
+  -------------------------------------------------------------------
+                         required time                         14.580    
+                         arrival time                         -20.011    
+  -------------------------------------------------------------------
+                         slack                                 -5.431    
+
+Slack (VIOLATED) :        -5.412ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+                            (rising edge-triggered cell RAMB36E1 clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        14.926ns  (logic 5.113ns (34.255%)  route 9.813ns (65.745%))
+  Logic Levels:           18  (CARRY4=7 LUT3=2 LUT4=3 LUT5=4 LUT6=2)
+  Clock Path Skew:        -0.008ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.711ns = ( 14.711 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.971ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.613     4.971    rast/startXBank/CLK
+    SLICE_X65Y137        FDRE                                         r  rast/startXBank/Q_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y137        FDRE (Prop_fdre_C_Q)         0.419     5.390 r  rast/startXBank/Q_reg[5]/Q
+                         net (fo=28, routed)          0.820     6.210    rast/ySub/subtraction/Q_reg[5]_1
+    SLICE_X64Y138        LUT5 (Prop_lut5_I0_O)        0.299     6.509 r  rast/ySub/subtraction/blockRam_i_i_118/O
+                         net (fo=1, routed)           0.000     6.509    rast/ySub/subtraction/blockRam_i_i_118_n_0
+    SLICE_X64Y138        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640     7.149 r  rast/ySub/subtraction/blockRam_i_i_89/O[3]
+                         net (fo=20, routed)          0.410     7.559    rast/ySub/subtraction/valIn[3]
+    SLICE_X64Y136        LUT4 (Prop_lut4_I0_O)        0.306     7.865 r  rast/ySub/subtraction/blockRam_i_i_90/O
+                         net (fo=10, routed)          0.770     8.635    rast/ySub/subtraction/Q_reg[10]_3
+    SLICE_X64Y139        LUT5 (Prop_lut5_I2_O)        0.124     8.759 f  rast/ySub/subtraction/blockRam_i_i_93/O
+                         net (fo=4, routed)           0.462     9.222    rast/xSub/subtraction/Q_reg[5]_0
+    SLICE_X63Y137        LUT4 (Prop_lut4_I2_O)        0.124     9.346 r  rast/xSub/subtraction/blockRam_i_i_61/O
+                         net (fo=1, routed)           0.331     9.677    rast/ySub/subtraction/DI[1]
+    SLICE_X63Y136        CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.398    10.075 r  rast/ySub/subtraction/blockRam_i_i_31/CO[3]
+                         net (fo=19, routed)          0.687    10.762    rast/startXBank/Q_reg[5]_0[0]
+    SLICE_X65Y136        LUT5 (Prop_lut5_I2_O)        0.124    10.886 r  rast/startXBank/blockRam_i_i_76/O
+                         net (fo=4, routed)           0.625    11.511    rast/leftX[8]
+    SLICE_X66Y135        LUT4 (Prop_lut4_I0_O)        0.124    11.635 r  rast/blockRam_i_i_79/O
+                         net (fo=1, routed)           0.000    11.635    rast/blockRam_i_i_79_n_0
+    SLICE_X66Y135        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533    12.168 r  rast/blockRam_i_i_53/CO[3]
+                         net (fo=1, routed)           0.000    12.168    rast/blockRam_i_i_53_n_0
+    SLICE_X66Y136        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219    12.387 r  rast/blockRam_i_i_52/O[0]
+                         net (fo=2, routed)           0.627    13.014    rast/startXBank/pixelX[2]
+    SLICE_X67Y136        CARRY4 (Prop_carry4_DI[3]_CO[3])
+                                                      0.556    13.570 r  rast/startXBank/blockRam_i_i_29/CO[3]
+                         net (fo=1, routed)           0.000    13.570    rast/majorCounter/CO[0]
+    SLICE_X67Y137        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    13.684 r  rast/majorCounter/blockRam_i_i_28/CO[3]
+                         net (fo=1, routed)           0.000    13.684    rast/majorCounter/blockRam_i_i_28_n_0
+    SLICE_X67Y138        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    14.018 f  rast/majorCounter/blockRam_i_i_27/O[1]
+                         net (fo=2, routed)           0.605    14.623    fbc/bramB/w_addr[9]
+    SLICE_X68Y136        LUT3 (Prop_lut3_I0_O)        0.303    14.926 f  fbc/bramB/blockRam_i_i_4__0/O
+                         net (fo=35, routed)          0.779    15.705    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/addra[15]
+    SLICE_X69Y135        LUT3 (Prop_lut3_I1_O)        0.124    15.829 f  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_i_2/O
+                         net (fo=18, routed)          1.222    17.051    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.SIMPLE_PRIM18.ram_0
+    SLICE_X64Y127        LUT6 (Prop_lut6_I0_O)        0.124    17.175 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__0/O
+                         net (fo=1, routed)           0.669    17.844    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_8__0_n_0
+    SLICE_X64Y127        LUT5 (Prop_lut5_I0_O)        0.124    17.968 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_2/O
+                         net (fo=1, routed)           0.831    18.799    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_2_n_0
+    SLICE_X62Y127        LUT6 (Prop_lut6_I0_O)        0.124    18.923 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[18].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T_i_1/O
+                         net (fo=6, routed)           0.975    19.898    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/ENA
+    RAMB36_X1Y22         RAMB36E1                                     r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/ENARDEN
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         1.526    14.711    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/clka
+    RAMB36_X1Y22         RAMB36E1                                     r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+                         clock pessimism              0.252    14.964    
+                         clock uncertainty           -0.035    14.928    
+    RAMB36_X1Y22         RAMB36E1 (Setup_ramb36e1_CLKARDCLK_ENARDEN)
+                                                     -0.443    14.485    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B
+  -------------------------------------------------------------------
+                         required time                         14.485    
+                         arrival time                         -19.898    
+  -------------------------------------------------------------------
+                         slack                                 -5.412    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.158ns  (arrival time - required time)
+  Source:                 fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.260ns  (logic 0.141ns (54.263%)  route 0.119ns (45.737%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.039ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.924ns
+    Source Clock Delay      (SCD):    1.415ns
+    Clock Pessimism Removal (CPR):    0.469ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.582     1.415    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X73Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X73Y131        FDRE (Prop_fdre_C_Q)         0.141     1.556 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]/Q
+                         net (fo=1, routed)           0.119     1.675    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[4]
+    SLICE_X74Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.855     1.924    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X74Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[4]/C
+                         clock pessimism             -0.469     1.454    
+    SLICE_X74Y131        FDRE (Hold_fdre_C_D)         0.063     1.517    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.517    
+                         arrival time                           1.675    
+  -------------------------------------------------------------------
+                         slack                                  0.158    
+
+Slack (MET) :             0.158ns  (arrival time - required time)
+  Source:                 fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.260ns  (logic 0.141ns (54.263%)  route 0.119ns (45.737%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.039ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.924ns
+    Source Clock Delay      (SCD):    1.415ns
+    Clock Pessimism Removal (CPR):    0.469ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.582     1.415    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X73Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X73Y131        FDRE (Prop_fdre_C_Q)         0.141     1.556 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[5]/Q
+                         net (fo=1, routed)           0.119     1.675    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[5]
+    SLICE_X74Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.855     1.924    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X74Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[5]/C
+                         clock pessimism             -0.469     1.454    
+    SLICE_X74Y131        FDRE (Hold_fdre_C_D)         0.063     1.517    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.517    
+                         arrival time                           1.675    
+  -------------------------------------------------------------------
+                         slack                                  0.158    
+
+Slack (MET) :             0.169ns  (arrival time - required time)
+  Source:                 fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.260ns  (logic 0.141ns (54.263%)  route 0.119ns (45.737%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.039ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.924ns
+    Source Clock Delay      (SCD):    1.415ns
+    Clock Pessimism Removal (CPR):    0.469ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.582     1.415    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X73Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X73Y131        FDRE (Prop_fdre_C_Q)         0.141     1.556 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/Q
+                         net (fo=1, routed)           0.119     1.675    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[3]
+    SLICE_X74Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.855     1.924    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X74Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[3]/C
+                         clock pessimism             -0.469     1.454    
+    SLICE_X74Y131        FDRE (Hold_fdre_C_D)         0.052     1.506    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.506    
+                         arrival time                           1.675    
+  -------------------------------------------------------------------
+                         slack                                  0.169    
+
+Slack (MET) :             0.176ns  (arrival time - required time)
+  Source:                 fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.262ns  (logic 0.141ns (53.727%)  route 0.121ns (46.273%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.016ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.902ns
+    Source Clock Delay      (SCD):    1.394ns
+    Clock Pessimism Removal (CPR):    0.491ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.561     1.394    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X64Y140        FDRE                                         r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y140        FDRE (Prop_fdre_C_Q)         0.141     1.535 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/Q
+                         net (fo=1, routed)           0.121     1.657    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[0]
+    SLICE_X64Y141        FDRE                                         r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.833     1.902    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X64Y141        FDRE                                         r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[0]/C
+                         clock pessimism             -0.491     1.410    
+    SLICE_X64Y141        FDRE (Hold_fdre_C_D)         0.070     1.480    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.480    
+                         arrival time                           1.657    
+  -------------------------------------------------------------------
+                         slack                                  0.176    
+
+Slack (MET) :             0.202ns  (arrival time - required time)
+  Source:                 fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.302ns  (logic 0.141ns (46.667%)  route 0.161ns (53.333%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.921ns
+    Source Clock Delay      (SCD):    1.414ns
+    Clock Pessimism Removal (CPR):    0.469ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.581     1.414    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X79Y124        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X79Y124        FDRE (Prop_fdre_C_Q)         0.141     1.555 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]/Q
+                         net (fo=1, routed)           0.161     1.717    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[2]
+    SLICE_X80Y124        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.851     1.921    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X80Y124        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[2]/C
+                         clock pessimism             -0.469     1.451    
+    SLICE_X80Y124        FDRE (Hold_fdre_C_D)         0.063     1.514    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.514    
+                         arrival time                           1.717    
+  -------------------------------------------------------------------
+                         slack                                  0.202    
+
+Slack (MET) :             0.206ns  (arrival time - required time)
+  Source:                 fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.302ns  (logic 0.141ns (46.667%)  route 0.161ns (53.333%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.037ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.921ns
+    Source Clock Delay      (SCD):    1.414ns
+    Clock Pessimism Removal (CPR):    0.469ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.581     1.414    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X79Y124        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X79Y124        FDRE (Prop_fdre_C_Q)         0.141     1.555 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/Q
+                         net (fo=1, routed)           0.161     1.717    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[0]
+    SLICE_X80Y124        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.851     1.921    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X80Y124        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[0]/C
+                         clock pessimism             -0.469     1.451    
+    SLICE_X80Y124        FDRE (Hold_fdre_C_D)         0.059     1.510    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.510    
+                         arrival time                           1.717    
+  -------------------------------------------------------------------
+                         slack                                  0.206    
+
+Slack (MET) :             0.209ns  (arrival time - required time)
+  Source:                 fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.276ns  (logic 0.164ns (59.419%)  route 0.112ns (40.581%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.896ns
+    Source Clock Delay      (SCD):    1.389ns
+    Clock Pessimism Removal (CPR):    0.491ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.556     1.389    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X66Y132        FDRE                                         r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X66Y132        FDRE (Prop_fdre_C_Q)         0.164     1.553 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[6]/Q
+                         net (fo=1, routed)           0.112     1.665    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[6]
+    SLICE_X66Y133        FDRE                                         r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.826     1.896    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X66Y133        FDRE                                         r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[6]/C
+                         clock pessimism             -0.491     1.404    
+    SLICE_X66Y133        FDRE (Hold_fdre_C_D)         0.052     1.456    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.456    
+                         arrival time                           1.665    
+  -------------------------------------------------------------------
+                         slack                                  0.209    
+
+Slack (MET) :             0.232ns  (arrival time - required time)
+  Source:                 fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.311ns  (logic 0.141ns (45.298%)  route 0.170ns (54.702%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.902ns
+    Source Clock Delay      (SCD):    1.394ns
+    Clock Pessimism Removal (CPR):    0.494ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.561     1.394    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X65Y141        FDRE                                         r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X65Y141        FDRE (Prop_fdre_C_Q)         0.141     1.535 r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/Q
+                         net (fo=1, routed)           0.170     1.706    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[1]
+    SLICE_X64Y141        FDRE                                         r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.833     1.902    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X64Y141        FDRE                                         r  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[1]/C
+                         clock pessimism             -0.494     1.407    
+    SLICE_X64Y141        FDRE (Hold_fdre_C_D)         0.066     1.473    fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.473    
+                         arrival time                           1.706    
+  -------------------------------------------------------------------
+                         slack                                  0.232    
+
+Slack (MET) :             0.233ns  (arrival time - required time)
+  Source:                 fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.317ns  (logic 0.164ns (51.712%)  route 0.153ns (48.288%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.014ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.924ns
+    Source Clock Delay      (SCD):    1.417ns
+    Clock Pessimism Removal (CPR):    0.492ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.584     1.417    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X76Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X76Y131        FDRE (Prop_fdre_C_Q)         0.164     1.581 r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[6]/Q
+                         net (fo=1, routed)           0.153     1.735    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[6]
+    SLICE_X75Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.855     1.924    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X75Y131        FDRE                                         r  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[6]/C
+                         clock pessimism             -0.492     1.431    
+    SLICE_X75Y131        FDRE (Hold_fdre_C_D)         0.070     1.501    fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -1.501    
+                         arrival time                           1.735    
+  -------------------------------------------------------------------
+                         slack                                  0.233    
+
+Slack (MET) :             0.239ns  (arrival time - required time)
+  Source:                 rast/majorCounter/Q_reg[8]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/majorCounter/Q_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.345ns  (logic 0.186ns (53.849%)  route 0.159ns (46.151%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.015ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.895ns
+    Source Clock Delay      (SCD):    1.389ns
+    Clock Pessimism Removal (CPR):    0.490ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.556     1.389    rast/majorCounter/CLK
+    SLICE_X61Y136        FDRE                                         r  rast/majorCounter/Q_reg[8]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y136        FDRE (Prop_fdre_C_Q)         0.141     1.530 r  rast/majorCounter/Q_reg[8]/Q
+                         net (fo=6, routed)           0.159     1.690    rast/majorCounter/Q[8]
+    SLICE_X61Y135        LUT6 (Prop_lut6_I1_O)        0.045     1.735 r  rast/majorCounter/Q[10]_i_1__0/O
+                         net (fo=1, routed)           0.000     1.735    rast/majorCounter/Q0[10]
+    SLICE_X61Y135        FDRE                                         r  rast/majorCounter/Q_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=237, routed)         0.826     1.895    rast/majorCounter/CLK
+    SLICE_X61Y135        FDRE                                         r  rast/majorCounter/Q_reg[10]/C
+                         clock pessimism             -0.490     1.404    
+    SLICE_X61Y135        FDRE (Hold_fdre_C_D)         0.091     1.495    rast/majorCounter/Q_reg[10]
+  -------------------------------------------------------------------
+                         required time                         -1.495    
+                         arrival time                           1.735    
+  -------------------------------------------------------------------
+                         slack                                  0.239    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y28   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y29   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y18   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y19   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y33   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y34   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X3Y18   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X3Y19   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y19   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y20   fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X79Y124  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X79Y124  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X79Y124  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X73Y131  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X73Y131  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X73Y131  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[5]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X64Y141  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X64Y141  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[1]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X64Y141  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.sel_pipe_d1_reg[2]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X64Y140  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X64Y140  fbc/bramA/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X79Y124  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X79Y124  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X79Y124  fbc/bramB/blockRam_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X65Y137  rast/colorBank/Q_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X65Y137  rast/endXBank/Q_reg[5]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X63Y138  rast/endXBank/Q_reg[8]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X65Y137  rast/endYBank/Q_reg[7]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X68Y138  rast/minorCounter/Q_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X68Y138  rast/minorCounter/Q_reg[2]/C
+
+
+

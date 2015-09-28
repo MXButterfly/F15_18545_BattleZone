@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="fb_top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="fb_top" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="20" />
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/btnCpuReset">
+      <obj_property name="ElementShortName">btnCpuReset</obj_property>
+      <obj_property name="ObjectShortName">btnCpuReset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/stb/rastReady">
+      <obj_property name="ElementShortName">rastReady</obj_property>
+      <obj_property name="ObjectShortName">rastReady</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/stb/readyFrame">
+      <obj_property name="ElementShortName">readyFrame</obj_property>
+      <obj_property name="ObjectShortName">readyFrame</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/stb/readyLine">
+      <obj_property name="ElementShortName">readyLine</obj_property>
+      <obj_property name="ObjectShortName">readyLine</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/fbc/wen_a">
+      <obj_property name="ElementShortName">wen_a</obj_property>
+      <obj_property name="ObjectShortName">wen_a</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/fbc/wen_b">
+      <obj_property name="ElementShortName">wen_b</obj_property>
+      <obj_property name="ObjectShortName">wen_b</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/fbc/ready">
+      <obj_property name="ElementShortName">ready</obj_property>
+      <obj_property name="ObjectShortName">ready</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/Hsync">
+      <obj_property name="ElementShortName">Hsync</obj_property>
+      <obj_property name="ObjectShortName">Hsync</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/Vsync">
+      <obj_property name="ElementShortName">Vsync</obj_property>
+      <obj_property name="ObjectShortName">Vsync</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/rast/goodPixel">
+      <obj_property name="ElementShortName">goodPixel</obj_property>
+      <obj_property name="ObjectShortName">goodPixel</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/fb_top/stb/startX">
+      <obj_property name="ElementShortName">startX[10:0]</obj_property>
+      <obj_property name="ObjectShortName">startX[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/fb_top/stb/endX">
+      <obj_property name="ElementShortName">endX[10:0]</obj_property>
+      <obj_property name="ObjectShortName">endX[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/fb_top/stb/startY">
+      <obj_property name="ElementShortName">startY[10:0]</obj_property>
+      <obj_property name="ObjectShortName">startY[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/fb_top/stb/endY">
+      <obj_property name="ElementShortName">endY[10:0]</obj_property>
+      <obj_property name="ObjectShortName">endY[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/fb_top/w_addr">
+      <obj_property name="ElementShortName">w_addr[18:0]</obj_property>
+      <obj_property name="ObjectShortName">w_addr[18:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/fb_top/color_in">
+      <obj_property name="ElementShortName">color_in[3:0]</obj_property>
+      <obj_property name="ObjectShortName">color_in[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/fb_top/rast/pixelX">
+      <obj_property name="ElementShortName">pixelX[10:0]</obj_property>
+      <obj_property name="ObjectShortName">pixelX[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/fb_top/rast/pixelY">
+      <obj_property name="ElementShortName">pixelY[10:0]</obj_property>
+      <obj_property name="ObjectShortName">pixelY[10:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/fb_top/stb/readyLine">
+      <obj_property name="ElementShortName">readyLine</obj_property>
+      <obj_property name="ObjectShortName">readyLine</obj_property>
+   </wvobject>
+</wave_config>

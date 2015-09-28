@@ -1,0 +1,37 @@
+##################################################
+#
+# For info on creating trigger state machines:
+#   1) In the main Vivado menu bar, select
+#      Window > Language Templates
+#   2) In the Templates window, select
+#      Debug > Trigger State Machine
+#   3) Refer to the entry 'Info' for an overview
+#      of the trigger state machine language.
+#
+# More information can be found in this document:
+#
+#   Vivado Design Suite User Guide: Programming
+#   and Debugging (UG908)
+#
+####################fbc/nextState##############################
+      
+state my_state0:
+    if (Vsync_OBUF == 1'b0) then
+      goto my_state1;
+    else
+      goto my_state0;
+    endif
+
+state my_state1:
+    if(fbc/bramA/blockRam_i/en_1 == 1'b0) then
+        goto my_state2;
+    else
+        goto my_state1;
+    endif
+    
+state my_state2:
+        if(fbc/bramA/blockRam_i/en_1 == 1'b1) then
+            trigger;
+        else
+            goto my_state2;
+        endif
