@@ -90,7 +90,10 @@
                              color = 4'b0111;
                              validPixel = 1'b1;
                          end    
-                      */                           
+                      */                     
+                      
+                      
+                      /*      
                                              0: begin
                                                      startX = 101;
                                                      startY = 100;
@@ -137,6 +140,130 @@
                         validPixel = 1'b1;
                     end
                     
+                      */
+                      
+                      0: begin
+                        startX = 220;
+                        startY = 140;
+                        endX = 420;
+                        endY = 140;
+                        color = 4'b0111;
+                        validPixel = 1'b1;
+                        end
+                        
+                     1: begin
+                        startX = 420;
+                        startY = 140;
+                        endX = 420;
+                        endY = 340;
+                        color = 4'b0010;
+                        validPixel = 1'b1;
+                     end
+                     
+                     2: begin
+                        startX = 420;
+                        startY = 340;
+                        endX = 220;
+                        endY = 340;
+                        color = 4'b0001;
+                        validPixel = 1'b1;
+                        end
+                        
+                     3: begin
+                        startX = 220;
+                        startY = 340;
+                        endX = 220;
+                        endY = 140;
+                        color = 4'b0110;
+                        validPixel = 1'b1;
+                        end
+                                                
+                                             4: begin
+                                                startX = 420;
+                                                startY = 140;
+                                                endX = 220;
+                                                endY = 340;
+                                                color = 4'b0011;
+                                                validPixel = 1'b1;
+                                                end
+                        
+                    5: begin
+                        startX = 220;
+                        startY = 140;
+                        endX = 420;
+                        endY = 340;
+                        color = 4'b0101;
+                        validPixel = 1'b1;
+                        end
+                                                
+                    6: begin
+                        startX = 0;
+                        startY = 0;
+                        endX = 220;
+                        endY = 140;
+                        color = 4'b0111;
+                        validPixel = 1'b1;
+                        end
+                        
+                        
+                    7: begin
+                        startX = 0;
+                        startY = 0;
+                        endX = 420;
+                        endY = 140;
+                        color = 4'b0111;
+                        validPixel = 1'b1;
+                        end
+
+                        
+                    8: begin
+                        startX = 0;
+                        startY = 0;
+                        endX = 220;
+                        endY = 340;
+                        color = 4'b0111;
+                        validPixel = 1'b1;
+                        end
+
+                        
+                    9: begin
+                        startX = 0;
+                        startY = 0;
+                        endX = 420;
+                        endY = 340;
+                        color = 4'b0111;
+                        validPixel = 1'b1;
+                        end
+
+                        
+                    10: begin
+                        startX = 0;
+                        startY = 0;
+                        endX = 639;
+                        endY = 0;
+                        color = 4'b0100;
+                        validPixel = 1'b1;
+                        end
+                    
+                 11: begin
+                    startX = 420;
+                    startY = 141;
+                    endX = 220;
+                    endY = 340;
+                    color = 4'b0011;
+                    validPixel = 1'b1;
+                    end
+                    
+                 12: begin
+                    startX = 419;
+                    startY = 140;
+                    endX = 220;
+                    endY = 340;
+                    color = 4'b0011;
+                    validPixel = 1'b1;
+                    end
+
+                      
                         
                     
                     default:  begin

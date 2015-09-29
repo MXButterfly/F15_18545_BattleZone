@@ -32,12 +32,12 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="ip/blockRam_blk_mem_gen_0_0/blockRam_blk_mem_gen_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="hdl/blockRam.v"/>
-        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="blockRam_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="hw_handoff/blockRam.hwh"/>
-        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="hw_handoff/blockRam_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="hdl/blockRam.hwdef"/>
+        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="hw_handoff/blockRam_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="hw_handoff/blockRam.hwh"/>
+        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="blockRam_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="hdl/blockRam.v"/>
+        <CompFileExtendedInfo CompFileName="blockRam.bd" FileRelPathName="ip/blockRam_blk_mem_gen_0_0/blockRam_blk_mem_gen_0_0.xci"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/blockRam/hdl/blockRam_wrapper.v">
         <FileInfo>

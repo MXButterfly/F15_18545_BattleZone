@@ -719,3 +719,70 @@ set_property IOSTANDARD LVCMOS33 [get_ports Vsync]
 ##Bank = 14, Pin name = IO_L23N_T3_A02_D18_14,				Sch name = CRAM_A22
 #set_property PACKAGE_PIN U13 [get_ports {MemAdr[22]}]
 #set_property IOSTANDARD LVCMOS33 [get_ports {MemAdr[22]}]
+
+
+create_debug_core u_ila_0_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0_0]
+set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_0_0]
+set_property C_ADV_TRIGGER true [get_debug_cores u_ila_0_0]
+set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_0_0]
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0_0]
+set_property port_width 1 [get_debug_ports u_ila_0_0/clk]
+connect_debug_port u_ila_0_0/clk [get_nets [list clk_IBUF_BUFG]]
+set_property port_width 13 [get_debug_ports u_ila_0_0/probe0]
+connect_debug_port u_ila_0_0/probe0 [get_nets [list {w_addr[6]} {w_addr[7]} {w_addr[8]} {w_addr[9]} {w_addr[10]} {w_addr[11]} {w_addr[12]} {w_addr[13]} {w_addr[14]} {w_addr[15]} {w_addr[16]} {w_addr[17]} {w_addr[18]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0_0/probe1]
+connect_debug_port u_ila_0_0/probe1 [get_nets [list {row[2]} {row[3]} {row[4]} {row[5]} {row[6]} {row[7]} {row[8]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0_0/probe2]
+connect_debug_port u_ila_0_0/probe2 [get_nets [list {startY[0]} {startY[3]} {startY[4]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0_0/probe3]
+connect_debug_port u_ila_0_0/probe3 [get_nets [list {color_in_a[0]} {color_in_a[1]} {color_in_a[2]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0_0/probe4]
+connect_debug_port u_ila_0_0/probe4 [get_nets [list {startX[0]} {startX[2]} {startX[3]} {startX[5]} {startX[7]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0_0/probe5]
+connect_debug_port u_ila_0_0/probe5 [get_nets [list {color_in[0]} {color_in[1]} {color_in[2]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 9 [get_debug_ports u_ila_0_0/probe6]
+connect_debug_port u_ila_0_0/probe6 [get_nets [list {col[0]} {col[1]} {col[2]} {col[3]} {col[4]} {col[6]} {col[7]} {col[8]} {col[9]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 2 [get_debug_ports u_ila_0_0/probe7]
+connect_debug_port u_ila_0_0/probe7 [get_nets [list {endY[7]} {endY[8]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0_0/probe8]
+connect_debug_port u_ila_0_0/probe8 [get_nets [list {endX[5]} {endX[6]} {endX[7]} {endX[8]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 19 [get_debug_ports u_ila_0_0/probe9]
+connect_debug_port u_ila_0_0/probe9 [get_nets [list {fbc/bramA/blockRam_i/addr_a_1[0]} {fbc/bramA/blockRam_i/addr_a_1[1]} {fbc/bramA/blockRam_i/addr_a_1[2]} {fbc/bramA/blockRam_i/addr_a_1[3]} {fbc/bramA/blockRam_i/addr_a_1[4]} {fbc/bramA/blockRam_i/addr_a_1[5]} {fbc/bramA/blockRam_i/addr_a_1[6]} {fbc/bramA/blockRam_i/addr_a_1[7]} {fbc/bramA/blockRam_i/addr_a_1[8]} {fbc/bramA/blockRam_i/addr_a_1[9]} {fbc/bramA/blockRam_i/addr_a_1[10]} {fbc/bramA/blockRam_i/addr_a_1[11]} {fbc/bramA/blockRam_i/addr_a_1[12]} {fbc/bramA/blockRam_i/addr_a_1[13]} {fbc/bramA/blockRam_i/addr_a_1[14]} {fbc/bramA/blockRam_i/addr_a_1[15]} {fbc/bramA/blockRam_i/addr_a_1[16]} {fbc/bramA/blockRam_i/addr_a_1[17]} {fbc/bramA/blockRam_i/addr_a_1[18]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0_0/probe10]
+connect_debug_port u_ila_0_0/probe10 [get_nets [list {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[0]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[1]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[2]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[3]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0_0/probe11]
+connect_debug_port u_ila_0_0/probe11 [get_nets [list {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[0]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[1]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[2]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[3]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 19 [get_debug_ports u_ila_0_0/probe12]
+connect_debug_port u_ila_0_0/probe12 [get_nets [list {fbc/bramB/blockRam_i/addr_a_1[0]} {fbc/bramB/blockRam_i/addr_a_1[1]} {fbc/bramB/blockRam_i/addr_a_1[2]} {fbc/bramB/blockRam_i/addr_a_1[3]} {fbc/bramB/blockRam_i/addr_a_1[4]} {fbc/bramB/blockRam_i/addr_a_1[5]} {fbc/bramB/blockRam_i/addr_a_1[6]} {fbc/bramB/blockRam_i/addr_a_1[7]} {fbc/bramB/blockRam_i/addr_a_1[8]} {fbc/bramB/blockRam_i/addr_a_1[9]} {fbc/bramB/blockRam_i/addr_a_1[10]} {fbc/bramB/blockRam_i/addr_a_1[11]} {fbc/bramB/blockRam_i/addr_a_1[12]} {fbc/bramB/blockRam_i/addr_a_1[13]} {fbc/bramB/blockRam_i/addr_a_1[14]} {fbc/bramB/blockRam_i/addr_a_1[15]} {fbc/bramB/blockRam_i/addr_a_1[16]} {fbc/bramB/blockRam_i/addr_a_1[17]} {fbc/bramB/blockRam_i/addr_a_1[18]}]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe13]
+connect_debug_port u_ila_0_0/probe13 [get_nets [list fbc/bramB/blockRam_i/en_1]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe14]
+connect_debug_port u_ila_0_0/probe14 [get_nets [list fbc/bramA/blockRam_i/en_1]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe15]
+connect_debug_port u_ila_0_0/probe15 [get_nets [list fbc/bramA/blockRam_i/write_en_1]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe16]
+connect_debug_port u_ila_0_0/probe16 [get_nets [list fbc/bramB/blockRam_i/write_en_1]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk_IBUF_BUFG]

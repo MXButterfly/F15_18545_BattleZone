@@ -17,7 +17,7 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1070.773 ; gain = 161.523 ; free physical = 1319 ; free virtual = 15678
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1070.777 ; gain = 161.523 ; free physical = 1811 ; free virtual = 16120
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'fb_top' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/fb_top.sv:23]
 INFO: [Synth 8-638] synthesizing module 'VGA_fsm' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/VGA_fsm.sv:22]
@@ -9939,15 +9939,19 @@ INFO: [Synth 8-256] done synthesizing module 'm_register' (19#1) [/afs/ece.cmu.e
 INFO: [Synth 8-638] synthesizing module 'm_register__parameterized0' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/matoro.sv:79]
 	Parameter WIDTH bound to: 11 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'm_register__parameterized0' (19#1) [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/matoro.sv:79]
+WARNING: [Synth 8-689] width (32) of port connection 'D' does not match port width (11) of module 'm_register__parameterized0' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/rasterizer.sv:39]
 INFO: [Synth 8-638] synthesizing module 'm_register__parameterized1' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/matoro.sv:79]
 	Parameter WIDTH bound to: 11 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'm_register__parameterized1' (19#1) [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/matoro.sv:79]
+WARNING: [Synth 8-689] width (32) of port connection 'D' does not match port width (11) of module 'm_register__parameterized1' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/rasterizer.sv:40]
 INFO: [Synth 8-638] synthesizing module 'm_register__parameterized2' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/matoro.sv:79]
 	Parameter WIDTH bound to: 11 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'm_register__parameterized2' (19#1) [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/matoro.sv:79]
+WARNING: [Synth 8-689] width (32) of port connection 'D' does not match port width (11) of module 'm_register__parameterized2' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/rasterizer.sv:41]
 INFO: [Synth 8-638] synthesizing module 'm_register__parameterized3' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/matoro.sv:79]
 	Parameter WIDTH bound to: 11 - type: integer 
 INFO: [Synth 8-256] done synthesizing module 'm_register__parameterized3' (19#1) [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/matoro.sv:79]
+WARNING: [Synth 8-689] width (32) of port connection 'D' does not match port width (11) of module 'm_register__parameterized3' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/rasterizer.sv:42]
 INFO: [Synth 8-638] synthesizing module 'absSubtractor' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/rasterizer.sv:188]
 	Parameter BUSWIDTH bound to: 11 - type: integer 
 INFO: [Synth 8-638] synthesizing module 'negator' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/rasterizer.sv:235]
@@ -9997,7 +10001,7 @@ WARNING: [Synth 8-689] width (1) of port connection 'pixelY' does not match port
 WARNING: [Synth 8-3848] Net done in module/entity fb_top does not have driver. [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/fb_top.sv:34]
 INFO: [Synth 8-256] done synthesizing module 'fb_top' (33#1) [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/fb_top.sv:23]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1303.387 ; gain = 394.137 ; free physical = 1092 ; free virtual = 15476
+Finished RTL Elaboration : Time (s): cpu = 00:01:16 ; elapsed = 00:01:18 . Memory (MB): peak = 1303.398 ; gain = 394.145 ; free physical = 1565 ; free virtual = 15887
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -10108,7 +10112,7 @@ INFO: [Synth 8-3295] tying undriven pin \has_mux_a.A :DIN[425] to constant 0 [/a
 INFO: [Synth 8-3295] tying undriven pin \has_mux_a.A :DIN[424] to constant 0 [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/ipshared/xilinx.com/blk_mem_gen_v8_2/7b054ed9/hdl/blk_mem_gen_v8_2_vhsyn_rfs.vhd:185564]
 INFO: [Common 17-14] Message 'Synth 8-3295' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:17 ; elapsed = 00:01:19 . Memory (MB): peak = 1303.387 ; gain = 394.137 ; free physical = 1092 ; free virtual = 15477
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:01:16 ; elapsed = 00:01:19 . Memory (MB): peak = 1303.398 ; gain = 394.145 ; free physical = 1565 ; free virtual = 15887
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 78 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -10119,6 +10123,8 @@ Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc]
 Finished Parsing XDC File [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/fb_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/fb_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
@@ -10126,16 +10132,16 @@ Completed Processing XDC Constraints
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1516.410 ; gain = 0.000 ; free physical = 1018 ; free virtual = 15402
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1515.422 ; gain = 0.000 ; free physical = 1508 ; free virtual = 15830
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1014 ; free virtual = 15399
+Finished Constraint Validation : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1504 ; free virtual = 15825
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a100tcsg324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1014 ; free virtual = 15399
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1504 ; free virtual = 15825
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -10145,7 +10151,7 @@ Applied set_property DONT_TOUCH = true for fbc/bramA/blockRam_i/blk_mem_gen_0. (
 Applied set_property DONT_TOUCH = true for fbc/bramB/blockRam_i. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for fbc/bramB/blockRam_i/blk_mem_gen_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:28 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1015 ; free virtual = 15399
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:24 ; elapsed = 00:01:27 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1504 ; free virtual = 15825
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "startX" won't be mapped to RAM because address size (19) is larger than maximum supported(18)
 INFO: [Synth 8-5545] ROM "validPixel" won't be mapped to RAM because address size (19) is larger than maximum supported(18)
@@ -10159,7 +10165,7 @@ WARNING: [Synth 8-327] inferring latch for variable 'loopEn_reg' [/afs/ece.cmu.e
 WARNING: [Synth 8-327] inferring latch for variable 'done_reg' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/rasterizer.sv:130]
 WARNING: [Synth 8-327] inferring latch for variable 'next_reg' [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.srcs/sources_1/new/rasterizer.sv:127]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1007 ; free virtual = 15391
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1496 ; free virtual = 15817
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10174,7 +10180,7 @@ Detailed RTL Component Info :
 +---Adders : 
 	   3 Input     19 Bit       Adders := 1     
 	   3 Input     12 Bit       Adders := 4     
-	   2 Input     11 Bit       Adders := 11    
+	   2 Input     11 Bit       Adders := 7     
 	   2 Input     10 Bit       Adders := 3     
 	   2 Input      9 Bit       Adders := 1     
 +---XORs : 
@@ -10191,19 +10197,20 @@ Detailed RTL Component Info :
 	   2 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 1     
 	   4 Input     19 Bit        Muxes := 2     
-	   2 Input     11 Bit        Muxes := 16    
-	   6 Input     11 Bit        Muxes := 4     
-	   2 Input     10 Bit        Muxes := 3     
-	   2 Input      9 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 12    
+	   2 Input     10 Bit        Muxes := 4     
+	  14 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 4     
+	  14 Input      9 Bit        Muxes := 3     
 	   4 Input      4 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 1     
 	   2 Input      3 Bit        Muxes := 2     
-	   6 Input      3 Bit        Muxes := 1     
+	  14 Input      3 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 4     
 	   2 Input      1 Bit        Muxes := 15    
 	   4 Input      1 Bit        Muxes := 7     
-	   6 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -10281,12 +10288,14 @@ Detailed RTL Component Info :
 +---Registers : 
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     11 Bit        Muxes := 4     
-	   6 Input     11 Bit        Muxes := 4     
+	   2 Input     10 Bit        Muxes := 1     
+	  14 Input     10 Bit        Muxes := 1     
+	   2 Input      9 Bit        Muxes := 3     
+	  14 Input      9 Bit        Muxes := 3     
 	   2 Input      3 Bit        Muxes := 1     
-	   6 Input      3 Bit        Muxes := 1     
+	  14 Input      3 Bit        Muxes := 1     
 	   2 Input      1 Bit        Muxes := 2     
-	   6 Input      1 Bit        Muxes := 1     
+	  14 Input      1 Bit        Muxes := 1     
 Module m_register 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -10351,7 +10360,7 @@ Detailed RTL Component Info :
 Module rasterizer 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     11 Bit       Adders := 6     
+	   2 Input     11 Bit       Adders := 2     
 +---XORs : 
 	   2 Input      1 Bit         XORs := 1     
 +---Muxes : 
@@ -10369,7 +10378,7 @@ BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
-Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1007 ; free virtual = 15391
+Start Parallel Synthesis Optimization  : Time (s): cpu = 00:01:25 ; elapsed = 00:01:29 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1496 ; free virtual = 15817
 ---------------------------------------------------------------------------------
 Start Cross Boundary Optimization
 ---------------------------------------------------------------------------------
@@ -10377,9 +10386,9 @@ DSP Report: Generating DSP r_addr, operation Mode is: C+(A:0x280)*B.
 DSP Report: operator r_addr is absorbed into DSP r_addr.
 DSP Report: operator r_addr0 is absorbed into DSP r_addr.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary Optimization : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1015 ; free virtual = 15400
+Finished Cross Boundary Optimization : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1505 ; free virtual = 15827
 ---------------------------------------------------------------------------------
-Finished Parallel Reinference  : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1015 ; free virtual = 15400
+Finished Parallel Reinference  : Time (s): cpu = 00:01:29 ; elapsed = 00:01:32 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1505 ; free virtual = 15827
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
@@ -10402,7 +10411,7 @@ Note: The table shows the DSPs inferred at the current stage of the synthesis fl
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rast/rasterControl/next_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rast/startYBank/Q_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rast/startYBank/Q_reg[10] )
 WARNING: [Synth 8-3332] Sequential element (\rast/rasterControl/done_reg ) is unused and will be removed from module fb_top.
 WARNING: [Synth 8-3332] Sequential element (\rast/rasterControl/current_reg[31] ) is unused and will be removed from module fb_top.
 WARNING: [Synth 8-3332] Sequential element (\rast/rasterControl/current_reg[30] ) is unused and will be removed from module fb_top.
@@ -10464,41 +10473,49 @@ WARNING: [Synth 8-3332] Sequential element (\rast/rasterControl/next_reg[5] ) is
 WARNING: [Synth 8-3332] Sequential element (\rast/rasterControl/next_reg[4] ) is unused and will be removed from module fb_top.
 WARNING: [Synth 8-3332] Sequential element (\rast/rasterControl/next_reg[3] ) is unused and will be removed from module fb_top.
 WARNING: [Synth 8-3332] Sequential element (\rast/rasterControl/next_reg[2] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[0] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/colorBank/Q_reg[3] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/endXBank/Q_reg[0] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[8] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[7] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[6] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[6] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[4] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[3] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[8] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[6] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[4] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[1] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endXBank/Q_reg[4] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endXBank/Q_reg[3] ) is unused and will be removed from module fb_top.
 WARNING: [Synth 8-3332] Sequential element (\rast/endXBank/Q_reg[1] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endXBank/Q_reg[0] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[9] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/colorBank/Q_reg[3] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endXBank/Q_reg[10] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[10] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[1] ) is unused and will be removed from module fb_top.
 WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[0] ) is unused and will be removed from module fb_top.
 WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[1] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[5] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[9] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[10] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[9] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[5] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[10] ) is unused and will be removed from module fb_top.
 ---------------------------------------------------------------------------------
 Start Area Optimization
 ---------------------------------------------------------------------------------
-WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[3] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[1] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/endXBank/Q_reg[4] ) is unused and will be removed from module fb_top.
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\rast/startXBank/Q_reg[9] )
-WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[6] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[2] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/endXBank/Q_reg[2] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[7] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[9] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[10] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[10] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[9] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[9] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/startXBank/Q_reg[10] ) is unused and will be removed from module fb_top.
-WARNING: [Synth 8-3332] Sequential element (\rast/endXBank/Q_reg[10] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/startYBank/Q_reg[2] ) is unused and will be removed from module fb_top.
+WARNING: [Synth 8-3332] Sequential element (\rast/endYBank/Q_reg[2] ) is unused and will be removed from module fb_top.
 ---------------------------------------------------------------------------------
-Finished Area Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1006 ; free virtual = 15391
+Finished Area Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1480 ; free virtual = 15802
 ---------------------------------------------------------------------------------
-Finished Parallel Area Optimization  : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1006 ; free virtual = 15391
+Finished Parallel Area Optimization  : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1480 ; free virtual = 15802
 
 Report RTL Partitions: 
 +-+--------------+------------+----------+
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
-Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 1006 ; free virtual = 15391
+Finished Parallel Synthesis Optimization  : Time (s): cpu = 00:01:31 ; elapsed = 00:01:35 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1480 ; free virtual = 15802
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
@@ -10506,10 +10523,10 @@ Start Timing Optimization
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:42 ; elapsed = 00:01:45 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 926 ; free virtual = 15311
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:41 ; elapsed = 00:01:45 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1395 ; free virtual = 15717
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:01:46 . Memory (MB): peak = 1516.410 ; gain = 607.160 ; free physical = 920 ; free virtual = 15305
+Finished Timing Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:01:46 . Memory (MB): peak = 1515.422 ; gain = 606.168 ; free physical = 1389 ; free virtual = 15711
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10530,18 +10547,9 @@ INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk
 INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[11] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
 INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[10] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
 INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[9] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
-INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[8] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
-INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[7] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
-INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[6] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
-INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[5] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
-INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[4] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
-INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[3] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
-INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[2] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
-INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[1] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
-INFO: [Synth 8-3332] Sequential element (\inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.sr_pri.rdaddrecc_mux_reg[0] ) is unused and will be removed from module blk_mem_gen_v8_2__2.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:44 ; elapsed = 00:01:47 . Memory (MB): peak = 1537.441 ; gain = 628.191 ; free physical = 892 ; free virtual = 15277
+Finished Technology Mapping : Time (s): cpu = 00:01:43 ; elapsed = 00:01:47 . Memory (MB): peak = 1536.445 ; gain = 627.191 ; free physical = 1365 ; free virtual = 15687
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10559,7 +10567,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1537.441 ; gain = 628.191 ; free physical = 892 ; free virtual = 15277
+Finished IO Insertion : Time (s): cpu = 00:01:44 ; elapsed = 00:01:47 . Memory (MB): peak = 1536.445 ; gain = 627.191 ; free physical = 1365 ; free virtual = 15687
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -10572,7 +10580,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1537.441 ; gain = 628.191 ; free physical = 892 ; free virtual = 15277
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:44 ; elapsed = 00:01:47 . Memory (MB): peak = 1536.445 ; gain = 627.191 ; free physical = 1365 ; free virtual = 15687
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -10584,13 +10592,13 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1537.441 ; gain = 628.191 ; free physical = 891 ; free virtual = 15276
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1536.445 ; gain = 627.191 ; free physical = 1364 ; free virtual = 15686
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start Renaming Generated Ports : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1537.441 ; gain = 628.191 ; free physical = 891 ; free virtual = 15276
+Start Renaming Generated Ports : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1536.445 ; gain = 627.191 ; free physical = 1364 ; free virtual = 15686
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1537.441 ; gain = 628.191 ; free physical = 891 ; free virtual = 15276
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1536.445 ; gain = 627.191 ; free physical = 1364 ; free virtual = 15686
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -10609,12 +10617,12 @@ Report Cell Usage:
 |1     |BUFG       |     1|
 |2     |CARRY4     |    48|
 |3     |DSP48E1    |     1|
-|4     |LUT1       |    10|
-|5     |LUT2       |    65|
-|6     |LUT3       |   139|
-|7     |LUT4       |   100|
-|8     |LUT5       |   114|
-|9     |LUT6       |   223|
+|4     |LUT1       |     9|
+|5     |LUT2       |    74|
+|6     |LUT3       |   135|
+|7     |LUT4       |    86|
+|8     |LUT5       |   141|
+|9     |LUT6       |   215|
 |10    |MUXF7      |     8|
 |11    |RAMB18E1   |     4|
 |12    |RAMB18E1_1 |     2|
@@ -10622,7 +10630,7 @@ Report Cell Usage:
 |14    |RAMB36E1_1 |    32|
 |15    |RAMB36E1_2 |     8|
 |16    |FDCE       |    74|
-|17    |FDRE       |    89|
+|17    |FDRE       |    82|
 |18    |LD         |     3|
 |19    |IBUF       |     2|
 |20    |OBUF       |    14|
@@ -10632,12 +10640,12 @@ Report Instance Areas:
 +------+----------------------------------------------+--------------------------------------------------+------+
 |      |Instance                                      |Module                                            |Cells |
 +------+----------------------------------------------+--------------------------------------------------+------+
-|1     |top                                           |                                                  |   969|
-|2     |  atb                                         |animation_tb                                      |   146|
+|1     |top                                           |                                                  |   971|
+|2     |  atb                                         |animation_tb                                      |   139|
 |3     |    countFrames                               |counter__parameterized1                           |    95|
-|4     |    countPixel                                |counter__parameterized0                           |    49|
-|5     |  fbc                                         |fb_controller                                     |   361|
-|6     |    bramA                                     |blockRam_wrapper__xdcDup__1                       |   180|
+|4     |    countPixel                                |counter__parameterized0                           |    42|
+|5     |  fbc                                         |fb_controller                                     |   360|
+|6     |    bramA                                     |blockRam_wrapper__xdcDup__1                       |   179|
 |7     |      blockRam_i                              |blockRam__xdcDup__1                               |   155|
 |8     |        blk_mem_gen_0                         |blockRam_blk_mem_gen_0_0__2                       |   155|
 |9     |          U0                                  |blk_mem_gen_v8_2__2                               |   155|
@@ -10745,35 +10753,35 @@ Report Instance Areas:
 |111   |                    \prim_init.ram            |blk_mem_gen_prim_wrapper_init__parameterized7     |     2|
 |112   |                  \ramloop[9].ram.r           |blk_mem_gen_prim_width__parameterized8            |     2|
 |113   |                    \prim_init.ram            |blk_mem_gen_prim_wrapper_init__parameterized8     |     2|
-|114   |  rast                                        |rasterizer                                        |   351|
+|114   |  rast                                        |rasterizer                                        |   356|
 |115   |    colorBank                                 |m_register                                        |     6|
-|116   |    endXBank                                  |m_register__parameterized1                        |    16|
-|117   |    endYBank                                  |m_register__parameterized3                        |    12|
-|118   |    majorCounter                              |m_counter                                         |    41|
-|119   |    minorCounter                              |m_counter_2                                       |    29|
-|120   |    rasterControl                             |rasterFSM                                         |    12|
-|121   |    rasterCore                                |bresenhamCore                                     |    54|
-|122   |      errAdder                                |m_adder_5                                         |    39|
+|116   |    endXBank                                  |m_register__parameterized1                        |    22|
+|117   |    endYBank                                  |m_register__parameterized3                        |    16|
+|118   |    majorCounter                              |m_counter                                         |    29|
+|119   |    minorCounter                              |m_counter_2                                       |    24|
+|120   |    rasterControl                             |rasterFSM                                         |    15|
+|121   |    rasterCore                                |bresenhamCore                                     |    55|
+|122   |      errAdder                                |m_adder_5                                         |    40|
 |123   |      errBank                                 |m_register__parameterized4                        |    11|
 |124   |      errSubtract                             |m_adder_6                                         |     4|
-|125   |    startXBank                                |m_register__parameterized0                        |    36|
-|126   |    startYBank                                |m_register__parameterized2                        |    37|
-|127   |    xSub                                      |absSubtractor                                     |    41|
-|128   |      subtraction                             |m_adder_4                                         |    41|
-|129   |    ySub                                      |absSubtractor_3                                   |    28|
-|130   |      subtraction                             |m_adder                                           |    28|
-|131   |  vfsm                                        |VGA_fsm                                           |    94|
+|125   |    startXBank                                |m_register__parameterized0                        |    17|
+|126   |    startYBank                                |m_register__parameterized2                        |    13|
+|127   |    xSub                                      |absSubtractor                                     |    68|
+|128   |      subtraction                             |m_adder_4                                         |    68|
+|129   |    ySub                                      |absSubtractor_3                                   |    44|
+|130   |      subtraction                             |m_adder                                           |    44|
+|131   |  vfsm                                        |VGA_fsm                                           |    99|
 |132   |    hCounter                                  |counter                                           |    43|
 |133   |    hReg                                      |register                                          |     1|
-|134   |    vCounter                                  |counter_0                                         |    45|
+|134   |    vCounter                                  |counter_0                                         |    50|
 |135   |    vReg                                      |register_1                                        |     1|
 +------+----------------------------------------------+--------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1537.441 ; gain = 628.191 ; free physical = 891 ; free virtual = 15276
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1536.445 ; gain = 627.191 ; free physical = 1364 ; free virtual = 15686
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 86 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:37 ; elapsed = 00:01:40 . Memory (MB): peak = 1537.441 ; gain = 298.648 ; free physical = 891 ; free virtual = 15276
-Synthesis Optimization Complete : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1537.441 ; gain = 628.191 ; free physical = 891 ; free virtual = 15276
+Synthesis finished with 0 errors, 0 critical warnings and 93 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:36 ; elapsed = 00:01:39 . Memory (MB): peak = 1536.445 ; gain = 298.648 ; free physical = 1364 ; free virtual = 15686
+Synthesis Optimization Complete : Time (s): cpu = 00:01:44 ; elapsed = 00:01:48 . Memory (MB): peak = 1536.445 ; gain = 627.191 ; free physical = 1364 ; free virtual = 15686
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 132 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -10784,8 +10792,8 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   LD => LDCE: 3 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-404 Infos, 212 Warnings, 0 Critical Warnings and 0 Errors encountered.
+395 Infos, 225 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:43 ; elapsed = 00:01:47 . Memory (MB): peak = 1569.457 ; gain = 551.688 ; free physical = 890 ; free virtual = 15275
-report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1601.477 ; gain = 0.000 ; free physical = 887 ; free virtual = 15273
-INFO: [Common 17-206] Exiting Vivado at Mon Sep 28 17:43:17 2015...
+synth_design: Time (s): cpu = 00:01:43 ; elapsed = 00:01:46 . Memory (MB): peak = 1568.461 ; gain = 550.688 ; free physical = 1363 ; free virtual = 15686
+report_utilization: Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1600.480 ; gain = 0.000 ; free physical = 1358 ; free virtual = 15682
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 29 15:24:31 2015...

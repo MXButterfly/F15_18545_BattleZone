@@ -3,8 +3,8 @@
 
 
 
-`define HALF_WIDTH 10'd320
-`define HALF_HEIGHT 9'd240
+`define HALF_WIDTH 0//10'd320
+`define HALF_HEIGHT 0//9'd240
 
 
 module rasterizer
@@ -55,7 +55,7 @@ module rasterizer
    switchMux #(11) recipSwitch(.U(numerator), .V(denominator), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
 
    m_counter #(11) majorCounter(.Q(majCnt), .D(11'd0), .clk(clk), .clr(rst|readyIn), .load(1'b0), .up(1'b1), .en(loopEn));
-   m_counter #(11) minorCounter(.Q(minCnt), .D(11'd0), .clk(clk), .clr(rst|readyIn), .load(1'b0), .up(cntNeg), .en(inc));
+   m_counter #(11) minorCounter(.Q(minCnt), .D(11'd0), .clk(clk), .clr(rst|readyIn), .load(1'b0), .up(~cntNeg), .en(inc));
 
 
    bresenhamCore rasterCore(.numerator(numerator), .denominator(denominator), .clk(clk), .rst(rst|readyIn), .en(loopEn), .inc(inc));
@@ -63,11 +63,11 @@ module rasterizer
    rasterFSM rasterControl(.readyIn(readyIn), .denominator(denominator), .majCnt(majCnt), .clk(clk), .rst(rst), .loopEn(loopEn), .done(done), .good(goodTime), .rastReady(rastReady));
 
 
-   m_mux2to1 #(11) leftXMux(.Y(leftX), .Sel(xZone ? xNeg : yNeg), .I0(adjEndX), .I1(adjStartX));
+   m_mux2to1 #(11) leftXMux(.Y(leftX), .Sel((bZone|xZone) ? xNeg : yNeg), .I0(adjEndX), .I1(adjStartX));
    m_mux2to1 #(11) topYMux(.Y(topY), .Sel(yZone ? yNeg : xNeg), .I0(adjEndY), .I1(adjStartY));
    
 
-   assign pixelX = leftX + (xZone ? majCnt : minCnt);
+   assign pixelX = leftX + ((bZone|xZone) ? majCnt : minCnt);
    assign pixelY = topY + (yZone ? majCnt : minCnt);
    
    coordinateIndexer addresser(.x(pixelX[9:0]), .y(pixelY[8:0]), .index(addressOut));

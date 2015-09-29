@@ -1,0 +1,597 @@
+#-----------------------------------------------------------
+# Vivado v2015.2 (64-bit)
+# SW Build 1266856 on Fri Jun 26 16:35:25 MDT 2015
+# IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
+# Start of session at: Tue Sep 29 13:29:17 2015
+# Process ID: 10035
+# Log file: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/vivado.log
+# Journal file: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/afs/ece.cmu.edu/support/xilinx/xilinx.release/Vivado-2015.2/Vivado/2015.2/data/ip'.
+open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 5926.941 ; gain = 81.773 ; free physical = 943 ; free virtual = 16577
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream
+[Tue Sep 29 13:30:53 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.2
+  **** Build date : Jun 26 2015-16:42:45
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210274552729A
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+close_hw
+reset_run synth_1
+launch_runs impl_1
+[Tue Sep 29 13:43:37 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+[Tue Sep 29 13:43:37 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Tue Sep 29 13:48:08 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.2
+  **** Build date : Jun 26 2015-16:42:45
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210274552729A
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1
+[Tue Sep 29 13:50:49 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+[Tue Sep 29 13:50:49 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Tue Sep 29 13:54:47 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1
+[Tue Sep 29 13:59:19 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+[Tue Sep 29 13:59:19 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+close_hw
+launch_runs impl_1 -to_step write_bitstream
+[Tue Sep 29 14:03:02 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2015.2
+  **** Build date : Jun 26 2015-16:42:45
+    ** Copyright 1986-1999, 2001-2015 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target [lindex [get_hw_targets -of_objects [get_hw_servers localhost]] 0]
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210274552729A
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+current_hw_device [lindex [get_hw_devices] 0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1
+[Tue Sep 29 14:18:30 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+[Tue Sep 29 14:18:30 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+[Tue Sep 29 14:25:14 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+[Tue Sep 29 14:25:14 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Tue Sep 29 14:29:04 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs impl_1
+[Tue Sep 29 14:46:04 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+[Tue Sep 29 14:46:04 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Tue Sep 29 14:49:53 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+set_property PROBES.FILE {} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3123] The debug hub core was not detected at User Scan Chain 1 or 3.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active OR
+2. Manually launch hw_server with -e "set xsdb-user-bscan <C_USER_SCAN_CHAIN scan_chain_number>" to detect the debug hub at User Scan Chain of 2 or 4. To determine the user scan chain setting, open the implemented design and use: get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub].
+reset_run synth_1
+launch_runs synth_1
+[Tue Sep 29 14:53:49 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7a100tcsg324-1
+INFO: [Netlist 29-17] Analyzing 128 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc]
+Finished Parsing XDC File [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 6420.895 ; gain = 387.930 ; free physical = 1200 ; free virtual = 16203
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*row*" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*end*" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*addr*" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*good*" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*pixel*" } ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0 ]
+set_property C_ADV_TRIGGER true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_0 ]
+endgroup
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 4 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[0]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[1]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[2]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 19 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {fbc/bramA/blockRam_i/addr_a_1[0]} {fbc/bramA/blockRam_i/addr_a_1[1]} {fbc/bramA/blockRam_i/addr_a_1[2]} {fbc/bramA/blockRam_i/addr_a_1[3]} {fbc/bramA/blockRam_i/addr_a_1[4]} {fbc/bramA/blockRam_i/addr_a_1[5]} {fbc/bramA/blockRam_i/addr_a_1[6]} {fbc/bramA/blockRam_i/addr_a_1[7]} {fbc/bramA/blockRam_i/addr_a_1[8]} {fbc/bramA/blockRam_i/addr_a_1[9]} {fbc/bramA/blockRam_i/addr_a_1[10]} {fbc/bramA/blockRam_i/addr_a_1[11]} {fbc/bramA/blockRam_i/addr_a_1[12]} {fbc/bramA/blockRam_i/addr_a_1[13]} {fbc/bramA/blockRam_i/addr_a_1[14]} {fbc/bramA/blockRam_i/addr_a_1[15]} {fbc/bramA/blockRam_i/addr_a_1[16]} {fbc/bramA/blockRam_i/addr_a_1[17]} {fbc/bramA/blockRam_i/addr_a_1[18]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[0]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[1]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[2]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[3]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 19 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {fbc/bramB/blockRam_i/addr_a_1[0]} {fbc/bramB/blockRam_i/addr_a_1[1]} {fbc/bramB/blockRam_i/addr_a_1[2]} {fbc/bramB/blockRam_i/addr_a_1[3]} {fbc/bramB/blockRam_i/addr_a_1[4]} {fbc/bramB/blockRam_i/addr_a_1[5]} {fbc/bramB/blockRam_i/addr_a_1[6]} {fbc/bramB/blockRam_i/addr_a_1[7]} {fbc/bramB/blockRam_i/addr_a_1[8]} {fbc/bramB/blockRam_i/addr_a_1[9]} {fbc/bramB/blockRam_i/addr_a_1[10]} {fbc/bramB/blockRam_i/addr_a_1[11]} {fbc/bramB/blockRam_i/addr_a_1[12]} {fbc/bramB/blockRam_i/addr_a_1[13]} {fbc/bramB/blockRam_i/addr_a_1[14]} {fbc/bramB/blockRam_i/addr_a_1[15]} {fbc/bramB/blockRam_i/addr_a_1[16]} {fbc/bramB/blockRam_i/addr_a_1[17]} {fbc/bramB/blockRam_i/addr_a_1[18]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {endY[3]} {endY[5]} {endY[6]} {endY[7]} {endY[8]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {endX[4]} {endX[5]} {endX[6]} {endX[7]} {endX[8]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 9 [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {col[0]} {col[1]} {col[2]} {col[3]} {col[4]} {col[6]} {col[7]} {col[8]} {col[9]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {startY[0]} {startY[3]} {startY[4]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {row[2]} {row[3]} {row[4]} {row[5]} {row[6]} {row[7]} {row[8]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {startX[0]} {startX[2]} {startX[3]} {startX[5]} {startX[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 13 [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {w_addr[6]} {w_addr[7]} {w_addr[8]} {w_addr[9]} {w_addr[10]} {w_addr[11]} {w_addr[12]} {w_addr[13]} {w_addr[14]} {w_addr[15]} {w_addr[16]} {w_addr[17]} {w_addr[18]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list fbc/bramB/blockRam_i/en_1 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list fbc/bramA/blockRam_i/en_1 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list fbc/bramB/blockRam_i/write_en_1 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list fbc/bramA/blockRam_i/write_en_1 ]]
+save_constraints
+launch_runs impl_1
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.37 ; elapsed = 00:00:00.10 . Memory (MB): peak = 6756.277 ; gain = 0.000 ; free physical = 809 ; free virtual = 15820
+[Tue Sep 29 15:02:23 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Tue Sep 29 15:09:43 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+file copy -force /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.sysdef /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.sdk/fb_top.hdf
+
+set_property PROBES.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1]
+WARNING: Simulation object fbc/vgaRed_OBUF was not found in the design.
+WARNING: Simulation object fbc/vgaGreen_OBUF was not found in the design.
+WARNING: Simulation object fbc/color_in was not found in the design.
+WARNING: Simulation object fbc/vgaBlue_OBUF was not found in the design.
+WARNING: Simulation object fbc/addr_b was not found in the design.
+WARNING: Simulation object nextState was not found in the design.
+WARNING: Simulation object state was not found in the design.
+WARNING: Simulation object fbc/done was not found in the design.
+WARNING: Simulation object fbc/en_a was not found in the design.
+WARNING: Simulation object fbc/en_b was not found in the design.
+set_property CONTROL.TRIGGER_MODE BASIC_ONLY [get_hw_ilas hw_ila_1]
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2015-Sep-29 15:11:32
+wait_on_hw_ila hw_ila_1
+display_hw_ila_data [upload_hw_ila_data hw_ila_1]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2015-Sep-29 15:11:32
+set_property CONTROL.TRIGGER_MODE ADVANCED_ONLY [get_hw_ilas hw_ila_1]
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-2015] Compiling ILA trigger state machine from file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+ERROR: [Labtools 27-2054] Lexer error: '3' is not a recognized token [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2054] Lexer error: '0' is not a recognized token [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2054] Lexer error: '6' is not a recognized token [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2054] Lexer error: '5' is not a recognized token [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2054] Lexer error: '6' is not a recognized token [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2054] Lexer error: '0' is not a recognized token [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2053] Error encountered during parse: syntax error, unexpected ')', expecting BINARY_CONSTANT or HEX_CONSTANT or INTEGER_CONSTANT [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2086] Failed to compile ILA trigger state machine file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+Compilation failed with 7 error(s), 0 warning(s)
+Consult the messages panel or tcl console to inspect the compilation errors.
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-2015] Compiling ILA trigger state machine from file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+ERROR: [Labtools 27-2054] Lexer error: ''' is not a recognized token [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2053] Error encountered during parse: syntax error, unexpected IDENTIFIER 'd306560', expecting BINARY_CONSTANT or HEX_CONSTANT or INTEGER_CONSTANT [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2086] Failed to compile ILA trigger state machine file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+Compilation failed with 2 error(s), 0 warning(s)
+Consult the messages panel or tcl console to inspect the compilation errors.
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-2015] Compiling ILA trigger state machine from file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+ERROR: [Labtools 27-2073] Invalid constant bit width: The hw_probe compare_value [eq'u306560] overflows the available bit count. The hw_probe supports values up to 13 bits.
+ [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2086] Failed to compile ILA trigger state machine file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+Compilation failed with 1 error(s), 0 warning(s)
+Consult the messages panel or tcl console to inspect the compilation errors.
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-2015] Compiling ILA trigger state machine from file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+INFO: [Labtools 27-2075] Trigger state machine - 1 of 16 states used
+    State #0  : my_state0
+INFO: [Labtools 27-2039] /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm compilation complete: 0 errors, 0 warnings
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2015-Sep-29 15:17:03
+wait_on_hw_ila -timeout 0 hw_ila_1
+upload_hw_ila_data hw_ila_1
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2015-Sep-29 15:17:54
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+reset_run synth_1
+launch_runs impl_1
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Sep 29 15:21:34 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+[Tue Sep 29 15:21:34 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Sep 29 15:21:58 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+[Tue Sep 29 15:21:58 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Tue Sep 29 15:22:37 2015] Launched synth_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/synth_1/runme.log
+[Tue Sep 29 15:22:37 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*color*" } ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*color*" } ]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0_0 ila
+set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_0_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0_0 ]
+set_property C_ADV_TRIGGER true [get_debug_cores u_ila_0_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_0_0 ]
+endgroup
+set_property port_width 1 [get_debug_ports u_ila_0_0/clk]
+connect_debug_port u_ila_0_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 4 [get_debug_ports u_ila_0_0/probe0]
+connect_debug_port u_ila_0_0/probe0 [get_nets [list {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[0]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[1]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[2]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[3]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 19 [get_debug_ports u_ila_0_0/probe1]
+connect_debug_port u_ila_0_0/probe1 [get_nets [list {fbc/bramA/blockRam_i/addr_a_1[0]} {fbc/bramA/blockRam_i/addr_a_1[1]} {fbc/bramA/blockRam_i/addr_a_1[2]} {fbc/bramA/blockRam_i/addr_a_1[3]} {fbc/bramA/blockRam_i/addr_a_1[4]} {fbc/bramA/blockRam_i/addr_a_1[5]} {fbc/bramA/blockRam_i/addr_a_1[6]} {fbc/bramA/blockRam_i/addr_a_1[7]} {fbc/bramA/blockRam_i/addr_a_1[8]} {fbc/bramA/blockRam_i/addr_a_1[9]} {fbc/bramA/blockRam_i/addr_a_1[10]} {fbc/bramA/blockRam_i/addr_a_1[11]} {fbc/bramA/blockRam_i/addr_a_1[12]} {fbc/bramA/blockRam_i/addr_a_1[13]} {fbc/bramA/blockRam_i/addr_a_1[14]} {fbc/bramA/blockRam_i/addr_a_1[15]} {fbc/bramA/blockRam_i/addr_a_1[16]} {fbc/bramA/blockRam_i/addr_a_1[17]} {fbc/bramA/blockRam_i/addr_a_1[18]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0_0/probe2]
+connect_debug_port u_ila_0_0/probe2 [get_nets [list {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[0]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[1]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[2]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[3]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 19 [get_debug_ports u_ila_0_0/probe3]
+connect_debug_port u_ila_0_0/probe3 [get_nets [list {fbc/bramB/blockRam_i/addr_a_1[0]} {fbc/bramB/blockRam_i/addr_a_1[1]} {fbc/bramB/blockRam_i/addr_a_1[2]} {fbc/bramB/blockRam_i/addr_a_1[3]} {fbc/bramB/blockRam_i/addr_a_1[4]} {fbc/bramB/blockRam_i/addr_a_1[5]} {fbc/bramB/blockRam_i/addr_a_1[6]} {fbc/bramB/blockRam_i/addr_a_1[7]} {fbc/bramB/blockRam_i/addr_a_1[8]} {fbc/bramB/blockRam_i/addr_a_1[9]} {fbc/bramB/blockRam_i/addr_a_1[10]} {fbc/bramB/blockRam_i/addr_a_1[11]} {fbc/bramB/blockRam_i/addr_a_1[12]} {fbc/bramB/blockRam_i/addr_a_1[13]} {fbc/bramB/blockRam_i/addr_a_1[14]} {fbc/bramB/blockRam_i/addr_a_1[15]} {fbc/bramB/blockRam_i/addr_a_1[16]} {fbc/bramB/blockRam_i/addr_a_1[17]} {fbc/bramB/blockRam_i/addr_a_1[18]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0_0/probe4]
+connect_debug_port u_ila_0_0/probe4 [get_nets [list {endY[3]} {endY[5]} {endY[6]} {endY[7]} {endY[8]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0_0/probe5]
+connect_debug_port u_ila_0_0/probe5 [get_nets [list {endX[4]} {endX[5]} {endX[6]} {endX[7]} {endX[8]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 9 [get_debug_ports u_ila_0_0/probe6]
+connect_debug_port u_ila_0_0/probe6 [get_nets [list {col[0]} {col[1]} {col[2]} {col[3]} {col[4]} {col[6]} {col[7]} {col[8]} {col[9]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0_0/probe7]
+connect_debug_port u_ila_0_0/probe7 [get_nets [list {color_in[0]} {color_in[1]} {color_in[2]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0_0/probe8]
+connect_debug_port u_ila_0_0/probe8 [get_nets [list {color_in_a[0]} {color_in_a[1]} {color_in_a[2]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0_0/probe9]
+connect_debug_port u_ila_0_0/probe9 [get_nets [list {startY[0]} {startY[3]} {startY[4]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0_0/probe10]
+connect_debug_port u_ila_0_0/probe10 [get_nets [list {row[2]} {row[3]} {row[4]} {row[5]} {row[6]} {row[7]} {row[8]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0_0/probe11]
+connect_debug_port u_ila_0_0/probe11 [get_nets [list {startX[0]} {startX[2]} {startX[3]} {startX[5]} {startX[7]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 13 [get_debug_ports u_ila_0_0/probe12]
+connect_debug_port u_ila_0_0/probe12 [get_nets [list {w_addr[6]} {w_addr[7]} {w_addr[8]} {w_addr[9]} {w_addr[10]} {w_addr[11]} {w_addr[12]} {w_addr[13]} {w_addr[14]} {w_addr[15]} {w_addr[16]} {w_addr[17]} {w_addr[18]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe13]
+connect_debug_port u_ila_0_0/probe13 [get_nets [list fbc/bramB/blockRam_i/en_1 ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe14]
+connect_debug_port u_ila_0_0/probe14 [get_nets [list fbc/bramA/blockRam_i/en_1 ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe15]
+connect_debug_port u_ila_0_0/probe15 [get_nets [list fbc/bramA/blockRam_i/write_en_1 ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe16]
+connect_debug_port u_ila_0_0/probe16 [get_nets [list fbc/bramB/blockRam_i/write_en_1 ]]
+refresh_design
+INFO: [Netlist 29-17] Analyzing 129 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2015.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc]
+WARNING: [Vivado 12-507] No nets matched 'endY[3]'. [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc:747]
+WARNING: [Vivado 12-507] No nets matched 'endY[5]'. [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc:747]
+WARNING: [Vivado 12-507] No nets matched 'endY[6]'. [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc:747]
+WARNING: [Vivado 12-507] No nets matched 'endX[4]'. [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc:750]
+Finished Parsing XDC File [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/Nexys4_Master.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:05 . Memory (MB): peak = 6781.312 ; gain = 24.016 ; free physical = 1970 ; free virtual = 16293
+reset_run impl_1
+launch_runs impl_1
+ERROR: [Chipscope 16-213] The debug port 'u_ila_0/probe4' has 3 unconnected channels (bits). This will cause errors during implementation.
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group -filter { NAME =~  "*color*" } ]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0_0 ila
+set_property C_DATA_DEPTH 8192 [get_debug_cores u_ila_0_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0_0]
+startgroup 
+set_property C_EN_STRG_QUAL true [get_debug_cores u_ila_0_0 ]
+set_property C_ADV_TRIGGER true [get_debug_cores u_ila_0_0 ]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0_0 ]
+set_property ALL_PROBE_SAME_MU_CNT 4 [get_debug_cores u_ila_0_0 ]
+endgroup
+set_property port_width 1 [get_debug_ports u_ila_0_0/clk]
+connect_debug_port u_ila_0_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 13 [get_debug_ports u_ila_0_0/probe0]
+connect_debug_port u_ila_0_0/probe0 [get_nets [list {w_addr[6]} {w_addr[7]} {w_addr[8]} {w_addr[9]} {w_addr[10]} {w_addr[11]} {w_addr[12]} {w_addr[13]} {w_addr[14]} {w_addr[15]} {w_addr[16]} {w_addr[17]} {w_addr[18]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0_0/probe1]
+connect_debug_port u_ila_0_0/probe1 [get_nets [list {row[2]} {row[3]} {row[4]} {row[5]} {row[6]} {row[7]} {row[8]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0_0/probe2]
+connect_debug_port u_ila_0_0/probe2 [get_nets [list {startY[0]} {startY[3]} {startY[4]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0_0/probe3]
+connect_debug_port u_ila_0_0/probe3 [get_nets [list {color_in_a[0]} {color_in_a[1]} {color_in_a[2]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0_0/probe4]
+connect_debug_port u_ila_0_0/probe4 [get_nets [list {startX[0]} {startX[2]} {startX[3]} {startX[5]} {startX[7]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 3 [get_debug_ports u_ila_0_0/probe5]
+connect_debug_port u_ila_0_0/probe5 [get_nets [list {color_in[0]} {color_in[1]} {color_in[2]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 9 [get_debug_ports u_ila_0_0/probe6]
+connect_debug_port u_ila_0_0/probe6 [get_nets [list {col[0]} {col[1]} {col[2]} {col[3]} {col[4]} {col[6]} {col[7]} {col[8]} {col[9]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 2 [get_debug_ports u_ila_0_0/probe7]
+connect_debug_port u_ila_0_0/probe7 [get_nets [list {endY[7]} {endY[8]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0_0/probe8]
+connect_debug_port u_ila_0_0/probe8 [get_nets [list {endX[5]} {endX[6]} {endX[7]} {endX[8]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 19 [get_debug_ports u_ila_0_0/probe9]
+connect_debug_port u_ila_0_0/probe9 [get_nets [list {fbc/bramA/blockRam_i/addr_a_1[0]} {fbc/bramA/blockRam_i/addr_a_1[1]} {fbc/bramA/blockRam_i/addr_a_1[2]} {fbc/bramA/blockRam_i/addr_a_1[3]} {fbc/bramA/blockRam_i/addr_a_1[4]} {fbc/bramA/blockRam_i/addr_a_1[5]} {fbc/bramA/blockRam_i/addr_a_1[6]} {fbc/bramA/blockRam_i/addr_a_1[7]} {fbc/bramA/blockRam_i/addr_a_1[8]} {fbc/bramA/blockRam_i/addr_a_1[9]} {fbc/bramA/blockRam_i/addr_a_1[10]} {fbc/bramA/blockRam_i/addr_a_1[11]} {fbc/bramA/blockRam_i/addr_a_1[12]} {fbc/bramA/blockRam_i/addr_a_1[13]} {fbc/bramA/blockRam_i/addr_a_1[14]} {fbc/bramA/blockRam_i/addr_a_1[15]} {fbc/bramA/blockRam_i/addr_a_1[16]} {fbc/bramA/blockRam_i/addr_a_1[17]} {fbc/bramA/blockRam_i/addr_a_1[18]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0_0/probe10]
+connect_debug_port u_ila_0_0/probe10 [get_nets [list {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[0]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[1]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[2]} {fbc/bramA/blockRam_i/blk_mem_gen_0_douta[3]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 4 [get_debug_ports u_ila_0_0/probe11]
+connect_debug_port u_ila_0_0/probe11 [get_nets [list {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[0]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[1]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[2]} {fbc/bramB/blockRam_i/blk_mem_gen_0_douta[3]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 19 [get_debug_ports u_ila_0_0/probe12]
+connect_debug_port u_ila_0_0/probe12 [get_nets [list {fbc/bramB/blockRam_i/addr_a_1[0]} {fbc/bramB/blockRam_i/addr_a_1[1]} {fbc/bramB/blockRam_i/addr_a_1[2]} {fbc/bramB/blockRam_i/addr_a_1[3]} {fbc/bramB/blockRam_i/addr_a_1[4]} {fbc/bramB/blockRam_i/addr_a_1[5]} {fbc/bramB/blockRam_i/addr_a_1[6]} {fbc/bramB/blockRam_i/addr_a_1[7]} {fbc/bramB/blockRam_i/addr_a_1[8]} {fbc/bramB/blockRam_i/addr_a_1[9]} {fbc/bramB/blockRam_i/addr_a_1[10]} {fbc/bramB/blockRam_i/addr_a_1[11]} {fbc/bramB/blockRam_i/addr_a_1[12]} {fbc/bramB/blockRam_i/addr_a_1[13]} {fbc/bramB/blockRam_i/addr_a_1[14]} {fbc/bramB/blockRam_i/addr_a_1[15]} {fbc/bramB/blockRam_i/addr_a_1[16]} {fbc/bramB/blockRam_i/addr_a_1[17]} {fbc/bramB/blockRam_i/addr_a_1[18]} ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe13]
+connect_debug_port u_ila_0_0/probe13 [get_nets [list fbc/bramB/blockRam_i/en_1 ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe14]
+connect_debug_port u_ila_0_0/probe14 [get_nets [list fbc/bramA/blockRam_i/en_1 ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe15]
+connect_debug_port u_ila_0_0/probe15 [get_nets [list fbc/bramA/blockRam_i/write_en_1 ]]
+create_debug_port u_ila_0_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0_0/probe16]
+connect_debug_port u_ila_0_0/probe16 [get_nets [list fbc/bramB/blockRam_i/write_en_1 ]]
+save_constraints
+launch_runs impl_1
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.10 . Memory (MB): peak = 6786.305 ; gain = 0.000 ; free physical = 1959 ; free virtual = 16286
+[Tue Sep 29 15:27:24 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream
+[Tue Sep 29 15:34:26 2015] Launched impl_1...
+Run output will be captured here: /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/runme.log
+file copy -force /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.sysdef /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.sdk/fb_top.hdf
+
+set_property PROBES.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/debug_nets.ltx} [lindex [get_hw_devices] 0]
+set_property PROGRAM.FILE {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/impl_1/fb_top.bit} [lindex [get_hw_devices] 0]
+program_hw_devices [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices] 0]
+INFO: [Labtools 27-2302] Device xc7a100t (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-2015] Compiling ILA trigger state machine from file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+ERROR: [Labtools 27-2073] Invalid constant bit width: The hw_probe compare_value [eq'u639] overflows the available bit count. The hw_probe supports values up to 7 bits.
+ [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2086] Failed to compile ILA trigger state machine file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+Compilation failed with 1 error(s), 0 warning(s)
+Consult the messages panel or tcl console to inspect the compilation errors.
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-2015] Compiling ILA trigger state machine from file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+ERROR: [Labtools 27-2073] Invalid constant bit width: The hw_probe compare_value [eq'u638] overflows the available bit count. The hw_probe supports values up to 7 bits.
+ [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2086] Failed to compile ILA trigger state machine file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+Compilation failed with 1 error(s), 0 warning(s)
+Consult the messages panel or tcl console to inspect the compilation errors.
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-2015] Compiling ILA trigger state machine from file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+ERROR: [Labtools 27-2073] Invalid constant bit width: The hw_probe compare_value has wrong bit count [eq6'u0] specified. Correct bit count for the hw_probe is 7.
+ [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2086] Failed to compile ILA trigger state machine file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+Compilation failed with 1 error(s), 0 warning(s)
+Consult the messages panel or tcl console to inspect the compilation errors.
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-2015] Compiling ILA trigger state machine from file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+ERROR: [Labtools 27-2073] Invalid constant bit width: The hw_probe compare_value [eq7'b0] has [1] value characters. The required number of value characters for radix [B], is [7].
+ [/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm:19]
+ERROR: [Labtools 27-2086] Failed to compile ILA trigger state machine file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+Compilation failed with 1 error(s), 0 warning(s)
+Consult the messages panel or tcl console to inspect the compilation errors.
+run_hw_ila hw_ila_1
+INFO: [Labtools 27-2015] Compiling ILA trigger state machine from file '/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm'
+INFO: [Labtools 27-2075] Trigger state machine - 1 of 16 states used
+    State #0  : my_state0
+INFO: [Labtools 27-2039] /afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.runs/debug/trigger_fsm1.tsm compilation complete: 0 errors, 0 warnings
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2015-Sep-29 15:42:00
+wait_on_hw_ila hw_ila_1
+display_hw_ila_data [upload_hw_ila_data hw_ila_1]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2015-Sep-29 15:42:00
+add_wave -into {hw_ila_data_1.wcfg} -radix hex [get_hw_probes {row}]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex [get_hw_probes {col}]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex [get_hw_probes {color_in}]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex [get_hw_probes {color_in_a}]
+save_wave_config {/afs/ece.cmu.edu/usr/ppearson/Private/class/18545/F15_18545_BattleZone/code/poc/avg/frame_buffer/frame_buffer.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue Sep 29 15:43:44 2015...

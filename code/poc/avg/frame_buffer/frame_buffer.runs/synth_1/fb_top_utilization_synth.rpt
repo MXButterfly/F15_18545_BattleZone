@@ -1,13 +1,13 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Mon Sep 28 17:43:17 2015
-| Host         : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
+| Date         : Tue Sep 29 15:24:31 2015
+| Host         : columbus.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
 | Command      : report_utilization -file fb_top_utilization_synth.rpt -pb fb_top_utilization_synth.pb
 | Design       : fb_top
 | Device       : xc7a100t
 | Design State : Synthesized
------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  588 |     0 |     63400 |  0.93 |
-|   LUT as Logic          |  588 |     0 |     63400 |  0.93 |
+| Slice LUTs*             |  594 |     0 |     63400 |  0.94 |
+|   LUT as Logic          |  594 |     0 |     63400 |  0.94 |
 |   LUT as Memory         |    0 |     0 |     19000 |  0.00 |
-| Slice Registers         |  166 |     0 |    126800 |  0.13 |
-|   Register as Flip Flop |  163 |     0 |    126800 |  0.13 |
+| Slice Registers         |  159 |     0 |    126800 |  0.13 |
+|   Register as Flip Flop |  156 |     0 |    126800 |  0.12 |
 |   Register as Latch     |    3 |     0 |    126800 | <0.01 |
 | F7 Muxes                |    8 |     0 |     31700 |  0.03 |
 | F8 Muxes                |    0 |     0 |     15850 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 77    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 89    |          Yes |       Reset |            - |
+| 82    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -150,17 +150,17 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  223 |                 LUT |
-| LUT3     |  139 |                 LUT |
-| LUT5     |  114 |                 LUT |
-| LUT4     |  100 |                 LUT |
-| FDRE     |   89 |        Flop & Latch |
+| LUT6     |  215 |                 LUT |
+| LUT5     |  141 |                 LUT |
+| LUT3     |  135 |                 LUT |
+| LUT4     |   86 |                 LUT |
+| FDRE     |   82 |        Flop & Latch |
+| LUT2     |   74 |                 LUT |
 | FDCE     |   74 |        Flop & Latch |
 | RAMB36E1 |   72 |        Block Memory |
-| LUT2     |   65 |                 LUT |
 | CARRY4   |   48 |          CarryLogic |
 | OBUF     |   14 |                  IO |
-| LUT1     |   10 |                 LUT |
+| LUT1     |    9 |                 LUT |
 | MUXF7    |    8 |               MuxFx |
 | RAMB18E1 |    6 |        Block Memory |
 | LDCE     |    3 |        Flop & Latch |

@@ -16,22 +16,8 @@
 ####################fbc/nextState##############################
       
 state my_state0:
-    if (Vsync_OBUF == 1'b0) then
-      goto my_state1;
+    if (row == 7'b0000000) then
+      trigger;
     else
       goto my_state0;
     endif
-
-state my_state1:
-    if(fbc/bramA/blockRam_i/en_1 == 1'b0) then
-        goto my_state2;
-    else
-        goto my_state1;
-    endif
-    
-state my_state2:
-        if(fbc/bramA/blockRam_i/en_1 == 1'b1) then
-            trigger;
-        else
-            goto my_state2;
-        endif
