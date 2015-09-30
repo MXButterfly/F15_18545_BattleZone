@@ -262,3 +262,5 @@ gui_sim_continue
 gui_wv_scroll_hslidermove -id  Wave.1 0
 gui_marker_move -id  Wave.1 C1 50
 gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_wv_zoom_timerange -id  Wave.1 0 3040
+gui_wv_zoom_timerange -id  Wave.1 0 3040
