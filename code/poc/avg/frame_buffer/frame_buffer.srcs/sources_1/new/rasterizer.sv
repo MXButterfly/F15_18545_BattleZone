@@ -31,15 +31,18 @@ module rasterizer
    logic [10:0]        leftX, topY;
 
    logic 	       goodTime, goodX, goodY;
+
+   logic 	       idleReady;
+   
    
 
-   m_register #(4) colorBank(pixelColor, lineColor, rst, readyIn, clk);
+   m_register #(4) colorBank(pixelColor, lineColor, rst, idleReady, clk);
    
    
-   m_register #(11) startXBank(adjStartX, startX + `HALF_WIDTH, rst, readyIn, clk);
-   m_register #(11) endXBank(adjEndX, endX + `HALF_WIDTH, rst, readyIn, clk);
-   m_register #(11) startYBank(adjStartY, startY + `HALF_HEIGHT, rst, readyIn, clk);
-   m_register #(11) endYBank(adjEndY, endY + `HALF_HEIGHT, rst, readyIn, clk);
+   m_register #(11) startXBank(adjStartX, startX + `HALF_WIDTH, rst, idleReady, clk);
+   m_register #(11) endXBank(adjEndX, endX + `HALF_WIDTH, rst, idleReady, clk);
+   m_register #(11) startYBank(adjStartY, startY + `HALF_HEIGHT, rst, idleReady, clk);
+   m_register #(11) endYBank(adjEndY, endY + `HALF_HEIGHT, rst, idleReady, clk);
    
 
    absSubtractor #(11) xSub(.A(adjEndX), .B(adjStartX), .absDiff(absDeltaX));
@@ -54,13 +57,13 @@ module rasterizer
    
    switchMux #(11) recipSwitch(.U(numerator), .V(denominator), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
 
-   m_counter #(11) majorCounter(.Q(majCnt), .D(11'd0), .clk(clk), .clr(rst|readyIn), .load(1'b0), .up(1'b1), .en(loopEn));
-   m_counter #(11) minorCounter(.Q(minCnt), .D(11'd0), .clk(clk), .clr(rst|readyIn), .load(1'b0), .up(~cntNeg), .en(inc));
+   m_counter #(11) majorCounter(.Q(majCnt), .D(11'd0), .clk(clk), .clr(rst|idleReady), .load(1'b0), .up(1'b1), .en(loopEn));
+   m_counter #(11) minorCounter(.Q(minCnt), .D(11'd0), .clk(clk), .clr(rst|idleReady), .load(1'b0), .up(~cntNeg), .en(inc));
 
 
-   bresenhamCore rasterCore(.numerator(numerator), .denominator(denominator), .clk(clk), .rst(rst|readyIn), .en(loopEn), .inc(inc));
+   bresenhamCore rasterCore(.numerator(numerator), .denominator(denominator), .clk(clk), .rst(rst|idleReady), .en(loopEn), .inc(inc));
 
-   rasterFSM rasterControl(.readyIn(readyIn), .denominator(denominator), .majCnt(majCnt), .clk(clk), .rst(rst), .loopEn(loopEn), .done(done), .good(goodTime), .rastReady(rastReady));
+   rasterFSM rasterControl(.readyIn(readyIn), .denominator(denominator), .majCnt(majCnt), .clk(clk), .rst(rst), .loopEn(loopEn), .done(done), .good(goodTime), .rastReady(rastReady), .idleReady(idleReady));
 
 
    m_mux2to1 #(11) leftXMux(.Y(leftX), .Sel((bZone|xZone) ? xNeg : yNeg), .I0(adjEndX), .I1(adjStartX));
@@ -99,7 +102,7 @@ module rasterFSM
   (input logic readyIn,
    input logic [10:0] denominator, majCnt,
    input logic 	      clk, rst,
-   output logic       loopEn, good, done, rastReady
+   output logic       loopEn, good, done, rastReady, idleReady
    );
 
    typedef enum       {IDLE, ITER, DONE} state;
@@ -124,12 +127,20 @@ module rasterFSM
 	  IDLE:
 	    begin
 	       if(readyIn)
-		 next = ITER;
-  	       else 
-		 next = IDLE;
+		 begin
+		    next = ITER;
+		    idleReady = 1'b1;
+		 end
+	       else
+		 begin
+		    next = IDLE;
+		    idleReady = 1'b0;
+		 end
 	       done = 1'b0;
 	       loopEn = 1'b0;
 	       good = 1'b0;
+
+	       
 	       
 	    end
 	  ITER:
@@ -144,6 +155,7 @@ module rasterFSM
 		  next = ITER;
 		  loopEn = 1'b1;
 		  good = 1'b1;
+		  idleReady = 1'b0;
 		  
 	       end
 	       
@@ -158,6 +170,8 @@ module rasterFSM
 	       done = 1'b1;
 	       loopEn = 1'b0;
 	       good = 1'b0;
+	       idleReady = 1'b0;
+	       
 	       
 	    end
 	endcase // case (current)
