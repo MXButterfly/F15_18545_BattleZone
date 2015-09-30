@@ -1,0 +1,25 @@
+{
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "test": {
+            "Compiled": "Yes",
+            "Compiled Times": 4
+        }
+    },
+    "ObjArchives": [],
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 7328,
+            "mode": 4
+        },
+        "x9Hvb_d": {
+            "mod": "test",
+            "out": "objs/x9Hvb_d.o",
+            "bytes": 160165,
+            "mode": 4
+        }
+    }
+}

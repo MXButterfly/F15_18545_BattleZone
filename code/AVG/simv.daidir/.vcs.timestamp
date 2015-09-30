@@ -96,7 +96,7 @@ AKLOG=/usr/bin/aklog
 5
 1442339826 avg_defines.vh
 1443625082 avg_test.sv
-1443625158 avg.sv
+1443626111 avg.sv
 1443625454 avg_decode.sv
 1440743823 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/vcsd.tab
 4
@@ -104,4 +104,4 @@ AKLOG=/usr/bin/aklog
 1440744113 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libvirsim.so
 1440743874 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/liberrorinf.so
 1440743866 /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/amd64/lib/libsnpsmalloc.so
-1443625470 simv.daidir
+1443626117 simv.daidir
