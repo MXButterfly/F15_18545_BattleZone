@@ -1,1 +1,0 @@
--wto "96a5931274a14026bb409a00eeb60ca0" --debug "typical" --relax --mt "8" -L "xil_defaultlib" -L "blk_mem_gen_v8_2" -L "unisims_ver" -L "unimacro_ver" -L "secureip" --snapshot "fb_top_behav" "xil_defaultlib.fb_top" "xil_defaultlib.glbl" -log "elaborate.log" 

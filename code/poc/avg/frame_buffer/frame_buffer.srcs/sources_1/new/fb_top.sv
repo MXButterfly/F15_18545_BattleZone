@@ -30,20 +30,34 @@ module fb_top(
     logic[9:0] col;
     logic[18:0] w_addr;
     logic[3:0] color_in, lineColor;
-    logic[10:0] startX, endX, startY, endY;
-    logic done, en_w, readyFrame, readyLine, rastReady;
+    logic[10:0] startX, endX, startY, endY, dStartX, dStartY, dEndX, dEndY;
+    logic done, en_w, en_r, readyFrame, readyLine, rastReady, blank;
+    logic lrWrite, full, empty; 
+    logic[15:0] pc;
+    logic[31:0] inst;
+    logic[3:0] dColor;
     
-    VGA_fsm vfsm(clk, btnCpuReset, row, col, Hsync, Vsync);
+    assign readyLine = ~empty;
+    
+    VGA_fsm vfsm(clk, btnCpuReset, row, col, Hsync, Vsync, en_r);
     //vgaTestDisplay colorBars(row, col, vgaRed, vgaGreen, vgaBlue);
-    fb_controller fbc(w_addr, en_w, done, clk, ~btnCpuReset, row, col, color_in,
+    fb_controller fbc(w_addr, en_w, en_r, done, clk, ~btnCpuReset, row, col, color_in,
                       vgaRed, vgaBlue, vgaGreen, readyFrame);
                         
     //fb_test fbt(clk,~btnCpuReset, ready, row, col, w_addr, color_in, en_w, done);
     //shapes_tb stb(startX, endX,startY, endY, readyLine, lineColor, rastReady, clk, ~btnCpuReset, readyFrame);
-    animation_tb atb(startX, endX,startY, endY, readyLine, lineColor, rastReady, clk, ~btnCpuReset, readyFrame, Vsync);
+    //animation_tb atb(startX, endX,startY, endY, readyLine, lineColor, rastReady, clk, ~btnCpuReset, readyFrame, Vsync);
     rasterizer rast(startX, endX, startY, endY, lineColor, clk, ~btnCpuReset, 
                     readyLine, w_addr, 
                     pixelX, pixelY, color_in, en_w, lineDone, rastReady);
+                    
+    avg_core avgc(dStartX, dStartY, dEndX, dEndY, dColor, lrWrite, pc, inst, clk, btnCpuReset, readyFrame);
+    lineRegQueue lrq(startX, startY, endX, endY, lineColor, full, empty, dStartX, dStartY, dEndX, dEndY,
+                                     dColor, lineDone, lrWrite, clk, btnCpuReset);
+    avgROM_wrapper avgRW (pc[10:0], pc[10:0] + 1, clk, 16'b0, 16'b0, inst[31:16], inst[15:0], 1'b1, 1'b0);
+
+                                      
+                                      
 endmodule
 
 

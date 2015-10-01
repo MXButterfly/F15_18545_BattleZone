@@ -3,8 +3,8 @@
 
 
 
-`define HALF_WIDTH 0//10'd320
-`define HALF_HEIGHT 0//9'd240
+`define HALF_WIDTH 10'd0//10'd320
+`define HALF_HEIGHT 9'd0// 9'd240
 
 
 module rasterizer

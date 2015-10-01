@@ -23,13 +23,13 @@ module VGA_fsm(
     input logic clk, rst_l,
     output logic[8:0] row,
     output logic[9:0] col,
-    output logic Hsync, Vsync
+    output logic Hsync, Vsync, en_r
     //input[3:0] pixel,
     //output[18:0] addr,
     );
     
     wire[9:0] H_MAX = 800;
-    wire[9:0] V_MAX = 521;
+    wire[9:0] V_MAX = 523;
     wire[9:0] H_PULSE = 96;
     wire[9:0] V_PULSE = 2;
     wire[9:0] H_FP = 16;
@@ -42,14 +42,14 @@ module VGA_fsm(
     logic[9:0] vCount;
     logic[3:0] R, G, B;
     
-    counter #(10) hCounter(clk_25, clearH, enH, rst_l, hCount);
-    counter #(10) vCounter(clk_25, clearV, enV, rst_l, vCount);
-    register #(1) hReg(h_sync_val, clk_25, rst_l, 1'b1, Hsync);
-    register #(1) vReg(v_sync_val, clk_25, rst_l, 1'b1, Vsync);
+    vga_counter #(10) hCounter(clk_25, clearH, enH, rst_l, hCount);
+    vga_counter #(10) vCounter(clk_25, clearV, enV, rst_l, vCount);
+    vga_register #(1) hReg(h_sync_val, clk_25, rst_l, 1'b1, Hsync);
+    vga_register #(1) vReg(v_sync_val, clk_25, rst_l, 1'b1, Vsync);
 
-    register #(4) redReg(R, clk_25, rst_l, 1'b1, vgaRed);
-    register #(4) greenReg(G, clk_25, rst_l, 1'b1, vgaGreen);
-    register #(4) blueReg(B, clk_25, rst_l, 1'b1, vgaBlue);
+    vga_register #(4) redReg(R, clk_25, rst_l, 1'b1, vgaRed);
+    vga_register #(4) greenReg(G, clk_25, rst_l, 1'b1, vgaGreen);
+    vga_register #(4) blueReg(B, clk_25, rst_l, 1'b1, vgaBlue);
             
     assign enH = 1'b1;
     
@@ -103,18 +103,20 @@ module VGA_fsm(
             
     end
     
+    assign en_r = (hCount >= H_FP+H_PULSE+H_BP) && (vCount >= V_FP+V_PULSE+V_BP);
+    
     //pixel
     always_comb begin
-        if(hCount > H_FP+H_PULSE+H_BP) begin
+        if(hCount >= H_FP+H_PULSE+H_BP) begin
             col = hCount - (H_FP+H_PULSE+H_BP);
         end
         else begin
             col = 0;
         end
     
-        if(vCount > V_FP+V_PULSE+V_BP) begin
+        if(vCount >= V_FP+V_PULSE+V_BP) begin
             row = vCount - (V_FP+V_PULSE+V_BP);
-        end    
+        end 
         else begin
             row = 0;
         end
@@ -134,7 +136,7 @@ module VGA_fsm(
 
 endmodule
 
-module counter
+module vga_counter
   #(parameter WIDTH = 8)
   (input  bit clk, clear, en, rst_L,
    output bit [WIDTH-1:0] Q);
@@ -146,11 +148,11 @@ module counter
       Q <= 0;
     else if (en)
       Q <= Q + 1;
-endmodule: counter
+endmodule: vga_counter
 
 
 
-module register
+module vga_register
   #(parameter WIDTH = 6)
    (input logic [WIDTH-1:0] D,
     input logic clk, clr, en,
@@ -161,4 +163,4 @@ module register
        Q <= 0;
      else if(en) Q <= D;
    
-endmodule: register
+endmodule: vga_register

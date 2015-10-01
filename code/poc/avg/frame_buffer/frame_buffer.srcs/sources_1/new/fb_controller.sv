@@ -22,7 +22,7 @@
 
 module fb_controller(
     input logic[18:0] w_addr,
-    input logic en_w,
+    input logic en_w, en_r,
     input logic done, clk, rst,
     input logic[8:0] row,
     input logic[9:0] col,
@@ -37,7 +37,7 @@ module fb_controller(
     
     logic[18:0] addr_a, addr_b, r_addr;
     logic[3:0] color_in_a, color_in_b, color_out_a, color_out_b, color_out;
-    logic en_a, en_b, wen_a, wen_b, en_r;
+    logic en_a, en_b, wen_a, wen_b;
     logic set_clear;
     
     blockRam_wrapper bramA(addr_a, clk, color_in_a, color_out_a, en_a, clear, wen_a);
@@ -49,9 +49,6 @@ module fb_controller(
     
     //assign clear BRAMs
     assign clear = set_clear;
-    
-    //constantly reading
-    assign en_r = 1'b1;
     
     //assign colors       
     assign red_out[0] = color_out[2]; 
@@ -135,14 +132,14 @@ module fb_controller(
     
     //bram state output
     always_comb begin
-        ready = (state[1] == 1'b1) && (nextState[1] == 1'b0); //done state and changing
+        ready = (state[1] == 1'b1); //&& (nextState[1] == 1'b0); //done state and changing
     end
     
     //bram nextState logic
     always_comb begin
         case(state)
             WRITE_A: begin
-                if(done == 1'b1 || (row == 479 && col == 639)) begin
+                if(done == 1'b1 ||  (row == 479 && col == 639)) begin
                     nextState = DONE_A;
                     set_clear = 1'b1;
                 end
@@ -152,7 +149,7 @@ module fb_controller(
                 end
             end
             DONE_A: begin
-                if(row == 0 && col == 0) begin
+                if( (row == 0 && col == 0)) begin
                     nextState = WRITE_B;
                     set_clear = 1'b0;
                 end
@@ -172,7 +169,7 @@ module fb_controller(
                 end
             end
             DONE_B: begin
-                if(row == 0 && col == 0) begin
+                if( (row == 0 && col == 0)) begin
                     nextState = WRITE_A;
                     set_clear = 1'b0;
                 end

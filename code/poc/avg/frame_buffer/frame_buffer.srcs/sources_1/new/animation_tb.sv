@@ -35,8 +35,8 @@
         
         enum logic {WAIT = 1'b0, SEND = 1'b1} state, nextState;
         
-        counter #(19) countPixel(clk, refresh, readyLine, ~rst, pixelCount);
-        counter #(28) countFrames(clk, clr, 1'b1, ~rst, count);
+        vga_counter #(19) countPixel(clk, refresh, readyLine, ~rst, pixelCount);
+        vga_counter #(28) countFrames(clk, clr, 1'b1, ~rst, count);
         
         assign refresh = readyFrame | clr;
         
@@ -262,7 +262,22 @@
                     color = 4'b0011;
                     validPixel = 1'b1;
                     end
-
+                13: begin
+                        startX = 0;
+                        startY = 1;
+                        endX = 639;
+                        endY = 1;
+                        color = 4'b0010;
+                        validPixel = 1'b1;
+                    end
+                14: begin
+                        startX = 0;
+                        startY = 0;
+                        endX = 639;
+                        endY = 10;
+                        color = 4'b0001;
+                        validPixel = 1'b1;
+                    end
                       
                         
                     
