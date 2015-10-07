@@ -31,14 +31,19 @@
         
         logic[27:0] count;
         logic[18:0] pixelCount;
-        logic clr, switch, validPixel, refresh;
+        logic clrFC, switch, validPixel, refresh;
         
         enum logic {WAIT = 1'b0, SEND = 1'b1} state, nextState;
         
-        vga_counter #(19) countPixel(clk, refresh, readyLine, ~rst, pixelCount);
-        vga_counter #(28) countFrames(clk, clr, 1'b1, ~rst, count);
+       // vga_counter #(19) countPixel(clk, refresh, readyLine, ~rst, pixelCount);
+       // vga_counter #(28) countFrames(clk, clr, 1'b1, ~rst, count);
+             
+            m_counter #(19) countPixel(.Q(pixelCount), .D(1'b0), .clk(clk), .clr(rst), 
+                                       .load(refresh), .en(readyLine), .up(1'b1));
+            m_counter #(28) countFrames(.Q(count), .D(1'b0), .clk(clk), .clr(rst), 
+                                        .load(clrFC), .en(1'b1), .up(1'b1));
         
-        assign refresh = readyFrame | clr;
+        assign refresh = readyFrame | clrFC;
         
         always_comb begin
             case (state)
@@ -65,221 +70,34 @@
         always_comb begin
             //if(state) begin //send points for tri
                 case(pixelCount)
-                    /*
-                    0: begin
-                           startX = 0;
-                           startY = -120;
-                           endX = -160;
-                           endY = 120;
-                           color = 4'b0101;
-                           validPixel = 1'b1;
-                         end    
-                    1: begin
-                             startX = 0;
-                             startY = -120;
-                             endX = 160;
-                             endY = 120;
-                             color = 4'b0010;
-                             validPixel = 1'b1;
-                         end    
-                    2: begin
-                             startX = -160;
-                             startY = 120;
-                             endX = 160;
-                             endY = 120;
-                             color = 4'b0111;
-                             validPixel = 1'b1;
-                         end    
-                      */                     
-                      
-                      
-                      /*      
-                                             0: begin
-                                                     startX = 101;
-                                                     startY = 100;
-                                                     endX = 200;
-                                                     endY = 200;
-                                                     color = 4'b0100;
-                                                     validPixel = 1'b1;
-                                                  end    
-                                                                         
-                                                                     1: begin
-                                                                             startX = -100;
-                                                                             startY = -200;
-                                                                             endX = 200;
-                                                                             endY = 200;
-                                                                             color = 4'b0001;
-                                                                             validPixel = 1'b1;
-                                                                          end    
-                                            
-                    
-                    
-                    2: begin
-                        startX = -100;
-                        endX = 100;
-                        startY = 0;
-                        endY = 0;
-                        color = 4'b0010;
-                        validPixel = 1'b1;
-                    end
-                    3: begin
-                        startX = 0;
-                        endX = 0;
-                        startY = -100;
-                        endY = 100;
-                        color = 4'b0110;
-                        validPixel = 1'b1;
-                    end
-                    
-                    4: begin
-                        startX = 50;
-                        startY = 50;
-                        endX = -100;
-                        endY = -200;
-                        color = 3'b101;
-                        validPixel = 1'b1;
-                    end
-                    
-                      */
-                      
+                                  
                       0: begin
-                        startX = 220;
-                        startY = 140;
-                        endX = 420;
-                        endY = 140;
-                        color = 4'b0111;
+                        startX = 0;
+                        startY = 479;
+                        endX = 639;
+                        endY = 479;
+                        color = 4'b0001;
                         validPixel = 1'b1;
                         end
                         
                      1: begin
-                        startX = 420;
-                        startY = 140;
-                        endX = 420;
-                        endY = 340;
+                        startX = 0;
+                        startY = 0;
+                        endX = 639;
+                        endY = 0;
                         color = 4'b0010;
                         validPixel = 1'b1;
                      end
                      
                      2: begin
-                        startX = 420;
-                        startY = 340;
-                        endX = 220;
-                        endY = 340;
-                        color = 4'b0001;
-                        validPixel = 1'b1;
-                        end
-                        
-                     3: begin
-                        startX = 220;
-                        startY = 340;
-                        endX = 220;
-                        endY = 140;
-                        color = 4'b0110;
-                        validPixel = 1'b1;
-                        end
-                                                
-                                             4: begin
-                                                startX = 420;
-                                                startY = 140;
-                                                endX = 220;
-                                                endY = 340;
-                                                color = 4'b0011;
-                                                validPixel = 1'b1;
-                                                end
-                        
-                    5: begin
-                        startX = 220;
-                        startY = 140;
-                        endX = 420;
-                        endY = 340;
-                        color = 4'b0101;
-                        validPixel = 1'b1;
-                        end
-                                                
-                    6: begin
-                        startX = 0;
-                        startY = 0;
-                        endX = 220;
-                        endY = 140;
-                        color = 4'b0111;
-                        validPixel = 1'b1;
-                        end
-                        
-                        
-                    7: begin
-                        startX = 0;
-                        startY = 0;
-                        endX = 420;
-                        endY = 140;
-                        color = 4'b0111;
-                        validPixel = 1'b1;
-                        end
-
-                        
-                    8: begin
-                        startX = 0;
-                        startY = 0;
-                        endX = 220;
-                        endY = 340;
-                        color = 4'b0111;
-                        validPixel = 1'b1;
-                        end
-
-                        
-                    9: begin
-                        startX = 0;
-                        startY = 0;
-                        endX = 420;
-                        endY = 340;
-                        color = 4'b0111;
-                        validPixel = 1'b1;
-                        end
-
-                        
-                    10: begin
-                        startX = 0;
-                        startY = 0;
-                        endX = 639;
-                        endY = 0;
-                        color = 4'b0100;
-                        validPixel = 1'b1;
-                        end
-                    
-                 11: begin
-                    startX = 420;
-                    startY = 141;
-                    endX = 220;
-                    endY = 340;
-                    color = 4'b0011;
-                    validPixel = 1'b1;
-                    end
-                    
-                 12: begin
-                    startX = 419;
-                    startY = 140;
-                    endX = 220;
-                    endY = 340;
-                    color = 4'b0011;
-                    validPixel = 1'b1;
-                    end
-                13: begin
                         startX = 0;
                         startY = 1;
                         endX = 639;
                         endY = 1;
-                        color = 4'b0010;
+                        color = 4'b0100;
                         validPixel = 1'b1;
-                    end
-                14: begin
-                        startX = 0;
-                        startY = 0;
-                        endX = 639;
-                        endY = 10;
-                        color = 4'b0001;
-                        validPixel = 1'b1;
-                    end
-                      
-                        
+                        end
+                   
                     
                     default:  begin
                                 startX = 'b0;
@@ -335,9 +153,9 @@
             end //send points for square*/
                 
             if (count >= 200000000) 
-                clr = 1'b1;
+                clrFC = 1'b1;
             else
-                clr = 1'b0;
+                clrFC = 1'b0;
         end
         
         always_ff@(posedge clk, posedge rst) begin

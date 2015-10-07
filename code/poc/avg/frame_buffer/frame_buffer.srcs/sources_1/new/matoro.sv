@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 module m_range_check
   #(parameter WIDTH = 6)
    (input logic [WIDTH-1:0] val, low, high,

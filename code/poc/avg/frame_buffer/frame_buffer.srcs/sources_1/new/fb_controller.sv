@@ -40,10 +40,11 @@ module fb_controller(
     logic en_a, en_b, wen_a, wen_b;
     logic set_clear;
     
-    blockRam_wrapper bramA(addr_a, clk, color_in_a, color_out_a, en_a, clear, wen_a);
-    blockRam_wrapper bramB(addr_b, clk, color_in_b, color_out_b, en_b, clear, wen_b);
-        
-        
+    blockRam_wrapper bramA(.addr_a(addr_a), .clk(clk), .color_in(color_in_a), .color_out(color_out_a), 
+                            .en(en_a), .rst(clear), .write_en(wen_a));
+    blockRam_wrapper bramB(.addr_a(addr_b), .clk(clk), .color_in(color_in_b), .color_out(color_out_b), 
+                                                        .en(en_b), .rst(clear), .write_en(wen_b));
+  
     //Calc addr from row/col
     assign r_addr = row*640 + col;
     

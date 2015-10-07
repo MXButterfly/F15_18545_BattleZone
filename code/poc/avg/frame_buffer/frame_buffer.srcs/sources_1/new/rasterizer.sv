@@ -3,8 +3,8 @@
 
 
 
-`define HALF_WIDTH 10'd0//10'd320
-`define HALF_HEIGHT 9'd0// 9'd240
+`define HALF_WIDTH 10'd0//320
+`define HALF_HEIGHT 9'd0//240
 
 
 module rasterizer
@@ -37,7 +37,7 @@ module rasterizer
    
 
    m_register #(4) colorBank(pixelColor, lineColor, rst, idleReady, clk);
-   
+   //assign pixelColor = 4'b0111;
    
    m_register #(11) startXBank(adjStartX, startX + `HALF_WIDTH, rst, idleReady, clk);
    m_register #(11) endXBank(adjEndX, endX + `HALF_WIDTH, rst, idleReady, clk);
@@ -57,8 +57,8 @@ module rasterizer
    
    switchMux #(11) recipSwitch(.U(numerator), .V(denominator), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
 
-   m_counter #(11) majorCounter(.Q(majCnt), .D(11'd0), .clk(clk), .clr(rst|idleReady), .load(1'b0), .up(1'b1), .en(loopEn));
-   m_counter #(11) minorCounter(.Q(minCnt), .D(11'd0), .clk(clk), .clr(rst|idleReady), .load(1'b0), .up(~cntNeg), .en(inc));
+   m_counter #(11) majorCounter(.Q(majCnt), .D(11'd0), .clk(clk), .clr(rst), .load(idleReady), .up(1'b1), .en(loopEn));
+   m_counter #(11) minorCounter(.Q(minCnt), .D(11'd0), .clk(clk), .clr(rst), .load(idleReady), .up(~cntNeg), .en(inc));
 
 
    bresenhamCore rasterCore(.numerator(numerator), .denominator(denominator), .clk(clk), .rst(rst|idleReady), .en(loopEn), .inc(inc));
