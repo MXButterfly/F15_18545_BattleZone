@@ -39,12 +39,12 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
                 if(inst[15:13] == 3'b000) blank = 1'b1;
                 else if(inst[15:13] == 3'b001) useZReg = 1'b1;
                 else zVal = (inst[15:13] << 1);
-                pcOffset = 3'h4;
+                pcOffset = 3'h2;
                 instLength = 7;
             end 
             `OP_HALT: begin
                 halt = 1'b1;
-                pcOffset = 3'h2;
+                pcOffset = 3'h1;
                 instLength = 1;
             end
 
@@ -55,12 +55,12 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
                 if(inst[23:21] == 3'b000) blank = 1'b1;
                 else if(inst[23:21] == 3'b001) useZReg = 1'b1;
                 else zVal = inst[23:21] << 1;
-                pcOffset = 3'h2;
+                pcOffset = 3'h1;
                 instLength = 5;
             end
 
             `OP_STORE: begin
-                pcOffset = 3'h2;
+                pcOffset = 3'h1;
                 case(inst[28]) 
                     1'b0: begin//STAT
                         zWrEn = 1'b1;
@@ -79,7 +79,7 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
 
             `OP_CNTR: begin
                 center = 1'b1;
-                pcOffset = 3'h2;
+                pcOffset = 3'h1;
                 instLength = 4;
             end
 
@@ -87,20 +87,20 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
                 jmp = 1'b1;
                 jsr = 1'b1;
                 jumpAddr = inst[28:16] << 1;;
-                pcOffset = 3'h2;
+                pcOffset = 3'h1;
                 instLength = 4;
             end
 
             `OP_JMP: begin
                 jmp = 1'b1;
                 jumpAddr = inst[28:16] << 1;;
-                pcOffset = 3'h2;
+                pcOffset = 3'h1;
                 instLength = 4;
             end
 
             `OP_RTS: begin
                 ret = 1'b1;
-                pcOffset = 3'h2;
+                pcOffset = 3'h1;
                 instLength = 3;
             end
         endcase

@@ -5,7 +5,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
                 output logic        lrWrite,
                 output logic [15:0] pc,
                 input  logic [31:0] inst,  
-                input  logic        clk, rst_b, vggo);
+                input  logic        clk_in, rst_b, vggo);
 
     logic zWrEn, scalWrEn, center, jump, jsr, ret;
     logic useZReg, blank, halt, vector;
@@ -35,11 +35,29 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     //         could cause errors from 2's comp
     logic [10:0] currX, nextX, currY, nextY; 
 
+    logic [3:0] clkCount;
+
+    logic vggoCap;
+
+    always_ff @(posedge clk_in, negedge rst_b) begin
+        if(~rst_b) begin
+            clkCount <= 0;
+        end
+        else begin
+            clkCount <= clkCount + 1;
+            if(vggo) vggoCap <= 1;
+            if(clkCount == 15) vggoCap <= 0;
+        end
+    end
+    
+    assign clk = clkCount > 7;
+        
+
     /***********************************/
     /*             FETCH               */
     /***********************************/
     
-    register #(16, 8192) pcReg(pc, nextPC, (countOut == 1 && ~halt), clk, rst_b);
+    register #(16, 8192) pcReg(pc, nextPC, (countIn == 1 && ~halt), clk, rst_b);
 
     assign nextPC = !(jump || ret) ? pc + pcOffset : (jump ? jumpAddr : retAddr);
 
@@ -60,7 +78,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     register #(11) xReg(currX, nextX, (center || vector) && run, clk, rst_b);
     register #(11) yReg(currY, nextY, (center || vector) && run, clk, rst_b);
 
-    retStack rs(retAddr, retValid, nextPC, jsr && run, ret && run, clk, rst_b);
+    retStack rs(retAddr, retValid, pc + pcOffset, jsr && run, ret && run, clk, rst_b);
     
     register #(4) zReg(zVal, decZVal, zWrEn && run, clk, rst_b);
 
@@ -88,7 +106,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     assign startY = currY;
     assign endY = nextY;
 
-    register #(1) haltReg(halt, (decHalt && ~vggo), 1'b1, clk, rst_b);
+    register #(1) haltReg(halt, (decHalt && ~vggoCap), 1'b1, clk, rst_b);
 
 endmodule
 
@@ -119,7 +137,7 @@ module retStack(output logic [15:0] retAddr,
     logic [2:0] top;
 
     always_ff @(posedge clk, negedge rst_b) begin
-        if(rst_b) begin
+        if(~rst_b) begin
             top <= 0;     
         end
         else begin

@@ -362,7 +362,7 @@ fHsimBcOptDebug                    	0
 fHsimBfuseFast                     	1
 fHsimParallelElab                  	0
 fHsimParallelElabVcs1              	0
-fpicArchive                        	0
+fpicArchive                        	1
 fCsrcInTmpDir                      	0
 fHsimInterconFE                    	1
 fHsimMxOpt                         	1
@@ -427,7 +427,7 @@ fGblPulseOnE                       	0
 fVCSiFlow                          	0
 fSystemVCSEnabled                  	1
 fHsimForcedPort                    	0
-fpicOption                         	0
+fpicOption                         	1
 fModelSave                         	0
 fHsimGenObj                        	1
 fHsimCbkMemOpt                     	1

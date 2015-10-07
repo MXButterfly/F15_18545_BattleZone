@@ -1,0 +1,42 @@
+{
+    "CompUnits": {
+        "x9Hvb_d": {
+            "mod": "test",
+            "archive": "archive.10/_742_archive_1.a",
+            "bytes": 164685,
+            "out": "x9Hvb_d.o",
+            "mode": 4
+        },
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "archive": "archive.10/_742_archive_1.a",
+            "bytes": 7328,
+            "out": "amcQw_d.o",
+            "mode": 4
+        }
+    },
+    "Modules": {
+        "...MASTER...": {},
+        "std": {},
+        "test": {
+            "Compiled Times": 3,
+            "Compiled": "Yes"
+        }
+    },
+    "ObjArchives": [
+        {
+            "archive": "archive.10/_742_archive_1.a",
+            "objects": [
+                [
+                    "amcQw_d.o",
+                    7328
+                ],
+                [
+                    "x9Hvb_d.o",
+                    164685
+                ]
+            ],
+            "size": 172013
+        }
+    ]
+}

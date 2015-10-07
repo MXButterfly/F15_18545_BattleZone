@@ -1,76 +1,79 @@
 {
     "MlibObjs": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 92381
+    },
+    "Misc": {
+        "csrc_abs": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/simv.daidir",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.9"
+    },
+    "CompileProcesses": [
+        "cgproc.32670.json"
+    ],
     "PrevCompiledModules": {
         "std": {
             "reYIK_d": {
-                "out": "objs/reYIK_d.o",
                 "bytes": 34314,
+                "archive": "archive.9/_prev_archive_1.a",
+                "mod": "std",
                 "mode": 4,
-                "mod": "std"
-            }
-        },
-        "test": {
-            "x9Hvb_d": {
-                "out": "objs/x9Hvb_d.o",
-                "bytes": 160165,
-                "mode": 4,
-                "mod": "test"
+                "out": "reYIK_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "out": "objs/amcQw_d.o",
                 "bytes": 7328,
-                "mode": 4,
-                "mod": "...MASTER..."
+                "archive": "archive.9/_32670_archive_1.a",
+                "mod": "...MASTER...",
+                "out": "amcQw_d.o",
+                "mode": 4
+            }
+        },
+        "test": {
+            "x9Hvb_d": {
+                "bytes": 164329,
+                "archive": "archive.9/_32670_archive_1.a",
+                "mod": "test",
+                "out": "x9Hvb_d.o",
+                "mode": 4
             }
         }
     },
-    "SIMBData": {
-        "bytes": 92957,
-        "out": "amcQwB.o"
-    },
+    "CurCompileUdps": {},
     "NameTable": {
         "std": [
             "std",
             "reYIK",
             "module"
         ],
-        "...MASTER...": [
-            "SIM",
-            "amcQw",
-            "module"
-        ],
         "test": [
             "test",
             "x9Hvb",
             "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
         ]
     },
     "CompileStrategy": "fullobj",
-    "CurCompileUdps": {},
-    "LVLData": [
-        "SIM"
-    ],
     "CurCompileModules": [
         "...MASTER...",
         "test"
     ],
-    "CompileProcesses": [
-        "cgproc.2060.json"
+    "CompileStatus": "Successful",
+    "LVLData": [
+        "SIM"
     ],
     "PEModules": [],
-    "Misc": {
-        "cwd": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG",
-        "csrc": "csrc",
-        "daidir": "simv.daidir",
-        "csrc_abs": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/csrc",
-        "default_output_dir": "csrc",
-        "daidir_abs": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/simv.daidir",
-        "archive_dir": "archive.57"
-    },
     "stat": {
-        "nMops": 12001
-    },
-    "CompileStatus": "Successful"
+        "nMops": 12324
+    }
 }

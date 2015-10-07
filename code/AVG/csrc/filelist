@@ -19,10 +19,6 @@ include filelist.hsopt
 
 include filelist.cu
 
-
-CG_OBJS= 
-
-
 VCS_INCR_OBJS=
 
 
@@ -32,4 +28,4 @@ SHARED_OBJ_SO=
 
 
 
-VLOG_OBJS= $(VCS_OBJS) $(CU_OBJS)  $(XTRN_OBJS) $(DPI_WRAPPER_OBJS) $(VCS_INCR_OBJS) $(SHARED_OBJ_SO) $(HSOPT_OBJS)  
+VLOG_OBJS= $(VCS_OBJS) $(CU_OBJS) $(VCS_ARC0) $(XTRN_OBJS) $(DPI_WRAPPER_OBJS) $(VCS_INCR_OBJS) $(SHARED_OBJ_SO) $(HSOPT_OBJS)  

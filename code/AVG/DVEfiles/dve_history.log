@@ -6,16 +6,16 @@ gui_create_pref_key -category {schem_pin_hc} -key {textExtFont} -value_type {str
 
 # State setting overrides
 gui_state_default_create -off -ini
-gui_set_state_value -category Layout -key child_console_size_x -value 1919
-gui_set_state_value -category Layout -key child_console_size_y -value 136
-gui_set_state_value -category Layout -key child_data_size_x -value 141
-gui_set_state_value -category Layout -key child_data_size_y -value 871
+gui_set_state_value -category Layout -key child_console_size_x -value 1599
+gui_set_state_value -category Layout -key child_console_size_y -value 133
+gui_set_state_value -category Layout -key child_data_size_x -value 138
+gui_set_state_value -category Layout -key child_data_size_y -value 874
 gui_set_state_value -category Layout -key child_driver_size_x -value 1647
 gui_set_state_value -category Layout -key child_driver_size_y -value 179
 gui_set_state_value -category Layout -key child_hier_col3 -value {-1}
 gui_set_state_value -category Layout -key child_hier_colpd -value 0
 gui_set_state_value -category Layout -key child_hier_size_x -value 105
-gui_set_state_value -category Layout -key child_hier_size_y -value 871
+gui_set_state_value -category Layout -key child_hier_size_y -value 874
 gui_set_state_value -category Layout -key child_list_down -value 153
 gui_set_state_value -category Layout -key child_list_right -value 442
 gui_set_state_value -category Layout -key child_schematic_pos_x -value {-2}
@@ -25,15 +25,15 @@ gui_set_state_value -category Layout -key child_schematic_size_y -value 837
 gui_set_state_value -category Layout -key child_source_docknewline -value false
 gui_set_state_value -category Layout -key child_source_pos_x -value {-2}
 gui_set_state_value -category Layout -key child_source_pos_y -value {-15}
-gui_set_state_value -category Layout -key child_source_size_x -value 1676
-gui_set_state_value -category Layout -key child_source_size_y -value 866
-gui_set_state_value -category Layout -key child_wave_colname -value 276
-gui_set_state_value -category Layout -key child_wave_colvalue -value 277
-gui_set_state_value -category Layout -key child_wave_left -value 557
-gui_set_state_value -category Layout -key child_wave_right -value 1357
+gui_set_state_value -category Layout -key child_source_size_x -value 1359
+gui_set_state_value -category Layout -key child_source_size_y -value 869
+gui_set_state_value -category Layout -key child_wave_colname -value 230
+gui_set_state_value -category Layout -key child_wave_colvalue -value 230
+gui_set_state_value -category Layout -key child_wave_left -value 464
+gui_set_state_value -category Layout -key child_wave_right -value 1130
 gui_set_state_value -category Layout -key main_pos_x -value 0
 gui_set_state_value -category Layout -key main_pos_y -value 32
-gui_set_state_value -category Layout -key main_size_x -value 1919
+gui_set_state_value -category Layout -key main_size_x -value 1599
 gui_set_state_value -category Layout -key main_size_y -value 1138
 gui_set_state_value -category Layout -key stand_list_child_docknewline -value false
 gui_set_state_value -category Layout -key stand_list_child_pos_x -value {-2}
@@ -47,11 +47,11 @@ gui_set_state_value -category Layout -key stand_list_top_size_y -value 600
 gui_set_state_value -category Layout -key stand_wave_child_docknewline -value false
 gui_set_state_value -category Layout -key stand_wave_child_pos_x -value {-2}
 gui_set_state_value -category Layout -key stand_wave_child_pos_y -value {-15}
-gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1924
+gui_set_state_value -category Layout -key stand_wave_child_size_x -value 1604
 gui_set_state_value -category Layout -key stand_wave_child_size_y -value 1002
 gui_set_state_value -category Layout -key stand_wave_top_pos_x -value 0
 gui_set_state_value -category Layout -key stand_wave_top_pos_y -value 32
-gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1919
+gui_set_state_value -category Layout -key stand_wave_top_size_x -value 1599
 gui_set_state_value -category Layout -key stand_wave_top_size_y -value 1138
 gui_create_state_key -category FindDialog -key m_pMatchCase -value_type bool -value false
 gui_create_state_key -category FindDialog -key m_pMatchWord -value_type bool -value false
@@ -66,53 +66,37 @@ gui_sim_run Ucli -exe ./simv -args {-ucligui  } -dir .
 gui_list_expand -id  Hier.1   test
 gui_list_select -id Hier.1 -current_item_name test.core -current_item_type Scope  -selected  { test.core   }
 gui_list_select -id Data.1 -selected  { {test.core.startX[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.core.startX[10:0]}  {test.core.startY[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.core.startX[10:0]}  {test.core.startY[10:0]}  {test.core.endX[10:0]}   }
 gui_list_select -id Data.1 -selected  { {test.core.startX[10:0]}  {test.core.startY[10:0]}  {test.core.endX[10:0]}  {test.core.endY[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.core.countIn[2:0]}   }
-gui_list_select -id Data.1 -selected  { {test.core.currX[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.core.currX[10:0]}  {test.core.nextX[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.core.currX[10:0]}  {test.core.nextX[10:0]}  {test.core.currY[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.core.currX[10:0]}  {test.core.nextX[10:0]}  {test.core.currY[10:0]}  {test.core.nextY[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.core.currX[10:0]}  {test.core.nextX[10:0]}  {test.core.currY[10:0]}  {test.core.nextY[10:0]}  test.core.clk   }
-gui_list_select -id Data.1 -selected  { {test.core.currX[10:0]}  {test.core.nextX[10:0]}  {test.core.currY[10:0]}  {test.core.nextY[10:0]}  test.core.clk  test.core.lrWrite   }
+gui_list_select -id Data.1 -selected  { {test.core.startX[10:0]}  {test.core.startY[10:0]}  {test.core.endX[10:0]}  {test.core.endY[10:0]}  test.core.lrWrite   }
+gui_list_select -id Data.1 -selected  { {test.core.startX[10:0]}  {test.core.startY[10:0]}  {test.core.endX[10:0]}  {test.core.endY[10:0]}  test.core.lrWrite  {test.core.pc[15:0]}   }
+gui_list_select -id Data.1 -selected  { {test.core.startX[10:0]}  {test.core.startY[10:0]}  {test.core.endX[10:0]}  {test.core.endY[10:0]}  test.core.lrWrite  {test.core.pc[15:0]}  {test.core.inst[31:0]}   }
 gui_open_window Wave
-gui_list_add -id Wave.1 -from Data.1 { test.core.lrWrite test.core.clk {test.core.currX[10:0]} {test.core.nextX[10:0]} {test.core.currY[10:0]} {test.core.nextY[10:0]} } -insertionbar
+gui_list_add -id Wave.1 -from Data.1 { {test.core.startX[10:0]} {test.core.startY[10:0]} {test.core.endX[10:0]} {test.core.endY[10:0]} test.core.lrWrite {test.core.pc[15:0]} {test.core.inst[31:0]} } -insertionbar
 gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_marker_move -id  Wave.1 C1 68
-gui_sim_restart
-gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 2197
-gui_sim_restart
-gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 127
+gui_wv_scroll_hslidermove -id  Wave.1 2831
 gui_sim_restart
 gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_zoom_timerange -id  Wave.1 76 170
-gui_zoom -window  Wave.1  -factor 0.5
-gui_zoom -window  Wave.1  -factor 0.5
+gui_wv_scroll_hslidermove -id  Wave.1 2028
 gui_zoom -window Wave.1 -factor 0.5
 gui_zoom -window Wave.1 -factor 0.5
 gui_zoom -window Wave.1 -factor 0.5
-gui_list_select -id Hier.1 -current_item_name test.q -current_item_type Scope  -selected  { test.q   }
-gui_list_select -id Data.1 -selected  { {test.q.DStartX[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.q.DStartX[10:0]}  {test.q.DEndX[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.q.DStartX[10:0]}  {test.q.DEndX[10:0]}  {test.q.DStartY[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.q.DStartX[10:0]}  {test.q.DEndX[10:0]}  {test.q.DStartY[10:0]}  {test.q.DEndY[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.q.DStartX[10:0]}  {test.q.DEndX[10:0]}  {test.q.DStartY[10:0]}  {test.q.DEndY[10:0]}  {test.q.DColor[2:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {test.q.DStartX[10:0]} {test.q.DEndX[10:0]} {test.q.DStartY[10:0]} {test.q.DEndY[10:0]} {test.q.DColor[2:0]} } -insertionbar
+gui_wv_scroll_hslidermove -id  Wave.1 99
+gui_wv_scroll_hslidermove -id  Wave.1 0
 gui_sim_restart
 gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_list_select -id Data.1 -selected  { {test.q.reIndex[3:0]}   }
-gui_list_select -id Data.1 -selected  { {test.q.reIndex[3:0]}  {test.q.wrIndex[3:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {test.q.wrIndex[3:0]} {test.q.reIndex[3:0]} } -insertionbar
 gui_sim_restart
 gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_list_select -id Data.1 -selected  { test.q.lastWrite   }
-gui_list_add -id Wave.1 -from Data.1 { test.q.lastWrite } -insertionbar
+gui_sim_restart
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_sim_restart
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 0
 gui_sim_restart
 gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 0
@@ -120,147 +104,104 @@ gui_sim_restart
 gui_sim_continue  
 gui_sim_restart
 gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 3162
+gui_list_select -id Hier.1 -current_item_name test -current_item_type Scope  -selected  { test   }
+gui_list_select -id Data.1 -selected  { test.vggo   }
+gui_list_select -id Data.1 -selected  { {test.inPC[15:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {test.inPC[15:0]} } -insertionbar
+gui_sim_restart
+gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 0
 gui_sim_restart
 gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_list_select -id Data.1 -selected  { test.q.read   }
-gui_list_select -id Data.1 -selected  { test.q.write   }
-gui_list_select -id Data.1 -selected  { test.q.write  test.q.read   }
-gui_list_select -id Data.1 -selected  { test.q.write  test.q.read  test.q.empty   }
-gui_list_add -id Wave.1 -from Data.1 { test.q.empty test.q.read test.q.write } -insertionbar
-gui_sim_restart
-gui_sim_continue  
-gui_sim_restart
-gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 2832
-gui_sim_restart
-gui_sim_continue  
-gui_sim_restart
-gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_zoom_timerange -id  Wave.1 0 3040
-gui_wv_zoom_timerange -id  Wave.1 0 3040
-gui_list_select -id Data.1 -selected  { {test.q.QStartX[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.q.QStartX[10:0]}  {test.q.QEndX[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.q.QStartX[10:0]}  {test.q.QEndX[10:0]}  {test.q.QStartY[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.q.QStartX[10:0]}  {test.q.QEndX[10:0]}  {test.q.QStartY[10:0]}  {test.q.QEndY[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.q.QStartX[10:0]}  {test.q.QEndX[10:0]}  {test.q.QStartY[10:0]}  {test.q.QEndY[10:0]}  test.q.read   }
-gui_list_add -id Wave.1 -from Data.1 { test.q.read {test.q.QStartX[10:0]} {test.q.QEndX[10:0]} {test.q.QStartY[10:0]} {test.q.QEndY[10:0]} } -insertionbar
-gui_sim_restart
-gui_sim_continue  
-gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_marker_move -id  Wave.1 C1 855
-gui_marker_select -id  Wave.1 { C1 }
-gui_marker_move -id  Wave.1 C1 955
-gui_list_select -id Wave.1 -selected  { test.q.read   }
-gui_marker_move -id  Wave.1 C1 857
-gui_list_select -id Wave.1 -selected  { {test.q.QStartX[10:0]}   }
-gui_list_select -id Wave.1 -selected  { {test.q.QEndX[10:0]}   }
-gui_list_select -id Wave.1 -selected  { {test.q.QStartY[10:0]}   }
-gui_list_select -id Wave.1 -selected  { {test.q.QEndY[10:0]}   }
-gui_list_select -id Wave.1 -selected  { test.q.read   }
-gui_list_select -id Wave.1 -selected  { test.q.empty   }
-gui_marker_move -id  Wave.1 C1 945
-gui_marker_move -id  Wave.1 C1 955
-gui_marker_move -id  Wave.1 C1 1655
-gui_marker_move -id  Wave.1 C1 1755
-gui_wv_scroll_hslidermove -id  Wave.1 1084
-gui_list_select -id Wave.1 -selected  { {test.q.QEndX[10:0]}   }
-gui_list_select -id Wave.1 -selected  { {test.q.QStartY[10:0]}   }
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_marker_move -id  Wave.1 C1 955
-gui_wv_scroll_hslidermove -id  Wave.1 1330
-gui_marker_move -id  Wave.1 C1 5055
-gui_marker_move -id  Wave.1 C1 5055
-gui_wv_scroll_hslidermove -id  Wave.1 1400
-gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_scroll_hslidermove -id  Wave.1 1666
-gui_marker_move -id  Wave.1 C1 5034
-gui_marker_move -id  Wave.1 C1 5097
-gui_marker_move -id  Wave.1 C1 5055
-gui_marker_move -id  Wave.1 C1 5055
-gui_list_select -id Wave.1 -selected  { {test.q.DStartX[10:0]}   }
-gui_list_select -id Wave.1 -selected  { {test.q.DStartY[10:0]}   }
-gui_list_select -id Wave.1 -selected  { {test.q.DEndX[10:0]}   }
-gui_list_select -id Wave.1 -selected  { {test.q.DStartY[10:0]}   }
-gui_list_select -id Wave.1 -selected  { {test.q.DEndY[10:0]}   }
-gui_list_select -id Wave.1 -selected  { {test.q.DStartY[10:0]}   }
-gui_wv_scroll_hslidermove -id  Wave.1 644
-gui_list_select -id Data.1 -selected  { test.q.rst_b   }
+gui_marker_move -id  Wave.1 C1 555
+gui_wv_scroll_hslidermove -id  Wave.1 201
+gui_wv_scroll_hslidermove -id  Wave.1 1701
+gui_wv_scroll_hslidermove -id  Wave.1 3111
+gui_marker_move -id  Wave.1 C1 10315
+gui_wv_scroll_hslidermove -id  Wave.1 2549
+gui_wv_scroll_hslidermove -id  Wave.1 2813
+gui_wv_scroll_hslidermove -id  Wave.1 3105
+gui_list_select -id Wave.1 -selected  { {test.core.pc[15:0]}   }
+gui_list_expand -id  Hier.1   test
 gui_list_select -id Hier.1 -current_item_name test.counter -current_item_type Scope  -selected  { test.counter   }
 gui_list_select -id Hier.1 -current_item_name test.core -current_item_type Scope  -selected  { test.core   }
-gui_list_select -id Data.1 -selected  { test.core.scalWrEn   }
-gui_list_select -id Data.1 -selected  { test.core.center   }
-gui_list_add -id Wave.1 -from Data.1 { test.core.center } -insertionbar
-gui_wv_scroll_hslidermove -id  Wave.1 952
-gui_marker_move -id  Wave.1 C1 3250
+gui_list_select -id Data.1 -selected  { {test.core.nextPC[15:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {test.core.nextPC[15:0]} } -insertionbar
+gui_sim_restart
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 3088
+gui_list_select -id Data.1 -selected  { test.core.jump   }
+gui_list_select -id Data.1 -selected  { test.core.jump  test.core.ret   }
+gui_list_add -id Wave.1 -from Data.1 { test.core.jump test.core.ret } -insertionbar
+gui_sim_restart
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 3421
+gui_list_select -id Data.1 -selected  { test.core.rst_b   }
+gui_list_select -id Data.1 -selected  { test.core.jsr   }
+gui_list_add -id Wave.1 -from Data.1 { test.core.jsr } -insertionbar
 gui_sim_restart
 gui_sim_continue  
 gui_wv_scrollleft -id  Wave.1  page
-gui_wv_scroll_hslidermove -id  Wave.1 2598
-gui_marker_move -id  Wave.1 C1 9275
-gui_marker_move -id  Wave.1 C1 9275
-gui_sim_restart
-gui_sim_continue  
-gui_marker_move -id  Wave.1 C1 9275
-gui_sim_restart
-gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 691
-gui_list_select -id Data.1 -selected  { test.core.vector   }
-gui_list_select -id Data.1 -selected  { test.core.halt   }
-gui_list_add -id Wave.1 -from Data.1 { test.core.halt } -insertionbar
-gui_wv_scroll_hslidermove -id  Wave.1 859
-gui_sim_restart
-gui_sim_continue  
+gui_wv_scrollleft -id  Wave.1  page
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_sim_restart
-gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 1240
-gui_marker_move -id  Wave.1 C1 5050
+gui_list_select -id Data.1 -selected  { {test.core.dX[12:0]}   }
 gui_list_select -id Data.1 -selected  { test.core.run   }
 gui_list_add -id Wave.1 -from Data.1 { test.core.run } -insertionbar
 gui_sim_restart
 gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 1295
-gui_wv_scroll_hslidermove -id  Wave.1 1221
-gui_marker_move -id  Wave.1 C1 5050
-gui_list_select -id Data.1 -selected  { test.core.scalWrEn   }
-gui_list_select -id Data.1 -selected  { {test.core.pc[15:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {test.core.pc[15:0]} } -insertionbar
+gui_wv_scroll_hslidermove -id  Wave.1 3346
+gui_list_expand -id  Hier.1   test.core
+gui_list_select -id Hier.1 -current_item_name test.core.rs -current_item_type Scope  -selected  { test.core.rs   }
+gui_list_select -id Data.1 -selected  { test.core.rs.retValid   }
+gui_list_add -id Wave.1 -from Data.1 { test.core.rs.retValid } -insertionbar
 gui_sim_restart
 gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_list_select -id Data.1 -selected  { {test.core.inst[31:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {test.core.inst[31:0]} } -insertionbar
+gui_list_select -id Data.1 -selected  { {test.core.rs.top[2:0]}   }
+gui_list_add -id Wave.1 -from Data.1 { {test.core.rs.top[2:0]} } -insertionbar
 gui_sim_restart
 gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 737
+gui_wv_scroll_hslidermove -id  Wave.1 5070
+gui_list_select -id Data.1 -selected  { test.core.rs.writeEn   }
+gui_list_add -id Wave.1 -from Data.1 { test.core.rs.writeEn } -insertionbar
+gui_sim_restart
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 3076
+gui_list_select -id Wave.1 -selected  { test.core.jsr   }
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_select -id Data.1 -selected  { test.core.rs.readEn   }
+gui_list_show_data -select -id  Data.1   test.core.rs.readEn
+gui_list_add -id Wave.1 -from Data.1 { test.core.rs.readEn } -insertionbar
+gui_sim_restart
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_select -id Wave.1 -selected  { test.core.rs.writeEn   }
+gui_list_select -id Wave.1 -selected  { test.core.rs.readEn   }
+gui_wv_scroll_hslidermove -id  Wave.1 0
+gui_list_select -id Wave.1 -selected  { test.core.rs.writeEn   }
+gui_sim_restart
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 3128
+gui_list_select -id Wave.1 -selected  { {test.core.nextPC[15:0]}   }
+gui_wv_scroll_hslidermove -id  Wave.1 3810
+gui_sim_restart
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 5898
+gui_list_select -id Wave.1 -selected  { test.core.rs.retValid   }
 gui_list_select -id Wave.1 -selected  { test.core.run   }
-gui_wv_scroll_hslidermove -id  Wave.1 1299
-gui_list_select -id Data.1 -selected  { {test.core.startY[10:0]}   }
-gui_list_select -id Data.1 -selected  { {test.core.countOut[2:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {test.core.countOut[2:0]} } -insertionbar
-gui_sim_restart
-gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 780
-gui_list_select -id Data.1 -selected  { {test.core.instLength[2:0]}   }
-gui_list_add -id Wave.1 -from Data.1 { {test.core.instLength[2:0]} } -insertionbar
-gui_sim_restart
-gui_sim_continue  
-gui_sim_restart
-gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 1307
-gui_sim_restart
-gui_sim_continue  
-gui_wv_scroll_hslidermove -id  Wave.1 1283
-gui_sim_restart
-gui_sim_continue  
+gui_list_select -id Wave.1 -selected  { {test.core.rs.top[2:0]}   }
+gui_wv_scroll_hslidermove -id  Wave.1 1282
+gui_list_select -id Wave.1 -selected  { test.core.rs.writeEn   }
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_marker_move -id  Wave.1 C1 50
+gui_marker_move -id  Wave.1 C1 875
+gui_wv_scroll_hslidermove -id  Wave.1 5812
+gui_list_select -id Wave.1 -selected  { test.core.rs.readEn   }
+gui_wv_scroll_hslidermove -id  Wave.1 3697
+gui_marker_move -id  Wave.1 C1 10635
 gui_wv_scroll_hslidermove -id  Wave.1 0
-gui_wv_zoom_timerange -id  Wave.1 0 3040
-gui_wv_zoom_timerange -id  Wave.1 0 3040
+gui_marker_move -id  Wave.1 C1 915
+gui_sim_restart
+gui_sim_continue  
+gui_wv_scroll_hslidermove -id  Wave.1 10449

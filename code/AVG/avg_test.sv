@@ -18,9 +18,11 @@ module test;
 
     logic [3:0] count;
     logic vggo;
+    
+    logic [15:0] inPC;
 
 
-    avg_core core(DStartX, DStartY, DEndX, DEndY, DColor, lrWrite, pc, inst, clk, rst_b, vggo);
+    avg_core core(DStartX, DStartY, DEndX, DEndY, DColor, lrWrite, pc, inst, clk_10x, rst_b, vggo);
     
     lineRegQueue q(QStartX, QEndX, QStartY, QEndY, QColor, full, empty, DStartX, DEndX, DStartY, DEndY, DColor, read, lrWrite, clk_10x, rst_b);
 
@@ -29,8 +31,9 @@ module test;
     assign read = (count == 15);
     
     always_comb begin
+        inPC = (pc - 16'h2000)*2 + 16'h2000;
         if(pc < 16'h2000) inst = 0;
-        else inst = {memory[pc], memory[pc+1], memory[pc+2], memory[pc+3]}; 
+        else inst = {memory[inPC], memory[inPC+1], memory[inPC+2], memory[inPC+3]}; 
     end
 
     initial begin
@@ -49,9 +52,9 @@ module test;
         vggo = 0;
         #1 rst_b = 1; 
 
-        #5000 vggo = 1;
+        #10000 vggo = 1;
 
-        #5000 $finish;
+        #50000 $finish;
 
         /*
         while( !core.halt ) begin
