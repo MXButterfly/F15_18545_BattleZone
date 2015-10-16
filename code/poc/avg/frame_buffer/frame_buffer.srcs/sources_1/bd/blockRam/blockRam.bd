@@ -58,21 +58,57 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>en</spirit:name>
+          <spirit:name>clear_in</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
-          <spirit:name>rst</spirit:name>
-          <spirit:wire>
-            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
           </spirit:wire>
         </spirit:port>
         <spirit:port>
           <spirit:name>write_en</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>write_en_b</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>en_b</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>en</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>addr_b</spirit:name>
+          <spirit:wire>
+            <spirit:direction>in</spirit:direction>
+            <spirit:vector>
+              <spirit:left>18</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>color_out_b</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>3</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
           </spirit:wire>
         </spirit:port>
       </spirit:ports>
@@ -90,16 +126,23 @@
         <spirit:componentRef spirit:library="ip" spirit:name="blk_mem_gen" spirit:vendor="xilinx.com" spirit:version="8.2"/>
         <spirit:configurableElementValues>
           <spirit:configurableElementValue spirit:referenceId="bd:xciName">blockRam_blk_mem_gen_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Memory_Type">True_Dual_Port_RAM</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Enable_32bit_Address">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Use_Byte_Write_Enable">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Write_Width_A">4</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Write_Depth_A">307200</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Read_Width_A">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Operating_Mode_A">READ_FIRST</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Write_Width_B">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Read_Width_B">4</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Enable_B">Use_ENB_Pin</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Register_PortA_Output_of_Memory_Primitives">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Fill_Remaining_Memory_Locations">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Use_RSTA_Pin">true</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Reset_Priority_A">SR</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Output_Reset_Value_A">0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Register_PortB_Output_of_Memory_Primitives">true</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Fill_Remaining_Memory_Locations">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Use_RSTA_Pin">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Port_B_Clock">100</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Port_B_Write_Rate">50</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Port_B_Enable_Rate">100</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="use_bram_block">Stand_Alone</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
@@ -125,6 +168,7 @@
         <spirit:name>clk_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="clka"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="clkb"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>color_1</spirit:name>
@@ -135,25 +179,39 @@
         </bd:hdl_attributes>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
-        <spirit:name>en_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="en"/>
-        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="ena"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>rst_l_1</spirit:name>
-        <spirit:externalPortReference spirit:portRef="rst"/>
-        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="rsta"/>
+        <spirit:name>clear_in_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="clear_in"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="dinb"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>write_en_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="write_en"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="wea"/>
-        <bd:hdl_attributes>
-          <bd:hdl_attribute bd:name="MARK_DEBUG" bd:value="true"/>
-        </bd:hdl_attributes>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>write_en_b_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="write_en_b"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="web"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>en_b_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="en_b"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="enb"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>en_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="en"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="ena"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>addr_b_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="addr_b"/>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="addrb"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>blk_mem_gen_0_doutb</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="doutb"/>
+        <spirit:externalPortReference spirit:portRef="color_out_b"/>
       </spirit:adHocConnection>
     </spirit:adHocConnections>
   </spirit:design>

@@ -28,37 +28,48 @@ module VGA_fsm(
     //output[18:0] addr,
     );
     
-    wire[9:0] H_MAX = 800;
-    wire[9:0] V_MAX = 525;
-    wire[9:0] H_PULSE = 95;
-    wire[9:0] H_FP = 16;
-    wire[9:0] H_BP = 48;
+    wire[9:0] H_MAX = 799;
+    wire[9:0] V_MAX = 522;
+    wire[9:0] H_PULSE = 96;
     wire[9:0] V_PULSE = 2;
+    wire[9:0] H_FP = 16;
     wire[9:0] V_FP = 10;
-    wire[9:0] V_BP = 32;
+    wire[9:0] H_BP = 48;
+    wire[9:0] V_BP = 29;
    
     logic clearH, clearV, enH, enV, h_sync_val, v_sync_val, clk_50, clk_25;
-    bit[9:0] hCount;
-    bit[9:0] vCount;
-    logic[9:0] row_out;
-    logic[3:0] R, G, B;
+    logic[9:0] hCount;
+    logic[9:0] vCount;
+    logic[1:0] clockCount;
+/*    
+    vga_counter #(10) hCounter(clk_25, clearH, enH, rst_l, hCount);
+    vga_counter #(10) vCounter(clk_25, clearV, enV, rst_l, vCount);
+
+    vga_register #(1) hReg(h_sync_val, clk_25, rst_l, 1'b1, Hsync);
+    vga_register #(1) vReg(v_sync_val, clk_25, rst_l, 1'b1, Vsync);
+
+    vga_register #(4) redReg(R, clk_25, rst_l, 1'b1, vgaRed);
+    vga_register #(4) greenReg(G, clk_25, rst_l, 1'b1, vgaGreen);
+    vga_register #(4) blueReg(B, clk_25, rst_l, 1'b1, vgaBlue);
+  */  
+  
+
+    //m_counter #(10) hCounter(.Q(hCount), .D(11'd0), .clk(clk_25), .clr(rst), .load(clearH), .en(enH), .up(1'b1));
+    //m_counter #(10) vCounter(.Q(vCount), .D(11'd0), .clk(clk_25), .clr(rst), .load(clearV), .en(enV), .up(1'b1));
     
-    //vga_counter #(10) hCounter(clk_25, clearH, enH, rst_l, hCount);
-    //vga_counter #(10) vCounter(clk_25, clearV, enV, rst_l, vCount);
-    //vga_register #(1) hReg(h_sync_val, clk_25, rst_l, 1'b1, Hsync);
-    //vga_register #(1) vReg(v_sync_val, clk_25, rst_l, 1'b1, Vsync);
-    
-    m_counter #(10) hCounter(.Q(hCount), .D(10'd0), .clk(clk_25), .clr(rst), .load(clearH), .up(1'b1), .en(enH));
-    m_counter #(10) vCounter(.Q(vCount), .D(10'd0), .clk(clk_25), .clr(rst), .load(clearV), .up(1'b1), .en(enV));
+
+    m_counter #(10) hCounter(.Q(hCount), .D(10'd0), .clk(clk_25), .clr(rst), .load(clearH), .up(enH), .en(1'b1));
+    m_counter #(11) vCounter(.Q(vCount), .D(10'd0), .clk(clk_25), .clr(rst), .load(clearV), .up(enV), .en(1'b1));
 
     
     m_register #(1) hReg(.Q(Hsync), .D(h_sync_val), .clr(rst), .en(1'b1), .clk(clk_25));
     m_register #(1) vReg(.Q(Vsync), .D(v_sync_val), .clr(rst), .en(1'b1), .clk(clk_25));
-    
-    
-            
+      
+    //m_register #(4) redReg(.Q(vgaRed), .D(R), .clr(rst), .en(1'b1), .clk(clk_25));
+    //m_register #(4) redGreen(.Q(vgaGreen), .D(G), .clr(rst), .en(1'b1), .clk(clk_25));
+    //m_register #(4) redBlue(.Q(vgaBlue), .D(B), .clr(rst), .en(1'b1), .clk(clk_25));
+
     assign enH = 1'b1;
-    assign row = row_out[8:0];
     
     //counter v and h sync
     always_comb begin
@@ -67,7 +78,7 @@ module VGA_fsm(
             h_sync_val = 1'b1;
             enV = 1'b0;
         end  
-        else if(hCount > H_FP+H_PULSE) begin
+        else if(hCount >= H_FP+H_PULSE) begin
             clearH = 1'b0;
             h_sync_val = 1'b1;
             enV = 1'b0;
@@ -110,7 +121,7 @@ module VGA_fsm(
             
     end
     
-    assign en_r = (hCount >= H_FP+H_PULSE+H_BP) && (vCount >= V_FP+V_PULSE+V_BP);
+    assign en_r = 1'b1;//(hCount >= H_FP+H_PULSE+H_BP) && (vCount >= V_FP+V_PULSE+V_BP);
     
     //pixel
     always_comb begin
@@ -122,38 +133,38 @@ module VGA_fsm(
         end
     
         if(vCount >= V_FP+V_PULSE+V_BP) begin
-            row_out = vCount - (V_FP+V_PULSE+V_BP);
+            row = vCount - (V_FP+V_PULSE+V_BP);
         end 
         else begin
-            row_out = 0;
+            row = 0;
         end
     end 
     
-   /* always_ff @(posedge clk, negedge rst_l) begin
-        if(~rst_l) clk_50 <= 0;
+   always_ff @(posedge clk, posedge rst) begin
+        if(rst) clk_50 <= 0;
         else clk_50 <= ~clk_50;
     end
     
         
-    always_ff @(posedge clk_50, negedge rst_l) begin
-        if(~rst_l) clk_25 <= 0;
+    always_ff @(posedge clk_50, posedge rst) begin
+        if(rst) clk_25 <= 0;
         else clk_25 <= ~clk_25;
-    end*/
-    
+    end
+    /*
     always_ff @(posedge clk, posedge rst) begin
-         if(rst) clk_50 <= 0;
-         else clk_50 <= ~clk_50;
-     end
-     
-         
-     always_ff @(posedge clk_50, posedge rst) begin
-         if(rst) clk_25 <= 0;
-         else clk_25 <= ~clk_25;
-     end
+        if(rst) begin
+            clockCount <= 0;
+        end
+        else begin
+            clockCount <= clockCount + 1;
+        end
+    end
+    
+    assign clk_25 = clockCount > 1;*/
     
 
-endmodule
-
+endmodule: VGA_fsm
+/*
 module vga_counter
   #(parameter WIDTH = 8)
   (input  bit clk, clear, en, rst_L,
@@ -181,4 +192,4 @@ module vga_register
        Q <= 0;
      else if(en) Q <= D;
    
-endmodule: vga_register
+endmodule: vga_register*/

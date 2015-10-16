@@ -146,30 +146,47 @@ proc create_root_design { parentCell } {
 
   # Create ports
   set addr_a [ create_bd_port -dir I -from 18 -to 0 addr_a ]
+  set addr_b [ create_bd_port -dir I -from 18 -to 0 addr_b ]
+  set clear_in [ create_bd_port -dir I -from 3 -to 0 clear_in ]
   set clk [ create_bd_port -dir I clk ]
   set color_in [ create_bd_port -dir I -from 3 -to 0 color_in ]
   set color_out [ create_bd_port -dir O -from 3 -to 0 color_out ]
+  set color_out_b [ create_bd_port -dir O -from 3 -to 0 color_out_b ]
   set en [ create_bd_port -dir I en ]
-  set rst [ create_bd_port -dir I rst ]
+  set en_b [ create_bd_port -dir I en_b ]
   set write_en [ create_bd_port -dir I write_en ]
+  set write_en_b [ create_bd_port -dir I write_en_b ]
 
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.2 blk_mem_gen_0 ]
-  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Enable_32bit_Address {false} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Output_Reset_Value_A {0} CONFIG.Read_Width_A {4} CONFIG.Read_Width_B {4} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Reset_Priority_A {SR} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {true} CONFIG.Write_Depth_A {307200} CONFIG.Write_Width_A {4} CONFIG.Write_Width_B {4} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
+  set_property -dict [ list CONFIG.Byte_Size {9} \
+CONFIG.Enable_32bit_Address {false} CONFIG.Enable_B {Use_ENB_Pin} \
+CONFIG.Fill_Remaining_Memory_Locations {false} CONFIG.Memory_Type {True_Dual_Port_RAM} \
+CONFIG.Operating_Mode_A {READ_FIRST} CONFIG.Output_Reset_Value_A {0} \
+CONFIG.Port_B_Clock {100} CONFIG.Port_B_Enable_Rate {100} \
+CONFIG.Port_B_Write_Rate {50} CONFIG.Read_Width_A {4} \
+CONFIG.Read_Width_B {4} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} \
+CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Reset_Priority_A {CE} \
+CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} \
+CONFIG.Write_Depth_A {307200} CONFIG.Write_Width_A {4} \
+CONFIG.Write_Width_B {4} CONFIG.use_bram_block {Stand_Alone} \
+ ] $blk_mem_gen_0
 
   # Create port connections
   connect_bd_net -net addr_a_1 [get_bd_ports addr_a] [get_bd_pins blk_mem_gen_0/addra]
   set_property -dict [ list HDL_ATTRIBUTE.MARK_DEBUG {true}  ] [get_bd_nets addr_a_1]
+  connect_bd_net -net addr_b_1 [get_bd_ports addr_b] [get_bd_pins blk_mem_gen_0/addrb]
   connect_bd_net -net blk_mem_gen_0_douta [get_bd_ports color_out] [get_bd_pins blk_mem_gen_0/douta]
   set_property -dict [ list HDL_ATTRIBUTE.MARK_DEBUG {true}  ] [get_bd_nets blk_mem_gen_0_douta]
-  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins blk_mem_gen_0/clka]
+  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_ports color_out_b] [get_bd_pins blk_mem_gen_0/doutb]
+  connect_bd_net -net clear_in_1 [get_bd_ports clear_in] [get_bd_pins blk_mem_gen_0/dinb]
+  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb]
   connect_bd_net -net color_1 [get_bd_ports color_in] [get_bd_pins blk_mem_gen_0/dina]
   set_property -dict [ list HDL_ATTRIBUTE.MARK_DEBUG {true}  ] [get_bd_nets color_1]
   connect_bd_net -net en_1 [get_bd_ports en] [get_bd_pins blk_mem_gen_0/ena]
-  set_property -dict [ list HDL_ATTRIBUTE.MARK_DEBUG {true}  ] [get_bd_nets en_1]
-  connect_bd_net -net rst_l_1 [get_bd_ports rst] [get_bd_pins blk_mem_gen_0/rsta]
+  connect_bd_net -net en_b_1 [get_bd_ports en_b] [get_bd_pins blk_mem_gen_0/enb]
   connect_bd_net -net write_en_1 [get_bd_ports write_en] [get_bd_pins blk_mem_gen_0/wea]
-  set_property -dict [ list HDL_ATTRIBUTE.MARK_DEBUG {true}  ] [get_bd_nets write_en_1]
+  connect_bd_net -net write_en_b_1 [get_bd_ports write_en_b] [get_bd_pins blk_mem_gen_0/web]
 
   # Create address segments
   

@@ -35,8 +35,9 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     //         could cause errors from 2's comp
     logic [10:0] currX, nextX, currY, nextY; 
 
-
     logic [3:0] clkCount;
+
+    logic vggoCap;
 
     always_ff @(posedge clk_in, negedge rst_b) begin
         if(~rst_b) begin
@@ -44,6 +45,8 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
         end
         else begin
             clkCount <= clkCount + 1;
+            if(vggo) vggoCap <= 1;
+            if(clkCount == 15) vggoCap <= 0;
         end
     end
     
@@ -75,7 +78,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     register #(11) xReg(currX, nextX, (center || vector) && run, clk, rst_b);
     register #(11) yReg(currY, nextY, (center || vector) && run, clk, rst_b);
 
-    retStack rs(retAddr, retValid, nextPC, jsr && run, ret && run, clk, rst_b);
+    retStack rs(retAddr, retValid, pc + pcOffset, jsr && run, ret && run, clk, rst_b);
     
     register #(4) zReg(zVal, decZVal, zWrEn && run, clk, rst_b);
 
@@ -103,7 +106,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     assign startY = currY;
     assign endY = nextY;
 
-    register #(1) haltReg(halt, (decHalt && ~vggo), 1'b1, clk, rst_b);
+    register #(1) haltReg(halt, (decHalt && ~vggoCap), 1'b1, clk, rst_b);
 
 endmodule
 
@@ -134,7 +137,7 @@ module retStack(output logic [15:0] retAddr,
     logic [2:0] top;
 
     always_ff @(posedge clk, negedge rst_b) begin
-        if(rst_b) begin
+        if(~rst_b) begin
             top <= 0;     
         end
         else begin

@@ -32,22 +32,20 @@ module fb_top(
     logic[3:0] color_in, lineColor;
     logic[10:0] startX, endX, startY, endY, dStartX, dStartY, dEndX, dEndY;
     logic done, en_w, en_r, readyFrame, readyLine, rastReady, blank;
-    logic lrWrite, full, empty, rst; 
+    logic rst, rst_l, rst_unstable;
+    logic lrWrite, full, empty; 
     logic[15:0] pc;
     logic[31:0] inst;
     logic[3:0] dColor;
-    logic[10:0] pixelX, pixelY;
+    
+    //assign readyLine = ~empty;
     
     assign rst = ~rst_l;
-    assign readyLine = ~empty;
-    
+   
     m_register #(1) syncRstRegA(.Q(rst_unstable), .D(btnCpuReset), .clr(1'b0), .en(1'b1), .clk(clk));
     m_register #(1) syncRstRegB(.Q(rst_l), .D(rst_unstable), .clr(1'b0), .en(1'b1), .clk(clk));
 
-    VGA_fsm vfsm(.clk(clk), .rst_l(btnCpuReset), .row(row), .col(col), .Hsync(Hsync), .Vsync(Vsync), .en_r(en_r));
-    //vga vgafsm(clk, ~btnCpuReset,Hsync, Vsync, blank,row,col);
-    //assign en_r = 1'b1;
-    
+    VGA_fsm vfsm(.clk(clk), .rst(rst), .row(row), .col(col), .Hsync(Hsync), .Vsync(Vsync), .en_r(en_r));
     //vgaTestDisplay colorBars(row, col, vgaRed, vgaGreen, vgaBlue);
     fb_controller fbc(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(done), .clk(clk), .rst(rst), 
                       .row(row), .col(col), .color_in(color_in),
@@ -55,19 +53,19 @@ module fb_top(
                         
        //fb_test fbt(clk,~btnCpuReset, ready, row, col, w_addr, color_in, en_w, done);
     //shapes_tb stb(startX, endX,startY, endY, readyLine, lineColor, rastReady, clk, ~btnCpuReset, readyFrame);
-    //animation_tb atb(.startX(startX), .endX(endX), .startY(startY), .endY(endY), .readyLine(readyLine), 
-    //                    .color(lineColor), .rastReady(rastReady), .clk(clk), .rst(rst), 
-    //                   .readyFrame(readyFrame), .vsync(Vsync));
+    animation_tb atb(.startX(startX), .endX(endX), .startY(startY), .endY(endY), .readyLine(readyLine), 
+                        .color(lineColor), .rastReady(rastReady), .clk(clk), .rst(rst), 
+                        .readyFrame(readyFrame), .vsync(Vsync));
                         
     rasterizer rast(.startX(startX), .endX(endX), .startY(startY), .endY(endY), .lineColor(lineColor), 
                     .clk(clk), .rst(rst), .readyIn(readyLine), .addressOut(w_addr), 
                     .pixelX(pixelX), .pixelY(pixelY), .pixelColor(color_in), 
                     .goodPixel(en_w), .done(lineDone), .rastReady(rastReady));
                     
-    avg_core avgc(dStartX, dStartY, dEndX, dEndY, dColor, lrWrite, pc, inst, clk, btnCpuReset, readyFrame);
-    lineRegQueue lrq(startX, startY, endX, endY, lineColor, full, empty, dStartX, dStartY, dEndX, dEndY,
-                                     dColor, lineDone, lrWrite, clk, btnCpuReset);
-    avgROM_wrapper avgRW (pc[10:0], pc[10:0] + 1, clk, 16'b0, 16'b0, inst[31:16], inst[15:0], 1'b1, 1'b0);
+    //avg_core avgc(dStartX, dStartY, dEndX, dEndY, dColor, lrWrite, pc, inst, clk, btnCpuReset, readyFrame);
+    //lineRegQueue lrq(startX, endX, startY, endY, lineColor, full, empty, dStartX, dEndX, dStartY, dEndY,
+    //                                 dColor, lineDone, lrWrite, clk, btnCpuReset);
+    //avgROM_wrapper avgRW (pc[10:0], pc[10:0] + 1, clk, 16'b0, 16'b0, inst[31:16], inst[15:0], 1'b1, 1'b0);
 
                                       
                                       
