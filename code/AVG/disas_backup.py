@@ -10,9 +10,6 @@ code = []
 for n in xrange(len(text)):
     code.append((text[n][7:55]))
 
-#for n in xrange(len(text)):
-#    code.append(text[n])
-
 codeText = ""
 
 for line in code:
@@ -24,18 +21,17 @@ n = 0
 end = False
 
 while(n < len(text) and not end):
+    byte = text[n]
     
     try: 
-        byte = text[n+1]
         byte = int(byte, base=16)
     except:
         break
 
     opcode = (byte & 0xE0) >> 5
 
-
     if(opcode == 0):
-        op = text[n+1] + text[n] + text[n+3] + text[n+2]
+        op = text[n] + text[n+1] + text[n+2] + text[n+3]
         op = int(op, base=16)
         
         dY = (op >> 16) & 0x1FFF
@@ -50,7 +46,7 @@ while(n < len(text) and not end):
         print("%2x: %08x Vector: dY:%d dX:%d I:%d" %(0x2000 + n, op, dY, dX, I))
 
     else:
-        op = text[n+1] + text[n]
+        op = text[n] + text[n+1]
         op = int(op, base=16)
 
         if(opcode == 1):

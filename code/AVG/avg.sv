@@ -57,7 +57,8 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     /*             FETCH               */
     /***********************************/
     
-    register #(16, 8192) pcReg(pc, nextPC, (countIn == 1 && ~halt), clk, rst_b);
+    //register #(16, 8192) pcReg(pc, nextPC, (countIn == 1 && ~halt), clk, rst_b);
+    register #(16, 0) pcReg(pc, nextPC, (countIn == 1 && ~halt), clk, rst_b);
 
     assign nextPC = !(jump || ret) ? pc + pcOffset : (jump ? jumpAddr : retAddr);
 

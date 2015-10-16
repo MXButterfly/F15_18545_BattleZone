@@ -161,3 +161,4 @@
 11:55:50    3554 --> ...                  [tcl] catch {senv activeDomain} dveMisc::result 
 11:55:50    3555 --> ...                      [tcl] set dveMisc::result
 11:55:50    3556 --> ...                          [tcl] gui_update_simulator_buttons
+19:22:31    3557 --> ...                              [tcl] eval $tcl_prompt1

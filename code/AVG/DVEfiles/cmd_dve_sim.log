@@ -101,3 +101,4 @@ set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
 set ucliGUI::state
+eval $tcl_prompt1

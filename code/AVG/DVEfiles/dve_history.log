@@ -205,3 +205,17 @@ gui_marker_move -id  Wave.1 C1 915
 gui_sim_restart
 gui_sim_continue  
 gui_wv_scroll_hslidermove -id  Wave.1 10449
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
+gui_wv_zoom_timerange -id  Wave.1 27749 30709
