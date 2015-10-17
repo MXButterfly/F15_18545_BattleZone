@@ -1,176 +1,180 @@
 Chronologic VCS simulator copyright 1991-2014
 Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:20 2015
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:37 2015
 VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
 The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Releasing License for VC-SIM-RUNTIME-BASE at Fri Oct 16 18:38:25
+Releasing License for VCSRuntime_Net at Fri Oct 16 18:38:25
+Attempting to Re-Acquire License for VC-SIM-RUNTIME-BASE at Fri Oct 16 18:38:28
+Re-Acquired License for VC-SIM-RUNTIME-BASE at Fri Oct 16 18:38:28, continuing....
+Attempting to Re-Acquire License for VCSRuntime_Net at Fri Oct 16 18:38:28
+Re-Acquired License for VCSRuntime_Net at Fri Oct 16 18:38:28, continuing....
 Chronologic VCS simulator copyright 1991-2014
 Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:22 2015
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:38 2015
 VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
 The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:33 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:34 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:36 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:37 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:37 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:38 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:38 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:40 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:42 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:45 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:46 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:47 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:48 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:49 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:49 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:50 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:50 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:51 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
-$finish at simulation time                15001
-Simulation complete, time is 15001.
-Chronologic VCS simulator copyright 1991-2014
-Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:52 2015
-VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
-The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
+$finish called from file "avg_test.sv", line 56.
 $finish at simulation time                60001
 Simulation complete, time is 60001.
 Chronologic VCS simulator copyright 1991-2014
 Contains Synopsys proprietary information.
-Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct  7 11:55 2015
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:38 2015
 VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
 The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
-$finish called from file "avg_test.sv", line 57.
+$finish called from file "avg_test.sv", line 56.
 $finish at simulation time                60001
 Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:43 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:45 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:46 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:46 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:47 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:49 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:51 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:52 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 18:54 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 19:00 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 56.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 19:05 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 58.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 19:07 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 58.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Releasing License for VC-SIM-RUNTIME-BASE at Fri Oct 16 19:17:05
+Releasing License for VCSRuntime_Net at Fri Oct 16 19:17:05
+Attempting to Re-Acquire License for VC-SIM-RUNTIME-BASE at Fri Oct 16 19:17:07
+Re-Acquired License for VC-SIM-RUNTIME-BASE at Fri Oct 16 19:17:07, continuing....
+Attempting to Re-Acquire License for VCSRuntime_Net at Fri Oct 16 19:17:07
+Re-Acquired License for VCSRuntime_Net at Fri Oct 16 19:17:07, continuing....
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 19:19 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 58.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 19:22 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 58.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 19:23 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 58.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Oct 16 19:26 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/inter.vpd' was opened successfully.
+$finish called from file "avg_test.sv", line 58.
+$finish at simulation time                60001
+Simulation complete, time is 60001.
+---------------------------------------------
+
+The tool has just exited abnormally:
+
+
+Release = 'J-2014.12-SP3-1_Full64'  Architecture = 'amd64'  Program = 'DVE'
+
+'33560838 33587166 33589351 140605685263913'
+
+---------------------------------------------
+=======================DVE Context and Call Stack=========================
+Command line: /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/gui/dve/amd64/bin/dve.exe -full64 -ucliplatform=amd64 -toolargs "-ucligui -toolexe ./simv  -pid 10949" -toolin /tmp/vcs_20151016223733_10948_ashresth..stdin -toolout /tmp/vcs_20151016223733_10948_ashresth..stdout
+
+--- Stack trace follows:
+No context available
+==========================================================================

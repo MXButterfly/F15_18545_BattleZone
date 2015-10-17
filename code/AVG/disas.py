@@ -7,11 +7,11 @@ with open(fileName) as fid:
 
 code = []
 
-for n in xrange(len(text)):
-    code.append((text[n][7:55]))
-
 #for n in xrange(len(text)):
-#    code.append(text[n])
+#    code.append((text[n][7:55]))
+
+for n in xrange(len(text)):
+    code.append(text[n])
 
 codeText = ""
 
@@ -36,7 +36,9 @@ while(n < len(text) and not end):
 
     if(opcode == 0):
         op = text[n+1] + text[n] + text[n+3] + text[n+2]
+        opPrint = text[n] + text[n+1] + text[n+2] + text[n+3]
         op = int(op, base=16)
+        opPrint = int(opPrint, base=16)
         
         dY = (op >> 16) & 0x1FFF
         if(dY > 4095):
@@ -47,14 +49,16 @@ while(n < len(text) and not end):
             dX = dX | (-1 << 12)
 
         I = (op >> 13 & 0x7)
-        print("%2x: %08x Vector: dY:%d dX:%d I:%d" %(0x2000 + n, op, dY, dX, I))
+        print("%2x: %08x Vector: dY:%d dX:%d I:%d" %(0x2000 + n, opPrint, dY, dX, I))
 
     else:
         op = text[n+1] + text[n]
+        opPrint = text[n] + text[n+1]
         op = int(op, base=16)
+        opPrint = int(opPrint, base=16)
 
         if(opcode == 1):
-            print("%2x: %2x     Halt" %(0x2000 + n, op))
+            print("%2x: %08x     Halt" %(0x2000 + n, opPrint))
 
         if(opcode == 2):
             dY = (op >> 8) & 0x1F
@@ -69,30 +73,30 @@ while(n < len(text) and not end):
 
             I = (op >> 5) & 0x7
 
-            print("%2x: %2x     SVEC: dY:%d dX:%d I:%d" %(0x2000 + n, op, dY, dX, I))
+            print("%2x: %04x     SVEC: dY:%d dX:%d I:%d" %(0x2000 + n, opPrint, dY, dX, I))
 
         if(opcode == 3):
             if(opcode >> 12 == 6):
                 I = op & 0xFF
-                print("%2x: %2x     Intensity: I:%d" %(0x2000 + n, op, I))
+                print("%04x: %4x     Intensity: I:%d" %(0x2000 + n, opPrint, I))
             else:
                 linScale = op & 0xFF
                 binScale = (op >> 8) & 0x7
-                print("%2x: %2x     Scale: LinScale:%d, BinScale:%d" %(0x2000 + n, op,linScale, binScale))
+                print("%04x: %4x     Scale: LinScale:%d, BinScale:%d" %(0x2000 + n, opPrint, linScale, binScale))
 
         if(opcode == 4):
-            print("%2x: %2x     Center" %(0x2000 + n, op))
+            print("%2x: %04x     Center" %(0x2000 + n, opPrint))
 
         if(opcode == 5):
             address = (op & 0x1FFF)*2
-            print("%2x: %2x     JSR:%x" %(0x2000 + n, op, address))
+            print("%2x: %04x     JSR:%x" %(0x2000 + n, opPrint, address))
 
         if(opcode == 6):
-            print("%2x: %2x     RTS" %(0x2000 + n, op))
+            print("%2x: %04x     RTS" %(0x2000 + n, opPrint))
 
         if(opcode == 7):
             address = (op & 0x1FFF)*2
-            print("%2x: %2x     JMP:%x" %(0x2000 + n, op, address))
+            print("%2x: %04x     JMP:%x" %(0x2000 + n, opPrint, address))
 
     if(opcode == 0): 
         n += 4

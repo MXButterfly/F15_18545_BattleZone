@@ -40,7 +40,7 @@ STRIPFLAGS=
 # Loader Flags
 LDFLAGS= 
 # Picarchive Flags
-PICLDFLAGS=-Wl,-rpath-link=./ -Wl,-rpath='$$ORIGIN'/simv.daidir/ -Wl,-rpath=./simv.daidir/ -Wl,-rpath='$$ORIGIN'/simv.daidir//scsim.db.dir 
+PICLDFLAGS= 
 
 # C run time startup
 CRT0=
@@ -63,9 +63,9 @@ TMPSPECENV=$(VCSTMPSPECENV)
 CC=$(TMPSPECENV) $(VCS_CC) $(TMPSPECARG)
 
 # C flags for compilation
-CFLAGS=-w  -pipe -fPIC -O -I/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/include   
+CFLAGS=-w  -pipe -O -I/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/include   
 
-CFLAGS_CG=-w  -pipe -fPIC -I/afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/include -O  
+CFLAGS_CG=-w -O  
 
 LD_PARTIAL_LOADER=ld
 # Partial linking
@@ -91,16 +91,14 @@ clean   :
 clobber : clean
 	rm -f $(PRODUCT) $(PRODUCT_TIMESTAMP) 
 
-picclean :
-	@rm -f _csrc*.so amd64_scvhdl_*.so pre_vcsobj_*.so share_vcsobj_*.so
-
 $(PRODUCT_TIMESTAMP) : $(PRODUCT)
 	@-if [ -x $(PRODUCT) ]; then chmod -x $(PRODUCT); fi
-	@$(LD) $(CRT0) -o $(PRODUCT) $(STRIPFLAGS) $(PCLDFLAGS) $(PICLDFLAGS) $(LDFLAGS) $(OBJS)  $(LIBS)   $(RUNTIME) -Wl,-whole-archive $(VCSUCLI) -Wl,-no-whole-archive     $(LINK_TB) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS)   $(VCS_SAVE_RESTORE_OBJ) $(SYSLIBS) $(CRTN)
+	@$(LD) $(CRT0) -o $(PRODUCT) $(STRIPFLAGS) $(LDFLAGS) $(PCLDFLAGS) $(PICAFLAGS) -Wl,-whole-archive  $(VHDL_OBJS)  $(VCSUCLI) -Wl,-no-whole-archive  $(VLOG_OBJS)  $(SYSC_OBJS) $(SYSC_LIBS)   $(LIBS)   $(CMODLIB) $(RUNTIME)     $(LINK_TB) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS)   $(VCS_SAVE_RESTORE_OBJ) $(SYSLIBS) $(CRTN)
 	@rm -f csrc[0-9]*.o
+	@rm -f $(CG_OBJS) $(VCS_INCR_OBJS)
 	@touch $(PRODUCT_TIMESTAMP)
 	@-if [ -d ./objs ]; then find ./objs -type d -empty -delete; fi
 
-$(PRODUCT) :  picclean  $(LD_VERSION_CHECK)  $(OBJS) $(DOTLIBS) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS) $(CMODLIB) $(RUNTIME)  $(VCSUCLI)  $(VCS_SAVE_RESTORE_OBJ) 
+$(PRODUCT) :  $(OBJS) $(DOTLIBS) $(DPI_STUB_OBJS) $(PLI_STUB_OBJS) $(CMODLIB) $(RUNTIME)  $(VCSUCLI)  $(VCS_SAVE_RESTORE_OBJ) 
 	@touch $(PRODUCT)
 

@@ -1,5 +1,5 @@
 =======================DVE Context and Call Stack=========================
-Command line: /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/gui/dve/amd64/bin/dve.exe -full64 -ucliplatform=amd64 -toolargs "-ucligui -toolexe ./simv  -pid 21553" -toolin /tmp/vcs_20150927231134_21552_ashresth..stdin -toolout /tmp/vcs_20150927231134_21552_ashresth..stdout
+Command line: /afs/ece.cmu.edu/support/synopsys/synopsys/share/image/usr/local/synopsys/vcs-mx_vJ-2014.12/gui/dve/amd64/bin/dve.exe -full64 -ucliplatform=amd64 -toolargs "-ucligui -toolexe ./simv  -pid 10949" -toolin /tmp/vcs_20151016223733_10948_ashresth..stdin -toolout /tmp/vcs_20151016223733_10948_ashresth..stdout
 
 --- Stack trace follows:
 No context available

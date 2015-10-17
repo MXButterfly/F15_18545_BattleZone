@@ -11,7 +11,7 @@ module test;
 
     logic [2:0] DColor, QColor;
     logic [15:0] pc;
-    logic [31:0] inst;
+    bit [15:0] inst;
 
     logic full, empty;
     logic read;
@@ -31,9 +31,10 @@ module test;
     assign read = (count == 15);
     
     always_comb begin
-        inPC = (pc - 16'h2000)*2 + 16'h2000;
         if(pc < 16'h2000) inst = 0;
-        else inst = {memory[inPC], memory[inPC+1], memory[inPC+2], memory[inPC+3]}; 
+        else begin 
+            inst <= #160 {memory[pc], memory[pc+1]}; 
+        end
     end
 
     initial begin
@@ -52,7 +53,7 @@ module test;
         vggo = 0;
         #1 rst_b = 1; 
 
-        #10000 vggo = 1;
+        #10000 vggo = 0;
 
         #50000 $finish;
 

@@ -1,4 +1,4 @@
-JMP ADDR:200e
+JMP ADDR:201c
 SVEC: dY:0 dX:0 I:0
 Vector: dY:80 dX:0 I:0
 Vector: dY:-160 dX:80 I:7

@@ -1,15 +1,15 @@
 # Begin_DVE_Session_Save_Info
 # DVE restart session
-# Saved on Wed Oct 7 11:55:47 2015
+# Saved on Sat Oct 17 16:52:15 2015
 # Designs open: 1
 #   Sim: /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/simv
 # Toplevel windows open: 2
 # 	TopLevel.1
 # 	TopLevel.2
 #   Source.1: test
-#   Wave.1: 17 signals
+#   Wave.1: 14 signals
 #   Group count = 1
-#   Group Group1 signal count = 17
+#   Group Group1 signal count = 14
 # End_DVE_Session_Save_Info
 
 # DVE version: J-2014.12-SP3-1_Full64
@@ -59,7 +59,7 @@ gui_sync_global -id ${TopLevel.2} -option true
 
 # MDI window settings
 set Wave.1 Wave.1
-gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 464} {child_wave_right 1130} {child_wave_colname 230} {child_wave_colvalue 230} {child_wave_col1 0} {child_wave_col2 1}}
+gui_update_layout -id ${Wave.1} {{show_state maximized} {dock_state undocked} {dock_on_new_line false} {child_wave_left 557} {child_wave_right 1357} {child_wave_colname 276} {child_wave_colvalue 277} {child_wave_col1 0} {child_wave_col2 1}}
 
 # End MDI window settings
 
@@ -86,15 +86,14 @@ gui_set_time_units 1s
 # Global: Signal Compare
 
 # Global: Signal Groups
-gui_load_child_values {test.core}
-gui_load_child_values {test}
+gui_load_child_values {test.core.idu}
 
 
-set _session_group_21 Group1
-gui_sg_create "$_session_group_21"
-set Group1 "$_session_group_21"
+set _session_group_9 Group1
+gui_sg_create "$_session_group_9"
+set Group1 "$_session_group_9"
 
-gui_sg_addsignal -group "$_session_group_21" { test.core.startX test.core.startY test.core.endX test.core.endY test.core.lrWrite test.core.pc test.core.inst test.inPC test.core.nextPC test.core.jump test.core.ret test.core.jsr test.core.run test.core.rs.retValid test.core.rs.top test.core.rs.writeEn test.core.rs.readEn }
+gui_sg_addsignal -group "$_session_group_9" { test.core.clk test.core.pcOut test.core.idu.inst test.core.run test.core.countOut test.core.countIn test.core.lrWrite test.core.instLength test.core.inst test.core.instOut test.core.startX test.core.startY test.core.endX test.core.endY }
 
 # Global: Highlighting
 
@@ -124,17 +123,16 @@ gui_list_set_filter -id ${Hier.1} -list { {Package 1} {All 0} {Process 1} {VirtP
 gui_list_set_filter -id ${Hier.1} -text {*}
 gui_change_design -id ${Hier.1} -design Sim
 catch {gui_list_expand -id ${Hier.1} test}
-catch {gui_list_expand -id ${Hier.1} test.core}
-catch {gui_list_select -id ${Hier.1} {test.core.rs}}
+catch {gui_list_select -id ${Hier.1} {test.core}}
 gui_view_scroll -id ${Hier.1} -vertical -set 0
 gui_view_scroll -id ${Hier.1} -horizontal -set 0
 
 # Data 'Data.1'
 gui_list_set_filter -id ${Data.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {LowPower 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Data.1} -text {*}
-gui_list_show_data -id ${Data.1} {test.core.rs}
+gui_list_show_data -id ${Data.1} {test.core}
 gui_show_window -window ${Data.1}
-catch { gui_list_select -id ${Data.1} {test.core.rs.readEn }}
+catch { gui_list_select -id ${Data.1} {test.core.startX test.core.startY test.core.endX test.core.endY }}
 gui_view_scroll -id ${Data.1} -vertical -set 0
 gui_view_scroll -id ${Data.1} -horizontal -set 0
 gui_view_scroll -id ${Hier.1} -vertical -set 0
@@ -155,9 +153,9 @@ set origWaveHeight [gui_get_pref_value -category Wave -key waveRowHeight]
 gui_list_set_height -id Wave -height 25
 set origGroupCreationState [gui_list_create_group_when_add -wave]
 gui_list_create_group_when_add -wave -disable
-gui_wv_zoom_timerange -id ${Wave.1} 0 2960
+gui_wv_zoom_timerange -id ${Wave.1} 526 2303
 gui_list_add_group -id ${Wave.1} -after {New Group} {Group1}
-gui_list_select -id ${Wave.1} {test.core.rs.readEn }
+gui_list_select -id ${Wave.1} {test.core.run }
 gui_seek_criteria -id ${Wave.1} {Any Edge}
 
 
@@ -173,7 +171,7 @@ if { $groupExD } {
 }
 gui_list_set_filter -id ${Wave.1} -list { {Buffer 1} {Input 1} {Others 1} {Linkage 1} {Output 1} {Parameter 1} {All 1} {Aggregate 1} {LibBaseMember 1} {Event 1} {Assertion 1} {Constant 1} {Interface 1} {BaseMembers 1} {Signal 1} {$unit 1} {Inout 1} {Variable 1} }
 gui_list_set_filter -id ${Wave.1} -text {*}
-gui_list_set_insertion_bar  -id ${Wave.1} -group Group1  -position in
+gui_list_set_insertion_bar  -id ${Wave.1} -group Group1  -item {test.core.endY[10:0]} -position below
 
 gui_view_scroll -id ${Wave.1} -vertical -set 0
 gui_show_grid -id ${Wave.1} -enable false

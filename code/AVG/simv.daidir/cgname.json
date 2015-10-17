@@ -1,12 +1,12 @@
 {
-    "std": [
-        "std",
-        "reYIK",
-        "module"
-    ],
     "test": [
         "test",
         "x9Hvb",
+        "module"
+    ],
+    "std": [
+        "std",
+        "reYIK",
         "module"
     ],
     "...MASTER...": [
