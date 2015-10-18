@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Wed Oct 14 10:52:10 2015
+//Date        : Fri Oct 16 16:46:19 2015
 //Host        : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
 //Command     : generate_target blockRam_wrapper.bd
 //Design      : blockRam_wrapper

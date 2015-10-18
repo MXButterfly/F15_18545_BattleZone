@@ -148,16 +148,16 @@ proc create_root_design { parentCell } {
   set addra [ create_bd_port -dir I -from 10 -to 0 addra ]
   set addrb [ create_bd_port -dir I -from 10 -to 0 addrb ]
   set clk [ create_bd_port -dir I clk ]
-  set dina [ create_bd_port -dir I -from 15 -to 0 dina ]
-  set dinb [ create_bd_port -dir I -from 15 -to 0 dinb ]
-  set douta [ create_bd_port -dir O -from 15 -to 0 douta ]
-  set doutb [ create_bd_port -dir O -from 15 -to 0 doutb ]
+  set dina [ create_bd_port -dir I -from 7 -to 0 dina ]
+  set dinb [ create_bd_port -dir I -from 7 -to 0 dinb ]
+  set douta [ create_bd_port -dir O -from 7 -to 0 douta ]
+  set doutb [ create_bd_port -dir O -from 7 -to 0 doutb ]
   set ena [ create_bd_port -dir I ena ]
   set wea [ create_bd_port -dir I wea ]
 
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.2 blk_mem_gen_0 ]
-  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Coe_File {../../../../new/code.coe} CONFIG.Enable_32bit_Address {false} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Fill_Remaining_Memory_Locations {false} CONFIG.Load_Init_File {true} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Enable_Rate {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Read_Width_A {16} CONFIG.Read_Width_B {16} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Write_Width_A {16} CONFIG.Write_Width_B {16} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
+  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Coe_File {../../../../new/code.coe} CONFIG.Enable_32bit_Address {false} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Load_Init_File {true} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Enable_Rate {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Read_Width_A {8} CONFIG.Read_Width_B {8} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Write_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
 
   # Create port connections
   connect_bd_net -net addra_1 [get_bd_ports addra] [get_bd_pins blk_mem_gen_0/addra]

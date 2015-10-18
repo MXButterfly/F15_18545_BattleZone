@@ -36,17 +36,17 @@ module fb_controller(
     enum logic[1:0] {WRITE_A = 2'b00, WRITE_B = 2'b01, DONE_A = 2'b10, DONE_B = 2'b11} state, nextState;
     
     logic[18:0] addr_a, addr_b, r_addr, addr_a_next, addr_b_next;
-    logic[3:0] color_in_a, color_in_b, color_out_a, color_out_b, color_out;
+    logic[3:0] color_in_a, color_in_b, color_out_a, color_out_b, color_out, color_out_next_b, color_out_next_a;
     logic en_a, en_b, wen_a, wen_b, wen_clear_a, wen_clear_b, en_clear_a, en_clear_b;
     
     blockRam_wrapper bramA(.addr_a(addr_a), .clk(clk), .color_in(color_in_a), .color_out(color_out_a), 
-                            .en(en_a), .write_en(wen_a), .color_out_b(), 
+                            .en(en_a), .write_en(wen_a), .color_out_b(color_out_next_a), 
                             .addr_b(addr_a_next), .clear_in(4'b000), .en_b(en_clear_a), .write_en_b(wen_clear_a));
+                            
     blockRam_wrapper bramB(.addr_a(addr_b), .clk(clk), .color_in(color_in_b), .color_out(color_out_b), 
-                            .en(en_b), .write_en(wen_b), .color_out_b(),
+                            .en(en_b), .write_en(wen_b), .color_out_b(color_out_next_b),
                             .addr_b(addr_b_next), .clear_in(4'b000), .en_b(en_clear_b), .write_en_b(wen_clear_b));
 
-  
     //Calc addr from row/col
     assign r_addr = row*640 + col;
     
@@ -128,7 +128,7 @@ module fb_controller(
                en_a = en_r;
                addr_a_next = r_addr-1;
                en_clear_a = en_r;
-               if(r_addr-1 >= 0)
+               if(r_addr-1 >= 0) 
                    wen_clear_a = 1'b1;
                else 
                    wen_clear_a = 1'b0;

@@ -57,25 +57,19 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     /*             FETCH               */
     /***********************************/
    
-    assign pcOut = (countIn == 7 || countIn == 6 || halt ? pc+2 : pc);
+    assign pcOut = (countIn == 7 || countIn == 6 ? pc+2 : pc);
 
-    logic [15:0] inst1Out, inst2Out;
+    logic [15:0] instOut;
     logic instEn;
     assign instEn = (countOut == 7);
 
-    register #(16) ir(inst1Out, inst, 1'b1, clk, rst_b);
-
-    register #(16) ir2(inst2Out, inst, instEn, clk, rst_b);
+    register #(16) ir(instOut, inst, instEn, clk, rst_b);
     
-    //register #(16, 8192) pcReg(pc, nextPC, (countOut == 2 && ~halt), clk, rst_b);
-    register #(16, 0) pcReg(pc, nextPC, (countOut == 2 && ~halt) || vggoCap, clk, rst_b);
+    register #(16, 8192) pcReg(pc, nextPC, (countOut == 2 && ~halt), clk, rst_b);
+    //register #(16, 0) pcReg(pc, nextPC, (countIn == 1 && ~halt), clk, rst_b);
 
-    //assign nextPC = !(jump || ret) ? pc + pcOffset : (jump ? jumpAddr + 16'h2000 : retAddr);
-	assign nextPC = !(jump || ret) ? pc + pcOffset : (jump ? jumpAddr : retAddr);
+    assign nextPC = !(jump || ret) ? pc + pcOffset : (jump ? jumpAddr + 16'h2000 : retAddr);
 
-    logic [15:0] oldPC;
-    register #(16) oldPCReg(oldPC, pc, 1'b1, clk, rst_b);
-    
     /***********************************/
     /*             DECODE              */
     /***********************************/
@@ -84,7 +78,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     avg_decode idu(zWrEn, scalWrEn, center, jump, jsr, ret, 
                    useZReg, blank, decHalt, vector,  
                    jumpAddr, pcOffset, dX, dY, decZVal, decLinScale, decBinScale, color,  
-                   instLength, {inst1Out, inst2Out});
+                   instLength, {inst, instOut});
 
     /***********************************/
     /*             EXECUTE             */
@@ -93,7 +87,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     register #(11) xReg(currX, nextX, (center || vector) && run, clk, rst_b);
     register #(11) yReg(currY, nextY, (center || vector) && run, clk, rst_b);
 
-    retStack rs(retAddr, retValid, oldPC + 2, jsr && run, ret && run, clk, rst_b);
+    retStack rs(retAddr, retValid, pc + pcOffset, jsr && run, ret && run, clk, rst_b);
     
     register #(4) zReg(zVal, decZVal, zWrEn && run, clk, rst_b);
 
@@ -121,16 +115,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     assign startY = currY;
     assign endY = nextY;
 
-    always_ff @(posedge clk, negedge rst_b) begin
-        if(~rst_b)
-            halt <= 0;
-        else begin
-            if(vggoCap) halt <= 0;
-            else if(decHalt) halt <= 1;
-        end
-    end
-
-    //register #(1) haltReg(halt, (decHalt && ~vggoCap), 1'b1, clk, rst_b);
+    register #(1) haltReg(halt, (decHalt && ~vggoCap), 1'b1, clk, rst_b);
 
 endmodule
 
@@ -177,7 +162,7 @@ module retStack(output logic [15:0] retAddr,
     end
 
     always_comb begin
-        retAddr = stack[top-1];
+        retAddr = stack[top];
         retValid = top != 0;
     end
 

@@ -12,7 +12,7 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
                   input  logic [31:0] inst);
 
     logic [2:0] dcd_op;
-    assign dcd_op = inst[31:29];
+    assign dcd_op = inst[23:21];
 
     always_comb begin
         zWrEn = 1'b0;
@@ -33,44 +33,44 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
         instLength = 0;
         case(dcd_op) 
             `OP_VCTR: begin
-                dY = inst[28:16];
-                dX = inst[12:0];
+                dY = ({inst[20:16], inst[31:24]}) >> 1;
+                dX = ({inst[4:0], inst[15:8]}) >> 1;
                 vector = 1;
-                if(inst[15:13] == 3'b000) blank = 1'b1;
-                else if(inst[15:13] == 3'b001) useZReg = 1'b1;
-                else zVal = (inst[15:13] << 1);
-                pcOffset = 3'h2;
+                if(inst[7:5] == 3'b000) blank = 1'b1;
+                else if(inst[7:5] == 3'b001) useZReg = 1'b1;
+                else zVal = (inst[7:5] << 1);
+                pcOffset = 3'h4;
                 instLength = 7;
             end 
             `OP_HALT: begin
                 halt = 1'b1;
-                pcOffset = 3'h1;
+                pcOffset = 3'h2;
                 instLength = 1;
             end
 
             `OP_SVEC: begin
-                dY = inst[28:24];
-                dX = inst[20:16];
+                dY = (inst[20:16]) >> 1;
+                dX = (inst[28:24]) >> 1;
                 vector = 1;
-                if(inst[23:21] == 3'b000) blank = 1'b1;
-                else if(inst[23:21] == 3'b001) useZReg = 1'b1;
-                else zVal = inst[23:21] << 1;
-                pcOffset = 3'h1;
+                if(inst[31:29] == 3'b000) blank = 1'b1;
+                else if(inst[31:29] == 3'b001) useZReg = 1'b1;
+                else zVal = inst[31:29] << 1;
+                pcOffset = 3'h2;
                 instLength = 5;
             end
 
             `OP_STORE: begin
-                pcOffset = 3'h1;
-                case(inst[28]) 
+                pcOffset = 3'h2;
+                case(inst[20]) 
                     1'b0: begin//STAT
                         zWrEn = 1'b1;
-                        zVal = inst[23:16];
-                        color = inst[26:24];
+                        zVal = inst[31:27];
+                        color = inst[19:16];
                         instLength = 6;
                     end
                     1'b1: begin //SCAL
-                        linScale = inst[23:16];
-                        binScale = inst[26:24];
+                        linScale = inst[31:24];
+                        binScale = inst[18:16];
                         scalWrEn = 1'b1;
                         instLength = 2;
                     end
@@ -79,28 +79,28 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
 
             `OP_CNTR: begin
                 center = 1'b1;
-                pcOffset = 3'h1;
+                pcOffset = 3'h2;
                 instLength = 4;
             end
 
             `OP_JSR: begin
                 jmp = 1'b1;
                 jsr = 1'b1;
-                jumpAddr = inst[28:16] << 1;;
-                pcOffset = 3'h1;
+                jumpAddr = {inst[19:16], inst[31:24]} << 1;
+                pcOffset = 3'h2;
                 instLength = 4;
             end
 
             `OP_JMP: begin
                 jmp = 1'b1;
-                jumpAddr = inst[28:16] << 1;;
-                pcOffset = 3'h1;
+                jumpAddr = {inst[19:16], inst[31:24]} << 1;
+                pcOffset = 3'h2;
                 instLength = 4;
             end
 
             `OP_RTS: begin
                 ret = 1'b1;
-                pcOffset = 3'h1;
+                pcOffset = 3'h2;
                 instLength = 3;
             end
         endcase

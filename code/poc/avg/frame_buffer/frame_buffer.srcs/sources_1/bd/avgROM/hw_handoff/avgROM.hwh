@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Oct 11 22:30:25 2015" VIVADOVERSION="2015.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Oct 17 18:00:25 2015" VIVADOVERSION="2015.2">
 
   <SYSTEMINFO ARCH="artix7" DEVICE="7a100t" NAME="avgROM" PACKAGE="csg324" SPEEDGRADE="-1"/>
 
@@ -13,11 +13,6 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clkb"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="15" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="douta"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="ena" SIGIS="undef" SIGNAME="External_Ports_ena">
@@ -37,17 +32,22 @@
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="addrb"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="15" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dina">
+    <PORT DIR="I" LEFT="7" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dina">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dina"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="15" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dinb">
+    <PORT DIR="I" LEFT="7" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dinb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dinb"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="15" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
+    <PORT DIR="O" LEFT="7" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="blk_mem_gen_0" PORT="douta"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="7" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
       <CONNECTIONS>
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="doutb"/>
       </CONNECTIONS>
@@ -80,7 +80,7 @@
         <PARAMETER NAME="C_LOAD_INIT_FILE" VALUE="1"/>
         <PARAMETER NAME="C_INIT_FILE_NAME" VALUE="avgROM_blk_mem_gen_0_0.mif"/>
         <PARAMETER NAME="C_INIT_FILE" VALUE="NONE"/>
-        <PARAMETER NAME="C_USE_DEFAULT_DATA" VALUE="0"/>
+        <PARAMETER NAME="C_USE_DEFAULT_DATA" VALUE="1"/>
         <PARAMETER NAME="C_DEFAULT_DATA" VALUE="0"/>
         <PARAMETER NAME="C_HAS_RSTA" VALUE="0"/>
         <PARAMETER NAME="C_RST_PRIORITY_A" VALUE="CE"/>
@@ -91,8 +91,8 @@
         <PARAMETER NAME="C_USE_BYTE_WEA" VALUE="0"/>
         <PARAMETER NAME="C_WEA_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_WRITE_MODE_A" VALUE="WRITE_FIRST"/>
-        <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="16"/>
-        <PARAMETER NAME="C_READ_WIDTH_A" VALUE="16"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_A" VALUE="8"/>
+        <PARAMETER NAME="C_READ_WIDTH_A" VALUE="8"/>
         <PARAMETER NAME="C_WRITE_DEPTH_A" VALUE="2048"/>
         <PARAMETER NAME="C_READ_DEPTH_A" VALUE="2048"/>
         <PARAMETER NAME="C_ADDRA_WIDTH" VALUE="11"/>
@@ -105,8 +105,8 @@
         <PARAMETER NAME="C_USE_BYTE_WEB" VALUE="0"/>
         <PARAMETER NAME="C_WEB_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_WRITE_MODE_B" VALUE="WRITE_FIRST"/>
-        <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="16"/>
-        <PARAMETER NAME="C_READ_WIDTH_B" VALUE="16"/>
+        <PARAMETER NAME="C_WRITE_WIDTH_B" VALUE="8"/>
+        <PARAMETER NAME="C_READ_WIDTH_B" VALUE="8"/>
         <PARAMETER NAME="C_WRITE_DEPTH_B" VALUE="2048"/>
         <PARAMETER NAME="C_READ_DEPTH_B" VALUE="2048"/>
         <PARAMETER NAME="C_ADDRB_WIDTH" VALUE="11"/>
@@ -131,9 +131,9 @@
         <PARAMETER NAME="C_EN_DEEPSLEEP_PIN" VALUE="0"/>
         <PARAMETER NAME="C_EN_SHUTDOWN_PIN" VALUE="0"/>
         <PARAMETER NAME="C_DISABLE_WARN_BHV_RANGE" VALUE="0"/>
-        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="1"/>
-        <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="0"/>
-        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     5.349 mW"/>
+        <PARAMETER NAME="C_COUNT_36K_BRAM" VALUE="0"/>
+        <PARAMETER NAME="C_COUNT_18K_BRAM" VALUE="1"/>
+        <PARAMETER NAME="C_EST_POWER_SUMMARY" VALUE="Estimated Power for IP     :     2.6792 mW"/>
         <PARAMETER NAME="Component_Name" VALUE="avgROM_blk_mem_gen_0_0"/>
         <PARAMETER NAME="Interface_Type" VALUE="Native"/>
         <PARAMETER NAME="AXI_Type" VALUE="AXI4_Full"/>
@@ -159,13 +159,13 @@
         <PARAMETER NAME="Algorithm" VALUE="Minimum_Area"/>
         <PARAMETER NAME="Primitive" VALUE="8kx2"/>
         <PARAMETER NAME="Assume_Synchronous_Clk" VALUE="false"/>
-        <PARAMETER NAME="Write_Width_A" VALUE="16"/>
+        <PARAMETER NAME="Write_Width_A" VALUE="8"/>
         <PARAMETER NAME="Write_Depth_A" VALUE="2048"/>
-        <PARAMETER NAME="Read_Width_A" VALUE="16"/>
+        <PARAMETER NAME="Read_Width_A" VALUE="8"/>
         <PARAMETER NAME="Operating_Mode_A" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_A" VALUE="Use_ENA_Pin"/>
-        <PARAMETER NAME="Write_Width_B" VALUE="16"/>
-        <PARAMETER NAME="Read_Width_B" VALUE="16"/>
+        <PARAMETER NAME="Write_Width_B" VALUE="8"/>
+        <PARAMETER NAME="Read_Width_B" VALUE="8"/>
         <PARAMETER NAME="Operating_Mode_B" VALUE="WRITE_FIRST"/>
         <PARAMETER NAME="Enable_B" VALUE="Use_ENB_Pin"/>
         <PARAMETER NAME="Register_PortA_Output_of_Memory_Primitives" VALUE="true"/>
@@ -179,7 +179,7 @@
         <PARAMETER NAME="Pipeline_Stages" VALUE="0"/>
         <PARAMETER NAME="Load_Init_File" VALUE="true"/>
         <PARAMETER NAME="Coe_File" VALUE="../../../../new/code.coe"/>
-        <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="false"/>
+        <PARAMETER NAME="Fill_Remaining_Memory_Locations" VALUE="true"/>
         <PARAMETER NAME="Remaining_Memory_Locations" VALUE="0"/>
         <PARAMETER NAME="Use_RSTA_Pin" VALUE="false"/>
         <PARAMETER NAME="Reset_Memory_Latch_A" VALUE="false"/>
@@ -226,12 +226,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="addra"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dina">
+        <PORT DIR="I" LEFT="7" NAME="dina" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dina">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="dina"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
+        <PORT DIR="O" LEFT="7" NAME="douta" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_douta">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="douta"/>
           </CONNECTIONS>
@@ -256,12 +256,12 @@
             <CONNECTION INSTANCE="External_Ports" PORT="addrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dinb">
+        <PORT DIR="I" LEFT="7" NAME="dinb" RIGHT="0" SIGIS="undef" SIGNAME="External_Ports_dinb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="dinb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
+        <PORT DIR="O" LEFT="7" NAME="doutb" RIGHT="0" SIGIS="undef" SIGNAME="blk_mem_gen_0_doutb">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="doutb"/>
           </CONNECTIONS>

@@ -57,18 +57,21 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     /*             FETCH               */
     /***********************************/
    
-    assign pcOut = (countIn == 7 || countIn == 6 ? pc+2 : pc);
+    assign pcOut = (countIn == 7 || countIn == 6 || halt ? pc+2 : pc);
 
-    logic [15:0] instOut;
+    logic [15:0] inst1Out, inst2Out;
     logic instEn;
     assign instEn = (countOut == 7);
 
-    register #(16) ir(instOut, inst, instEn, clk, rst_b);
-    
-    register #(16, 8192) pcReg(pc, nextPC, (countOut == 2 && ~halt), clk, rst_b);
-    //register #(16, 0) pcReg(pc, nextPC, (countIn == 1 && ~halt), clk, rst_b);
+    register #(16) ir(inst1Out, inst, 1'b1, clk, rst_b);
 
-    assign nextPC = !(jump || ret) ? pc + pcOffset : (jump ? jumpAddr + 16'h2000 : retAddr);
+    register #(16) ir2(inst2Out, inst, instEn, clk, rst_b);
+    
+    //register #(16, 8192) pcReg(pc, nextPC, (countOut == 2 && ~halt), clk, rst_b);
+    register #(16, 0) pcReg(pc, nextPC, (countOut == 2 && ~halt) || vggoCap, clk, rst_b);
+
+    //assign nextPC = !(jump || ret) ? pc + pcOffset : (jump ? jumpAddr + 16'h2000 : retAddr);
+	assign nextPC = !(jump || ret) ? pc + pcOffset : (jump ? jumpAddr : retAddr);
 
     /***********************************/
     /*             DECODE              */
@@ -78,7 +81,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     avg_decode idu(zWrEn, scalWrEn, center, jump, jsr, ret, 
                    useZReg, blank, decHalt, vector,  
                    jumpAddr, pcOffset, dX, dY, decZVal, decLinScale, decBinScale, color,  
-                   instLength, {inst, instOut});
+                   instLength, {inst1Out, inst2Out});
 
     /***********************************/
     /*             EXECUTE             */

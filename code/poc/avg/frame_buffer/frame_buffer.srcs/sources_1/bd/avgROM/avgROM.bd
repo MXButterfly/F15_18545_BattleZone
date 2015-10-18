@@ -38,16 +38,6 @@
           </spirit:wire>
         </spirit:port>
         <spirit:port>
-          <spirit:name>douta</spirit:name>
-          <spirit:wire>
-            <spirit:direction>out</spirit:direction>
-            <spirit:vector>
-              <spirit:left>15</spirit:left>
-              <spirit:right>0</spirit:right>
-            </spirit:vector>
-          </spirit:wire>
-        </spirit:port>
-        <spirit:port>
           <spirit:name>ena</spirit:name>
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
@@ -74,7 +64,7 @@
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
             <spirit:vector>
-              <spirit:left>15</spirit:left>
+              <spirit:left>7</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
           </spirit:wire>
@@ -84,7 +74,17 @@
           <spirit:wire>
             <spirit:direction>in</spirit:direction>
             <spirit:vector>
-              <spirit:left>15</spirit:left>
+              <spirit:left>7</spirit:left>
+              <spirit:right>0</spirit:right>
+            </spirit:vector>
+          </spirit:wire>
+        </spirit:port>
+        <spirit:port>
+          <spirit:name>douta</spirit:name>
+          <spirit:wire>
+            <spirit:direction>out</spirit:direction>
+            <spirit:vector>
+              <spirit:left>7</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
           </spirit:wire>
@@ -94,7 +94,7 @@
           <spirit:wire>
             <spirit:direction>out</spirit:direction>
             <spirit:vector>
-              <spirit:left>15</spirit:left>
+              <spirit:left>7</spirit:left>
               <spirit:right>0</spirit:right>
             </spirit:vector>
           </spirit:wire>
@@ -117,16 +117,16 @@
           <spirit:configurableElementValue spirit:referenceId="Memory_Type">True_Dual_Port_RAM</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Enable_32bit_Address">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Use_Byte_Write_Enable">false</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Write_Width_A">16</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Read_Width_A">16</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Write_Width_B">16</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Read_Width_B">16</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Write_Width_A">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Read_Width_A">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Write_Width_B">8</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Read_Width_B">8</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Enable_B">Use_ENB_Pin</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Register_PortA_Output_of_Memory_Primitives">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Register_PortB_Output_of_Memory_Primitives">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Load_Init_File">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Coe_File">../../../../new/code.coe</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="Fill_Remaining_Memory_Locations">false</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="Fill_Remaining_Memory_Locations">true</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Use_RSTA_Pin">false</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Port_B_Clock">100</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="Port_B_Write_Rate">50</spirit:configurableElementValue>
@@ -146,11 +146,6 @@
         <spirit:externalPortReference spirit:portRef="clk"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="clka"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="clkb"/>
-      </spirit:adHocConnection>
-      <spirit:adHocConnection>
-        <spirit:name>blk_mem_gen_0_douta</spirit:name>
-        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="douta"/>
-        <spirit:externalPortReference spirit:portRef="douta"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>ena_1</spirit:name>
@@ -178,6 +173,11 @@
         <spirit:name>dinb_1</spirit:name>
         <spirit:externalPortReference spirit:portRef="dinb"/>
         <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="dinb"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>blk_mem_gen_0_douta</spirit:name>
+        <spirit:internalPortReference spirit:componentRef="blk_mem_gen_0" spirit:portRef="douta"/>
+        <spirit:externalPortReference spirit:portRef="douta"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>blk_mem_gen_0_doutb</spirit:name>
