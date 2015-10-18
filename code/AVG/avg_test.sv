@@ -33,7 +33,7 @@ module test;
     always_comb begin
         if(pc < 16'h2000) inst = 0;
         else begin 
-            inst <= #160 {memory[pc], memory[pc+1]}; 
+            inst <= #10 {memory[pc], memory[pc+1]}; 
         end
     end
 
@@ -53,7 +53,8 @@ module test;
         vggo = 0;
         #1 rst_b = 1; 
 
-        #10000 vggo = 0;
+        #10000 vggo = 1;
+        #10005 vggo = 0;
 
         #50000 $finish;
 

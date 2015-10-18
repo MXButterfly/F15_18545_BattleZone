@@ -33,8 +33,8 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
         instLength = 0;
         case(dcd_op) 
             `OP_VCTR: begin
-                dY = ({inst[20:16], inst[31:24]} * 5) >> 3;
-                dX = ({inst[4:0], inst[15:8]} * 5) >> 3;
+                dY = ({inst[20:16], inst[31:24]}) >> 1;
+                dX = ({inst[4:0], inst[15:8]}) >> 1;
                 vector = 1;
                 if(inst[7:5] == 3'b000) blank = 1'b1;
                 else if(inst[7:5] == 3'b001) useZReg = 1'b1;
@@ -49,8 +49,8 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
             end
 
             `OP_SVEC: begin
-                dY = (inst[20:16] * 5) >> 3;
-                dX = (inst[28:24] * 5) >> 3;
+                dY = (inst[20:16]) >> 1;
+                dX = (inst[28:24]) >> 1;
                 vector = 1;
                 if(inst[31:29] == 3'b000) blank = 1'b1;
                 else if(inst[31:29] == 3'b001) useZReg = 1'b1;

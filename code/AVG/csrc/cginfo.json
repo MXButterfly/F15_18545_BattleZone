@@ -1,44 +1,46 @@
 {
-    "stat": {
-        "nMops": 0
-    },
     "MlibObjs": {},
-    "CompileStatus": "Successful",
+    "PEModules": [],
     "PrevCompiledModules": {
-        "test": {
-            "x9Hvb_d": {
-                "out": "objs/x9Hvb_d.o",
-                "bytes": 168894,
-                "mod": "test",
-                "mode": 4
-            }
-        },
         "std": {
             "reYIK_d": {
-                "out": "objs/reYIK_d.o",
                 "bytes": 34314,
                 "mod": "std",
-                "mode": 4
+                "mode": 4,
+                "out": "objs/reYIK_d.o"
             }
         },
         "...MASTER...": {
             "amcQw_d": {
-                "out": "objs/amcQw_d.o",
                 "bytes": 7328,
                 "mod": "...MASTER...",
+                "out": "objs/amcQw_d.o",
+                "mode": 4
+            }
+        },
+        "test": {
+            "x9Hvb_d": {
+                "bytes": 172039,
+                "mod": "test",
+                "out": "objs/x9Hvb_d.o",
                 "mode": 4
             }
         }
     },
+    "CurCompileUdps": {},
+    "CompileStatus": "Successful",
+    "LVLData": [
+        "SIM"
+    ],
     "NameTable": {
-        "test": [
-            "test",
-            "x9Hvb",
-            "module"
-        ],
         "std": [
             "std",
             "reYIK",
+            "module"
+        ],
+        "test": [
+            "test",
+            "x9Hvb",
             "module"
         ],
         "...MASTER...": [
@@ -47,29 +49,28 @@
             "module"
         ]
     },
-    "CompileStrategy": "fullobj",
-    "CurCompileUdps": {},
-    "CurCompileModules": [
-        "...MASTER..."
-    ],
-    "SIMBData": {
-        "bytes": 92268,
-        "out": "amcQwB.o"
+    "stat": {
+        "nMops": 12968
     },
-    "LVLData": [
-        "SIM"
-    ],
-    "PEModules": [],
-    "CompileProcesses": [
-        "cgproc.18923.json"
-    ],
     "Misc": {
-        "daidir_abs": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/simv.daidir",
         "cwd": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG",
-        "csrc": "csrc",
         "csrc_abs": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/csrc",
+        "csrc": "csrc",
+        "archive_dir": "archive.40",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/AVG/simv.daidir",
         "daidir": "simv.daidir",
-        "default_output_dir": "csrc",
-        "archive_dir": "archive.38"
-    }
+        "default_output_dir": "csrc"
+    },
+    "CompileStrategy": "fullobj",
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 92348
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "test"
+    ],
+    "CompileProcesses": [
+        "cgproc.25615.json"
+    ]
 }
