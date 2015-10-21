@@ -145,8 +145,8 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set addra [ create_bd_port -dir I -from 10 -to 0 addra ]
-  set addrb [ create_bd_port -dir I -from 10 -to 0 addrb ]
+  set addra [ create_bd_port -dir I -from 13 -to 0 addra ]
+  set addrb [ create_bd_port -dir I -from 13 -to 0 addrb ]
   set clk [ create_bd_port -dir I clk ]
   set dina [ create_bd_port -dir I -from 7 -to 0 dina ]
   set dinb [ create_bd_port -dir I -from 7 -to 0 dinb ]
@@ -155,20 +155,20 @@ proc create_root_design { parentCell } {
   set ena [ create_bd_port -dir I ena ]
   set wea [ create_bd_port -dir I wea ]
 
-  # Create instance: blk_mem_gen_0, and set properties
-  set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.2 blk_mem_gen_0 ]
-  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Coe_File {../../../../new/code.coe} CONFIG.Enable_32bit_Address {false} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Load_Init_File {true} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Enable_Rate {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Read_Width_A {8} CONFIG.Read_Width_B {8} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Write_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
+  # Create instance: blk_mem_gen_1, and set properties
+  set blk_mem_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.2 blk_mem_gen_1 ]
+  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Coe_File {../../../../new/high_score.coe} CONFIG.Enable_32bit_Address {false} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Load_Init_File {true} CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Enable_Rate {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Read_Width_A {8} CONFIG.Read_Width_B {8} CONFIG.Register_PortA_Output_of_Memory_Primitives {true} CONFIG.Register_PortB_Output_of_Memory_Primitives {true} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Write_Depth_A {16384} CONFIG.Write_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_1
 
   # Create port connections
-  connect_bd_net -net addra_1 [get_bd_ports addra] [get_bd_pins blk_mem_gen_0/addra]
-  connect_bd_net -net addrb_1 [get_bd_ports addrb] [get_bd_pins blk_mem_gen_0/addrb]
-  connect_bd_net -net blk_mem_gen_0_douta [get_bd_ports douta] [get_bd_pins blk_mem_gen_0/douta]
-  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_ports doutb] [get_bd_pins blk_mem_gen_0/doutb]
-  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins blk_mem_gen_0/clka] [get_bd_pins blk_mem_gen_0/clkb]
-  connect_bd_net -net dina_1 [get_bd_ports dina] [get_bd_pins blk_mem_gen_0/dina]
-  connect_bd_net -net dinb_1 [get_bd_ports dinb] [get_bd_pins blk_mem_gen_0/dinb]
-  connect_bd_net -net ena_1 [get_bd_ports ena] [get_bd_pins blk_mem_gen_0/ena] [get_bd_pins blk_mem_gen_0/enb]
-  connect_bd_net -net wea_1 [get_bd_ports wea] [get_bd_pins blk_mem_gen_0/wea] [get_bd_pins blk_mem_gen_0/web]
+  connect_bd_net -net addra_1 [get_bd_ports addra] [get_bd_pins blk_mem_gen_1/addra]
+  connect_bd_net -net addrb_1 [get_bd_ports addrb] [get_bd_pins blk_mem_gen_1/addrb]
+  connect_bd_net -net blk_mem_gen_0_douta [get_bd_ports douta] [get_bd_pins blk_mem_gen_1/douta]
+  connect_bd_net -net blk_mem_gen_0_doutb [get_bd_ports doutb] [get_bd_pins blk_mem_gen_1/doutb]
+  connect_bd_net -net clk_1 [get_bd_ports clk] [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins blk_mem_gen_1/clkb]
+  connect_bd_net -net dina_1 [get_bd_ports dina] [get_bd_pins blk_mem_gen_1/dina]
+  connect_bd_net -net dinb_1 [get_bd_ports dinb] [get_bd_pins blk_mem_gen_1/dinb]
+  connect_bd_net -net ena_1 [get_bd_ports ena] [get_bd_pins blk_mem_gen_1/ena] [get_bd_pins blk_mem_gen_1/enb]
+  connect_bd_net -net wea_1 [get_bd_ports wea] [get_bd_pins blk_mem_gen_1/wea] [get_bd_pins blk_mem_gen_1/web]
 
   # Create address segments
   

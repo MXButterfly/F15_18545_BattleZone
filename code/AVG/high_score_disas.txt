@@ -1,0 +1,2944 @@
+2000: 01e0     JMP:2
+2002:   71     Scale: LinScale:0, BinScale:1
+2004: 4080     Center
+2006: 041e041e Vector: dY:-508 dX:-508 I:0
+200a:  360     Scale: LinScale:3, BinScale:0
+200c: 4080     Center
+200e: fc01fc01 Vector: dY:508 dX:508 I:0
+2012:  362     Scale: LinScale:3, BinScale:2
+2014: 4080     Center
+2016: 68018000 Vector: dY:360 dX:128 I:0
+201a: 4080     Center
+201c: 40018000 Vector: dY:320 dX:128 I:0
+2020:   71     Scale: LinScale:0, BinScale:1
+2022: a9a9     JSR:1352
+2024: 55a9     JSR:12aa
+2026: 8fa9     JSR:131e
+2028: a2a9     JSR:1344
+202a: 60a9     JSR:12c0
+202c: 93a9     JSR:1326
+202e: 93a9     JSR:1326
+2030: 93a9     JSR:1326
+2032: 93a9     JSR:1326
+2034: 93a9     JSR:1326
+2036: 8fa9     JSR:131e
+2038: 8fa9     JSR:131e
+203a: 8fa9     JSR:131e
+203c:   71     Scale: LinScale:0, BinScale:1
+203e: 0000581f Vector: dY:0 dX:-168 I:0
+2042: 93a9     JSR:1326
+2044: 93a9     JSR:1326
+2046: 93a9     JSR:1326
+2048: 8fa9     JSR:131e
+204a: 4080     Center
+204c: 18018000 Vector: dY:280 dX:128 I:0
+2050:   72     Scale: LinScale:0, BinScale:2
+2052: 6fa9     JSR:12de
+2054: 74a9     JSR:12e8
+2056: 68a9     JSR:12d0
+2058: 6fa9     JSR:12de
+205a: 93a9     JSR:1326
+205c: a9a9     JSR:1352
+205e: 55a9     JSR:12aa
+2060: 8fa9     JSR:131e
+2062: a2a9     JSR:1344
+2064: 60a9     JSR:12c0
+2066: 93a9     JSR:1326
+2068: 93a9     JSR:1326
+206a: 93a9     JSR:1326
+206c: 93a9     JSR:1326
+206e: 93a9     JSR:1326
+2070: 93a9     JSR:1326
+2072: 8fa9     JSR:131e
+2074: 8fa9     JSR:131e
+2076: 8fa9     JSR:131e
+2078:   71     Scale: LinScale:0, BinScale:1
+207a:   72     Scale: LinScale:0, BinScale:2
+207c: 0000581f Vector: dY:0 dX:-168 I:0
+2080: 93a9     JSR:1326
+2082: 93a9     JSR:1326
+2084: 93a9     JSR:1326
+2086: a9a9     JSR:1352
+2088:   71     Scale: LinScale:0, BinScale:1
+208a: 4080     Center
+208c: a000901f Vector: dY:160 dX:-112 I:0
+2090:   71     Scale: LinScale:0, BinScale:1
+2092: 6fa9     JSR:12de
+2094: 74a9     JSR:12e8
+2096: 68a9     JSR:12d0
+2098: 6fa9     JSR:12de
+209a: 93a9     JSR:1326
+209c: a9a9     JSR:1352
+209e: 55a9     JSR:12aa
+20a0: 8fa9     JSR:131e
+20a2: a2a9     JSR:1344
+20a4: 60a9     JSR:12c0
+20a6: a9a9     JSR:1352
+20a8:   71     Scale: LinScale:0, BinScale:1
+20aa: 4080     Center
+20ac: 6800801f Vector: dY:104 dX:-128 I:0
+20b0: 93a9     JSR:1326
+20b2: 93a9     JSR:1326
+20b4: 93a9     JSR:1326
+20b6: a9a9     JSR:1352
+20b8:   71     Scale: LinScale:0, BinScale:1
+20ba: 8fa9     JSR:131e
+20bc: 8fa9     JSR:131e
+20be: 8fa9     JSR:131e
+20c0: 93a9     JSR:1326
+20c2:   71     Scale: LinScale:0, BinScale:1
+20c4: 60a9     JSR:12c0
+20c6: 59a9     JSR:12b2
+20c8: a2a9     JSR:1344
+20ca: d81ff41e Vector: dY:-40 dX:-268 I:0
+20ce: 93a9     JSR:1326
+20d0: 93a9     JSR:1326
+20d2: 93a9     JSR:1326
+20d4: a9a9     JSR:1352
+20d6:   71     Scale: LinScale:0, BinScale:1
+20d8: 8fa9     JSR:131e
+20da: 8fa9     JSR:131e
+20dc: 8fa9     JSR:131e
+20de: 93a9     JSR:1326
+20e0:   71     Scale: LinScale:0, BinScale:1
+20e2: 88a9     JSR:1310
+20e4: 95a9     JSR:132a
+20e6: 6fa9     JSR:12de
+20e8: d81ff41e Vector: dY:-40 dX:-268 I:0
+20ec: 93a9     JSR:1326
+20ee: 93a9     JSR:1326
+20f0: 93a9     JSR:1326
+20f2: a9a9     JSR:1352
+20f4:   71     Scale: LinScale:0, BinScale:1
+20f6: 8fa9     JSR:131e
+20f8: 8fa9     JSR:131e
+20fa: 8fa9     JSR:131e
+20fc: 93a9     JSR:1326
+20fe:   71     Scale: LinScale:0, BinScale:1
+2100: 7ba9     JSR:12f6
+2102: 60a9     JSR:12c0
+2104: 59a9     JSR:12b2
+2106: d81ff41e Vector: dY:-40 dX:-268 I:0
+210a: 93a9     JSR:1326
+210c: 93a9     JSR:1326
+210e: 93a9     JSR:1326
+2110: a9a9     JSR:1352
+2112:   71     Scale: LinScale:0, BinScale:1
+2114: 8fa9     JSR:131e
+2116: 8fa9     JSR:131e
+2118: 8fa9     JSR:131e
+211a: 93a9     JSR:1326
+211c:   71     Scale: LinScale:0, BinScale:1
+211e: 59a9     JSR:12b2
+2120: 60a9     JSR:12c0
+2122: a9a9     JSR:1352
+2124: d81ff41e Vector: dY:-40 dX:-268 I:0
+2128: 93a9     JSR:1326
+212a: 93a9     JSR:1326
+212c: 93a9     JSR:1326
+212e: a9a9     JSR:1352
+2130:   71     Scale: LinScale:0, BinScale:1
+2132: 8fa9     JSR:131e
+2134: 8fa9     JSR:131e
+2136: 8fa9     JSR:131e
+2138: 93a9     JSR:1326
+213a:   71     Scale: LinScale:0, BinScale:1
+213c: afa9     JSR:135e
+213e: 7fa9     JSR:12fe
+2140: 60a9     JSR:12c0
+2142: d81ff41e Vector: dY:-40 dX:-268 I:0
+2146: 93a9     JSR:1326
+2148: 93a9     JSR:1326
+214a: 93a9     JSR:1326
+214c: a9a9     JSR:1352
+214e:   71     Scale: LinScale:0, BinScale:1
+2150: 8fa9     JSR:131e
+2152: 8fa9     JSR:131e
+2154: 8fa9     JSR:131e
+2156: 93a9     JSR:1326
+2158:   71     Scale: LinScale:0, BinScale:1
+215a: b7a9     JSR:136e
+215c: 7fa9     JSR:12fe
+215e: 49a9     JSR:1292
+2160: d81ff41e Vector: dY:-40 dX:-268 I:0
+2164: 93a9     JSR:1326
+2166: 93a9     JSR:1326
+2168: 93a9     JSR:1326
+216a: a9a9     JSR:1352
+216c:   71     Scale: LinScale:0, BinScale:1
+216e: 8fa9     JSR:131e
+2170: 8fa9     JSR:131e
+2172: 8fa9     JSR:131e
+2174: 93a9     JSR:1326
+2176:   71     Scale: LinScale:0, BinScale:1
+2178: 60a9     JSR:12c0
+217a: 85a9     JSR:130a
+217c: 93a9     JSR:1326
+217e: d81ff41e Vector: dY:-40 dX:-268 I:0
+2182: 93a9     JSR:1326
+2184: 93a9     JSR:1326
+2186: 93a9     JSR:1326
+2188: a9a9     JSR:1352
+218a:   71     Scale: LinScale:0, BinScale:1
+218c: 8fa9     JSR:131e
+218e: 8fa9     JSR:131e
+2190: 8fa9     JSR:131e
+2192: 93a9     JSR:1326
+2194:   71     Scale: LinScale:0, BinScale:1
+2196: 6fa9     JSR:12de
+2198: 41a9     JSR:1282
+219a: 59a9     JSR:12b2
+219c: d81ff41e Vector: dY:-40 dX:-268 I:0
+21a0: 93a9     JSR:1326
+21a2: 93a9     JSR:1326
+21a4: 93a9     JSR:1326
+21a6: a9a9     JSR:1352
+21a8:   71     Scale: LinScale:0, BinScale:1
+21aa: 8fa9     JSR:131e
+21ac: 8fa9     JSR:131e
+21ae: 8fa9     JSR:131e
+21b0: 93a9     JSR:1326
+21b2:   71     Scale: LinScale:0, BinScale:1
+21b4: 8fa9     JSR:131e
+21b6: a2a9     JSR:1344
+21b8: a2a9     JSR:1344
+21ba: d81ff41e Vector: dY:-40 dX:-268 I:0
+21be: 93a9     JSR:1326
+21c0: 93a9     JSR:1326
+21c2: 93a9     JSR:1326
+21c4: a9a9     JSR:1352
+21c6:   71     Scale: LinScale:0, BinScale:1
+21c8: 8fa9     JSR:131e
+21ca: 8fa9     JSR:131e
+21cc: 8fa9     JSR:131e
+21ce: 93a9     JSR:1326
+21d0:   71     Scale: LinScale:0, BinScale:1
+21d2: 68a9     JSR:12d0
+21d4: 7ba9     JSR:12f6
+21d6: a2a9     JSR:1344
+21d8: 4080     Center
+21da: e81ea41e Vector: dY:-280 dX:-348 I:0
+21de:   71     Scale: LinScale:0, BinScale:1
+21e0: 49a9     JSR:1292
+21e2: 8fa9     JSR:131e
+21e4: 8ca9     JSR:1318
+21e6: b1a9     JSR:1362
+21e8: a9a9     JSR:1352
+21ea: 93a9     JSR:1326
+21ec: afa9     JSR:135e
+21ee: 41a9     JSR:1282
+21f0: 8ca9     JSR:1318
+21f2: 7fa9     JSR:12fe
+21f4: 93a9     JSR:1326
+21f6: 41a9     JSR:1282
+21f8: afa9     JSR:135e
+21fa: 93a9     JSR:1326
+21fc:   71     Scale: LinScale:0, BinScale:1
+21fe: cfa9     JSR:139e
+2200: a9a9     JSR:1352
+2202:   71     Scale: LinScale:0, BinScale:1
+2204: 8fa9     JSR:131e
+2206: 8fa9     JSR:131e
+2208: 8fa9     JSR:131e
+220a: 93a9     JSR:1326
+220c: 41a9     JSR:1282
+220e: 8ca9     JSR:1318
+2210: 59a9     JSR:12b2
+2212: 93a9     JSR:1326
+2214: cfa9     JSR:139e
+2216: 8fa9     JSR:131e
+2218: 8fa9     JSR:131e
+221a: 8fa9     JSR:131e
+221c: 8fa9     JSR:131e
+221e: 8fa9     JSR:131e
+2220:   71     Scale: LinScale:0, BinScale:1
+2222: 4080     Center
+2224: 00002020     Halt
+2226: 60a9     JSR:12c0
+2228: 93a9     JSR:1326
+222a: 93a9     JSR:1326
+222c: 93a9     JSR:1326
+222e: 93a9     JSR:1326
+2230: 93a9     JSR:1326
+2232: 93a9     JSR:1326
+2234: 8fa9     JSR:131e
+2236: 8fa9     JSR:131e
+2238: 8fa9     JSR:131e
+223a:   71     Scale: LinScale:0, BinScale:1
+223c:   72     Scale: LinScale:0, BinScale:2
+223e: 0000581f Vector: dY:0 dX:-168 I:0
+2242: 93a9     JSR:1326
+2244: 93a9     JSR:1326
+2246: 93a9     JSR:1326
+2248: a9a9     JSR:1352
+224a:   71     Scale: LinScale:0, BinScale:1
+224c: 4080     Center
+224e: 6000901f Vector: dY:96 dX:-112 I:0
+2252:   71     Scale: LinScale:0, BinScale:1
+2254: 68a9     JSR:12d0
+2256: 41a9     JSR:1282
+2258: 88a9     JSR:1310
+225a: 60a9     JSR:12c0
+225c: 93a9     JSR:1326
+225e: 8fa9     JSR:131e
+2260: b7a9     JSR:136e
+2262: 60a9     JSR:12c0
+2264: a2a9     JSR:1344
+2266:   71     Scale: LinScale:0, BinScale:1
+2268: 4080     Center
+226a: 0000381f Vector: dY:0 dX:-200 I:0
+226e:   71     Scale: LinScale:0, BinScale:1
+2270: d1a9     JSR:13a2
+2272: 93a9     JSR:1326
+2274: 93a9     JSR:1326
+2276: 93a9     JSR:1326
+2278: 93a9     JSR:1326
+227a: 93a9     JSR:1326
+227c: a9a9     JSR:1352
+227e: 93a9     JSR:1326
+2280: cfa9     JSR:139e
+2282:   71     Scale: LinScale:0, BinScale:1
+2284: 4080     Center
+2286: 0000381f Vector: dY:0 dX:-200 I:0
+228a:   71     Scale: LinScale:0, BinScale:1
+228c: 93a9     JSR:1326
+228e: 93a9     JSR:1326
+2290: 55a9     JSR:12aa
+2292: 8fa9     JSR:131e
+2294: 74a9     JSR:12e8
+2296: 8ca9     JSR:1318
+2298: 93a9     JSR:1326
+229a: 93a9     JSR:1326
+229c: 93a9     JSR:1326
+229e: 93a9     JSR:1326
+22a0: 95a9     JSR:132a
+22a2: 85a9     JSR:130a
+22a4: 41a9     JSR:1282
+22a6: c4a9     JSR:1388
+22a8:   71     Scale: LinScale:0, BinScale:1
+22aa: 4080     Center
+22ac: a81f701f Vector: dY:-88 dX:-144 I:0
+22b0:   71     Scale: LinScale:0, BinScale:1
+22b2: 74a9     JSR:12e8
+22b4: 8ca9     JSR:1318
+22b6: a9a9     JSR:1352
+22b8: 60a9     JSR:12c0
+22ba: a2a9     JSR:1344
+22bc: afa9     JSR:135e
+22be: 93a9     JSR:1326
+22c0: 55a9     JSR:12aa
+22c2: 8fa9     JSR:131e
+22c4: 74a9     JSR:12e8
+22c6: 8ca9     JSR:1318
+22c8:   71     Scale: LinScale:0, BinScale:1
+22ca: 4080     Center
+22cc: 00002020     Halt
+22ce:   71     Scale: LinScale:0, BinScale:1
+22d0: 93a9     JSR:1326
+22d2: 93a9     JSR:1326
+22d4: 55a9     JSR:12aa
+22d6: 8fa9     JSR:131e
+22d8: 74a9     JSR:12e8
+22da: 8ca9     JSR:1318
+22dc: 93a9     JSR:1326
+22de: 93a9     JSR:1326
+22e0: 93a9     JSR:1326
+22e2: 93a9     JSR:1326
+22e4: 95a9     JSR:132a
+22e6: 85a9     JSR:130a
+22e8: 41a9     JSR:1282
+22ea: c4a9     JSR:1388
+22ec:   71     Scale: LinScale:0, BinScale:1
+22ee: 4080     Center
+22f0: a81f701f Vector: dY:-88 dX:-144 I:0
+22f4:   71     Scale: LinScale:0, BinScale:1
+22f6: 74a9     JSR:12e8
+22f8: 8ca9     JSR:1318
+22fa: a9a9     JSR:1352
+22fc: 60a9     JSR:12c0
+22fe: a2a9     JSR:1344
+2300: afa9     JSR:135e
+2302: 93a9     JSR:1326
+2304: 55a9     JSR:12aa
+2306: 8fa9     JSR:131e
+2308: 74a9     JSR:12e8
+230a: 8ca9     JSR:1318
+230c:   71     Scale: LinScale:0, BinScale:1
+230e: 4080     Center
+2310: 00002020     Halt
+2312: 8fa9     JSR:131e
+2314: b7a9     JSR:136e
+2316: 60a9     JSR:12c0
+2318: a2a9     JSR:1344
+231a:   71     Scale: LinScale:0, BinScale:1
+231c: 4080     Center
+231e: 0000381f Vector: dY:0 dX:-200 I:0
+2322:   71     Scale: LinScale:0, BinScale:1
+2324: d1a9     JSR:13a2
+2326: 93a9     JSR:1326
+2328: 93a9     JSR:1326
+232a: 93a9     JSR:1326
+232c: 93a9     JSR:1326
+232e: 93a9     JSR:1326
+2330: a9a9     JSR:1352
+2332: 93a9     JSR:1326
+2334: cfa9     JSR:139e
+2336:   71     Scale: LinScale:0, BinScale:1
+2338: 4080     Center
+233a: 0000381f Vector: dY:0 dX:-200 I:0
+233e:   71     Scale: LinScale:0, BinScale:1
+2340: 93a9     JSR:1326
+2342: 93a9     JSR:1326
+2344: 55a9     JSR:12aa
+2346: 8fa9     JSR:131e
+2348: 74a9     JSR:12e8
+234a: 8ca9     JSR:1318
+234c: 93a9     JSR:1326
+234e: 93a9     JSR:1326
+2350: 93a9     JSR:1326
+2352: 93a9     JSR:1326
+2354: 95a9     JSR:132a
+2356: 85a9     JSR:130a
+2358: 41a9     JSR:1282
+235a: c4a9     JSR:1388
+235c:   71     Scale: LinScale:0, BinScale:1
+235e: 4080     Center
+2360: 00002020     Halt
+2362: 0000381f Vector: dY:0 dX:-200 I:0
+2366:   71     Scale: LinScale:0, BinScale:1
+2368: d1a9     JSR:13a2
+236a: 93a9     JSR:1326
+236c: 93a9     JSR:1326
+236e: 93a9     JSR:1326
+2370: 93a9     JSR:1326
+2372: 93a9     JSR:1326
+2374: a9a9     JSR:1352
+2376: 93a9     JSR:1326
+2378: cfa9     JSR:139e
+237a:   71     Scale: LinScale:0, BinScale:1
+237c: 4080     Center
+237e: 0000381f Vector: dY:0 dX:-200 I:0
+2382:   71     Scale: LinScale:0, BinScale:1
+2384: 93a9     JSR:1326
+2386: 93a9     JSR:1326
+2388: 55a9     JSR:12aa
+238a: 8fa9     JSR:131e
+238c: 74a9     JSR:12e8
+238e: 8ca9     JSR:1318
+2390: 93a9     JSR:1326
+2392: 93a9     JSR:1326
+2394: 93a9     JSR:1326
+2396: 93a9     JSR:1326
+2398: 95a9     JSR:132a
+239a: 85a9     JSR:130a
+239c: 41a9     JSR:1282
+239e: c4a9     JSR:1388
+23a0:   71     Scale: LinScale:0, BinScale:1
+23a2: 4080     Center
+23a4: a81f701f Vector: dY:-88 dX:-144 I:0
+23a8:   71     Scale: LinScale:0, BinScale:1
+23aa: 74a9     JSR:12e8
+23ac: 8ca9     JSR:1318
+23ae: a9a9     JSR:1352
+23b0: 60a9     JSR:12c0
+23b2: a2a9     JSR:1344
+23b4: afa9     JSR:135e
+23b6: 93a9     JSR:1326
+23b8: 55a9     JSR:12aa
+23ba: 8fa9     JSR:131e
+23bc: 74a9     JSR:12e8
+23be: 8ca9     JSR:1318
+23c0:   71     Scale: LinScale:0, BinScale:1
+23c2: 4080     Center
+23c4: 00002020     Halt
+23c6: 8ca9     JSR:1318
+23c8: 93a9     JSR:1326
+23ca: 93a9     JSR:1326
+23cc: 93a9     JSR:1326
+23ce: 93a9     JSR:1326
+23d0: 95a9     JSR:132a
+23d2: 85a9     JSR:130a
+23d4: 41a9     JSR:1282
+23d6: c4a9     JSR:1388
+23d8:   71     Scale: LinScale:0, BinScale:1
+23da: 4080     Center
+23dc: 00002020     Halt
+23de: 381f0071 Vector: dY:-200 dX:-3840 I:3
+23e2: 93a9     JSR:1326
+23e4: 93a9     JSR:1326
+23e6: 55a9     JSR:12aa
+23e8: 8fa9     JSR:131e
+23ea: 74a9     JSR:12e8
+23ec: 8ca9     JSR:1318
+23ee: 93a9     JSR:1326
+23f0: 93a9     JSR:1326
+23f2: 93a9     JSR:1326
+23f4: 93a9     JSR:1326
+23f6: 95a9     JSR:132a
+23f8: 85a9     JSR:130a
+23fa: 41a9     JSR:1282
+23fc: c4a9     JSR:1388
+23fe:   71     Scale: LinScale:0, BinScale:1
+2400: 4080     Center
+2402: a81f701f Vector: dY:-88 dX:-144 I:0
+2406:   71     Scale: LinScale:0, BinScale:1
+2408: 74a9     JSR:12e8
+240a: 8ca9     JSR:1318
+240c: a9a9     JSR:1352
+240e: 60a9     JSR:12c0
+2410: a2a9     JSR:1344
+2412: afa9     JSR:135e
+2414: 93a9     JSR:1326
+2416: 55a9     JSR:12aa
+2418: 8fa9     JSR:131e
+241a: 74a9     JSR:12e8
+241c: 8ca9     JSR:1318
+241e:   71     Scale: LinScale:0, BinScale:1
+2420: 4080     Center
+2422: 00002020     Halt
+2424: 00000000 Vector: dY:0 dX:0 I:0
+2428: 00000000 Vector: dY:0 dX:0 I:0
+242c: 00000000 Vector: dY:0 dX:0 I:0
+2430: 00000000 Vector: dY:0 dX:0 I:0
+2434: 00000000 Vector: dY:0 dX:0 I:0
+2438: 00000000 Vector: dY:0 dX:0 I:0
+243c: 00000000 Vector: dY:0 dX:0 I:0
+2440: 00000000 Vector: dY:0 dX:0 I:0
+2444: 00000000 Vector: dY:0 dX:0 I:0
+2448: 00000000 Vector: dY:0 dX:0 I:0
+244c: 00000000 Vector: dY:0 dX:0 I:0
+2450: 00000000 Vector: dY:0 dX:0 I:0
+2454: 00000000 Vector: dY:0 dX:0 I:0
+2458: 00000000 Vector: dY:0 dX:0 I:0
+245c: 00000000 Vector: dY:0 dX:0 I:0
+2460: 00000000 Vector: dY:0 dX:0 I:0
+2464: 00000000 Vector: dY:0 dX:0 I:0
+2468: 00000000 Vector: dY:0 dX:0 I:0
+246c: 00000000 Vector: dY:0 dX:0 I:0
+2470: 00000000 Vector: dY:0 dX:0 I:0
+2474: 00000000 Vector: dY:0 dX:0 I:0
+2478: 00000000 Vector: dY:0 dX:0 I:0
+247c: 00000000 Vector: dY:0 dX:0 I:0
+2480: 00000000 Vector: dY:0 dX:0 I:0
+2484: 00000000 Vector: dY:0 dX:0 I:0
+2488: 00000000 Vector: dY:0 dX:0 I:0
+248c: 00000000 Vector: dY:0 dX:0 I:0
+2490: 00000000 Vector: dY:0 dX:0 I:0
+2494: 00000000 Vector: dY:0 dX:0 I:0
+2498: 00000000 Vector: dY:0 dX:0 I:0
+249c: 00000000 Vector: dY:0 dX:0 I:0
+24a0: 00000000 Vector: dY:0 dX:0 I:0
+24a4: 00000000 Vector: dY:0 dX:0 I:0
+24a8: 00000000 Vector: dY:0 dX:0 I:0
+24ac: 00000000 Vector: dY:0 dX:0 I:0
+24b0: 00000000 Vector: dY:0 dX:0 I:0
+24b4: 00000000 Vector: dY:0 dX:0 I:0
+24b8: 00000000 Vector: dY:0 dX:0 I:0
+24bc: 00000000 Vector: dY:0 dX:0 I:0
+24c0: 00000000 Vector: dY:0 dX:0 I:0
+24c4: 00000000 Vector: dY:0 dX:0 I:0
+24c8: 00000000 Vector: dY:0 dX:0 I:0
+24cc: 00000000 Vector: dY:0 dX:0 I:0
+24d0: 00000000 Vector: dY:0 dX:0 I:0
+24d4: 00000000 Vector: dY:0 dX:0 I:0
+24d8: 00000000 Vector: dY:0 dX:0 I:0
+24dc: 00000000 Vector: dY:0 dX:0 I:0
+24e0: 00000000 Vector: dY:0 dX:0 I:0
+24e4: 00000000 Vector: dY:0 dX:0 I:0
+24e8: 00000000 Vector: dY:0 dX:0 I:0
+24ec: 00000000 Vector: dY:0 dX:0 I:0
+24f0: 00000000 Vector: dY:0 dX:0 I:0
+24f4: 00000000 Vector: dY:0 dX:0 I:0
+24f8: 00000000 Vector: dY:0 dX:0 I:0
+24fc: 00000000 Vector: dY:0 dX:0 I:0
+2500: 00000000 Vector: dY:0 dX:0 I:0
+2504: 00000000 Vector: dY:0 dX:0 I:0
+2508: 00000000 Vector: dY:0 dX:0 I:0
+250c: 00000000 Vector: dY:0 dX:0 I:0
+2510: 00000000 Vector: dY:0 dX:0 I:0
+2514: 00000000 Vector: dY:0 dX:0 I:0
+2518: 00000000 Vector: dY:0 dX:0 I:0
+251c: 00000000 Vector: dY:0 dX:0 I:0
+2520: 00000000 Vector: dY:0 dX:0 I:0
+2524: 00000000 Vector: dY:0 dX:0 I:0
+2528: 00000000 Vector: dY:0 dX:0 I:0
+252c: 00000000 Vector: dY:0 dX:0 I:0
+2530: 00000000 Vector: dY:0 dX:0 I:0
+2534: 00000000 Vector: dY:0 dX:0 I:0
+2538: 00000000 Vector: dY:0 dX:0 I:0
+253c: 00000000 Vector: dY:0 dX:0 I:0
+2540: 00000000 Vector: dY:0 dX:0 I:0
+2544: 00000000 Vector: dY:0 dX:0 I:0
+2548: 00000000 Vector: dY:0 dX:0 I:0
+254c: 00000000 Vector: dY:0 dX:0 I:0
+2550: 00000000 Vector: dY:0 dX:0 I:0
+2554: 00000000 Vector: dY:0 dX:0 I:0
+2558: 00000000 Vector: dY:0 dX:0 I:0
+255c: 00000000 Vector: dY:0 dX:0 I:0
+2560: 00000000 Vector: dY:0 dX:0 I:0
+2564: 00000000 Vector: dY:0 dX:0 I:0
+2568: 00000000 Vector: dY:0 dX:0 I:0
+256c: 00000000 Vector: dY:0 dX:0 I:0
+2570: 00000000 Vector: dY:0 dX:0 I:0
+2574: 00000000 Vector: dY:0 dX:0 I:0
+2578: 00000000 Vector: dY:0 dX:0 I:0
+257c: 00000000 Vector: dY:0 dX:0 I:0
+2580: 00000000 Vector: dY:0 dX:0 I:0
+2584: 00000000 Vector: dY:0 dX:0 I:0
+2588: 00000000 Vector: dY:0 dX:0 I:0
+258c: 00000000 Vector: dY:0 dX:0 I:0
+2590: 00000000 Vector: dY:0 dX:0 I:0
+2594: 00000000 Vector: dY:0 dX:0 I:0
+2598: 00000000 Vector: dY:0 dX:0 I:0
+259c: 00000000 Vector: dY:0 dX:0 I:0
+25a0: 00000000 Vector: dY:0 dX:0 I:0
+25a4: 00000000 Vector: dY:0 dX:0 I:0
+25a8: 00000000 Vector: dY:0 dX:0 I:0
+25ac: 00000000 Vector: dY:0 dX:0 I:0
+25b0: 00000000 Vector: dY:0 dX:0 I:0
+25b4: 00000000 Vector: dY:0 dX:0 I:0
+25b8: 00000000 Vector: dY:0 dX:0 I:0
+25bc: 00000000 Vector: dY:0 dX:0 I:0
+25c0: 00000000 Vector: dY:0 dX:0 I:0
+25c4: 00000000 Vector: dY:0 dX:0 I:0
+25c8: 00000000 Vector: dY:0 dX:0 I:0
+25cc: 00000000 Vector: dY:0 dX:0 I:0
+25d0: 00000000 Vector: dY:0 dX:0 I:0
+25d4: 00000000 Vector: dY:0 dX:0 I:0
+25d8: 00000000 Vector: dY:0 dX:0 I:0
+25dc: 00000000 Vector: dY:0 dX:0 I:0
+25e0: 00000000 Vector: dY:0 dX:0 I:0
+25e4: 00000000 Vector: dY:0 dX:0 I:0
+25e8: 00000000 Vector: dY:0 dX:0 I:0
+25ec: 00000000 Vector: dY:0 dX:0 I:0
+25f0: 00000000 Vector: dY:0 dX:0 I:0
+25f4: 00000000 Vector: dY:0 dX:0 I:0
+25f8: 00000000 Vector: dY:0 dX:0 I:0
+25fc: 00000000 Vector: dY:0 dX:0 I:0
+2600: 00000000 Vector: dY:0 dX:0 I:0
+2604: 00000000 Vector: dY:0 dX:0 I:0
+2608: 00000000 Vector: dY:0 dX:0 I:0
+260c: 00000000 Vector: dY:0 dX:0 I:0
+2610: 00000000 Vector: dY:0 dX:0 I:0
+2614: 00000000 Vector: dY:0 dX:0 I:0
+2618: 00000000 Vector: dY:0 dX:0 I:0
+261c: 00000000 Vector: dY:0 dX:0 I:0
+2620: 00000000 Vector: dY:0 dX:0 I:0
+2624: 00000000 Vector: dY:0 dX:0 I:0
+2628: 00000000 Vector: dY:0 dX:0 I:0
+262c: 00000000 Vector: dY:0 dX:0 I:0
+2630: 00000000 Vector: dY:0 dX:0 I:0
+2634: 00000000 Vector: dY:0 dX:0 I:0
+2638: 00000000 Vector: dY:0 dX:0 I:0
+263c: 00000000 Vector: dY:0 dX:0 I:0
+2640: 00000000 Vector: dY:0 dX:0 I:0
+2644: 00000000 Vector: dY:0 dX:0 I:0
+2648: 00000000 Vector: dY:0 dX:0 I:0
+264c: 00000000 Vector: dY:0 dX:0 I:0
+2650: 00000000 Vector: dY:0 dX:0 I:0
+2654: 00000000 Vector: dY:0 dX:0 I:0
+2658: 00000000 Vector: dY:0 dX:0 I:0
+265c: 00000000 Vector: dY:0 dX:0 I:0
+2660: 00000000 Vector: dY:0 dX:0 I:0
+2664: 00000000 Vector: dY:0 dX:0 I:0
+2668: 00000000 Vector: dY:0 dX:0 I:0
+266c: 00000000 Vector: dY:0 dX:0 I:0
+2670: 00000000 Vector: dY:0 dX:0 I:0
+2674: 00000000 Vector: dY:0 dX:0 I:0
+2678: 00000000 Vector: dY:0 dX:0 I:0
+267c: 00000000 Vector: dY:0 dX:0 I:0
+2680: 00000000 Vector: dY:0 dX:0 I:0
+2684: 00000000 Vector: dY:0 dX:0 I:0
+2688: 00000000 Vector: dY:0 dX:0 I:0
+268c: 00000000 Vector: dY:0 dX:0 I:0
+2690: 00000000 Vector: dY:0 dX:0 I:0
+2694: 00000000 Vector: dY:0 dX:0 I:0
+2698: 00000000 Vector: dY:0 dX:0 I:0
+269c: 00000000 Vector: dY:0 dX:0 I:0
+26a0: 00000000 Vector: dY:0 dX:0 I:0
+26a4: 00000000 Vector: dY:0 dX:0 I:0
+26a8: 00000000 Vector: dY:0 dX:0 I:0
+26ac: 00000000 Vector: dY:0 dX:0 I:0
+26b0: 00000000 Vector: dY:0 dX:0 I:0
+26b4: 00000000 Vector: dY:0 dX:0 I:0
+26b8: 00000000 Vector: dY:0 dX:0 I:0
+26bc: 00000000 Vector: dY:0 dX:0 I:0
+26c0: 00000000 Vector: dY:0 dX:0 I:0
+26c4: 00000000 Vector: dY:0 dX:0 I:0
+26c8: 00000000 Vector: dY:0 dX:0 I:0
+26cc: 00000000 Vector: dY:0 dX:0 I:0
+26d0: 00000000 Vector: dY:0 dX:0 I:0
+26d4: 00000000 Vector: dY:0 dX:0 I:0
+26d8: 00000000 Vector: dY:0 dX:0 I:0
+26dc: 00000000 Vector: dY:0 dX:0 I:0
+26e0: 00000000 Vector: dY:0 dX:0 I:0
+26e4: 00000000 Vector: dY:0 dX:0 I:0
+26e8: 00000000 Vector: dY:0 dX:0 I:0
+26ec: 00000000 Vector: dY:0 dX:0 I:0
+26f0: 00000000 Vector: dY:0 dX:0 I:0
+26f4: 00000000 Vector: dY:0 dX:0 I:0
+26f8: 00000000 Vector: dY:0 dX:0 I:0
+26fc: 00000000 Vector: dY:0 dX:0 I:0
+2700: 00000000 Vector: dY:0 dX:0 I:0
+2704: 00000000 Vector: dY:0 dX:0 I:0
+2708: 00000000 Vector: dY:0 dX:0 I:0
+270c: 00000000 Vector: dY:0 dX:0 I:0
+2710: 00000000 Vector: dY:0 dX:0 I:0
+2714: 00000000 Vector: dY:0 dX:0 I:0
+2718: 00000000 Vector: dY:0 dX:0 I:0
+271c: 00000000 Vector: dY:0 dX:0 I:0
+2720: 00000000 Vector: dY:0 dX:0 I:0
+2724: 00000000 Vector: dY:0 dX:0 I:0
+2728: 00000000 Vector: dY:0 dX:0 I:0
+272c: 00000000 Vector: dY:0 dX:0 I:0
+2730: 00000000 Vector: dY:0 dX:0 I:0
+2734: 00000000 Vector: dY:0 dX:0 I:0
+2738: 00000000 Vector: dY:0 dX:0 I:0
+273c: 00000000 Vector: dY:0 dX:0 I:0
+2740: 00000000 Vector: dY:0 dX:0 I:0
+2744: 00000000 Vector: dY:0 dX:0 I:0
+2748: 00000000 Vector: dY:0 dX:0 I:0
+274c: 00000000 Vector: dY:0 dX:0 I:0
+2750: 00000000 Vector: dY:0 dX:0 I:0
+2754: 00000000 Vector: dY:0 dX:0 I:0
+2758: 00000000 Vector: dY:0 dX:0 I:0
+275c: 00000000 Vector: dY:0 dX:0 I:0
+2760: 00000000 Vector: dY:0 dX:0 I:0
+2764: 00000000 Vector: dY:0 dX:0 I:0
+2768: 00000000 Vector: dY:0 dX:0 I:0
+276c: 00000000 Vector: dY:0 dX:0 I:0
+2770: 00000000 Vector: dY:0 dX:0 I:0
+2774: 00000000 Vector: dY:0 dX:0 I:0
+2778: 00000000 Vector: dY:0 dX:0 I:0
+277c: 00000000 Vector: dY:0 dX:0 I:0
+2780: 00000000 Vector: dY:0 dX:0 I:0
+2784: 00000000 Vector: dY:0 dX:0 I:0
+2788: 00000000 Vector: dY:0 dX:0 I:0
+278c: 00000000 Vector: dY:0 dX:0 I:0
+2790: 00000000 Vector: dY:0 dX:0 I:0
+2794: 00000000 Vector: dY:0 dX:0 I:0
+2798: 00000000 Vector: dY:0 dX:0 I:0
+279c: 00000000 Vector: dY:0 dX:0 I:0
+27a0: 00000000 Vector: dY:0 dX:0 I:0
+27a4: 00000000 Vector: dY:0 dX:0 I:0
+27a8: 00000000 Vector: dY:0 dX:0 I:0
+27ac: 00000000 Vector: dY:0 dX:0 I:0
+27b0: 00000000 Vector: dY:0 dX:0 I:0
+27b4: 00000000 Vector: dY:0 dX:0 I:0
+27b8: 00000000 Vector: dY:0 dX:0 I:0
+27bc: 00000000 Vector: dY:0 dX:0 I:0
+27c0: 00000000 Vector: dY:0 dX:0 I:0
+27c4: 00000000 Vector: dY:0 dX:0 I:0
+27c8: 00000000 Vector: dY:0 dX:0 I:0
+27cc: 00000000 Vector: dY:0 dX:0 I:0
+27d0: 00000000 Vector: dY:0 dX:0 I:0
+27d4: 00000000 Vector: dY:0 dX:0 I:0
+27d8: 00000000 Vector: dY:0 dX:0 I:0
+27dc: 00000000 Vector: dY:0 dX:0 I:0
+27e0: 00000000 Vector: dY:0 dX:0 I:0
+27e4: 00000000 Vector: dY:0 dX:0 I:0
+27e8: 00000000 Vector: dY:0 dX:0 I:0
+27ec: 00000000 Vector: dY:0 dX:0 I:0
+27f0: 00000000 Vector: dY:0 dX:0 I:0
+27f4: 00000000 Vector: dY:0 dX:0 I:0
+27f8: 00000000 Vector: dY:0 dX:0 I:0
+27fc: 00000000 Vector: dY:0 dX:0 I:0
+2800: 00000071 Vector: dY:0 dX:-3840 I:3
+2804: 4080     Center
+2806: 041e041e Vector: dY:-508 dX:-508 I:0
+280a:  360     Scale: LinScale:3, BinScale:0
+280c: 4080     Center
+280e: fc01fc01 Vector: dY:508 dX:508 I:0
+2812:  362     Scale: LinScale:3, BinScale:2
+2814: 4080     Center
+2816: 68018000 Vector: dY:360 dX:128 I:0
+281a: 4080     Center
+281c: 40018000 Vector: dY:320 dX:128 I:0
+2820:   71     Scale: LinScale:0, BinScale:1
+2822: a9a9     JSR:1352
+2824: 55a9     JSR:12aa
+2826: 8fa9     JSR:131e
+2828: a2a9     JSR:1344
+282a: 60a9     JSR:12c0
+282c: 93a9     JSR:1326
+282e: 93a9     JSR:1326
+2830: 93a9     JSR:1326
+2832: 93a9     JSR:1326
+2834: 93a9     JSR:1326
+2836: 8fa9     JSR:131e
+2838: 8fa9     JSR:131e
+283a: 8fa9     JSR:131e
+283c:   71     Scale: LinScale:0, BinScale:1
+283e: 0000581f Vector: dY:0 dX:-168 I:0
+2842: 93a9     JSR:1326
+2844: 93a9     JSR:1326
+2846: 93a9     JSR:1326
+2848: 8fa9     JSR:131e
+284a: 4080     Center
+284c: 18018000 Vector: dY:280 dX:128 I:0
+2850:   72     Scale: LinScale:0, BinScale:2
+2852: 6fa9     JSR:12de
+2854: 74a9     JSR:12e8
+2856: 68a9     JSR:12d0
+2858: 6fa9     JSR:12de
+285a: 93a9     JSR:1326
+285c: a9a9     JSR:1352
+285e: 55a9     JSR:12aa
+2860: 8fa9     JSR:131e
+2862: a2a9     JSR:1344
+2864: 60a9     JSR:12c0
+2866: 93a9     JSR:1326
+2868: 93a9     JSR:1326
+286a: 93a9     JSR:1326
+286c: 93a9     JSR:1326
+286e: 93a9     JSR:1326
+2870: 93a9     JSR:1326
+2872: 8fa9     JSR:131e
+2874: 8fa9     JSR:131e
+2876: 8fa9     JSR:131e
+2878:   71     Scale: LinScale:0, BinScale:1
+287a:   72     Scale: LinScale:0, BinScale:2
+287c: 0000581f Vector: dY:0 dX:-168 I:0
+2880: 93a9     JSR:1326
+2882: 93a9     JSR:1326
+2884: 93a9     JSR:1326
+2886: a9a9     JSR:1352
+2888:   71     Scale: LinScale:0, BinScale:1
+288a: 4080     Center
+288c: a000901f Vector: dY:160 dX:-112 I:0
+2890:   71     Scale: LinScale:0, BinScale:1
+2892: 6fa9     JSR:12de
+2894: 74a9     JSR:12e8
+2896: 68a9     JSR:12d0
+2898: 6fa9     JSR:12de
+289a: 93a9     JSR:1326
+289c: a9a9     JSR:1352
+289e: 55a9     JSR:12aa
+28a0: 8fa9     JSR:131e
+28a2: a2a9     JSR:1344
+28a4: 60a9     JSR:12c0
+28a6: a9a9     JSR:1352
+28a8:   71     Scale: LinScale:0, BinScale:1
+28aa: 4080     Center
+28ac: 6800801f Vector: dY:104 dX:-128 I:0
+28b0: 93a9     JSR:1326
+28b2: 93a9     JSR:1326
+28b4: 93a9     JSR:1326
+28b6: a9a9     JSR:1352
+28b8:   71     Scale: LinScale:0, BinScale:1
+28ba: 8fa9     JSR:131e
+28bc: 8fa9     JSR:131e
+28be: 8fa9     JSR:131e
+28c0: 93a9     JSR:1326
+28c2:   71     Scale: LinScale:0, BinScale:1
+28c4: 60a9     JSR:12c0
+28c6: 59a9     JSR:12b2
+28c8: a2a9     JSR:1344
+28ca: d81ff41e Vector: dY:-40 dX:-268 I:0
+28ce: 93a9     JSR:1326
+28d0: 93a9     JSR:1326
+28d2: 93a9     JSR:1326
+28d4: a9a9     JSR:1352
+28d6:   71     Scale: LinScale:0, BinScale:1
+28d8: 8fa9     JSR:131e
+28da: 8fa9     JSR:131e
+28dc: 8fa9     JSR:131e
+28de: 93a9     JSR:1326
+28e0:   71     Scale: LinScale:0, BinScale:1
+28e2: 88a9     JSR:1310
+28e4: 95a9     JSR:132a
+28e6: 6fa9     JSR:12de
+28e8: d81ff41e Vector: dY:-40 dX:-268 I:0
+28ec: 93a9     JSR:1326
+28ee: 93a9     JSR:1326
+28f0: 93a9     JSR:1326
+28f2: a9a9     JSR:1352
+28f4:   71     Scale: LinScale:0, BinScale:1
+28f6: 8fa9     JSR:131e
+28f8: 8fa9     JSR:131e
+28fa: 8fa9     JSR:131e
+28fc: 93a9     JSR:1326
+28fe:   71     Scale: LinScale:0, BinScale:1
+2900: 7ba9     JSR:12f6
+2902: 60a9     JSR:12c0
+2904: 59a9     JSR:12b2
+2906: d81ff41e Vector: dY:-40 dX:-268 I:0
+290a: 93a9     JSR:1326
+290c: 93a9     JSR:1326
+290e: 93a9     JSR:1326
+2910: a9a9     JSR:1352
+2912:   71     Scale: LinScale:0, BinScale:1
+2914: 8fa9     JSR:131e
+2916: 8fa9     JSR:131e
+2918: 8fa9     JSR:131e
+291a: 93a9     JSR:1326
+291c:   71     Scale: LinScale:0, BinScale:1
+291e: 59a9     JSR:12b2
+2920: 60a9     JSR:12c0
+2922: a9a9     JSR:1352
+2924: d81ff41e Vector: dY:-40 dX:-268 I:0
+2928: 93a9     JSR:1326
+292a: 93a9     JSR:1326
+292c: 93a9     JSR:1326
+292e: a9a9     JSR:1352
+2930:   71     Scale: LinScale:0, BinScale:1
+2932: 8fa9     JSR:131e
+2934: 8fa9     JSR:131e
+2936: 8fa9     JSR:131e
+2938: 93a9     JSR:1326
+293a:   71     Scale: LinScale:0, BinScale:1
+293c: afa9     JSR:135e
+293e: 7fa9     JSR:12fe
+2940: 60a9     JSR:12c0
+2942: d81ff41e Vector: dY:-40 dX:-268 I:0
+2946: 93a9     JSR:1326
+2948: 93a9     JSR:1326
+294a: 93a9     JSR:1326
+294c: a9a9     JSR:1352
+294e:   71     Scale: LinScale:0, BinScale:1
+2950: 8fa9     JSR:131e
+2952: 8fa9     JSR:131e
+2954: 8fa9     JSR:131e
+2956: 93a9     JSR:1326
+2958:   71     Scale: LinScale:0, BinScale:1
+295a: b7a9     JSR:136e
+295c: 7fa9     JSR:12fe
+295e: 49a9     JSR:1292
+2960: d81ff41e Vector: dY:-40 dX:-268 I:0
+2964: 93a9     JSR:1326
+2966: 93a9     JSR:1326
+2968: 93a9     JSR:1326
+296a: a9a9     JSR:1352
+296c:   71     Scale: LinScale:0, BinScale:1
+296e: 8fa9     JSR:131e
+2970: 8fa9     JSR:131e
+2972: 8fa9     JSR:131e
+2974: 93a9     JSR:1326
+2976:   71     Scale: LinScale:0, BinScale:1
+2978: 60a9     JSR:12c0
+297a: 85a9     JSR:130a
+297c: 93a9     JSR:1326
+297e: d81ff41e Vector: dY:-40 dX:-268 I:0
+2982: 93a9     JSR:1326
+2984: 93a9     JSR:1326
+2986: 93a9     JSR:1326
+2988: a9a9     JSR:1352
+298a:   71     Scale: LinScale:0, BinScale:1
+298c: 8fa9     JSR:131e
+298e: 8fa9     JSR:131e
+2990: 8fa9     JSR:131e
+2992: 93a9     JSR:1326
+2994:   71     Scale: LinScale:0, BinScale:1
+2996: 6fa9     JSR:12de
+2998: 41a9     JSR:1282
+299a: 59a9     JSR:12b2
+299c: d81ff41e Vector: dY:-40 dX:-268 I:0
+29a0: 93a9     JSR:1326
+29a2: 93a9     JSR:1326
+29a4: 93a9     JSR:1326
+29a6: a9a9     JSR:1352
+29a8:   71     Scale: LinScale:0, BinScale:1
+29aa: 8fa9     JSR:131e
+29ac: 8fa9     JSR:131e
+29ae: 8fa9     JSR:131e
+29b0: 93a9     JSR:1326
+29b2:   71     Scale: LinScale:0, BinScale:1
+29b4: 8fa9     JSR:131e
+29b6: a2a9     JSR:1344
+29b8: a2a9     JSR:1344
+29ba: d81ff41e Vector: dY:-40 dX:-268 I:0
+29be: 93a9     JSR:1326
+29c0: 93a9     JSR:1326
+29c2: 93a9     JSR:1326
+29c4: a9a9     JSR:1352
+29c6:   71     Scale: LinScale:0, BinScale:1
+29c8: 8fa9     JSR:131e
+29ca: 8fa9     JSR:131e
+29cc: 8fa9     JSR:131e
+29ce: 93a9     JSR:1326
+29d0:   71     Scale: LinScale:0, BinScale:1
+29d2: 68a9     JSR:12d0
+29d4: 7ba9     JSR:12f6
+29d6: a2a9     JSR:1344
+29d8: 4080     Center
+29da: e81ea41e Vector: dY:-280 dX:-348 I:0
+29de:   71     Scale: LinScale:0, BinScale:1
+29e0: 49a9     JSR:1292
+29e2: 8fa9     JSR:131e
+29e4: 8ca9     JSR:1318
+29e6: b1a9     JSR:1362
+29e8: a9a9     JSR:1352
+29ea: 93a9     JSR:1326
+29ec: afa9     JSR:135e
+29ee: 41a9     JSR:1282
+29f0: 8ca9     JSR:1318
+29f2: 7fa9     JSR:12fe
+29f4: 93a9     JSR:1326
+29f6: 41a9     JSR:1282
+29f8: afa9     JSR:135e
+29fa: 93a9     JSR:1326
+29fc:   71     Scale: LinScale:0, BinScale:1
+29fe: cfa9     JSR:139e
+2a00: a9a9     JSR:1352
+2a02:   71     Scale: LinScale:0, BinScale:1
+2a04: 8fa9     JSR:131e
+2a06: 8fa9     JSR:131e
+2a08: 8fa9     JSR:131e
+2a0a: 93a9     JSR:1326
+2a0c: 41a9     JSR:1282
+2a0e: 8ca9     JSR:1318
+2a10: 59a9     JSR:12b2
+2a12: 93a9     JSR:1326
+2a14: cfa9     JSR:139e
+2a16: 8fa9     JSR:131e
+2a18: 8fa9     JSR:131e
+2a1a: 8fa9     JSR:131e
+2a1c: 8fa9     JSR:131e
+2a1e: 8fa9     JSR:131e
+2a20:   71     Scale: LinScale:0, BinScale:1
+2a22: 4080     Center
+2a24: 00002020     Halt
+2a26: 60a9     JSR:12c0
+2a28: 93a9     JSR:1326
+2a2a: 93a9     JSR:1326
+2a2c: 93a9     JSR:1326
+2a2e: 93a9     JSR:1326
+2a30: 93a9     JSR:1326
+2a32: 93a9     JSR:1326
+2a34: 8fa9     JSR:131e
+2a36: 8fa9     JSR:131e
+2a38: 8fa9     JSR:131e
+2a3a:   71     Scale: LinScale:0, BinScale:1
+2a3c:   72     Scale: LinScale:0, BinScale:2
+2a3e: 0000581f Vector: dY:0 dX:-168 I:0
+2a42: 93a9     JSR:1326
+2a44: 93a9     JSR:1326
+2a46: 93a9     JSR:1326
+2a48: a9a9     JSR:1352
+2a4a:   71     Scale: LinScale:0, BinScale:1
+2a4c: 4080     Center
+2a4e: 6000901f Vector: dY:96 dX:-112 I:0
+2a52:   71     Scale: LinScale:0, BinScale:1
+2a54: 68a9     JSR:12d0
+2a56: 41a9     JSR:1282
+2a58: 88a9     JSR:1310
+2a5a: 60a9     JSR:12c0
+2a5c: 93a9     JSR:1326
+2a5e: 8fa9     JSR:131e
+2a60: b7a9     JSR:136e
+2a62: 60a9     JSR:12c0
+2a64: a2a9     JSR:1344
+2a66:   71     Scale: LinScale:0, BinScale:1
+2a68: 4080     Center
+2a6a: 0000381f Vector: dY:0 dX:-200 I:0
+2a6e:   71     Scale: LinScale:0, BinScale:1
+2a70: d1a9     JSR:13a2
+2a72: 93a9     JSR:1326
+2a74: 93a9     JSR:1326
+2a76: 93a9     JSR:1326
+2a78: 93a9     JSR:1326
+2a7a: 93a9     JSR:1326
+2a7c: a9a9     JSR:1352
+2a7e: 93a9     JSR:1326
+2a80: cfa9     JSR:139e
+2a82:   71     Scale: LinScale:0, BinScale:1
+2a84: 4080     Center
+2a86: 0000381f Vector: dY:0 dX:-200 I:0
+2a8a:   71     Scale: LinScale:0, BinScale:1
+2a8c: 93a9     JSR:1326
+2a8e: 93a9     JSR:1326
+2a90: 55a9     JSR:12aa
+2a92: 8fa9     JSR:131e
+2a94: 74a9     JSR:12e8
+2a96: 8ca9     JSR:1318
+2a98: 93a9     JSR:1326
+2a9a: 93a9     JSR:1326
+2a9c: 93a9     JSR:1326
+2a9e: 93a9     JSR:1326
+2aa0: 95a9     JSR:132a
+2aa2: 85a9     JSR:130a
+2aa4: 41a9     JSR:1282
+2aa6: c4a9     JSR:1388
+2aa8:   71     Scale: LinScale:0, BinScale:1
+2aaa: 4080     Center
+2aac: a81f701f Vector: dY:-88 dX:-144 I:0
+2ab0:   71     Scale: LinScale:0, BinScale:1
+2ab2: 74a9     JSR:12e8
+2ab4: 8ca9     JSR:1318
+2ab6: a9a9     JSR:1352
+2ab8: 60a9     JSR:12c0
+2aba: a2a9     JSR:1344
+2abc: afa9     JSR:135e
+2abe: 93a9     JSR:1326
+2ac0: 55a9     JSR:12aa
+2ac2: 8fa9     JSR:131e
+2ac4: 74a9     JSR:12e8
+2ac6: 8ca9     JSR:1318
+2ac8:   71     Scale: LinScale:0, BinScale:1
+2aca: 4080     Center
+2acc: 00002020     Halt
+2ace:   71     Scale: LinScale:0, BinScale:1
+2ad0: 93a9     JSR:1326
+2ad2: 93a9     JSR:1326
+2ad4: 55a9     JSR:12aa
+2ad6: 8fa9     JSR:131e
+2ad8: 74a9     JSR:12e8
+2ada: 8ca9     JSR:1318
+2adc: 93a9     JSR:1326
+2ade: 93a9     JSR:1326
+2ae0: 93a9     JSR:1326
+2ae2: 93a9     JSR:1326
+2ae4: 95a9     JSR:132a
+2ae6: 85a9     JSR:130a
+2ae8: 41a9     JSR:1282
+2aea: c4a9     JSR:1388
+2aec:   71     Scale: LinScale:0, BinScale:1
+2aee: 4080     Center
+2af0: 00002020     Halt
+2af2: 0000581f Vector: dY:0 dX:-168 I:0
+2af6: 93a9     JSR:1326
+2af8: 93a9     JSR:1326
+2afa: 93a9     JSR:1326
+2afc: a9a9     JSR:1352
+2afe:   71     Scale: LinScale:0, BinScale:1
+2b00: 4080     Center
+2b02: 6000901f Vector: dY:96 dX:-112 I:0
+2b06:   71     Scale: LinScale:0, BinScale:1
+2b08: 68a9     JSR:12d0
+2b0a: 41a9     JSR:1282
+2b0c: 88a9     JSR:1310
+2b0e: 60a9     JSR:12c0
+2b10: 93a9     JSR:1326
+2b12: 8fa9     JSR:131e
+2b14: b7a9     JSR:136e
+2b16: 60a9     JSR:12c0
+2b18: a2a9     JSR:1344
+2b1a:   71     Scale: LinScale:0, BinScale:1
+2b1c: 4080     Center
+2b1e: 0000381f Vector: dY:0 dX:-200 I:0
+2b22:   71     Scale: LinScale:0, BinScale:1
+2b24: d1a9     JSR:13a2
+2b26: 93a9     JSR:1326
+2b28: 93a9     JSR:1326
+2b2a: 93a9     JSR:1326
+2b2c: 93a9     JSR:1326
+2b2e: 93a9     JSR:1326
+2b30: a9a9     JSR:1352
+2b32: 93a9     JSR:1326
+2b34: cfa9     JSR:139e
+2b36:   71     Scale: LinScale:0, BinScale:1
+2b38: 4080     Center
+2b3a: 0000381f Vector: dY:0 dX:-200 I:0
+2b3e:   71     Scale: LinScale:0, BinScale:1
+2b40: 93a9     JSR:1326
+2b42: 93a9     JSR:1326
+2b44: 55a9     JSR:12aa
+2b46: 8fa9     JSR:131e
+2b48: 74a9     JSR:12e8
+2b4a: 8ca9     JSR:1318
+2b4c: 93a9     JSR:1326
+2b4e: 93a9     JSR:1326
+2b50: 93a9     JSR:1326
+2b52: 93a9     JSR:1326
+2b54: 95a9     JSR:132a
+2b56: 85a9     JSR:130a
+2b58: 41a9     JSR:1282
+2b5a: c4a9     JSR:1388
+2b5c:   71     Scale: LinScale:0, BinScale:1
+2b5e: 4080     Center
+2b60: 00002020     Halt
+2b62: 0000381f Vector: dY:0 dX:-200 I:0
+2b66:   71     Scale: LinScale:0, BinScale:1
+2b68: d1a9     JSR:13a2
+2b6a: 93a9     JSR:1326
+2b6c: 93a9     JSR:1326
+2b6e: 93a9     JSR:1326
+2b70: 93a9     JSR:1326
+2b72: 93a9     JSR:1326
+2b74: a9a9     JSR:1352
+2b76: 93a9     JSR:1326
+2b78: cfa9     JSR:139e
+2b7a:   71     Scale: LinScale:0, BinScale:1
+2b7c: 4080     Center
+2b7e: 0000381f Vector: dY:0 dX:-200 I:0
+2b82:   71     Scale: LinScale:0, BinScale:1
+2b84: 93a9     JSR:1326
+2b86: 93a9     JSR:1326
+2b88: 55a9     JSR:12aa
+2b8a: 8fa9     JSR:131e
+2b8c: 74a9     JSR:12e8
+2b8e: 8ca9     JSR:1318
+2b90: 93a9     JSR:1326
+2b92: 93a9     JSR:1326
+2b94: 93a9     JSR:1326
+2b96: 93a9     JSR:1326
+2b98: 95a9     JSR:132a
+2b9a: 85a9     JSR:130a
+2b9c: 41a9     JSR:1282
+2b9e: c4a9     JSR:1388
+2ba0:   71     Scale: LinScale:0, BinScale:1
+2ba2: 4080     Center
+2ba4: a81f701f Vector: dY:-88 dX:-144 I:0
+2ba8:   71     Scale: LinScale:0, BinScale:1
+2baa: 74a9     JSR:12e8
+2bac: 8ca9     JSR:1318
+2bae: a9a9     JSR:1352
+2bb0: 60a9     JSR:12c0
+2bb2: a2a9     JSR:1344
+2bb4: afa9     JSR:135e
+2bb6: 93a9     JSR:1326
+2bb8: 55a9     JSR:12aa
+2bba: 8fa9     JSR:131e
+2bbc: 74a9     JSR:12e8
+2bbe: 8ca9     JSR:1318
+2bc0:   71     Scale: LinScale:0, BinScale:1
+2bc2: 4080     Center
+2bc4: 00002020     Halt
+2bc6: 85a9     JSR:130a
+2bc8: 41a9     JSR:1282
+2bca: c4a9     JSR:1388
+2bcc:   71     Scale: LinScale:0, BinScale:1
+2bce: 4080     Center
+2bd0: 00002020     Halt
+2bd2: a9a9     JSR:1352
+2bd4: 93a9     JSR:1326
+2bd6: cfa9     JSR:139e
+2bd8:   71     Scale: LinScale:0, BinScale:1
+2bda: 4080     Center
+2bdc: 0000381f Vector: dY:0 dX:-200 I:0
+2be0:   71     Scale: LinScale:0, BinScale:1
+2be2: 93a9     JSR:1326
+2be4: 93a9     JSR:1326
+2be6: 55a9     JSR:12aa
+2be8: 8fa9     JSR:131e
+2bea: 74a9     JSR:12e8
+2bec: 8ca9     JSR:1318
+2bee: 93a9     JSR:1326
+2bf0: 93a9     JSR:1326
+2bf2: 93a9     JSR:1326
+2bf4: 93a9     JSR:1326
+2bf6: 95a9     JSR:132a
+2bf8: 85a9     JSR:130a
+2bfa: 41a9     JSR:1282
+2bfc: c4a9     JSR:1388
+2bfe:   71     Scale: LinScale:0, BinScale:1
+2c00: 4080     Center
+2c02: 00002020     Halt
+2c04:   71     Scale: LinScale:0, BinScale:1
+2c06: 4080     Center
+2c08: 00002020     Halt
+2c0a: 85a9     JSR:130a
+2c0c: 41a9     JSR:1282
+2c0e: c4a9     JSR:1388
+2c10:   71     Scale: LinScale:0, BinScale:1
+2c12: 4080     Center
+2c14: a81f701f Vector: dY:-88 dX:-144 I:0
+2c18:   71     Scale: LinScale:0, BinScale:1
+2c1a: 74a9     JSR:12e8
+2c1c: 8ca9     JSR:1318
+2c1e: a9a9     JSR:1352
+2c20: 60a9     JSR:12c0
+2c22: a2a9     JSR:1344
+2c24: afa9     JSR:135e
+2c26: 93a9     JSR:1326
+2c28: 55a9     JSR:12aa
+2c2a: 8fa9     JSR:131e
+2c2c: 74a9     JSR:12e8
+2c2e: 8ca9     JSR:1318
+2c30:   71     Scale: LinScale:0, BinScale:1
+2c32: 4080     Center
+2c34: 00002020     Halt
+2c36: 00000000 Vector: dY:0 dX:0 I:0
+2c3a: 00000000 Vector: dY:0 dX:0 I:0
+2c3e: 00000000 Vector: dY:0 dX:0 I:0
+2c42: 00000000 Vector: dY:0 dX:0 I:0
+2c46: 00000000 Vector: dY:0 dX:0 I:0
+2c4a: 00000000 Vector: dY:0 dX:0 I:0
+2c4e: 00000000 Vector: dY:0 dX:0 I:0
+2c52: 00000000 Vector: dY:0 dX:0 I:0
+2c56: 00000000 Vector: dY:0 dX:0 I:0
+2c5a: 00000000 Vector: dY:0 dX:0 I:0
+2c5e: 00000000 Vector: dY:0 dX:0 I:0
+2c62: 00000000 Vector: dY:0 dX:0 I:0
+2c66: 00000000 Vector: dY:0 dX:0 I:0
+2c6a: 00000000 Vector: dY:0 dX:0 I:0
+2c6e: 00000000 Vector: dY:0 dX:0 I:0
+2c72: 00000000 Vector: dY:0 dX:0 I:0
+2c76: 00000000 Vector: dY:0 dX:0 I:0
+2c7a: 00000000 Vector: dY:0 dX:0 I:0
+2c7e: 00000000 Vector: dY:0 dX:0 I:0
+2c82: 00000000 Vector: dY:0 dX:0 I:0
+2c86: 00000000 Vector: dY:0 dX:0 I:0
+2c8a: 00000000 Vector: dY:0 dX:0 I:0
+2c8e: 00000000 Vector: dY:0 dX:0 I:0
+2c92: 00000000 Vector: dY:0 dX:0 I:0
+2c96: 00000000 Vector: dY:0 dX:0 I:0
+2c9a: 00000000 Vector: dY:0 dX:0 I:0
+2c9e: 00000000 Vector: dY:0 dX:0 I:0
+2ca2: 00000000 Vector: dY:0 dX:0 I:0
+2ca6: 00000000 Vector: dY:0 dX:0 I:0
+2caa: 00000000 Vector: dY:0 dX:0 I:0
+2cae: 00000000 Vector: dY:0 dX:0 I:0
+2cb2: 00000000 Vector: dY:0 dX:0 I:0
+2cb6: 00000000 Vector: dY:0 dX:0 I:0
+2cba: 00000000 Vector: dY:0 dX:0 I:0
+2cbe: 00000000 Vector: dY:0 dX:0 I:0
+2cc2: 00000000 Vector: dY:0 dX:0 I:0
+2cc6: 00000000 Vector: dY:0 dX:0 I:0
+2cca: 00000000 Vector: dY:0 dX:0 I:0
+2cce: 00000000 Vector: dY:0 dX:0 I:0
+2cd2: 00000000 Vector: dY:0 dX:0 I:0
+2cd6: 00000000 Vector: dY:0 dX:0 I:0
+2cda: 00000000 Vector: dY:0 dX:0 I:0
+2cde: 00000000 Vector: dY:0 dX:0 I:0
+2ce2: 00000000 Vector: dY:0 dX:0 I:0
+2ce6: 00000000 Vector: dY:0 dX:0 I:0
+2cea: 00000000 Vector: dY:0 dX:0 I:0
+2cee: 00000000 Vector: dY:0 dX:0 I:0
+2cf2: 00000000 Vector: dY:0 dX:0 I:0
+2cf6: 00000000 Vector: dY:0 dX:0 I:0
+2cfa: 00000000 Vector: dY:0 dX:0 I:0
+2cfe: 00000000 Vector: dY:0 dX:0 I:0
+2d02: 00000000 Vector: dY:0 dX:0 I:0
+2d06: 00000000 Vector: dY:0 dX:0 I:0
+2d0a: 00000000 Vector: dY:0 dX:0 I:0
+2d0e: 00000000 Vector: dY:0 dX:0 I:0
+2d12: 00000000 Vector: dY:0 dX:0 I:0
+2d16: 00000000 Vector: dY:0 dX:0 I:0
+2d1a: 00000000 Vector: dY:0 dX:0 I:0
+2d1e: 00000000 Vector: dY:0 dX:0 I:0
+2d22: 00000000 Vector: dY:0 dX:0 I:0
+2d26: 00000000 Vector: dY:0 dX:0 I:0
+2d2a: 00000000 Vector: dY:0 dX:0 I:0
+2d2e: 00000000 Vector: dY:0 dX:0 I:0
+2d32: 00000000 Vector: dY:0 dX:0 I:0
+2d36: 00000000 Vector: dY:0 dX:0 I:0
+2d3a: 00000000 Vector: dY:0 dX:0 I:0
+2d3e: 00000000 Vector: dY:0 dX:0 I:0
+2d42: 00000000 Vector: dY:0 dX:0 I:0
+2d46: 00000000 Vector: dY:0 dX:0 I:0
+2d4a: 00000000 Vector: dY:0 dX:0 I:0
+2d4e: 00000000 Vector: dY:0 dX:0 I:0
+2d52: 00000000 Vector: dY:0 dX:0 I:0
+2d56: 00000000 Vector: dY:0 dX:0 I:0
+2d5a: 00000000 Vector: dY:0 dX:0 I:0
+2d5e: 00000000 Vector: dY:0 dX:0 I:0
+2d62: 00000000 Vector: dY:0 dX:0 I:0
+2d66: 00000000 Vector: dY:0 dX:0 I:0
+2d6a: 00000000 Vector: dY:0 dX:0 I:0
+2d6e: 00000000 Vector: dY:0 dX:0 I:0
+2d72: 00000000 Vector: dY:0 dX:0 I:0
+2d76: 00000000 Vector: dY:0 dX:0 I:0
+2d7a: 00000000 Vector: dY:0 dX:0 I:0
+2d7e: 00000000 Vector: dY:0 dX:0 I:0
+2d82: 00000000 Vector: dY:0 dX:0 I:0
+2d86: 00000000 Vector: dY:0 dX:0 I:0
+2d8a: 00000000 Vector: dY:0 dX:0 I:0
+2d8e: 00000000 Vector: dY:0 dX:0 I:0
+2d92: 00000000 Vector: dY:0 dX:0 I:0
+2d96: 00000000 Vector: dY:0 dX:0 I:0
+2d9a: 00000000 Vector: dY:0 dX:0 I:0
+2d9e: 00000000 Vector: dY:0 dX:0 I:0
+2da2: 00000000 Vector: dY:0 dX:0 I:0
+2da6: 00000000 Vector: dY:0 dX:0 I:0
+2daa: 00000000 Vector: dY:0 dX:0 I:0
+2dae: 00000000 Vector: dY:0 dX:0 I:0
+2db2: 00000000 Vector: dY:0 dX:0 I:0
+2db6: 00000000 Vector: dY:0 dX:0 I:0
+2dba: 00000000 Vector: dY:0 dX:0 I:0
+2dbe: 00000000 Vector: dY:0 dX:0 I:0
+2dc2: 00000000 Vector: dY:0 dX:0 I:0
+2dc6: 00000000 Vector: dY:0 dX:0 I:0
+2dca: 00000000 Vector: dY:0 dX:0 I:0
+2dce: 00000000 Vector: dY:0 dX:0 I:0
+2dd2: 00000000 Vector: dY:0 dX:0 I:0
+2dd6: 00000000 Vector: dY:0 dX:0 I:0
+2dda: 00000000 Vector: dY:0 dX:0 I:0
+2dde: 00000000 Vector: dY:0 dX:0 I:0
+2de2: 00000000 Vector: dY:0 dX:0 I:0
+2de6: 00000000 Vector: dY:0 dX:0 I:0
+2dea: 00000000 Vector: dY:0 dX:0 I:0
+2dee: 00000000 Vector: dY:0 dX:0 I:0
+2df2: 00000000 Vector: dY:0 dX:0 I:0
+2df6: 00000000 Vector: dY:0 dX:0 I:0
+2dfa: 00000000 Vector: dY:0 dX:0 I:0
+2dfe: 00000000 Vector: dY:0 dX:0 I:0
+2e02: 00000000 Vector: dY:0 dX:0 I:0
+2e06: 00000000 Vector: dY:0 dX:0 I:0
+2e0a: 00000000 Vector: dY:0 dX:0 I:0
+2e0e: 00000000 Vector: dY:0 dX:0 I:0
+2e12: 00000000 Vector: dY:0 dX:0 I:0
+2e16: 00000000 Vector: dY:0 dX:0 I:0
+2e1a: 00000000 Vector: dY:0 dX:0 I:0
+2e1e: 00000000 Vector: dY:0 dX:0 I:0
+2e22: 00000000 Vector: dY:0 dX:0 I:0
+2e26: 00000000 Vector: dY:0 dX:0 I:0
+2e2a: 00000000 Vector: dY:0 dX:0 I:0
+2e2e: 00000000 Vector: dY:0 dX:0 I:0
+2e32: 00000000 Vector: dY:0 dX:0 I:0
+2e36: 00000000 Vector: dY:0 dX:0 I:0
+2e3a: 00000000 Vector: dY:0 dX:0 I:0
+2e3e: 00000000 Vector: dY:0 dX:0 I:0
+2e42: 00000000 Vector: dY:0 dX:0 I:0
+2e46: 00000000 Vector: dY:0 dX:0 I:0
+2e4a: 00000000 Vector: dY:0 dX:0 I:0
+2e4e: 00000000 Vector: dY:0 dX:0 I:0
+2e52: 00000000 Vector: dY:0 dX:0 I:0
+2e56: 00000000 Vector: dY:0 dX:0 I:0
+2e5a: 00000000 Vector: dY:0 dX:0 I:0
+2e5e: 00000000 Vector: dY:0 dX:0 I:0
+2e62: 00000000 Vector: dY:0 dX:0 I:0
+2e66: 00000000 Vector: dY:0 dX:0 I:0
+2e6a: 00000000 Vector: dY:0 dX:0 I:0
+2e6e: 00000000 Vector: dY:0 dX:0 I:0
+2e72: 00000000 Vector: dY:0 dX:0 I:0
+2e76: 00000000 Vector: dY:0 dX:0 I:0
+2e7a: 00000000 Vector: dY:0 dX:0 I:0
+2e7e: 00000000 Vector: dY:0 dX:0 I:0
+2e82: 00000000 Vector: dY:0 dX:0 I:0
+2e86: 00000000 Vector: dY:0 dX:0 I:0
+2e8a: 00000000 Vector: dY:0 dX:0 I:0
+2e8e: 00000000 Vector: dY:0 dX:0 I:0
+2e92: 00000000 Vector: dY:0 dX:0 I:0
+2e96: 00000000 Vector: dY:0 dX:0 I:0
+2e9a: 00000000 Vector: dY:0 dX:0 I:0
+2e9e: 00000000 Vector: dY:0 dX:0 I:0
+2ea2: 00000000 Vector: dY:0 dX:0 I:0
+2ea6: 00000000 Vector: dY:0 dX:0 I:0
+2eaa: 00000000 Vector: dY:0 dX:0 I:0
+2eae: 00000000 Vector: dY:0 dX:0 I:0
+2eb2: 00000000 Vector: dY:0 dX:0 I:0
+2eb6: 00000000 Vector: dY:0 dX:0 I:0
+2eba: 00000000 Vector: dY:0 dX:0 I:0
+2ebe: 00000000 Vector: dY:0 dX:0 I:0
+2ec2: 00000000 Vector: dY:0 dX:0 I:0
+2ec6: 00000000 Vector: dY:0 dX:0 I:0
+2eca: 00000000 Vector: dY:0 dX:0 I:0
+2ece: 00000000 Vector: dY:0 dX:0 I:0
+2ed2: 00000000 Vector: dY:0 dX:0 I:0
+2ed6: 00000000 Vector: dY:0 dX:0 I:0
+2eda: 00000000 Vector: dY:0 dX:0 I:0
+2ede: 00000000 Vector: dY:0 dX:0 I:0
+2ee2: 00000000 Vector: dY:0 dX:0 I:0
+2ee6: 00000000 Vector: dY:0 dX:0 I:0
+2eea: 00000000 Vector: dY:0 dX:0 I:0
+2eee: 00000000 Vector: dY:0 dX:0 I:0
+2ef2: 00000000 Vector: dY:0 dX:0 I:0
+2ef6: 00000000 Vector: dY:0 dX:0 I:0
+2efa: 00000000 Vector: dY:0 dX:0 I:0
+2efe: 00000000 Vector: dY:0 dX:0 I:0
+2f02: 00000000 Vector: dY:0 dX:0 I:0
+2f06: 00000000 Vector: dY:0 dX:0 I:0
+2f0a: 00000000 Vector: dY:0 dX:0 I:0
+2f0e: 00000000 Vector: dY:0 dX:0 I:0
+2f12: 00000000 Vector: dY:0 dX:0 I:0
+2f16: 00000000 Vector: dY:0 dX:0 I:0
+2f1a: 00000000 Vector: dY:0 dX:0 I:0
+2f1e: 00000000 Vector: dY:0 dX:0 I:0
+2f22: 00000000 Vector: dY:0 dX:0 I:0
+2f26: 00000000 Vector: dY:0 dX:0 I:0
+2f2a: 00000000 Vector: dY:0 dX:0 I:0
+2f2e: 00000000 Vector: dY:0 dX:0 I:0
+2f32: 00000000 Vector: dY:0 dX:0 I:0
+2f36: 00000000 Vector: dY:0 dX:0 I:0
+2f3a: 00000000 Vector: dY:0 dX:0 I:0
+2f3e: 00000000 Vector: dY:0 dX:0 I:0
+2f42: 00000000 Vector: dY:0 dX:0 I:0
+2f46: 00000000 Vector: dY:0 dX:0 I:0
+2f4a: 00000000 Vector: dY:0 dX:0 I:0
+2f4e: 00000000 Vector: dY:0 dX:0 I:0
+2f52: 00000000 Vector: dY:0 dX:0 I:0
+2f56: 00000000 Vector: dY:0 dX:0 I:0
+2f5a: 00000000 Vector: dY:0 dX:0 I:0
+2f5e: 00000000 Vector: dY:0 dX:0 I:0
+2f62: 00000000 Vector: dY:0 dX:0 I:0
+2f66: 00000000 Vector: dY:0 dX:0 I:0
+2f6a: 00000000 Vector: dY:0 dX:0 I:0
+2f6e: 00000000 Vector: dY:0 dX:0 I:0
+2f72: 00000000 Vector: dY:0 dX:0 I:0
+2f76: 00000000 Vector: dY:0 dX:0 I:0
+2f7a: 00000000 Vector: dY:0 dX:0 I:0
+2f7e: 00000000 Vector: dY:0 dX:0 I:0
+2f82: 00000000 Vector: dY:0 dX:0 I:0
+2f86: 00000000 Vector: dY:0 dX:0 I:0
+2f8a: 00000000 Vector: dY:0 dX:0 I:0
+2f8e: 00000000 Vector: dY:0 dX:0 I:0
+2f92: 00000000 Vector: dY:0 dX:0 I:0
+2f96: 00000000 Vector: dY:0 dX:0 I:0
+2f9a: 00000000 Vector: dY:0 dX:0 I:0
+2f9e: 00000000 Vector: dY:0 dX:0 I:0
+2fa2: 00000000 Vector: dY:0 dX:0 I:0
+2fa6: 00000000 Vector: dY:0 dX:0 I:0
+2faa: 00000000 Vector: dY:0 dX:0 I:0
+2fae: 00000000 Vector: dY:0 dX:0 I:0
+2fb2: 00000000 Vector: dY:0 dX:0 I:0
+2fb6: 00000000 Vector: dY:0 dX:0 I:0
+2fba: 00000000 Vector: dY:0 dX:0 I:0
+2fbe: 00000000 Vector: dY:0 dX:0 I:0
+2fc2: 00000000 Vector: dY:0 dX:0 I:0
+2fc6: 00000000 Vector: dY:0 dX:0 I:0
+2fca: 00000000 Vector: dY:0 dX:0 I:0
+2fce: 00000000 Vector: dY:0 dX:0 I:0
+2fd2: 00000000 Vector: dY:0 dX:0 I:0
+2fd6: 00000000 Vector: dY:0 dX:0 I:0
+2fda: 00000000 Vector: dY:0 dX:0 I:0
+2fde: 00000000 Vector: dY:0 dX:0 I:0
+2fe2: 00000000 Vector: dY:0 dX:0 I:0
+2fe6: 00000000 Vector: dY:0 dX:0 I:0
+2fea: 00000000 Vector: dY:0 dX:0 I:0
+2fee: 00000000 Vector: dY:0 dX:0 I:0
+2ff2: 00000000 Vector: dY:0 dX:0 I:0
+2ff6: 00000000 Vector: dY:0 dX:0 I:0
+2ffa: 00000000 Vector: dY:0 dX:0 I:0
+2ffe: 00000000 Vector: dY:0 dX:0 I:0
+3002:   7a     Scale: LinScale:0, BinScale:2
+3004: 00c0     RTS
+3006: 0ba8     JSR:1016
+3008: 65a8     JSR:10ca
+300a: 82a8     JSR:1104
+300c: c1a8     JSR:1182
+300e: e2a8     JSR:11c4
+3010: f9a8     JSR:11f2
+3012: 17a9     JSR:122e
+3014: 34a9     JSR:1268
+3016: 40000000 Vector: dY:64 dX:0 I:0
+301a: e01f2060 Vector: dY:-32 dX:32 I:3
+301e: 185c     SVEC: dY:-8 dX:-16 I:0
+3020: 28005060 Vector: dY:40 dX:80 I:3
+3024: 00002060 Vector: dY:0 dX:32 I:3
+3028: e01f2060 Vector: dY:-32 dX:32 I:3
+302c: 2000c07f Vector: dY:32 dX:-64 I:3
+3030: c01f0000 Vector: dY:-64 dX:0 I:0
+3034: 40008060 Vector: dY:64 dX:128 I:3
+3038: c01f4060 Vector: dY:-64 dX:64 I:3
+303c: 00002000 Vector: dY:0 dX:32 I:0
+3040: 2000c07f Vector: dY:32 dX:-64 I:3
+3044: 2000e01f Vector: dY:32 dX:-32 I:0
+3048: e01f4060 Vector: dY:-32 dX:64 I:3
+304c: f01f4060 Vector: dY:-16 dX:64 I:3
+3050: f01f6060 Vector: dY:-16 dX:96 I:3
+3054: a0003000 Vector: dY:160 dX:48 I:0
+3058: f41f05e0 Vector: dY:-12 dX:5 I:7
+305c: e05a     SVEC: dY:-12 dX:0 I:7
+305e: fc5a     SVEC: dY:-12 dX:-8 I:7
+3060: fa5a     SVEC: dY:-12 dX:-12 I:7
+3062: fd1ff4ff Vector: dY:-3 dX:-12 I:7
+3066: 0300f4ff Vector: dY:3 dX:-12 I:7
+306a: f71f0ce0 Vector: dY:-9 dX:12 I:7
+306e: fd1f0ce0 Vector: dY:-3 dX:12 I:7
+3072: 03000ce0 Vector: dY:3 dX:12 I:7
+3076: 09000ce0 Vector: dY:9 dX:12 I:7
+307a: e346     SVEC: dY:12 dX:6 I:7
+307c: e046     SVEC: dY:12 dX:0 I:7
+307e: fe46     SVEC: dY:12 dX:-4 I:7
+3080: 0c00f5ff Vector: dY:12 dX:-11 I:7
+3084: 0300f35f Vector: dY:3 dX:-13 I:2
+3088: fc1ff15f Vector: dY:-4 dX:-15 I:2
+308c: 5b5c     SVEC: dY:-8 dX:-10 I:2
+308e: f51ffb5f Vector: dY:-11 dX:-5 I:2
+3092: f31ffe5f Vector: dY:-13 dX:-2 I:2
+3096: f11f0640 Vector: dY:-15 dX:6 I:2
+309a: 03001b00 Vector: dY:3 dX:27 I:0
+309e: a05e     SVEC: dY:-4 dX:0 I:5
+30a0: ff1f06a0 Vector: dY:-1 dX:6 I:5
+30a4: 0b0006a0 Vector: dY:11 dX:6 I:5
+30a8: ff1ffcbf Vector: dY:-1 dX:-4 I:5
+30ac: 0200ffbf Vector: dY:2 dX:-1 I:5
+30b0: 094a     SVEC: dY:20 dX:18 I:0
+30b2: fd1ffdbf Vector: dY:-3 dX:-3 I:5
+30b6: 030001a0 Vector: dY:3 dX:1 I:5
+30ba: 0100fdbf Vector: dY:1 dX:-3 I:5
+30be: a043     SVEC: dY:6 dX:0 I:5
+30c0: 01000140 Vector: dY:1 dX:1 I:2
+30c4: 6a1f0700 Vector: dY:-150 dX:7 I:0
+30c8: 00c0     RTS
+30ca: 00002000 Vector: dY:0 dX:32 I:0
+30ce: 30004060 Vector: dY:48 dX:64 I:3
+30d2: d01f2060 Vector: dY:-48 dX:32 I:3
+30d6: 3000e01f Vector: dY:48 dX:-32 I:0
+30da: f01f2060 Vector: dY:-16 dX:32 I:3
+30de: 20004060 Vector: dY:32 dX:64 I:3
+30e2: c01fa060 Vector: dY:-64 dX:160 I:3
+30e6: 2000807f Vector: dY:32 dX:-128 I:3
+30ea: 2000e07f Vector: dY:32 dX:-32 I:3
+30ee: e01fc01f Vector: dY:-32 dX:-64 I:0
+30f2: e01f6060 Vector: dY:-32 dX:96 I:3
+30f6: 00008000 Vector: dY:0 dX:128 I:0
+30fa: 2000a060 Vector: dY:32 dX:160 I:3
+30fe: e01f0000 Vector: dY:-32 dX:0 I:0
+3102: 00c0     RTS
+3104: 20000000 Vector: dY:32 dX:0 I:0
+3108: 00004060 Vector: dY:0 dX:64 I:3
+310c: e01f0000 Vector: dY:-32 dX:0 I:0
+3110: 2000c07f Vector: dY:32 dX:-64 I:3
+3114: 00004000 Vector: dY:0 dX:64 I:0
+3118: 20004060 Vector: dY:32 dX:64 I:3
+311c: e01fc01f Vector: dY:-32 dX:-64 I:0
+3120: e01f6060 Vector: dY:-32 dX:96 I:3
+3124: 20002060 Vector: dY:32 dX:32 I:3
+3128: 2000c07f Vector: dY:32 dX:-64 I:3
+312c: 00002060 Vector: dY:0 dX:32 I:3
+3130: e01f2060 Vector: dY:-32 dX:32 I:3
+3134: 10002060 Vector: dY:16 dX:32 I:3
+3138: f01f2060 Vector: dY:-16 dX:32 I:3
+313c: e01fa07f Vector: dY:-32 dX:-96 I:3
+3140: 20006000 Vector: dY:32 dX:96 I:0
+3144: 20004060 Vector: dY:32 dX:64 I:3
+3148: e01f4060 Vector: dY:-32 dX:64 I:3
+314c: 1000a01f Vector: dY:16 dX:-96 I:0
+3150: f01f2060 Vector: dY:-16 dX:32 I:3
+3154: 10002060 Vector: dY:16 dX:32 I:3
+3158: d01f0000 Vector: dY:-48 dX:0 I:0
+315c: 08006060 Vector: dY:8 dX:96 I:3
+3160: 1800c07f Vector: dY:24 dX:-64 I:3
+3164: 10002060 Vector: dY:16 dX:32 I:3
+3168: f01f4060 Vector: dY:-16 dX:64 I:3
+316c: e81fe07f Vector: dY:-24 dX:-32 I:3
+3170: 2800e07f Vector: dY:40 dX:-32 I:3
+3174: f01f4000 Vector: dY:-16 dX:64 I:0
+3178: 00002060 Vector: dY:0 dX:32 I:3
+317c: e01f0000 Vector: dY:-32 dX:0 I:0
+3180: 00c0     RTS
+3182: 20000000 Vector: dY:32 dX:0 I:0
+3186: e01f4060 Vector: dY:-32 dX:64 I:3
+318a: 2000c01f Vector: dY:32 dX:-64 I:0
+318e: e01f8060 Vector: dY:-32 dX:128 I:3
+3192: 0000a000 Vector: dY:0 dX:160 I:0
+3196: 20006060 Vector: dY:32 dX:96 I:3
+319a: e01f2060 Vector: dY:-32 dX:32 I:3
+319e: 2000e01f Vector: dY:32 dX:-32 I:0
+31a2: 20002060 Vector: dY:32 dX:32 I:3
+31a6: c01f2060 Vector: dY:-64 dX:32 I:3
+31aa: 00002000 Vector: dY:0 dX:32 I:0
+31ae: 4000c07f Vector: dY:64 dX:-64 I:3
+31b2: e01f2000 Vector: dY:-32 dX:32 I:0
+31b6: 20002060 Vector: dY:32 dX:32 I:3
+31ba: e01f2060 Vector: dY:-32 dX:32 I:3
+31be: e01f0000 Vector: dY:-32 dX:0 I:0
+31c2: 00c0     RTS
+31c4: 20000000 Vector: dY:32 dX:0 I:0
+31c8: 20004060 Vector: dY:32 dX:64 I:3
+31cc: c01f2060 Vector: dY:-64 dX:32 I:3
+31d0: 00002000 Vector: dY:0 dX:32 I:0
+31d4: 4000c07f Vector: dY:64 dX:-64 I:3
+31d8: e01f2000 Vector: dY:-32 dX:32 I:0
+31dc: 10002060 Vector: dY:16 dX:32 I:3
+31e0: d01f6060 Vector: dY:-48 dX:96 I:3
+31e4: 00008000 Vector: dY:0 dX:128 I:0
+31e8: 2000a060 Vector: dY:32 dX:160 I:3
+31ec: e01f0000 Vector: dY:-32 dX:0 I:0
+31f0: 00c0     RTS
+31f2: 20000000 Vector: dY:32 dX:0 I:0
+31f6: 00004060 Vector: dY:0 dX:64 I:3
+31fa: e01fe060 Vector: dY:-32 dX:224 I:3
+31fe: 3000e07f Vector: dY:48 dX:-32 I:3
+3202: e01fc07f Vector: dY:-32 dX:-64 I:3
+3206: f01f6000 Vector: dY:-16 dX:96 I:0
+320a: 40006060 Vector: dY:64 dX:96 I:3
+320e: d81f4060 Vector: dY:-40 dX:64 I:3
+3212: 1854     SVEC: dY:-24 dX:-16 I:0
+3214: 60004060 Vector: dY:96 dX:64 I:3
+3218: f91f0360 Vector: dY:-7 dX:3 I:3
+321c: 05000560 Vector: dY:5 dX:5 I:3
+3220: fa1f0360 Vector: dY:-6 dX:3 I:3
+3224: 08000560 Vector: dY:8 dX:5 I:3
+3228: a01f0000 Vector: dY:-96 dX:0 I:0
+322c: 00c0     RTS
+322e: 60000000 Vector: dY:96 dX:0 I:0
+3232: a01f4060 Vector: dY:-96 dX:64 I:3
+3236: 40006060 Vector: dY:64 dX:96 I:3
+323a: c01f4060 Vector: dY:-64 dX:64 I:3
+323e: 00004000 Vector: dY:0 dX:64 I:0
+3242: 4000807f Vector: dY:64 dX:-128 I:3
+3246: e01f4000 Vector: dY:-32 dX:64 I:0
+324a: 20004060 Vector: dY:32 dX:64 I:3
+324e: c01f8060 Vector: dY:-64 dX:128 I:3
+3252: 2000c01f Vector: dY:32 dX:-64 I:0
+3256: 10004060 Vector: dY:16 dX:64 I:3
+325a: d01f2060 Vector: dY:-48 dX:32 I:3
+325e: 3000e01f Vector: dY:48 dX:-32 I:0
+3262: d01f6060 Vector: dY:-48 dX:96 I:3
+3266: 00c0     RTS
+3268: 0000c000 Vector: dY:0 dX:192 I:0
+326c: 2000e060 Vector: dY:32 dX:224 I:3
+3270: e01f4060 Vector: dY:-32 dX:64 I:3
+3274: 1000e01f Vector: dY:16 dX:-32 I:0
+3278: 30004060 Vector: dY:48 dX:64 I:3
+327c: c01f0000 Vector: dY:-64 dX:0 I:0
+3280: 00c0     RTS
+3282: c048     SVEC: dY:16 dX:0 I:6
+3284: c444     SVEC: dY:8 dX:8 I:6
+3286: c45c     SVEC: dY:-8 dX:8 I:6
+3288: c058     SVEC: dY:-16 dX:0 I:6
+328a: 1844     SVEC: dY:8 dX:-16 I:0
+328c: c840     SVEC: dY:0 dX:16 I:6
+328e: 045c     SVEC: dY:-8 dX:8 I:0
+3290: 00c0     RTS
+3292: c04c     SVEC: dY:24 dX:0 I:6
+3294: c640     SVEC: dY:0 dX:12 I:6
+3296: c25e     SVEC: dY:-4 dX:4 I:6
+3298: c05e     SVEC: dY:-4 dX:0 I:6
+329a: de5e     SVEC: dY:-4 dX:-4 I:6
+329c: da40     SVEC: dY:0 dX:-12 I:6
+329e: 0640     SVEC: dY:0 dX:12 I:0
+32a0: c25e     SVEC: dY:-4 dX:4 I:6
+32a2: c05e     SVEC: dY:-4 dX:0 I:6
+32a4: de5e     SVEC: dY:-4 dX:-4 I:6
+32a6: da40     SVEC: dY:0 dX:-12 I:6
+32a8: 93e9     JMP:1326
+32aa: c04c     SVEC: dY:24 dX:0 I:6
+32ac: c840     SVEC: dY:0 dX:16 I:6
+32ae: 1854     SVEC: dY:-24 dX:-16 I:0
+32b0: d6e9     JMP:13ac
+32b2: c04c     SVEC: dY:24 dX:0 I:6
+32b4: c440     SVEC: dY:0 dX:8 I:6
+32b6: c45c     SVEC: dY:-8 dX:8 I:6
+32b8: c05c     SVEC: dY:-8 dX:0 I:6
+32ba: dc5c     SVEC: dY:-8 dX:-8 I:6
+32bc: dc40     SVEC: dY:0 dX:-8 I:6
+32be: 93e9     JMP:1326
+32c0: c840     SVEC: dY:0 dX:16 I:6
+32c2: 1840     SVEC: dY:0 dX:-16 I:0
+32c4: c04c     SVEC: dY:24 dX:0 I:6
+32c6: c840     SVEC: dY:0 dX:16 I:6
+32c8: 1e5a     SVEC: dY:-12 dX:-4 I:0
+32ca: da40     SVEC: dY:0 dX:-12 I:6
+32cc: 0c5a     SVEC: dY:-12 dX:24 I:0
+32ce: 00c0     RTS
+32d0: c04c     SVEC: dY:24 dX:0 I:6
+32d2: c840     SVEC: dY:0 dX:16 I:6
+32d4: c05c     SVEC: dY:-8 dX:0 I:6
+32d6: 1c5c     SVEC: dY:-8 dX:-8 I:0
+32d8: c440     SVEC: dY:0 dX:8 I:6
+32da: c05c     SVEC: dY:-8 dX:0 I:6
+32dc: 92e9     JMP:1324
+32de: c04c     SVEC: dY:24 dX:0 I:6
+32e0: 005a     SVEC: dY:-12 dX:0 I:0
+32e2: c840     SVEC: dY:0 dX:16 I:6
+32e4: 0046     SVEC: dY:12 dX:0 I:0
+32e6: efe9     JMP:13de
+32e8: c840     SVEC: dY:0 dX:16 I:6
+32ea: 184c     SVEC: dY:24 dX:-16 I:0
+32ec: c840     SVEC: dY:0 dX:16 I:6
+32ee: 1c40     SVEC: dY:0 dX:-8 I:0
+32f0: c054     SVEC: dY:-24 dX:0 I:6
+32f2: 0840     SVEC: dY:0 dX:16 I:0
+32f4: 00c0     RTS
+32f6: 0044     SVEC: dY:8 dX:0 I:0
+32f8: c45c     SVEC: dY:-8 dX:8 I:6
+32fa: c440     SVEC: dY:0 dX:8 I:6
+32fc: b4e9     JMP:1368
+32fe: c04c     SVEC: dY:24 dX:0 I:6
+3300: 0640     SVEC: dY:0 dX:12 I:0
+3302: da5a     SVEC: dY:-12 dX:-12 I:6
+3304: c65a     SVEC: dY:-12 dX:12 I:6
+3306: 0640     SVEC: dY:0 dX:12 I:0
+3308: 00c0     RTS
+330a: 004c     SVEC: dY:24 dX:0 I:0
+330c: c054     SVEC: dY:-24 dX:0 I:6
+330e: d6e9     JMP:13ac
+3310: c04c     SVEC: dY:24 dX:0 I:6
+3312: c45c     SVEC: dY:-8 dX:8 I:6
+3314: c444     SVEC: dY:8 dX:8 I:6
+3316: efe9     JMP:13de
+3318: c04c     SVEC: dY:24 dX:0 I:6
+331a: c854     SVEC: dY:-24 dX:16 I:6
+331c: b4e9     JMP:1368
+331e: c04c     SVEC: dY:24 dX:0 I:6
+3320: c840     SVEC: dY:0 dX:16 I:6
+3322: c054     SVEC: dY:-24 dX:0 I:6
+3324: d840     SVEC: dY:0 dX:-16 I:6
+3326: 0c40     SVEC: dY:0 dX:24 I:0
+3328: 00c0     RTS
+332a: c04c     SVEC: dY:24 dX:0 I:6
+332c: c840     SVEC: dY:0 dX:16 I:6
+332e: c05a     SVEC: dY:-12 dX:0 I:6
+3330: d840     SVEC: dY:0 dX:-16 I:6
+3332: 66e9     JMP:12cc
+3334: c04c     SVEC: dY:24 dX:0 I:6
+3336: c840     SVEC: dY:0 dX:16 I:6
+3338: c058     SVEC: dY:-16 dX:0 I:6
+333a: dc5c     SVEC: dY:-8 dX:-8 I:6
+333c: dc40     SVEC: dY:0 dX:-8 I:6
+333e: 0444     SVEC: dY:8 dX:8 I:0
+3340: c45c     SVEC: dY:-8 dX:8 I:6
+3342: d7e9     JMP:13ae
+3344: c04c     SVEC: dY:24 dX:0 I:6
+3346: c840     SVEC: dY:0 dX:16 I:6
+3348: c05a     SVEC: dY:-12 dX:0 I:6
+334a: d840     SVEC: dY:0 dX:-16 I:6
+334c: 0240     SVEC: dY:0 dX:4 I:0
+334e: c65a     SVEC: dY:-12 dX:12 I:6
+3350: d7e9     JMP:13ae
+3352: c840     SVEC: dY:0 dX:16 I:6
+3354: c046     SVEC: dY:12 dX:0 I:6
+3356: d840     SVEC: dY:0 dX:-16 I:6
+3358: c046     SVEC: dY:12 dX:0 I:6
+335a: c840     SVEC: dY:0 dX:16 I:6
+335c: b5e9     JMP:136a
+335e: 004c     SVEC: dY:24 dX:0 I:0
+3360: 76e9     JMP:12ec
+3362: 004c     SVEC: dY:24 dX:0 I:0
+3364: c054     SVEC: dY:-24 dX:0 I:6
+3366: c840     SVEC: dY:0 dX:16 I:6
+3368: c04c     SVEC: dY:24 dX:0 I:6
+336a: 0454     SVEC: dY:-24 dX:8 I:0
+336c: 00c0     RTS
+336e: 004c     SVEC: dY:24 dX:0 I:0
+3370: c454     SVEC: dY:-24 dX:8 I:6
+3372: c44c     SVEC: dY:24 dX:8 I:6
+3374: b5e9     JMP:136a
+3376: 004c     SVEC: dY:24 dX:0 I:0
+3378: c054     SVEC: dY:-24 dX:0 I:6
+337a: c444     SVEC: dY:8 dX:8 I:6
+337c: c45c     SVEC: dY:-8 dX:8 I:6
+337e: b4e9     JMP:1368
+3380: c84c     SVEC: dY:24 dX:16 I:6
+3382: 1840     SVEC: dY:0 dX:-16 I:0
+3384: c854     SVEC: dY:-24 dX:16 I:6
+3386: f0e9     JMP:13e0
+3388: 0440     SVEC: dY:0 dX:8 I:0
+338a: c048     SVEC: dY:16 dX:0 I:6
+338c: dc44     SVEC: dY:8 dX:-8 I:6
+338e: 0840     SVEC: dY:0 dX:16 I:0
+3390: dc5c     SVEC: dY:-8 dX:-8 I:6
+3392: 0858     SVEC: dY:-16 dX:16 I:0
+3394: 00c0     RTS
+3396: 004c     SVEC: dY:24 dX:0 I:0
+3398: c840     SVEC: dY:0 dX:16 I:6
+339a: d854     SVEC: dY:-24 dX:-16 I:6
+339c: d6e9     JMP:13ac
+339e: 044c     SVEC: dY:24 dX:8 I:0
+33a0: 78e9     JMP:12f0
+33a2: 004c     SVEC: dY:24 dX:0 I:0
+33a4: c840     SVEC: dY:0 dX:16 I:6
+33a6: c05a     SVEC: dY:-12 dX:0 I:6
+33a8: d840     SVEC: dY:0 dX:-16 I:6
+33aa: c05a     SVEC: dY:-12 dX:0 I:6
+33ac: c840     SVEC: dY:0 dX:16 I:6
+33ae: 0440     SVEC: dY:0 dX:8 I:0
+33b0: 00c0     RTS
+33b2: 004c     SVEC: dY:24 dX:0 I:0
+33b4: c840     SVEC: dY:0 dX:16 I:6
+33b6: c054     SVEC: dY:-24 dX:0 I:6
+33b8: d840     SVEC: dY:0 dX:-16 I:6
+33ba: 0046     SVEC: dY:12 dX:0 I:0
+33bc: c840     SVEC: dY:0 dX:16 I:6
+33be: 045a     SVEC: dY:-12 dX:8 I:0
+33c0: 00c0     RTS
+33c2: 004c     SVEC: dY:24 dX:0 I:0
+33c4: c05a     SVEC: dY:-12 dX:0 I:6
+33c6: c840     SVEC: dY:0 dX:16 I:6
+33c8: 0046     SVEC: dY:12 dX:0 I:0
+33ca: efe9     JMP:13de
+33cc: 0046     SVEC: dY:12 dX:0 I:0
+33ce: c840     SVEC: dY:0 dX:16 I:6
+33d0: c05a     SVEC: dY:-12 dX:0 I:6
+33d2: d840     SVEC: dY:0 dX:-16 I:6
+33d4: c04c     SVEC: dY:24 dX:0 I:6
+33d6: 0c54     SVEC: dY:-24 dX:24 I:0
+33d8: 00c0     RTS
+33da: 004c     SVEC: dY:24 dX:0 I:0
+33dc: c840     SVEC: dY:0 dX:16 I:6
+33de: c054     SVEC: dY:-24 dX:0 I:6
+33e0: 0440     SVEC: dY:0 dX:8 I:0
+33e2: 00c0     RTS
+33e4: c04c     SVEC: dY:24 dX:0 I:6
+33e6: dae9     JMP:13b4
+33e8: 0846     SVEC: dY:12 dX:16 I:0
+33ea: d840     SVEC: dY:0 dX:-16 I:6
+33ec: c046     SVEC: dY:12 dX:0 I:6
+33ee: eee9     JMP:13dc
+33f0: 93a9     JSR:1326
+33f2: 8fa9     JSR:131e
+33f4: cfa9     JSR:139e
+33f6: d1a9     JSR:13a2
+33f8: d9a9     JSR:13b2
+33fa: e1a9     JSR:13c2
+33fc: a9a9     JSR:1352
+33fe: e6a9     JSR:13cc
+3400: eda9     JSR:13da
+3402: f2a9     JSR:13e4
+3404: f4a9     JSR:13e8
+3406: 41a9     JSR:1282
+3408: 49a9     JSR:1292
+340a: 55a9     JSR:12aa
+340c: 59a9     JSR:12b2
+340e: 60a9     JSR:12c0
+3410: 62a9     JSR:12c4
+3412: 68a9     JSR:12d0
+3414: 6fa9     JSR:12de
+3416: 74a9     JSR:12e8
+3418: 7ba9     JSR:12f6
+341a: 7fa9     JSR:12fe
+341c: 85a9     JSR:130a
+341e: 88a9     JSR:1310
+3420: 8ca9     JSR:1318
+3422: 8fa9     JSR:131e
+3424: 95a9     JSR:132a
+3426: 9aa9     JSR:1334
+3428: a2a9     JSR:1344
+342a: a9a9     JSR:1352
+342c: afa9     JSR:135e
+342e: b1a9     JSR:1362
+3430: b7a9     JSR:136e
+3432: bba9     JSR:1376
+3434: c0a9     JSR:1380
+3436: c4a9     JSR:1388
+3438: cba9     JSR:1396
+343a: 93a9     JSR:1326
+343c: d6a9     JSR:13ac
+343e: 2aaa     JSR:1454
+3440: 33aa     JSR:1466
+3442: 00c0     RTS
+3444: 0042     SVEC: dY:4 dX:0 I:0
+3446: c048     SVEC: dY:16 dX:0 I:6
+3448: c442     SVEC: dY:4 dX:8 I:6
+344a: c45e     SVEC: dY:-4 dX:8 I:6
+344c: c058     SVEC: dY:-16 dX:0 I:6
+344e: dc5e     SVEC: dY:-4 dX:-8 I:6
+3450: dc42     SVEC: dY:4 dX:-8 I:6
+3452: 00c0     RTS
+3454: 22aa     JSR:1444
+3456: 01000b00 Vector: dY:1 dX:11 I:0
+345a: dd40     SVEC: dY:0 dX:-6 I:6
+345c: c047     SVEC: dY:14 dX:0 I:6
+345e: c340     SVEC: dY:0 dX:6 I:6
+3460: ed1f0d00 Vector: dY:-19 dX:13 I:0
+3464: 00c0     RTS
+3466: 22aa     JSR:1444
+3468: 01000500 Vector: dY:1 dX:5 I:0
+346c: c047     SVEC: dY:14 dX:0 I:6
+346e: c340     SVEC: dY:0 dX:6 I:6
+3470: c05d     SVEC: dY:-6 dX:0 I:6
+3472: dd40     SVEC: dY:0 dX:-6 I:6
+3474: f31f1300 Vector: dY:-13 dX:19 I:0
+3478: 00c0     RTS
+347a: 0000c01f Vector: dY:0 dX:-64 I:0
+347e: 000000e0 Vector: dY:0 dX:0 I:7
+3482: c01fc01f Vector: dY:-64 dX:-64 I:0
+3486: 000000e0 Vector: dY:0 dX:0 I:7
+348a: c01f4000 Vector: dY:-64 dX:64 I:0
+348e: 000000e0 Vector: dY:0 dX:0 I:7
+3492: 20006000 Vector: dY:32 dX:96 I:0
+3496: 000000e0 Vector: dY:0 dX:0 I:7
+349a: e01f4000 Vector: dY:-32 dX:64 I:0
+349e: 000000e0 Vector: dY:0 dX:0 I:7
+34a2: 40000000 Vector: dY:64 dX:0 I:0
+34a6: 000000e0 Vector: dY:0 dX:0 I:7
+34aa: 60002000 Vector: dY:96 dX:32 I:0
+34ae: 000000e0 Vector: dY:0 dX:0 I:7
+34b2: 6000e01f Vector: dY:96 dX:-32 I:0
+34b6: 000000e0 Vector: dY:0 dX:0 I:7
+34ba: e01f801f Vector: dY:-32 dX:-128 I:0
+34be: 000000e0 Vector: dY:0 dX:0 I:7
+34c2: 2000a01f Vector: dY:32 dX:-96 I:0
+34c6: 000000e0 Vector: dY:0 dX:0 I:7
+34ca: 00c0     RTS
+34cc: 4080     Center
+34ce: 511f0000 Vector: dY:-175 dX:0 I:0
+34d2: 64000060 Vector: dY:100 dX:0 I:3
+34d6: 1900b51f Vector: dY:25 dX:-75 I:0
+34da: e71f0060 Vector: dY:-25 dX:0 I:3
+34de: 00009660 Vector: dY:0 dX:150 I:3
+34e2: 19000060 Vector: dY:25 dX:0 I:3
+34e6: 64000000 Vector: dY:100 dX:0 I:0
+34ea: 19000060 Vector: dY:25 dX:0 I:3
+34ee: 00006a7f Vector: dY:0 dX:-150 I:3
+34f2: e71f0060 Vector: dY:-25 dX:0 I:3
+34f6: 19004b00 Vector: dY:25 dX:75 I:0
+34fa: 64000060 Vector: dY:100 dX:0 I:3
+34fe: 00c0     RTS
+3500: 4080     Center
+3502: 511f0000 Vector: dY:-175 dX:0 I:0
+3506: 640000e0 Vector: dY:100 dX:0 I:7
+350a: 28000060 Vector: dY:40 dX:0 I:3
+350e: 0000dd1f Vector: dY:0 dX:-35 I:0
+3512: d81fd8ff Vector: dY:-40 dX:-40 I:7
+3516: 000096e0 Vector: dY:0 dX:150 I:7
+351a: 2800d8ff Vector: dY:40 dX:-40 I:7
+351e: 46000000 Vector: dY:70 dX:0 I:0
+3522: 280028e0 Vector: dY:40 dX:40 I:7
+3526: 00006aff Vector: dY:0 dX:-150 I:7
+352a: d81f28e0 Vector: dY:-40 dX:40 I:7
+352e: 00002300 Vector: dY:0 dX:35 I:0
+3532: 28000060 Vector: dY:40 dX:0 I:3
+3536: 640000e0 Vector: dY:100 dX:0 I:7
+353a: 00c0     RTS
+353c: 4080     Center
+353e: 3c014400 Vector: dY:316 dX:68 I:0
+3542: fc40     SVEC: dY:0 dX:-8 I:7
+3544: c41fc41f Vector: dY:-60 dX:-60 I:0
+3548: e05c     SVEC: dY:-8 dX:0 I:7
+354a: 4400c41f Vector: dY:68 dX:-60 I:0
+354e: fc40     SVEC: dY:0 dX:-8 I:7
+3550: 00004400 Vector: dY:0 dX:68 I:0
+3554: 3400dcbf Vector: dY:52 dX:-36 I:5
+3558: 08002400 Vector: dY:8 dX:36 I:0
+355c: e044     SVEC: dY:8 dX:0 I:7
+355e: f01f2400 Vector: dY:-16 dX:36 I:0
+3562: cc1fdcbf Vector: dY:-52 dX:-36 I:5
+3566: 00c0     RTS
+3568: dd43     SVEC: dY:6 dX:-6 I:6
+356a: 030009c0 Vector: dY:3 dX:9 I:6
+356e: 060003c0 Vector: dY:6 dX:3 I:6
+3572: f71f24c0 Vector: dY:-9 dX:36 I:6
+3576: dd5d     SVEC: dY:-6 dX:-6 I:6
+3578: 0000dcdf Vector: dY:0 dX:-36 I:6
+357c: 0946     SVEC: dY:12 dX:18 I:0
+357e: 000015c0 Vector: dY:0 dX:21 I:6
+3582: fd1f00c0 Vector: dY:-3 dX:0 I:6
+3586: 0000f7df Vector: dY:0 dX:-9 I:6
+358a: f71f1b00 Vector: dY:-9 dX:27 I:0
+358e: 00c0     RTS
+3590: b4aa     JSR:1568
+3592: 4080     Center
+3594: 32009c1f Vector: dY:50 dX:-100 I:0
+3598: 0000b5df Vector: dY:0 dX:-75 I:6
+359c: 9c1f2300 Vector: dY:-100 dX:35 I:0
+35a0: 640028c0 Vector: dY:100 dX:40 I:6
+35a4: 64009cdf Vector: dY:100 dX:-100 I:6
+35a8: 1900fa00 Vector: dY:25 dX:250 I:0
+35ac: 831f6adf Vector: dY:-125 dX:-150 I:6
+35b0: ce1f64c0 Vector: dY:-50 dX:100 I:6
+35b4: 00c0     RTS
+35b6: 000050c0 Vector: dY:0 dX:80 I:6
+35ba: ce1f241f Vector: dY:-50 dX:-220 I:0
+35be: ce1f41c0 Vector: dY:-50 dX:65 I:6
+35c2: 96009c1f Vector: dY:150 dX:-100 I:0
+35c6: d31f00c0 Vector: dY:-45 dX:0 I:6
+35ca: 9100e71f Vector: dY:145 dX:-25 I:0
+35ce: 2d006adf Vector: dY:45 dX:-150 I:6
+35d2: 1e00e100 Vector: dY:30 dX:225 I:0
+35d6: b51fb5df Vector: dY:-75 dX:-75 I:6
+35da: 1900fa00 Vector: dY:25 dX:250 I:0
+35de: 5f000ac0 Vector: dY:95 dX:10 I:6
+35e2: a11ff61f Vector: dY:-95 dX:-10 I:0
+35e6: 3c0064c0 Vector: dY:60 dX:100 I:6
+35ea: 00c0     RTS
+35ec: 3c0064c0 Vector: dY:60 dX:100 I:6
+35f0: 2d009c1f Vector: dY:45 dX:-100 I:0
+35f4: 971f00c0 Vector: dY:-105 dX:0 I:6
+35f8: f61fed1e Vector: dY:-10 dX:-275 I:0
+35fc: 5f0097df Vector: dY:95 dX:-105 I:6
+3600: 831f881f Vector: dY:-125 dX:-120 I:0
+3604: 0a00cedf Vector: dY:10 dX:-50 I:6
+3608: f61f3200 Vector: dY:-10 dX:50 I:0
+360c: 881f7edf Vector: dY:-120 dX:-130 I:6
+3610: ba1f3101 Vector: dY:-70 dX:305 I:0
+3614: fb1fa6df Vector: dY:-5 dX:-90 I:6
+3618: 9c1fbe00 Vector: dY:-100 dX:190 I:0
+361c: 741f2dc0 Vector: dY:-140 dX:45 I:6
+3620: f0006e00 Vector: dY:240 dX:110 I:0
+3624: d81f00c0 Vector: dY:-40 dX:0 I:6
+3628: 00c0     RTS
+362a: 000069c0 Vector: dY:0 dX:105 I:6
+362e: 381f291f Vector: dY:-200 dX:-215 I:0
+3632: 6a1fb0df Vector: dY:-150 dX:-80 I:6
+3636: 8601651f Vector: dY:390 dX:-155 I:0
+363a: ce1f00c0 Vector: dY:-50 dX:0 I:6
+363e: 32000000 Vector: dY:50 dX:0 I:0
+3642: 1900abdf Vector: dY:25 dX:-85 I:6
+3646: 27017800 Vector: dY:295 dX:120 I:0
+364a: 730088df Vector: dY:115 dX:-120 I:6
+364e: 0f00af00 Vector: dY:15 dX:175 I:0
+3652: 7e1fc9df Vector: dY:-130 dX:-55 I:6
+3656: e71fe001 Vector: dY:-25 dX:480 I:0
+365a: 000046c0 Vector: dY:0 dX:70 I:6
+365e: 69003d1f Vector: dY:105 dX:-195 I:0
+3662: c41f19c0 Vector: dY:-60 dX:25 I:6
+3666: 55004bc0 Vector: dY:85 dX:75 I:6
+366a: 00c0     RTS
+366c: 4100f1df Vector: dY:65 dX:-15 I:6
+3670: d81f3200 Vector: dY:-40 dX:50 I:0
+3674: e71fdddf Vector: dY:-25 dX:-35 I:6
+3678: 2f1ed81f Vector: dY:-465 dX:-40 I:0
+367c: 640069c0 Vector: dY:100 dX:105 I:6
+3680: 601fb01f Vector: dY:-160 dX:-80 I:0
+3684: 3c00e7df Vector: dY:60 dX:-25 I:6
+3688: c41ff6df Vector: dY:-60 dX:-10 I:6
+368c: a21e061f Vector: dY:-350 dX:-250 I:0
+3690: 3c00dddf Vector: dY:60 dX:-35 I:6
+3694: c41fd8df Vector: dY:-60 dX:-40 I:6
+3698: 90018d1f Vector: dY:400 dX:-115 I:0
+369c: e21fdddf Vector: dY:-30 dX:-35 I:6
+36a0: 00c0     RTS
+36a2: ba1f32c0 Vector: dY:-70 dX:50 I:6
+36a6: 1e009c1f Vector: dY:30 dX:-100 I:0
+36aa: 280032c0 Vector: dY:40 dX:50 I:6
+36ae: ec1fdb01 Vector: dY:-20 dX:475 I:0
+36b2: ce1fcedf Vector: dY:-50 dX:-50 I:6
+36b6: 58028700 Vector: dY:600 dX:135 I:0
+36ba: ce1f0fc0 Vector: dY:-50 dX:15 I:6
+36be: ac1e0f00 Vector: dY:-340 dX:15 I:0
+36c2: 921f5fc0 Vector: dY:-110 dX:95 I:6
+36c6: 00c0     RTS
+36c8: 4b0073c0 Vector: dY:75 dX:115 I:6
+36cc: 8d1fa61f Vector: dY:-115 dX:-90 I:0
+36d0: 2800e7df Vector: dY:40 dX:-25 I:6
+36d4: ba1f211d Vector: dY:-70 dX:-735 I:0
+36d8: f11fbfdf Vector: dY:-15 dX:-65 I:6
+36dc: 00c0     RTS
+36de: 2d00abdf Vector: dY:45 dX:-85 I:6
+36e2: a11f3200 Vector: dY:-95 dX:50 I:0
+36e6: 320023c0 Vector: dY:50 dX:35 I:6
+36ea: f11f5703 Vector: dY:-15 dX:855 I:0
+36ee: 3c00e2df Vector: dY:60 dX:-30 I:6
+36f2: 1e0050c0 Vector: dY:30 dX:80 I:6
+36f6: 00c0     RTS
+36f8: c9aa     JSR:1592
+36fa: dbaa     JSR:15b6
+36fc: f6aa     JSR:15ec
+36fe: 15ab     JSR:162a
+3700: 36ab     JSR:166c
+3702: 51ab     JSR:16a2
+3704: 64ab     JSR:16c8
+3706: 6fab     JSR:16de
+3708: 00c0     RTS
+370a: 4080     Center
+370c:   71     Scale: LinScale:0, BinScale:1
+370e: 08020802 Vector: dY:520 dX:520 I:0
+3712: 1062     Scale: LinScale:16, BinScale:2
+3714: 4080     Center
+3716: f81df81d Vector: dY:-520 dX:-520 I:0
+371a: 2060     Scale: LinScale:32, BinScale:0
+371c: 88000800 Vector: dY:136 dX:8 I:0
+3720: 0000ffe3 Vector: dY:0 dX:1023 I:7
+3724: ff0200e0 Vector: dY:767 dX:0 I:7
+3728: 000001fc Vector: dY:0 dX:-1023 I:7
+372c: 011d00e0 Vector: dY:-767 dX:0 I:7
+3730: ff02ffe2 Vector: dY:767 dX:767 I:7
+3734: 001f00e1 Vector: dY:-256 dX:256 I:7
+3738: 011e01fe Vector: dY:-511 dX:-511 I:7
+373c: 000200fe Vector: dY:512 dX:-512 I:7
+3740: ff0000e1 Vector: dY:255 dX:256 I:7
+3744: 011dffe2 Vector: dY:-767 dX:767 I:7
+3748: ff020000 Vector: dY:767 dX:0 I:0
+374c: 011d01fd Vector: dY:-767 dX:-767 I:7
+3750: ff0000ff Vector: dY:255 dX:-256 I:7
+3754: 000200e2 Vector: dY:512 dX:512 I:7
+3758: 011effe1 Vector: dY:-511 dX:511 I:7
+375c: 001f00ff Vector: dY:-256 dX:-256 I:7
+3760: ff0201fd Vector: dY:767 dX:-767 I:7
+3764: 4080     Center
+3766: 185c     SVEC: dY:-8 dX:-16 I:0
+3768: ef40     SVEC: dY:0 dX:30 I:7
+376a: 1f42     SVEC: dY:4 dX:-2 I:0
+376c: d340     SVEC: dY:0 dX:-26 I:6
+376e: 0142     SVEC: dY:4 dX:2 I:0
+3770: ab40     SVEC: dY:0 dX:22 I:5
+3772: 1f42     SVEC: dY:4 dX:-2 I:0
+3774: 9740     SVEC: dY:0 dX:-18 I:4
+3776: 0142     SVEC: dY:4 dX:2 I:0
+3778: 6740     SVEC: dY:0 dX:14 I:3
+377a: 1f42     SVEC: dY:4 dX:-2 I:0
+377c: 5b40     SVEC: dY:0 dX:-10 I:2
+377e: 0142     SVEC: dY:4 dX:2 I:0
+3780: 2340     SVEC: dY:0 dX:6 I:1
+3782: 00c0     RTS
+3784: 92000000 Vector: dY:146 dX:0 I:0
+3788: 00010101 Vector: dY:256 dX:257 I:0
+378c: 01010102 Vector: dY:257 dX:513 I:0
+3790: 02020202 Vector: dY:514 dX:514 I:0
+3794: 02030303 Vector: dY:770 dX:771 I:0
+3798: 03030303 Vector: dY:771 dX:771 I:0
+379c: 04040404 Vector: dY:1028 dX:1028 I:0
+37a0: 04040505 Vector: dY:1028 dX:1285 I:0
+37a4: 05050505 Vector: dY:1285 dX:1285 I:0
+37a8: 06060606 Vector: dY:1542 dX:1542 I:0
+37ac: 06060607 Vector: dY:1542 dX:1798 I:0
+37b0: 07070707 Vector: dY:1799 dX:1799 I:0
+37b4: 07080808 Vector: dY:2055 dX:2056 I:0
+37b8: 08080808 Vector: dY:2056 dX:2056 I:0
+37bc: 09090909 Vector: dY:2313 dX:2313 I:0
+37c0: 09090a0a Vector: dY:2313 dX:2570 I:0
+37c4: 0a0a0a0a Vector: dY:2570 dX:2570 I:0
+37c8: 0a0b0b0b Vector: dY:2826 dX:2827 I:0
+37cc: 0b0b0b0b Vector: dY:2827 dX:2827 I:0
+37d0: 0c0c0c0c Vector: dY:3084 dX:3084 I:0
+37d4: 0c0c0c0d Vector: dY:3084 dX:3340 I:0
+37d8: 0d0d0d0d Vector: dY:3341 dX:3341 I:0
+37dc: 0d0d0e0e Vector: dY:3341 dX:3598 I:0
+37e0: 0e0e0e0e Vector: dY:3598 dX:3598 I:0
+37e4: 0e0f0f0f Vector: dY:3854 dX:3855 I:0
+37e8: 0f0f0f0f Vector: dY:3855 dX:3855 I:0
+37ec: 10101010 Vector: dY:-4080 dX:-4080 I:0
+37f0: 10101011 Vector: dY:-4080 dX:-3824 I:0
+37f4: 11111111 Vector: dY:-3823 dX:-3823 I:0
+37f8: 11111112 Vector: dY:-3823 dX:-3567 I:0
+37fc: 12121212 Vector: dY:-3566 dX:-3566 I:0
+3800: 12121313 Vector: dY:-3566 dX:-3309 I:0
+3804: 13131313 Vector: dY:-3309 dX:-3309 I:0
+3808: 13131414 Vector: dY:-3309 dX:-3052 I:0
+380c: 14141414 Vector: dY:-3052 dX:-3052 I:0
+3810: 14141515 Vector: dY:-3052 dX:-2795 I:0
+3814: 15151515 Vector: dY:-2795 dX:-2795 I:0
+3818: 15151516 Vector: dY:-2795 dX:-2539 I:0
+381c: 16161616 Vector: dY:-2538 dX:-2538 I:0
+3820: 16161617 Vector: dY:-2538 dX:-2282 I:0
+3824: 17171717 Vector: dY:-2281 dX:-2281 I:0
+3828: 17171717 Vector: dY:-2281 dX:-2281 I:0
+382c: 18181818 Vector: dY:-2024 dX:-2024 I:0
+3830: 18181818 Vector: dY:-2024 dX:-2024 I:0
+3834: 18191919 Vector: dY:-1768 dX:-1767 I:0
+3838: 19191919 Vector: dY:-1767 dX:-1767 I:0
+383c: 1919191a Vector: dY:-1767 dX:-1511 I:0
+3840: 1a1a1a1a Vector: dY:-1510 dX:-1510 I:0
+3844: 1a1a1a1a Vector: dY:-1510 dX:-1510 I:0
+3848: 1b1b1b1b Vector: dY:-1253 dX:-1253 I:0
+384c: 1b1b1b1b Vector: dY:-1253 dX:-1253 I:0
+3850: 1b1b1c1c Vector: dY:-1253 dX:-996 I:0
+3854: 1c1c1c1c Vector: dY:-996 dX:-996 I:0
+3858: 1c1c1c1c Vector: dY:-996 dX:-996 I:0
+385c: 1c1d1d1d Vector: dY:-740 dX:-739 I:0
+3860: 1d1d1d1d Vector: dY:-739 dX:-739 I:0
+3864: 1d1d1d1d Vector: dY:-739 dX:-739 I:0
+3868: 1e1e1e1e Vector: dY:-482 dX:-482 I:0
+386c: 1e1e1e1e Vector: dY:-482 dX:-482 I:0
+3870: 1e1e1e1f Vector: dY:-482 dX:-226 I:0
+3874: 1f1f1f1f Vector: dY:-225 dX:-225 I:0
+3878: 1f1f1f1f Vector: dY:-225 dX:-225 I:0
+387c: 1f1f1f20 Vector: dY:-225 dX:31 I:1
+3880: 00002020     Halt
+3882: 00002020     Halt
+3884: 20d4     RTS
+3886: 00142449 Vector: dY:-3072 dX:2340 I:2
+388a: 05102030 Vector: dY:-4091 dX:-4064 I:1
+388e: 0000e638     Halt
+3890: 00000539     Halt
+3892: 00005539     Halt
+3894: 00003639     Halt
+3896: 0000553a     Halt
+3898: 0000303a     Halt
+389a: 00000b3a     Halt
+389c: 0000e639     Halt
+389e: 00007a3a     Halt
+38a0: 00009f3a     Halt
+38a2: 0000c43a     Halt
+38a4: 0000e93a     Halt
+38a6: 00003b3c     Halt
+38a8: 00000e3b     Halt
+38aa: 00003f3b     Halt
+38ac: 00005a3c     Halt
+38ae: 00009b3b     Halt
+38b0: 0000c03b     Halt
+38b2: 0000463b     Halt
+38b4: 00000e3b     Halt
+38b6: 0000c03b     Halt
+38b8: 00009b3b     Halt
+38ba: 00008b3c     Halt
+38bc: d576     Scale: LinScale:213, BinScale:6
+38be: 0000c03b     Halt
+38c0: 00000a3c     Halt
+38c2: 00009b3b     Halt
+38c4: 0000f13b     Halt
+38c6: 00009b3b     Halt
+38c8: 00000a3c     Halt
+38ca: 4e77     Scale: LinScale:78, BinScale:7
+38cc: cd77     Scale: LinScale:205, BinScale:7
+38ce: 0000b03e     Halt
+38d0: 0000173f     Halt
+38d2: 00000000 Vector: dY:0 dX:0 I:0
+38d6: 0000283d     Halt
+38d8: 0000593d     Halt
+38da: 00008a3d     Halt
+38dc: 0000bb3d     Halt
+38de: 0000ec3d     Halt
+38e0: 00001d3e     Halt
+38e2: 00004e3e     Halt
+38e4: 00007f3e     Halt
+38e6: 1f00fe00 Vector: dY:31 dX:254 I:0
+38ea: fec0     RTS
+38ec: fe00fe00 Vector: dY:254 dX:254 I:0
+38f0: 02c0     RTS
+38f2: fe000200 Vector: dY:254 dX:2 I:0
+38f6: 02c0     RTS
+38f8: fe000200 Vector: dY:254 dX:2 I:0
+38fc: fec0     RTS
+38fe: fe000000 Vector: dY:254 dX:0 I:0
+3902: 0040     SVEC: dY:0 dX:0 I:0
+3904: 00000131     Halt
+3906: 00fe     JMP:3c00
+3908: 00fe     JMP:3c00
+390a: c0fe     JMP:3d80
+390c: 00fe     JMP:3c00
+390e: 0002c0fe Vector: dY:512 dX:-320 I:7
+3912: 00020002 Vector: dY:512 dX:512 I:0
+3916: c0fe     JMP:3d80
+3918: 000200fe Vector: dY:512 dX:-512 I:7
+391c: c0fe     JMP:3d80
+391e: 00fe     JMP:3c00
+3920: 00fe     JMP:3c00
+3922: 400100fe Vector: dY:320 dX:-512 I:7
+3926: 00024001 Vector: dY:512 dX:320 I:0
+392a: 00020002 Vector: dY:512 dX:512 I:0
+392e: 40010002 Vector: dY:320 dX:512 I:0
+3932: 00fe     JMP:3c00
+3934: 40011fd8 Vector: dY:320 dX:-2017 I:6
+3938: ffd8     RTS
+393a: ffd0     RTS
+393c: ffd8     RTS
+393e: ffd8     RTS
+3940: fff8     JMP:31fe
+3942: ffd8     RTS
+3944: 0000ff28     Halt
+3946: 00f8     JMP:3000
+3948: ffd8     RTS
+394a: 0000ff28     Halt
+394c: 00d0     RTS
+394e: ff50     SVEC: dY:-32 dX:-2 I:7
+3950: 000000e4 Vector: dY:0 dX:1024 I:7
+3954: ff91     Center
+3956: 20fd     JMP:3a40
+3958: 00fe     JMP:3c00
+395a: c0fe     JMP:3d80
+395c: 20fd     JMP:3a40
+395e: 0002c0fe Vector: dY:512 dX:-320 I:7
+3962: c8030002 Vector: dY:968 dX:512 I:0
+3966: c0fe     JMP:3d80
+3968: c80300fe Vector: dY:968 dX:-512 I:7
+396c: c0fe     JMP:3d80
+396e: 00fc     JMP:3800
+3970: c8fd     JMP:3b90
+3972: 30ff     JMP:3e60
+3974: 00fc     JMP:3800
+3976: 380230ff Vector: dY:568 dX:-208 I:7
+397a: e0043802 Vector: dY:1248 dX:568 I:0
+397e: 30ff     JMP:3e60
+3980: e004c8fd Vector: dY:1248 dX:-568 I:7
+3984: 30ff     JMP:3e60
+3986: 58fd     JMP:3ab0
+3988: a8fe     JMP:3d50
+398a: 88ff     JMP:3f10
+398c: 58fd     JMP:3ab0
+398e: 580188ff Vector: dY:344 dX:-120 I:7
+3992: a8025801 Vector: dY:680 dX:344 I:0
+3996: 88ff     JMP:3f10
+3998: a802a8fe Vector: dY:680 dX:-344 I:7
+399c: 88ff     JMP:3f10
+399e: 00fe     JMP:3c00
+39a0: 58ff     JMP:3eb0
+39a2: 300000fe Vector: dY:48 dX:-512 I:7
+39a6: a8003000 Vector: dY:168 dX:48 I:0
+39aa: 80ff     JMP:3f00
+39ac: d8ff     JMP:3fb0
+39ae: f8ff     JMP:3ff0
+39b0: 80ff     JMP:3f00
+39b2: 2800f8ff Vector: dY:40 dX:-8 I:7
+39b6: 80002800 Vector: dY:128 dX:40 I:0
+39ba: d0ff     JMP:3fa0
+39bc: 8000d8ff Vector: dY:128 dX:-40 I:7
+39c0: d0ff     JMP:3fa0
+39c2: 60042800 Vector: dY:1120 dX:40 I:0
+39c6: f8ff     JMP:3ff0
+39c8: 60042800 Vector: dY:1120 dX:40 I:0
+39cc: d0ff     JMP:3fa0
+39ce: 6004d8ff Vector: dY:1120 dX:-40 I:7
+39d2: f8ff     JMP:3ff0
+39d4: 6004d8ff Vector: dY:1120 dX:-40 I:7
+39d8: d0ff     JMP:3fa0
+39da: 00fe     JMP:3c00
+39dc: 00003000 Vector: dY:0 dX:48 I:0
+39e0: 00fe     JMP:3c00
+39e2: 00005000 Vector: dY:0 dX:80 I:0
+39e6: 2500fcc8 Vector: dY:37 dX:2300 I:6
+39ea: 0000fd30     Halt
+39ec: ff00fc38 Vector: dY:255 dX:-1796 I:1
+39f0: 00000230     Halt
+39f2: ff68     Scale: LinScale:255, BinScale:0
+39f4: fcdc     RTS
+39f6: fd08ff68 Vector: dY:2301 dX:2303 I:3
+39fa: 0000fc24     Halt
+39fc: 0208ffd0 Vector: dY:2050 dX:-3841 I:6
+3a00: fcec     JMP:19f8
+3a02: fde0     JMP:1fa
+3a04: fed0     RTS
+3a06: fc1402e0 Vector: dY:-2820 dX:2 I:7
+3a0a: 0000fe25     Halt
+3a0c: 18fc     JMP:3830
+3a0e: ccfd     JMP:3b98
+3a10: 28ff     JMP:3e50
+3a12: 18fc     JMP:3830
+3a14: 340228ff Vector: dY:564 dX:-216 I:7
+3a18: 80fc     JMP:3900
+3a1a: e0fd     JMP:3bc0
+3a1c: 00ff     JMP:3e00
+3a1e: 80fc     JMP:3900
+3a20: 200200ff Vector: dY:544 dX:-256 I:7
+3a24: e8fc     JMP:39d0
+3a26: f0fd     JMP:3be0
+3a28: d8fe     JMP:3db0
+3a2a: e8fc     JMP:39d0
+3a2c: 1002d8fe Vector: dY:528 dX:-296 I:7
+3a30: 00002534     Halt
+3a32: fcd4     RTS
+3a34: fd1cff34 Vector: dY:-771 dX:-2817 I:1
+3a38: 0000fc2c     Halt
+3a3a: 021cff9c Vector: dY:-1022 dX:-769 I:4
+3a3e: fce4     JMP:9f8
+3a40: fdf4     JMP:29fa
+3a42: fe9c     Center
+3a44: fc1c02f4 Vector: dY:-772 dX:-3070 I:7
+3a48: fe04fdf8 Vector: dY:1278 dX:-1795 I:7
+3a4c: fdcc     RTS
+3a4e: fe04fd08 Vector: dY:1278 dX:2301 I:0
+3a52: 02cc     RTS
+3a54: 0000fe25     Halt
+3a56: 4cfc     JMP:3898
+3a58: d8fd     JMP:3bb0
+3a5a: 14ff     JMP:3e28
+3a5c: 4cfc     JMP:3898
+3a5e: 280214ff Vector: dY:552 dX:-236 I:7
+3a62: b4fc     JMP:3968
+3a64: e8fd     JMP:3bd0
+3a66: ecfe     JMP:3dd8
+3a68: b4fc     JMP:3968
+3a6a: 1802ecfe Vector: dY:536 dX:-276 I:7
+3a6e: 20fd     JMP:3a40
+3a70: fcfd     JMP:3bf8
+3a72: c4fe     JMP:3d88
+3a74: 20fd     JMP:3a40
+3a76: 0402c4fe Vector: dY:516 dX:-316 I:7
+3a7a: 25e0     JMP:4a
+3a7c: 04c8     RTS
+3a7e: 0000fd30     Halt
+3a80: ffe0     JMP:1fe
+3a82: 00000438     Halt
+3a84: 00000230     Halt
+3a86: ff80     Center
+3a88: 04dc     RTS
+3a8a: fd08ff80 Vector: dY:2301 dX:255 I:4
+3a8e: 00000424     Halt
+3a90: 0208ff20 Vector: dY:2050 dX:255 I:1
+3a94: 04ec     JMP:1808
+3a96: fde0     JMP:1fa
+3a98: 0000fe20     Halt
+3a9a: 041402e0 Vector: dY:-3068 dX:2 I:7
+3a9e: 0000fe25     Halt
+3aa0: c804ccfd Vector: dY:1224 dX:-564 I:7
+3aa4: 28ff     JMP:3e50
+3aa6: c8043402 Vector: dY:1224 dX:564 I:0
+3aaa: 28ff     JMP:3e50
+3aac: 6804e0fd Vector: dY:1128 dX:-544 I:7
+3ab0: 00ff     JMP:3e00
+3ab2: 68042002 Vector: dY:1128 dX:544 I:0
+3ab6: 00ff     JMP:3e00
+3ab8: 0804f0fd Vector: dY:1032 dX:-528 I:7
+3abc: d8fe     JMP:3db0
+3abe: 08041002 Vector: dY:1032 dX:528 I:0
+3ac2: d8fe     JMP:3db0
+3ac4: 25b0     JSR:204a
+3ac6: 04d4     RTS
+3ac8: fd1cffb0 Vector: dY:-771 dX:-3841 I:5
+3acc: 0000042c     Halt
+3ace: 021cff50 Vector: dY:-1022 dX:-3841 I:2
+3ad2: 04e4     JMP:808
+3ad4: fdf4     JMP:29fa
+3ad6: fe50     SVEC: dY:-32 dX:-4 I:7
+3ad8: 041c02f4 Vector: dY:-1020 dX:-3070 I:7
+3adc: fef0     JMP:21fc
+3ade: 03f8     JMP:3006
+3ae0: fdcc     RTS
+3ae2: fef0     JMP:21fc
+3ae4: 030802cc Vector: dY:2051 dX:3074 I:6
+3ae8: 0000fe25     Halt
+3aea: 9804d8fd Vector: dY:1176 dX:-552 I:7
+3aee: 14ff     JMP:3e28
+3af0: 98042802 Vector: dY:1176 dX:552 I:0
+3af4: 14ff     JMP:3e28
+3af6: 3804e8fd Vector: dY:1080 dX:-536 I:7
+3afa: ecfe     JMP:3dd8
+3afc: 38041802 Vector: dY:1080 dX:536 I:0
+3b00: ecfe     JMP:3dd8
+3b02: d803fcfd Vector: dY:984 dX:-516 I:7
+3b06: c4fe     JMP:3d88
+3b08: d8030402 Vector: dY:984 dX:516 I:0
+3b0c: c4fe     JMP:3d88
+3b0e: 310000b0 Vector: dY:49 dX:-4096 I:5
+3b12: ff50     SVEC: dY:-32 dX:-2 I:7
+3b14: 0050     SVEC: dY:-32 dX:0 I:0
+3b16:   60     Scale: LinScale:0, BinScale:0
+3b18: ff64     Scale: LinScale:255, BinScale:4
+3b1a: 0050     SVEC: dY:-32 dX:0 I:0
+3b1c:   60     Scale: LinScale:0, BinScale:0
+3b1e: ff78     Scale: LinScale:255, BinScale:0
+3b20: 000000b0 Vector: dY:0 dX:-4096 I:5
+3b24: ff8c     Center
+3b26: 00000050 Vector: dY:0 dX:-4096 I:2
+3b2a: 0050     SVEC: dY:-32 dX:0 I:0
+3b2c: 0050     SVEC: dY:-32 dX:0 I:0
+3b2e: 00a0     JSR:0
+3b30:   64     Scale: LinScale:0, BinScale:4
+3b32: 0050     SVEC: dY:-32 dX:0 I:0
+3b34: 00a0     JSR:0
+3b36:   78     Scale: LinScale:0, BinScale:0
+3b38: 00000050 Vector: dY:0 dX:-4096 I:2
+3b3c: 008c     Center
+3b3e: 00070000 Vector: dY:1792 dX:0 I:0
+3b42: 00000000 Vector: dY:0 dX:0 I:0
+3b46: 55b4     JSR:28aa
+3b48: fda8     JSR:11fa
+3b4a: fe6c     Scale: LinScale:254, BinScale:4
+3b4c: ffb4     JSR:29fe
+3b4e: fd58     SVEC: dY:-16 dX:-6 I:7
+3b50:  16c     Scale: LinScale:1, BinScale:4
+3b52: ff4c     SVEC: dY:24 dX:-2 I:7
+3b54: 0258     SVEC: dY:-16 dX:4 I:0
+3b56: 0118fe4c Vector: dY:-2047 dX:3326 I:2
+3b5a: 02a8     JSR:1004
+3b5c: fe18fef0 Vector: dY:-1794 dX:-3842 I:7
+3b60: fe58     SVEC: dY:-16 dX:-4 I:7
+3b62: ffd0     RTS
+3b64: fff0     JMP:21fe
+3b66: fea8     JSR:11fc
+3b68: 00d0     RTS
+3b6a: ff0000d8 Vector: dY:255 dX:-2048 I:6
+3b6e: ff44     SVEC: dY:8 dX:-2 I:7
+3b70: ff000028 Vector: dY:255 dX:2048 I:1
+3b74: 0044     SVEC: dY:8 dX:0 I:0
+3b76: ffb4     JSR:29fe
+3b78: 00000028     Halt
+3b7a: 00e0     JMP:0
+3b7c: feb4     JSR:29fc
+3b7e: 00d8     RTS
+3b80: ffe0     JMP:1fe
+3b82: 0000fe38     Halt
+3b84: 00000428     Halt
+3b86: 000cfe10 Vector: dY:3072 dX:-3842 I:0
+3b8a: 00000428     Halt
+3b8c: 00e8     JMP:1000
+3b8e: 0000fd38     Halt
+3b90: 04d8     RTS
+3b92: ff0cfe10 Vector: dY:3327 dX:-3842 I:0
+3b96: 04d8     RTS
+3b98: ffe8     JMP:11fe
+3b9a: 0000fd25     Halt
+3b9c: dc000000 Vector: dY:220 dX:0 I:0
+3ba0: f0fe     JMP:3de0
+3ba2: c0fe     JMP:3d80
+3ba4: b0ff     JMP:3f60
+3ba6: 44ff     JMP:3e88
+3ba8: 54015000 Vector: dY:340 dX:80 I:0
+3bac: a0ff     JMP:3f40
+3bae: 48ff     JMP:3e90
+3bb0: 00009cfe Vector: dY:0 dX:-356 I:7
+3bb4: 84ff     JMP:3f08
+3bb6: b0ff     JMP:3f60
+3bb8: 00ff     JMP:3e00
+3bba: 8cff     JMP:3f18
+3bbc: 500030ff Vector: dY:80 dX:-208 I:7
+3bc0: 3110ff88 Vector: dY:-4047 dX:2303 I:4
+3bc4: ffc0     RTS
+3bc6: fe88     Center
+3bc8: fe40     SVEC: dY:0 dX:-4 I:7
+3bca: 00e8     JMP:1000
+3bcc: fed0     RTS
+3bce: 02a0     JSR:4
+3bd0: 0080     Center
+3bd2: fe80     Center
+3bd4: 0288     Center
+3bd6: ffc0     RTS
+3bd8: fed8     RTS
+3bda: ffc0     RTS
+3bdc: ffb0     JSR:21fe
+3bde: ff000020 Vector: dY:255 dX:0 I:1
+3be2: 00c4     RTS
+3be4: 0000ff38     Halt
+3be6:   60     Scale: LinScale:0, BinScale:0
+3be8: 0000ff38     Halt
+3bea: ff78     Scale: LinScale:255, BinScale:0
+3bec: 00c8     RTS
+3bee: 0010ff19 Vector: dY:-4096 dX:-1537 I:0
+3bf2: b0ff     JMP:3f60
+3bf4: f4ff     JMP:3fe8
+3bf6: e0fe     JMP:3dc0
+3bf8: d8017000 Vector: dY:472 dX:112 I:0
+3bfc: 50fe     JMP:3ca0
+3bfe: 2003d4ff Vector: dY:800 dX:-44 I:7
+3c02: 0c005800 Vector: dY:12 dX:88 I:0
+3c06: f0ff     JMP:3fe0
+3c08: f4fe     JMP:3de8
+3c0a: 31d4     RTS
+3c0c: feb8     JSR:31fc
+3c0e: ff48     SVEC: dY:16 dX:-2 I:7
+3c10: ff18ff58 Vector: dY:-1793 dX:-1793 I:2
+3c14: ff48     SVEC: dY:16 dX:-2 I:7
+3c16: ff18fff0 Vector: dY:-1793 dX:-3841 I:7
+3c1a: fe14ffd4 Vector: dY:-2818 dX:-2817 I:6
+3c1e: fef0     JMP:21fc
+3c20: fee4     JMP:9fc
+3c22: fea0     JSR:1fc
+3c24: ffa8     JSR:11fe
+3c26: 00000034     Halt
+3c28: 0000ff28     Halt
+3c2a: 000c0040 Vector: dY:3072 dX:0 I:2
+3c2e: 0000ff28     Halt
+3c30: 00fc     JMP:3800
+3c32: febc     JSR:39fc
+3c34: fea0     JSR:1fc
+3c36: ff18ff6c Vector: dY:-1793 dX:3327 I:3
+3c3a: fe1fe0fc Vector: dY:-2 dX:-800 I:7
+3c3e: e0fc     JMP:39c0
+3c40: c0fe     JMP:3d80
+3c42: e0fc     JMP:39c0
+3c44: 2003c0fe Vector: dY:800 dX:-320 I:7
+3c48: 20032003 Vector: dY:800 dX:800 I:0
+3c4c: c0fe     JMP:3d80
+3c4e: 2003e0fc Vector: dY:800 dX:-800 I:7
+3c52: c0fe     JMP:3d80
+3c54: 00000000 Vector: dY:0 dX:0 I:0
+3c58: 90013180 Vector: dY:400 dX:49 I:4
+3c5c: fd80     Center
+3c5e: fdc0     RTS
+3c60: fe80     Center
+3c62: fd80     Center
+3c64: 02c0     RTS
+3c66: fe80     Center
+3c68: 0280     Center
+3c6a: 02c0     RTS
+3c6c: fe80     Center
+3c6e: 0280     Center
+3c70: fdc0     RTS
+3c72: fe80     Center
+3c74: fd80     Center
+3c76: fdd8     RTS
+3c78: ff80     Center
+3c7a: fd80     Center
+3c7c: 02d8     RTS
+3c7e: ff80     Center
+3c80: 0280     Center
+3c82: 02d8     RTS
+3c84: ff80     Center
+3c86: 0280     Center
+3c88: fdd8     RTS
+3c8a: ff9d     Center
+3c8c: 80fe     JMP:3d00
+3c8e: 90000000 Vector: dY:144 dX:0 I:0
+3c92: 80fe     JMP:3d00
+3c94: 48003000 Vector: dY:72 dX:48 I:0
+3c98: 80fe     JMP:3d00
+3c9a: b8ff     JMP:3f70
+3c9c: 300080fe Vector: dY:48 dX:-384 I:7
+3ca0: 70ff     JMP:3ee0
+3ca2: 000080fe Vector: dY:0 dX:-384 I:7
+3ca6: b8ff     JMP:3f70
+3ca8: d0ff     JMP:3fa0
+3caa: 80fe     JMP:3d00
+3cac: 4800d0ff Vector: dY:72 dX:-48 I:7
+3cb0: a0ff     JMP:3f40
+3cb2: 20010000 Vector: dY:288 dX:0 I:0
+3cb6: a0ff     JMP:3f40
+3cb8: c0006000 Vector: dY:192 dX:96 I:0
+3cbc: a0ff     JMP:3f40
+3cbe: 40ff     JMP:3e80
+3cc0: 6000a0ff Vector: dY:96 dX:-96 I:7
+3cc4: e0fe     JMP:3dc0
+3cc6: 0000a0ff Vector: dY:0 dX:-96 I:7
+3cca: 40ff     JMP:3e80
+3ccc: a0ff     JMP:3f40
+3cce: a0ff     JMP:3f40
+3cd0: c000a0ff Vector: dY:192 dX:-96 I:7
+3cd4: 80040000 Vector: dY:1152 dX:0 I:0
+3cd8: 00007005 Vector: dY:0 dX:1392 I:0
+3cdc: 00000000 Vector: dY:0 dX:0 I:0
+3ce0: 70ff     JMP:3ee0
+3ce2: 70ff     JMP:3ee0
+3ce4: 58ff     JMP:3eb0
+3ce6: 70ff     JMP:3ee0
+3ce8: 900058ff Vector: dY:144 dX:-168 I:7
+3cec: 90009000 Vector: dY:144 dX:144 I:0
+3cf0: 58ff     JMP:3eb0
+3cf2: 900070ff Vector: dY:144 dX:-144 I:7
+3cf6: 58ff     JMP:3eb0
+3cf8: d0ff     JMP:3fa0
+3cfa: d0ff     JMP:3fa0
+3cfc: a4ff     JMP:3f48
+3cfe: d0ff     JMP:3fa0
+3d00: 3000a4ff Vector: dY:48 dX:-92 I:7
+3d04: 30003000 Vector: dY:48 dX:48 I:0
+3d08: acff     JMP:3f58
+3d0a: 3000d0ff Vector: dY:48 dX:-48 I:7
+3d0e: acff     JMP:3f58
+3d10: a0ff     JMP:3f40
+3d12: 00006000 Vector: dY:0 dX:96 I:0
+3d16: 10024800 Vector: dY:528 dX:72 I:0
+3d1a: 30001002 Vector: dY:48 dX:528 I:0
+3d1e: b8ff     JMP:3f70
+3d20: 30003000 Vector: dY:48 dX:48 I:0
+3d24: 00009000 Vector: dY:0 dX:144 I:0
+3d28: 31000034 Vector: dY:49 dX:-3072 I:1
+3d2c: 004c     SVEC: dY:24 dX:0 I:0
+3d2e: 0000ff24     Halt
+3d30: 00000024     Halt
+3d32: 004c     SVEC: dY:24 dX:0 I:0
+3d34: 0000ff34     Halt
+3d36: 0000004c Vector: dY:0 dX:3072 I:2
+3d3a: 0000ff24     Halt
+3d3c: 00dc     RTS
+3d3e: ff4c     SVEC: dY:24 dX:-2 I:7
+3d40: ff0000cc Vector: dY:255 dX:3072 I:6
+3d44: ff4c     SVEC: dY:24 dX:-2 I:7
+3d46: ffdc     RTS
+3d48: ffdc     RTS
+3d4a: ff4c     SVEC: dY:24 dX:-2 I:7
+3d4c: ffcc     RTS
+3d4e: ff00004c Vector: dY:255 dX:3072 I:2
+3d52: ffdc     RTS
+3d54: 0000ff24     Halt
+3d56: 004c     SVEC: dY:24 dX:0 I:0
+3d58: 0000ff31     Halt
+3d5a: 00006400 Vector: dY:0 dX:100 I:0
+3d5e: 38ff     JMP:3e70
+3d60: 48004800 Vector: dY:72 dX:72 I:0
+3d64: 38ff     JMP:3e70
+3d66: 64000000 Vector: dY:100 dX:0 I:0
+3d6a: 38ff     JMP:3e70
+3d6c: 4800b8ff Vector: dY:72 dX:-72 I:7
+3d70: 38ff     JMP:3e70
+3d72: 00009cff Vector: dY:0 dX:-100 I:7
+3d76: 38ff     JMP:3e70
+3d78: b8ff     JMP:3f70
+3d7a: b8ff     JMP:3f70
+3d7c: 38ff     JMP:3e70
+3d7e: 9cff     JMP:3f38
+3d80: 000038ff Vector: dY:0 dX:-200 I:7
+3d84: b8ff     JMP:3f70
+3d86: 480038ff Vector: dY:72 dX:-200 I:7
+3d8a: 31000098 Vector: dY:49 dX:-2048 I:4
+3d8e: 00000024     Halt
+3d90: ff6c     Scale: LinScale:255, BinScale:4
+3d92:   6c     Scale: LinScale:0, BinScale:4
+3d94: 00000024     Halt
+3d96: ff98     Center
+3d98: 00000024 Vector: dY:0 dX:1024 I:1
+3d9c: ff6c     Scale: LinScale:255, BinScale:4
+3d9e: 0094     Center
+3da0: 0000ff24     Halt
+3da2: ff000068 Vector: dY:255 dX:2048 I:3
+3da6: 0000ff24     Halt
+3da8: ff94     Center
+3daa: ff94     Center
+3dac: 0000ff24     Halt
+3dae: ff68     Scale: LinScale:255, BinScale:0
+3db0: ff000024 Vector: dY:255 dX:1024 I:1
+3db4: ff94     Center
+3db6: ff6c     Scale: LinScale:255, BinScale:4
+3db8: 00000024     Halt
+3dba: 0000ff31     Halt
+3dbc: 0000c800 Vector: dY:0 dX:200 I:0
+3dc0: 10ff     JMP:3e20
+3dc2: 90009000 Vector: dY:144 dX:144 I:0
+3dc6: 10ff     JMP:3e20
+3dc8: c8000000 Vector: dY:200 dX:0 I:0
+3dcc: 10ff     JMP:3e20
+3dce: 900070ff Vector: dY:144 dX:-144 I:7
+3dd2: 10ff     JMP:3e20
+3dd4: 000038ff Vector: dY:0 dX:-200 I:7
+3dd8: 10ff     JMP:3e20
+3dda: 70ff     JMP:3ee0
+3ddc: 70ff     JMP:3ee0
+3dde: 10ff     JMP:3e20
+3de0: 38ff     JMP:3e70
+3de2: 000010ff Vector: dY:0 dX:-240 I:7
+3de6: 70ff     JMP:3ee0
+3de8: 900010ff Vector: dY:144 dX:-240 I:7
+3dec: 310000fc Vector: dY:49 dX:-1024 I:7
+3df0: 00fc     JMP:3800
+3df2: feb0     JSR:21fc
+3df4: 00b0     JSR:2000
+3df6: 00fc     JMP:3800
+3df8: fefc     JMP:39fc
+3dfa: 000000fc Vector: dY:0 dX:-1024 I:7
+3dfe: feb0     JSR:21fc
+3e00: 0050     SVEC: dY:-32 dX:0 I:0
+3e02: fffc     JMP:39fe
+3e04: fe000004 Vector: dY:254 dX:1024 I:0
+3e08: fffc     JMP:39fe
+3e0a: fe50     SVEC: dY:-32 dX:-4 I:7
+3e0c: ff50     SVEC: dY:-32 dX:-2 I:7
+3e0e: fffc     JMP:39fe
+3e10: fe04ff00 Vector: dY:1278 dX:255 I:0
+3e14: 00fc     JMP:3800
+3e16: fe50     SVEC: dY:-32 dX:-4 I:7
+3e18: ffb0     JSR:21fe
+3e1a: 00fc     JMP:3800
+3e1c: 0000fe31     Halt
+3e1e: 00002c01 Vector: dY:0 dX:300 I:0
+3e22: e8fe     JMP:3dd0
+3e24: d400d400 Vector: dY:212 dX:212 I:0
+3e28: e8fe     JMP:3dd0
+3e2a: 2c010000 Vector: dY:300 dX:0 I:0
+3e2e: e8fe     JMP:3dd0
+3e30: d4002cff Vector: dY:212 dX:-212 I:7
+3e34: e8fe     JMP:3dd0
+3e36: 0000d4fe Vector: dY:0 dX:-300 I:7
+3e3a: e8fe     JMP:3dd0
+3e3c: 2cff     JMP:3e58
+3e3e: 2cff     JMP:3e58
+3e40: e8fe     JMP:3dd0
+3e42: d4fe     JMP:3da8
+3e44: 0000e8fe Vector: dY:0 dX:-280 I:7
+3e48: 2cff     JMP:3e58
+3e4a: d400e8fe Vector: dY:212 dX:-280 I:7
+3e4e: 31000060 Vector: dY:49 dX:0 I:3
+3e52: 01d4     RTS
+3e54: fe080108 Vector: dY:2302 dX:2049 I:0
+3e58: 01d4     RTS
+3e5a: fe60     Scale: LinScale:254, BinScale:0
+3e5c: 010000d4 Vector: dY:1 dX:-3072 I:6
+3e60: fe0801f8 Vector: dY:2302 dX:-2047 I:7
+3e64: fed4     RTS
+3e66: fe0000a0 Vector: dY:254 dX:0 I:5
+3e6a: fed4     RTS
+3e6c: fef8     JMP:31fc
+3e6e: fef8     JMP:31fc
+3e70: fed4     RTS
+3e72: fea0     JSR:1fc
+3e74: fe0000d4 Vector: dY:254 dX:-3072 I:6
+3e78: fef8     JMP:31fc
+3e7a: fe0801d4 Vector: dY:2302 dX:-3071 I:6
+3e7e: 0000fe31     Halt
+3e80: 00009001 Vector: dY:0 dX:400 I:0
+3e84: c0fe     JMP:3d80
+3e86: 1c011c01 Vector: dY:284 dX:284 I:0
+3e8a: c0fe     JMP:3d80
+3e8c: 90010000 Vector: dY:400 dX:0 I:0
+3e90: c0fe     JMP:3d80
+3e92: 1c01e4fe Vector: dY:284 dX:-284 I:7
+3e96: c0fe     JMP:3d80
+3e98: 000070fe Vector: dY:0 dX:-400 I:7
+3e9c: c0fe     JMP:3d80
+3e9e: e4fe     JMP:3dc8
+3ea0: e4fe     JMP:3dc8
+3ea2: c0fe     JMP:3d80
+3ea4: 70fe     JMP:3ce0
+3ea6: 0000c0fe Vector: dY:0 dX:-320 I:7
+3eaa: e4fe     JMP:3dc8
+3eac: 1c01c0fe Vector: dY:284 dX:-320 I:7
+3eb0: 6710ff00 Vector: dY:-3993 dX:255 I:0
+3eb4: 00d8     RTS
+3eb6: ff60     Scale: LinScale:255, BinScale:0
+3eb8: ffa0     JSR:1fe
+3eba: 00d8     RTS
+3ebc: ff0000f0 Vector: dY:255 dX:-4096 I:7
+3ec0: 00d8     RTS
+3ec2: ffa0     JSR:1fe
+3ec4: 00a0     JSR:0
+3ec6: 00d8     RTS
+3ec8: fff0     JMP:21fe
+3eca: 000000d8 Vector: dY:0 dX:-2048 I:6
+3ece: ffa0     JSR:1fe
+3ed0:   60     Scale: LinScale:0, BinScale:0
+3ed2: ffd8     RTS
+3ed4: ff000010 Vector: dY:255 dX:-4096 I:0
+3ed8: ffd8     RTS
+3eda: ff60     Scale: LinScale:255, BinScale:0
+3edc: ff60     Scale: LinScale:255, BinScale:0
+3ede: ffd8     RTS
+3ee0: ff40     SVEC: dY:0 dX:-2 I:7
+3ee2: fc000050 Vector: dY:252 dX:-4096 I:2
+3ee6: 0058     SVEC: dY:-16 dX:0 I:0
+3ee8: fda8     JSR:11fa
+3eea: 0250     SVEC: dY:-32 dX:4 I:0
+3eec: 000000c0 Vector: dY:0 dX:0 I:6
+3ef0: 0350     SVEC: dY:-32 dX:6 I:0
+3ef2: 00a8     JSR:1000
+3ef4: 02a8     JSR:1004
+3ef6: 0250     SVEC: dY:-32 dX:4 I:0
+3ef8: 00c0     RTS
+3efa: 03000050 Vector: dY:3 dX:-4096 I:2
+3efe: 00a8     JSR:1000
+3f00: 0258     SVEC: dY:-16 dX:4 I:0
+3f02: fd50     SVEC: dY:-32 dX:-6 I:7
+3f04: 00000040 Vector: dY:0 dX:0 I:2
+3f08: fc50     SVEC: dY:-32 dX:-8 I:7
+3f0a: 0058     SVEC: dY:-16 dX:0 I:0
+3f0c: fd58     SVEC: dY:-16 dX:-6 I:7
+3f0e: fd50     SVEC: dY:-32 dX:-6 I:7
+3f10: 00000000 Vector: dY:0 dX:0 I:0
+3f14: 00180197 Vector: dY:-2048 dX:-2303 I:4
+3f18: b0057001 Vector: dY:1456 dX:368 I:0
+3f1c: c0fe     JMP:3d80
+3f1e: 38fe     JMP:3c70
+3f20: 2802c0fe Vector: dY:552 dX:-320 I:7
+3f24: 38fe     JMP:3c70
+3f26: d8fd     JMP:3bb0
+3f28: c0fe     JMP:3d80
+3f2a: b00590fe Vector: dY:1456 dX:-368 I:7
+3f2e: c0fe     JMP:3d80
+3f30: 38fe     JMP:3c70
+3f32: c801a4ff Vector: dY:456 dX:-92 I:7
+3f36: 38fe     JMP:3c70
+3f38: 38fe     JMP:3c70
+3f3a: a4ff     JMP:3f48
+3f3c: 48040000 Vector: dY:1096 dX:0 I:0
+3f40: ecfe     JMP:3dd8
+3f42: f0fe     JMP:3de0
+3f44: 10018cff Vector: dY:272 dX:-116 I:7
+3f48: 38fe     JMP:3c70
+3f4a: 1001a4ff Vector: dY:272 dX:-92 I:7
+3f4e: 38fe     JMP:3c70
+3f50: f0fe     JMP:3de0
+3f52: a4ff     JMP:3f48
+3f54: f0fe     JMP:3de0
+3f56: f0fe     JMP:3de0
+3f58: 8cff     JMP:3f18
+3f5a: f0fe     JMP:3de0
+3f5c: b8002c00 Vector: dY:184 dX:44 I:0
+3f60: 38fe     JMP:3c70
+3f62: b8002c00 Vector: dY:184 dX:44 I:0
+3f66: 38fe     JMP:3c70
+3f68: 48ff     JMP:3e90
+3f6a: 2c00f0fe Vector: dY:44 dX:-272 I:7
+3f6e: 48ff     JMP:3e90
+3f70: 2c000005 Vector: dY:44 dX:1280 I:0
+3f74: 5800d4ff Vector: dY:88 dX:-44 I:7
+3f78: 58005800 Vector: dY:88 dX:88 I:0
+3f7c: d4ff     JMP:3fa8
+3f7e: 5800a8ff Vector: dY:88 dX:-88 I:7
+3f82: d4ff     JMP:3fa8
+3f84: 0005a8ff Vector: dY:1280 dX:-88 I:7
+3f88: d4ff     JMP:3fa8
+3f8a: 00055800 Vector: dY:1280 dX:88 I:0
+3f8e: 0000a8ff Vector: dY:0 dX:-88 I:7
+3f92: 58000000 Vector: dY:88 dX:0 I:0
+3f96: a8ff     JMP:3f50
+3f98: a8ff     JMP:3f50
+3f9a: 00000005 Vector: dY:0 dX:1280 I:0
+3f9e: a8ff     JMP:3f50
+3fa0: 000038fe Vector: dY:0 dX:-456 I:7
+3fa4: 00002c00 Vector: dY:0 dX:44 I:0
+3fa8: 38fe     JMP:3c70
+3faa: 00001401 Vector: dY:0 dX:276 I:0
+3fae: 88ff     JMP:3f10
+3fb0: 88ff     JMP:3f10
+3fb2: 1400c800 Vector: dY:20 dX:200 I:0
+3fb6: 000060ff Vector: dY:0 dX:-160 I:7
+3fba: 78000000 Vector: dY:120 dX:0 I:0
+3fbe: ecff     JMP:3fd8
+3fc0: c80060ff Vector: dY:200 dX:-160 I:7
+3fc4: 60ff     JMP:3ec0
+3fc6: 00003728     Halt
+3fc8: 4658     SVEC: dY:-16 dX:12 I:2
+3fca: 2842     SVEC: dY:4 dX:16 I:1
+3fcc: 0c000f10 Vector: dY:12 dX:-4081 I:0
+3fd0: 00000c20     Halt
+3fd2: 0f40     SVEC: dY:0 dX:30 I:0
+3fd4: 0c180028 Vector: dY:-2036 dX:2048 I:1
+3fd8: 00000130     Halt
+3fda: 00000038     Halt
+3fdc: 0140     SVEC: dY:0 dX:2 I:0
+3fde: 0f48     SVEC: dY:16 dX:30 I:0
+3fe0: 0c50     SVEC: dY:-32 dX:24 I:0
+3fe2: 0058     SVEC: dY:-16 dX:0 I:0
+3fe4:  160     Scale: LinScale:1, BinScale:0
+3fe6:  f68     Scale: LinScale:15, BinScale:0
+3fe8:  c70     Scale: LinScale:12, BinScale:0
+3fea:   78     Scale: LinScale:0, BinScale:0
+3fec: 0180     Center
+3fee: 0f88     Center
+3ff0: 0c90     Center
+3ff2: 0098     Center
+3ff4: 01a0     JSR:2
+3ff6: ff17801e Vector: dY:-2049 dX:-384 I:0
+3ffa: 801f8000 Vector: dY:-128 dX:128 I:0

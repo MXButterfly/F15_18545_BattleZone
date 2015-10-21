@@ -49,8 +49,19 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
             end
 
             `OP_SVEC: begin
-                dY = (inst[20:16]) >> 1;
-                dX = (inst[28:24]) >> 1;
+                dY[4:0] = (inst[20:16]); //>> 1; //DEMO: removed the right shift
+                //DEMO: added a sign extension check
+                if(inst[20])
+                    dY[12:5] = 8'b11111111;
+                else
+                    dY[12:5] = 8'b00000000;
+                dX[4:0] = (inst[28:24]);// >> 1; //DEMO: removed the right shift
+                //DEMO: added a sign extension check
+                if(inst[28])
+                    dX[12:5] = 8'b11111111;
+                else
+                    dX[12:5] = 8'b00000000;
+                
                 vector = 1;
                 if(inst[31:29] == 3'b000) blank = 1'b1;
                 else if(inst[31:29] == 3'b001) useZReg = 1'b1;

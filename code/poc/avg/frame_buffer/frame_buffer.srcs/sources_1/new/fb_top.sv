@@ -44,7 +44,7 @@ module fb_top(
     m_register #(1) syncRstRegA(.Q(rst_unstable), .D(btnCpuReset), .clr(1'b0), .en(1'b1), .clk(clk));
     m_register #(1) syncRstRegB(.Q(rst_l), .D(rst_unstable), .clr(1'b0), .en(1'b1), .clk(clk));
 
-    VGA_fsm vfsm(.clk(clk), .rst_l(btnCpuReset), .row(row), .col(col), .Hsync(Hsync), .Vsync(Vsync), .en_r(en_r));
+    VGA_fsm vfsm(.clk(clk), .rst(rst), .row(row), .col(col), .Hsync(Hsync), .Vsync(Vsync), .en_r(en_r));
 
     fb_controller fbc(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(done), .clk(clk), .rst(rst), 
                       .row(row), .col(col), .color_in(color_in),
@@ -61,13 +61,13 @@ module fb_top(
                     
     avg_core avgc(.startX(dStartX), .startY(dStartY), .endX(dEndX), .endY(dEndY), 
                   .color(dColor), .lrWrite(lrWrite), .pcOut(pc), .inst(inst), .clk_in(clk), 
-                  .rst_b(btnCpuReset), .vggo(readyFrame));
+                  .rst(rst), .vggo(readyFrame));
     lineRegQueue lrq(.QStartX(startX), .QStartY(startY), .QEndX(endX), .QEndY(endY), 
                      .QColor(lineColor), .full(full), .empty(empty), 
                      .DStartX(dStartX), .DStartY(dStartY), .DEndX(dEndX), .DEndY(dEndY),
                                      .DColor(dColor), .read(lineDone), .currWrite(lrWrite), 
-                                     .clk(clk), .rst_b(btnCpuReset));
-    avgROM_wrapper avgRW (.addra(pc[10:0]), .addrb(pc[10:0] + 1), .clk(clk), .dina(8'b0), .dinb(8'b0), 
+                                     .clk(clk), .rst(rst));
+    avgROM_wrapper avgRW (.addra(pc[13:0]), .addrb(pc[13:0] + 1), .clk(clk), .dina(8'b0), .dinb(8'b0), 
                           .douta(inst[15:8]), .doutb(inst[7:0]), .ena(1'b1), .wea(1'b0));
 
 endmodule

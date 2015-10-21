@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module VGA_fsm(
-    input logic clk, rst_l,
+    input logic clk, rst,
     output logic[8:0] row,
     output logic[9:0] col,
     output logic Hsync, Vsync, en_r
@@ -43,17 +43,17 @@ module VGA_fsm(
     logic[9:0] row_out;
     logic[3:0] R, G, B;
     
-    vga_counter #(10) hCounter(clk_25, clearH, enH, rst_l, hCount);
+    /*vga_counter #(10) hCounter(clk_25, clearH, enH, rst_l, hCount);
     vga_counter #(10) vCounter(clk_25, clearV, enV, rst_l, vCount);
     vga_register #(1) hReg(h_sync_val, clk_25, rst_l, 1'b1, Hsync);
     vga_register #(1) vReg(v_sync_val, clk_25, rst_l, 1'b1, Vsync);
-    
-    //m_counter #(10) hCounter(.Q(hCount), .D(10'd0), .clk(clk_25), .clr(rst), .load(clearH), .up(1'b1), .en(enH));
-    //m_counter #(10) vCounter(.Q(vCount), .D(10'd0), .clk(clk_25), .clr(rst), .load(clearV), .up(1'b1), .en(enV));
+    */
+    m_counter #(10) hCounter(.Q(hCount), .D(10'd0), .clk(clk_25), .clr(rst), .load(clearH), .up(1'b1), .en(enH));
+    m_counter #(10) vCounter(.Q(vCount), .D(10'd0), .clk(clk_25), .clr(rst), .load(clearV), .up(1'b1), .en(enV));
 
     
-    //m_register #(1) hReg(.Q(Hsync), .D(h_sync_val), .clr(rst), .en(1'b1), .clk(clk_25));
-    //m_register #(1) vReg(.Q(Vsync), .D(v_sync_val), .clr(rst), .en(1'b1), .clk(clk_25));
+    m_register #(1) hReg(.Q(Hsync), .D(h_sync_val), .clr(rst), .en(1'b1), .clk(clk_25));
+    m_register #(1) vReg(.Q(Vsync), .D(v_sync_val), .clr(rst), .en(1'b1), .clk(clk_25));
     
     
             
@@ -128,7 +128,7 @@ module VGA_fsm(
             row_out = 0;
         end
     end 
-    
+    /*
     always_ff @(posedge clk, negedge rst_l) begin
         if(~rst_l) clk_50 <= 0;
         else clk_50 <= ~clk_50;
@@ -139,18 +139,18 @@ module VGA_fsm(
         if(~rst_l) clk_25 <= 0;
         else clk_25 <= ~clk_25;
     end
-    /*
+    */
     always_ff @(posedge clk, posedge rst) begin
-         if(rst) clk_50 <= 0;
+         if(rst) clk_50 <= 1;
          else clk_50 <= ~clk_50;
      end
      
          
      always_ff @(posedge clk_50, posedge rst) begin
-         if(rst) clk_25 <= 0;
+         if(rst) clk_25 <= 1;
          else clk_25 <= ~clk_25;
      end
-    */
+    
 
 endmodule
 

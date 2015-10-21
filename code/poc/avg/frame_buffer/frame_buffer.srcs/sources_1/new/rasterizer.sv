@@ -41,8 +41,8 @@ module rasterizer
    
    m_register #(11) startXBank(adjStartX, startX + `HALF_WIDTH, rst, idleReady, clk);
    m_register #(11) endXBank(adjEndX, endX + `HALF_WIDTH, rst, idleReady, clk);
-   m_register #(11) startYBank(adjStartY, startY + `HALF_HEIGHT, rst, idleReady, clk);
-   m_register #(11) endYBank(adjEndY, endY + `HALF_HEIGHT, rst, idleReady, clk);
+   m_register #(11) startYBank(adjStartY, -startY + `HALF_HEIGHT, rst, idleReady, clk);
+   m_register #(11) endYBank(adjEndY, -endY + `HALF_HEIGHT, rst, idleReady, clk);
    
 
    absSubtractor #(11) xSub(.A(adjEndX), .B(adjStartX), .absDiff(absDeltaX));
@@ -127,36 +127,32 @@ module rasterFSM
 	  IDLE:
 	    begin
 	       if(readyIn)
-		 begin
-		    next = ITER;
-		    idleReady = 1'b1;
-		 end
+             begin
+                next = ITER;
+                idleReady = 1'b1;
+             end
 	       else
-		 begin
-		    next = IDLE;
-		    idleReady = 1'b0;
-		 end
-	       done = 1'b0;
-	       loopEn = 1'b0;
-	       good = 1'b0;
-
-	       
-	       
+             begin
+                next = IDLE;
+                idleReady = 1'b0;
+             end
+           done = 1'b0;
+           loopEn = 1'b0;
+           good = 1'b0;
 	    end
 	  ITER:
 	    begin
 	       if(denominator == majCnt)begin
-		  next = DONE;
-		  loopEn = 1'b0;
-		  good = 1'b0;
-		  
+              next = DONE;
+              loopEn = 1'b0;
+              good = 1'b0;
+              
 	       end
 	       else begin
-		  next = ITER;
-		  loopEn = 1'b1;
-		  good = 1'b1;
-		  idleReady = 1'b0;
-		  
+              next = ITER;
+              loopEn = 1'b1;
+              good = 1'b1;
+              idleReady = 1'b0;
 	       end
 	       
 	       done = 1'b0;

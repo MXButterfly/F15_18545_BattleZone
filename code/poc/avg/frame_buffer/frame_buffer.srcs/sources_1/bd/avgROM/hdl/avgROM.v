@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Sat Oct 17 18:00:25 2015
+//Date        : Wed Oct 21 01:04:47 2015
 //Host        : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
 //Command     : generate_target avgROM.bd
 //Design      : avgROM
@@ -20,8 +20,8 @@ module avgROM
     doutb,
     ena,
     wea);
-  input [10:0]addra;
-  input [10:0]addrb;
+  input [13:0]addra;
+  input [13:0]addrb;
   input clk;
   input [7:0]dina;
   input [7:0]dinb;
@@ -30,8 +30,8 @@ module avgROM
   input ena;
   input wea;
 
-  wire [10:0]addra_1;
-  wire [10:0]addrb_1;
+  wire [13:0]addra_1;
+  wire [13:0]addrb_1;
   wire [7:0]blk_mem_gen_0_douta;
   wire [7:0]blk_mem_gen_0_doutb;
   wire clk_1;
@@ -40,8 +40,8 @@ module avgROM
   wire ena_1;
   wire wea_1;
 
-  assign addra_1 = addra[10:0];
-  assign addrb_1 = addrb[10:0];
+  assign addra_1 = addra[13:0];
+  assign addrb_1 = addrb[13:0];
   assign clk_1 = clk;
   assign dina_1 = dina[7:0];
   assign dinb_1 = dinb[7:0];
@@ -49,7 +49,7 @@ module avgROM
   assign doutb[7:0] = blk_mem_gen_0_doutb;
   assign ena_1 = ena;
   assign wea_1 = wea;
-  avgROM_blk_mem_gen_0_0 blk_mem_gen_0
+  avgROM_blk_mem_gen_0_0 blk_mem_gen_1
        (.addra(addra_1),
         .addrb(addrb_1),
         .clka(clk_1),

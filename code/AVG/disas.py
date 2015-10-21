@@ -7,11 +7,11 @@ with open(fileName) as fid:
 
 code = []
 
-#for n in xrange(len(text)):
-#    code.append((text[n][7:55]))
-
 for n in xrange(len(text)):
-    code.append(text[n])
+    code.append((text[n][7:55]))
+
+#for n in xrange(len(text)):
+#    code.append(text[n])
 
 codeText = ""
 

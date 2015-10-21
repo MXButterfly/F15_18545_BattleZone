@@ -1,7 +1,7 @@
 //Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-//Date        : Sat Oct 17 18:00:25 2015
+//Date        : Wed Oct 21 01:04:47 2015
 //Host        : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
 //Command     : generate_target avgROM_wrapper.bd
 //Design      : avgROM_wrapper
@@ -19,8 +19,8 @@ module avgROM_wrapper
     doutb,
     ena,
     wea);
-  input [10:0]addra;
-  input [10:0]addrb;
+  input [13:0]addra;
+  input [13:0]addrb;
   input clk;
   input [7:0]dina;
   input [7:0]dinb;
@@ -29,8 +29,8 @@ module avgROM_wrapper
   input ena;
   input wea;
 
-  wire [10:0]addra;
-  wire [10:0]addrb;
+  wire [13:0]addra;
+  wire [13:0]addrb;
   wire clk;
   wire [7:0]dina;
   wire [7:0]dinb;

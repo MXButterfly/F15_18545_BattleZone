@@ -21,6 +21,7 @@
 
 
 module fb_controller(
+
     input logic[18:0] w_addr,
     input logic en_w, en_r,
     input logic done, clk, rst,
@@ -41,11 +42,11 @@ module fb_controller(
     
     blockRam_wrapper bramA(.addr_a(addr_a), .clk(clk), .color_in(color_in_a), .color_out(color_out_a), 
                             .en(en_a), .write_en(wen_a), .color_out_b(color_out_next_a), 
-                            .addr_b(addr_a_next), .clear_in(4'b000), .en_b(en_clear_a), .write_en_b(wen_clear_a));
+                            .addr_b(addr_a_next), .clear_in(4'b0000), .en_b(en_clear_a), .write_en_b(wen_clear_a));
                             
     blockRam_wrapper bramB(.addr_a(addr_b), .clk(clk), .color_in(color_in_b), .color_out(color_out_b), 
                             .en(en_b), .write_en(wen_b), .color_out_b(color_out_next_b),
-                            .addr_b(addr_b_next), .clear_in(4'b000), .en_b(en_clear_b), .write_en_b(wen_clear_b));
+                            .addr_b(addr_b_next), .clear_in(4'b0000), .en_b(en_clear_b), .write_en_b(wen_clear_b));
 
     //Calc addr from row/col
     assign r_addr = row*640 + col;
@@ -83,7 +84,7 @@ module fb_controller(
                 en_b = en_r;
                 addr_b_next = r_addr-1;
                 en_clear_b = en_r;
-                if(r_addr-1 >= 0)
+                if(r_addr-1 >= 0 && r_addr-1<=307200)
                     wen_clear_b = 1'b1;
                 else 
                     wen_clear_b = 1'b0;
@@ -105,9 +106,12 @@ module fb_controller(
                 addr_b = r_addr;
                 wen_b = 1'b0;
                 en_b = en_r;
-                addr_b_next = 'b0;
-                en_clear_b = 1'b0;
-                wen_clear_b = 1'b0;
+                addr_b_next = r_addr-1;
+                en_clear_b = en_r;
+                if(r_addr-1 >= 0 && r_addr-1<=307200)
+                    wen_clear_b = 1'b1;
+                else 
+                    wen_clear_b = 1'b0;
                 
                 //demux
                 color_out = color_out_b;
@@ -128,7 +132,7 @@ module fb_controller(
                en_a = en_r;
                addr_a_next = r_addr-1;
                en_clear_a = en_r;
-               if(r_addr-1 >= 0) 
+               if(r_addr-1 >= 0 && r_addr-1<=307200) 
                    wen_clear_a = 1'b1;
                else 
                    wen_clear_a = 1'b0;
@@ -151,9 +155,12 @@ module fb_controller(
               addr_a = r_addr;
               wen_a = 1'b0;
               en_a = en_r;
-              addr_a_next = 'b0;
-              en_clear_a = 1'b0;
-              wen_clear_a = 1'b0;
+              addr_a_next = r_addr-1;
+              en_clear_a = en_r;
+              if(r_addr-1 >= 0 && r_addr-1<=307200)
+                  wen_clear_a = 1'b1;
+              else 
+                  wen_clear_a = 1'b0;
               
               //demux
               color_out = color_out_a;
@@ -206,7 +213,7 @@ module fb_controller(
     end
     
     //bram state
-    always_ff@(posedge clk, posedge rst)
+    always_ff@(posedge clk)
       if(rst)
         state <= WRITE_A;
       else
