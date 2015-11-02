@@ -33,8 +33,9 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
         instLength = 0;
         case(dcd_op) 
             `OP_VCTR: begin
-                dY = ({inst[20:16], inst[31:24]}) >> 1;
-                dX = ({inst[4:0], inst[15:8]}) >> 1;
+                //DEMO
+                dY = ({inst[20:16], inst[31:24]});
+                dX = ({inst[4:0], inst[15:8]});
                 vector = 1;
                 if(inst[7:5] == 3'b000) blank = 1'b1;
                 else if(inst[7:5] == 3'b001) useZReg = 1'b1;
@@ -49,18 +50,21 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
             end
 
             `OP_SVEC: begin
-                dY[4:0] = (inst[20:16]); //>> 1; //DEMO: removed the right shift
+                dY[0] = 1'b0;
+                dY[5:1] = (inst[20:16]); //>> 1; //DEMO: removed the right shift
                 //DEMO: added a sign extension check
-                if(inst[20])
-                    dY[12:5] = 8'b11111111;
+                if(inst[20] == 1'b1)
+                    dY[12:6] = 7'b1111111;
                 else
-                    dY[12:5] = 8'b00000000;
-                dX[4:0] = (inst[28:24]);// >> 1; //DEMO: removed the right shift
+                    dY[12:6] = 7'b0000000;
+                    
+                dX[0] = 1'b0;
+                dX[5:1] = (inst[28:24]);// >> 1; //DEMO: removed the right shift
                 //DEMO: added a sign extension check
-                if(inst[28])
-                    dX[12:5] = 8'b11111111;
+                if(inst[28] == 1'b1)
+                    dX[12:6] = 7'b1111111;
                 else
-                    dX[12:5] = 8'b00000000;
+                    dX[12:6] = 7'b0000000;
                 
                 vector = 1;
                 if(inst[31:29] == 3'b000) blank = 1'b1;

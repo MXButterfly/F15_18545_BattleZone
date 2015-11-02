@@ -3,17 +3,17 @@
 
 
 
-`define HALF_WIDTH 10'd320
-`define HALF_HEIGHT 9'd240
+`define HALF_WIDTH 13'd320
+`define HALF_HEIGHT 13'd240
 
 
 module rasterizer
-  (input logic [10:0]  startX, endX,
-   input logic [10:0]  startY, endY,
+  (input logic signed [12:0]  startX, endX,
+   input logic signed [12:0]  startY, endY,
    input logic [3:0]   lineColor,
    input logic 	       clk, rst, readyIn,
    output logic [18:0] addressOut,
-   output logic [10:0] pixelX, pixelY,
+   output logic [12:0] pixelX, pixelY,
    output logic [3:0]  pixelColor,
    output logic        goodPixel, done, rastReady);
 
@@ -21,44 +21,82 @@ module rasterizer
    logic 	       xNeg, yNeg, cntNet;
    logic 	       loopEn;
    
-   logic [10:0]        adjStartX, adjEndX;
-   logic [10:0]        adjStartY, adjEndY;
+   logic signed [12:0]        adjStartX, adjEndX;
+   logic signed [12:0]        adjStartY, adjEndY;
 
-   logic [10:0]        absDeltaX, absDeltaY, numerator, denominator;
+  logic signed [12:0]        truncStartX, truncEndX; //EDIT: truncate if out of bounds
+  logic signed [12:0]        truncStartY, truncEndY;//EDIT: truncate if out of bounds
+  
+   logic [12:0]        absDeltaX, absDeltaY, numerator, denominator;
 
-   logic [10:0]        majCnt, minCnt;
+   logic [12:0]        majCnt, minCnt;
 
-   logic [10:0]        leftX, topY;
+   logic [12:0]        leftX, topY;
 
    logic 	       goodTime, goodX, goodY;
 
    logic 	       idleReady;
    
+   wire signed [12:0] halfWidth;
+   wire signed [12:0] halfHeight;
    
+   assign halfWidth = `HALF_WIDTH;
+   assign halfHeight = `HALF_HEIGHT;
+   
+   //EDIT: truncate if > 320 or < -320 for X, > 240 < -240 for Y
+   always_comb begin
+      if(startX >= halfWidth)
+        truncStartX = halfWidth - 1;
+      else if(startX < - halfWidth)
+        truncStartX = -halfWidth;
+      else
+        truncStartX = startX;
+        
+      if(endX >= halfWidth)
+        truncEndX = halfWidth - 1;
+      else if(endX < -halfWidth)
+        truncEndX = -halfWidth;
+      else
+        truncEndX = endX;
+      
+      if(startY >= halfHeight)
+        truncStartY = halfHeight - 1;
+      else if(startY < -halfHeight)
+        truncStartY = -halfHeight;
+      else
+        truncStartY= startY;
+      
+      if(endY >= halfHeight)
+        truncEndY = halfHeight - 1;
+      else if(endY < -halfHeight)
+        truncEndY = -halfHeight;
+      else
+        truncEndY = endY;
+   end
 
    m_register #(4) colorBank(pixelColor, lineColor, rst, idleReady, clk);
    //assign pixelColor = 4'b0111;
    
-   m_register #(11) startXBank(adjStartX, startX + `HALF_WIDTH, rst, idleReady, clk);
-   m_register #(11) endXBank(adjEndX, endX + `HALF_WIDTH, rst, idleReady, clk);
-   m_register #(11) startYBank(adjStartY, -startY + `HALF_HEIGHT, rst, idleReady, clk);
-   m_register #(11) endYBank(adjEndY, -endY + `HALF_HEIGHT, rst, idleReady, clk);
+   m_register #(13) startXBank(adjStartX, truncStartX + `HALF_WIDTH, rst, idleReady, clk);
+   m_register #(13) endXBank(adjEndX, truncEndX + `HALF_WIDTH, rst, idleReady, clk);
+   m_register #(13) startYBank(adjStartY, -truncStartY + `HALF_HEIGHT, rst, idleReady, clk);
+   m_register #(13) endYBank(adjEndY, -truncEndY + `HALF_HEIGHT, rst, idleReady, clk);
    
 
-   absSubtractor #(11) xSub(.A(adjEndX), .B(adjStartX), .absDiff(absDeltaX));
-   absSubtractor #(11) ySub(.A(adjEndY), .B(adjStartY), .absDiff(absDeltaY));
+   absSubtractor #(13) xSub(.A(adjEndX), .B(adjStartX), .absDiff(absDeltaX));
+   absSubtractor #(13) ySub(.A(adjEndY), .B(adjStartY), .absDiff(absDeltaY));
    
-   m_comparator #(11) slopePicker(.A(absDeltaX), .B(absDeltaY), .AgtB(xZone), .AeqB(bZone), .AltB(yZone));
+   m_comparator #(13) slopePicker(.A(absDeltaX), .B(absDeltaY), .AgtB(xZone), .AeqB(bZone), .AltB(yZone));
 
-   m_comparator #(11) xDirCmp(.A(adjStartX), .B(adjEndX), .AltB(xNeg));
-   m_comparator #(11) yDirCmp(.A(adjStartY), .B(adjEndY), .AltB(yNeg));
+   m_comparator #(13) xDirCmp(.A(adjStartX), .B(adjEndX), .AltB(xNeg));
+   m_comparator #(13) yDirCmp(.A(adjStartY), .B(adjEndY), .AltB(yNeg));
    xor xorNeg(cntNeg, xNeg, yNeg);
    
    
-   switchMux #(11) recipSwitch(.U(numerator), .V(denominator), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
+   switchMux #(13) recipSwitch(.U(numerator), .V(denominator), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
 
-   m_counter #(11) majorCounter(.Q(majCnt), .D(11'd0), .clk(clk), .clr(rst), .load(idleReady), .up(1'b1), .en(loopEn));
-   m_counter #(11) minorCounter(.Q(minCnt), .D(11'd0), .clk(clk), .clr(rst), .load(idleReady), .up(~cntNeg), .en(inc));
+   m_counter #(13) majorCounter(.Q(majCnt), .D(13'd0), .clk(clk), .clr(rst), .load(idleReady), .up(1'b1), .en(loopEn));
+   m_counter #(13) minorCounter(.Q(minCnt), .D(13'd0), .clk(clk), .clr(rst), .load(idleReady), .up(~cntNeg), .en(inc));
 
 
    bresenhamCore rasterCore(.numerator(numerator), .denominator(denominator), .clk(clk), .rst(rst|idleReady), .en(loopEn), .inc(inc));
@@ -66,8 +104,8 @@ module rasterizer
    rasterFSM rasterControl(.readyIn(readyIn), .denominator(denominator), .majCnt(majCnt), .clk(clk), .rst(rst), .loopEn(loopEn), .done(done), .good(goodTime), .rastReady(rastReady), .idleReady(idleReady));
 
 
-   m_mux2to1 #(11) leftXMux(.Y(leftX), .Sel((bZone|xZone) ? xNeg : yNeg), .I0(adjEndX), .I1(adjStartX));
-   m_mux2to1 #(11) topYMux(.Y(topY), .Sel(yZone ? yNeg : xNeg), .I0(adjEndY), .I1(adjStartY));
+   m_mux2to1 #(13) leftXMux(.Y(leftX), .Sel((bZone|xZone) ? xNeg : yNeg), .I0(adjEndX), .I1(adjStartX));
+   m_mux2to1 #(13) topYMux(.Y(topY), .Sel(yZone ? yNeg : xNeg), .I0(adjEndY), .I1(adjStartY));
    
 
    assign pixelX = leftX + ((bZone|xZone) ? majCnt : minCnt);
@@ -75,8 +113,8 @@ module rasterizer
    
    coordinateIndexer addresser(.x(pixelX[9:0]), .y(pixelY[8:0]), .index(addressOut));
 
-   m_range_check #(11) xRangeCheck(.val(pixelX), .low(11'd0), .high(11'd640), .is_between(goodX));
-   m_range_check #(11) yRangeCheck(.val(pixelY), .low(11'd0), .high(11'd480), .is_between(goodY));
+   m_range_check #(13) xRangeCheck(.val(pixelX), .low(13'd0), .high(13'd640), .is_between(goodX));
+   m_range_check #(13) yRangeCheck(.val(pixelY), .low(13'd0), .high(13'd480), .is_between(goodY));
 
    assign goodPixel = goodX & goodY & goodTime;
    
@@ -100,7 +138,7 @@ endmodule: coordinateIndexer
 
 module rasterFSM
   (input logic readyIn,
-   input logic [10:0] denominator, majCnt,
+   input logic [12:0] denominator, majCnt,
    input logic 	      clk, rst,
    output logic       loopEn, good, done, rastReady, idleReady
    );
@@ -181,7 +219,7 @@ endmodule: rasterFSM
 
 
 module switchMux
-  #(parameter BUSWIDTH = 11)
+  #(parameter BUSWIDTH = 13)
    (output logic [BUSWIDTH-1:0] U, V,
     input logic [BUSWIDTH-1:0] A, B,
     input logic 	       Sel
@@ -196,7 +234,7 @@ module switchMux
 endmodule: switchMux
 
 module absSubtractor
-  #(parameter BUSWIDTH = 11)
+  #(parameter BUSWIDTH = 13)
    (input logic [BUSWIDTH-1:0] A, B,
     output logic [BUSWIDTH-1:0] absDiff
     );
@@ -215,27 +253,27 @@ endmodule: absSubtractor
 
 
 module bresenhamCore
-  (input logic [10:0] numerator, denominator,
+  (input logic [12:0] numerator, denominator,
    input logic 	clk, rst, en,
    output logic inc
    );
 
-   logic [10:0] errSum, errDiff, errCurr, absErr, subtrahend, negDenom;
+   logic [12:0] errSum, errDiff, errCurr, absErr, subtrahend, negDenom;
 
-   negator #(11) denomNegator(.valIn(denominator), .valOut(negDenom));
+   negator #(13) denomNegator(.valIn(denominator), .valOut(negDenom));
    
 
-   m_register #(11) errBank(.Q(errCurr), .D(errDiff), .clr(rst), .clk(clk), .en(en));
+   m_register #(13) errBank(.Q(errCurr), .D(errDiff), .clr(rst), .clk(clk), .en(en));
    
-   absVal #(11) errMagnitude(.valIn(errSum), .valOut(absErr));
+   absVal #(13) errMagnitude(.valIn(errSum), .valOut(absErr));
 
-   m_mux2to1 #(11) subSelect(.Y(subtrahend), .I0(11'd0), .I1(negDenom), .Sel(inc));
+   m_mux2to1 #(13) subSelect(.Y(subtrahend), .I0(13'd0), .I1(negDenom), .Sel(inc));
    
-   m_comparator #(11) comp   (,, inc, absErr, {{1'b0}, {denominator[10:1]}});
+   m_comparator #(13) comp   (,, inc, absErr, {{1'b0}, {denominator[12:1]}});
 
-   m_adder #(11) errAdder(errSum,, errCurr, numerator, 1'b0);
+   m_adder #(13) errAdder(errSum,, errCurr, numerator, 1'b0);
 
-   m_adder #(11) errSubtract(errDiff,, errSum, subtrahend, 1'b0);
+   m_adder #(13) errSubtract(errDiff,, errSum, subtrahend, 1'b0);
    
 
 
@@ -243,7 +281,7 @@ endmodule: bresenhamCore
 
 
 module negator
-  #(parameter BUSWIDTH = 11)
+  #(parameter BUSWIDTH = 13)
    (input logic [BUSWIDTH-1:0] valIn,
     output logic [BUSWIDTH-1:0] valOut
     );
@@ -256,7 +294,7 @@ endmodule: negator
 
 
 module absVal
-  #(parameter BUSWIDTH = 11)
+  #(parameter BUSWIDTH = 13)
    (input logic [BUSWIDTH-1:0] valIn,
     output logic [BUSWIDTH-1:0] valOut
     );
@@ -280,6 +318,7 @@ module absVal
 
 endmodule: absVal	  
 
+//NOTE: Outdated, need to change 10:0 to 12:0
 module sanityBench();
 
    logic [10:0]  startX, endX;

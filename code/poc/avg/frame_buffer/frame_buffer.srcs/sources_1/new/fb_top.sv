@@ -30,13 +30,13 @@ module fb_top(
     logic[9:0] col;
     logic[18:0] w_addr;
     logic[3:0] color_in, lineColor;
-    logic[10:0] startX, endX, startY, endY, dStartX, dStartY, dEndX, dEndY;
+    logic[12:0] startX, endX, startY, endY, dStartX, dStartY, dEndX, dEndY;
     logic done, en_w, en_r, readyFrame, readyLine, rastReady, blank;
     logic lrWrite, full, empty, rst; 
     logic[15:0] pc;
     logic[15:0] inst;
     logic[3:0] dColor;
-    logic[10:0] pixelX, pixelY;
+    logic[12:0] pixelX, pixelY;
     
     assign rst = ~rst_l;
     assign readyLine = ~empty;
@@ -67,7 +67,7 @@ module fb_top(
                      .DStartX(dStartX), .DStartY(dStartY), .DEndX(dEndX), .DEndY(dEndY),
                                      .DColor(dColor), .read(lineDone), .currWrite(lrWrite), 
                                      .clk(clk), .rst(rst));
-    avgROM_wrapper avgRW (.addra(pc[13:0]), .addrb(pc[13:0] + 1), .clk(clk), .dina(8'b0), .dinb(8'b0), 
+    avgROM_wrapper avgRW (.addra(pc[13:0]), .addrb(pc[13:0] + 14'd1), .clk(clk), .dina(8'b0), .dinb(8'b0), 
                           .douta(inst[15:8]), .doutb(inst[7:0]), .ena(1'b1), .wea(1'b0));
 
 endmodule

@@ -1,6 +1,6 @@
 
 
-module avg_core(output logic [10:0] startX, startY, endX, endY, 
+module avg_core(output logic [12:0] startX, startY, endX, endY, 
                 output logic [2:0]  color, 
                 output logic        lrWrite,
                 output logic [15:0] pcOut,
@@ -10,11 +10,12 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     logic zWrEn, scalWrEn, center, jump, jsr, ret;
     logic useZReg, blank, halt, vector;
     logic [15:0] jumpAddr, retAddr; 
-    logic [12:0] dX, dY;
+    logic signed [12:0] dX, dY;
+    logic signed [21:0] dX_buf, dY_buf, nextX_scaled, nextY_scaled, linScale_buf;
     logic [2:0] pcOffset;
     logic [3:0] zVal, decZVal;
-    logic [7:0] linScale, decLinScale;
-    logic [2:0] binScale, decBinScale;
+    logic signed [7:0] linScale, decLinScale;
+    logic signed [2:0] binScale, decBinScale;
     logic [15:0] nextPC, pc;
 
     logic retValid;
@@ -27,7 +28,7 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
 
     //WARNING: don't know how many bits this should be
     //         could cause errors from 2's comp
-    logic [10:0] currX, nextX, currY, nextY; 
+    logic signed [13:0] currX, nextX, currY, nextY; 
 
     logic [3:0] clkCount;
 
@@ -91,8 +92,8 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     /*             EXECUTE             */
     /***********************************/
 
-    register #(11) xReg(currX, nextX, (center || vector) && run, clk, rst || vggoCap);
-    register #(11) yReg(currY, nextY, (center || vector) && run, clk, rst || vggoCap);
+    register #(14) xReg(currX, nextX, (center || vector) && run, clk, rst || vggoCap);
+    register #(14) yReg(currY, nextY, (center || vector) && run, clk, rst || vggoCap);
 
     retStack rs(retAddr, retValid, oldPC + 16'd2, jsr && run, ret && run, clk, rst || vggoCap);
     
@@ -107,8 +108,23 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
             nextY = 0;
         end
         else begin //DEMO: multiplied dx/dy by 2
-            nextX = currX + ((((dX * 2)* (256 - linScale)) / 256) >> binScale);
-            nextY = currY + ((((dY * 2)* (256 - linScale)) / 256) >> binScale);
+            if(dX[12] == 1'b1)
+               dX_buf[21:13] = 9'b111111111;
+            else
+               dX_buf[21:13] = 9'b000000000;
+            if(dY[12] == 1'b1)
+               dY_buf[21:13] = 9'b111111111;
+            else
+               dY_buf[21:13] = 9'b000000000;
+            dX_buf[12:0] = dX;
+            dY_buf[12:0] = dY;
+            linScale_buf[21:8] = 14'd0;
+            linScale_buf[7:0] = linScale;
+            nextX_scaled = ((currX + ((((dX_buf * 2 * (21'd256 - linScale_buf)) / 21'd256) >> binScale) * 1) / 1) );
+            nextY_scaled = ((currY + ((((dY_buf * 2 * (21'd256 - linScale_buf)) / 21'd256) >> binScale) * 1) / 1) );
+                        
+            nextX = nextX_scaled[13:0];
+            nextY = nextY_scaled[13:0];
         end
     end
 
@@ -117,17 +133,17 @@ module avg_core(output logic [10:0] startX, startY, endX, endY,
     /***********************************/
 
     assign lrWrite = vector && ~blank && run;
-    assign startX = currX;
-    assign endX = nextX;
-    assign startY = currY;
-    assign endY = nextY;
+    assign startX = currX[13:1];
+    assign endX = nextX[13:1];
+    assign startY = currY[13:1];
+    assign endY = nextY[13:1];
 
     always_ff @(posedge clk) begin
         if(rst)
             halt <= 0;
         else begin
             if(vggoCap) halt <= 0;
-            else if(decHalt) halt <= 1;
+            else if(decHalt && run) halt <= 1;
         end
     end
 
@@ -194,10 +210,10 @@ module retStack(output logic [15:0] retAddr,
 
 endmodule
 
-module lineReg(output logic [10:0] QStartX, QEndX, QStartY, QEndY, 
+module lineReg(output logic [12:0] QStartX, QEndX, QStartY, QEndY, 
                output logic [2:0]  QColor, 
                output logic        valid,
-               input  logic [10:0] DStartX, DEndX, DStartY, DEndY, 
+               input  logic [12:0] DStartX, DEndX, DStartY, DEndY, 
                input  logic [2:0]  DColor, 
                input  logic        writeEn, clk, rst);
 
@@ -225,17 +241,17 @@ endmodule
 
 
 
-module lineRegQueue(output logic [10:0] QStartX, QEndX, QStartY, QEndY, 
+module lineRegQueue(output logic [12:0] QStartX, QEndX, QStartY, QEndY, 
                     output logic [2:0]  QColor, 
                     output logic full, empty,  
-                    input  logic [10:0] DStartX, DEndX, DStartY, DEndY, 
+                    input  logic [12:0] DStartX, DEndX, DStartY, DEndY, 
                     input  logic [2:0]  DColor, 
                     input  logic read,  currWrite, clk, rst);
 
     parameter DEPTH = 16;
 
 
-    logic [DEPTH-1:0] [10:0] startX, startY, endX, endY; 
+    logic [DEPTH-1:0] [12:0] startX, startY, endX, endY; 
     logic [DEPTH-1:0] valid;
     logic [DEPTH-1:0] writeEn;
     logic [DEPTH-1:0] [2:0] color;
