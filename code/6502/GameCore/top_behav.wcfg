@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="52" />
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/btnCpuReset">
+      <obj_property name="ElementShortName">btnCpuReset</obj_property>
+      <obj_property name="ObjectShortName">btnCpuReset</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/clk_3MHz">
+      <obj_property name="ElementShortName">clk_3MHz</obj_property>
+      <obj_property name="ObjectShortName">clk_3MHz</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/address">
+      <obj_property name="ElementShortName">address[15:0]</obj_property>
+      <obj_property name="ObjectShortName">address[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/dataOut">
+      <obj_property name="ElementShortName">dataOut[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dataOut[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/dataIn">
+      <obj_property name="ElementShortName">dataIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dataIn[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/WE">
+      <obj_property name="ElementShortName">WE</obj_property>
+      <obj_property name="ObjectShortName">WE</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/IRQ">
+      <obj_property name="ElementShortName">IRQ</obj_property>
+      <obj_property name="ObjectShortName">IRQ</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/NMI">
+      <obj_property name="ElementShortName">NMI</obj_property>
+      <obj_property name="ObjectShortName">NMI</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/RDY">
+      <obj_property name="ElementShortName">RDY</obj_property>
+      <obj_property name="ObjectShortName">RDY</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/dataToBram">
+      <obj_property name="ElementShortName">dataToBram[2:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">dataToBram[2:0][7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/dataFromBram">
+      <obj_property name="ElementShortName">dataFromBram[2:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">dataFromBram[2:0][7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject db_ref_id="1" type="array" fp_name="/top/dataFromBram[2]">
+         <obj_property name="ElementShortName">[2][7:0]</obj_property>
+         <obj_property name="ObjectShortName">dataFromBram[2][7:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/top/dataFromBram[1]">
+         <obj_property name="ElementShortName">[1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">dataFromBram[1][7:0]</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/top/dataFromBram[0]">
+         <obj_property name="ElementShortName">[0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">dataFromBram[0][7:0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/addrToBram">
+      <obj_property name="ElementShortName">addrToBram[2:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">addrToBram[2:0][15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <wvobject db_ref_id="1" type="array" fp_name="/top/addrToBram[2]">
+         <obj_property name="ElementShortName">[2][15:0]</obj_property>
+         <obj_property name="ObjectShortName">addrToBram[2][15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/top/addrToBram[1]">
+         <obj_property name="ElementShortName">[1][15:0]</obj_property>
+         <obj_property name="ObjectShortName">addrToBram[1][15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject db_ref_id="1" type="array" fp_name="/top/addrToBram[0]">
+         <obj_property name="ElementShortName">[0][15:0]</obj_property>
+         <obj_property name="ObjectShortName">addrToBram[0][15:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/weEnBram">
+      <obj_property name="ElementShortName">weEnBram[2:0]</obj_property>
+      <obj_property name="ObjectShortName">weEnBram[2:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/core/PC">
+      <obj_property name="ElementShortName">PC[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PC[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/core/state">
+      <obj_property name="ElementShortName">state[5:0]</obj_property>
+      <obj_property name="ObjectShortName">state[5:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/core/PC_temp">
+      <obj_property name="ElementShortName">PC_temp[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_temp[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/core/res">
+      <obj_property name="ElementShortName">res</obj_property>
+      <obj_property name="ObjectShortName">res</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/core/NMI_edge">
+      <obj_property name="ElementShortName">NMI_edge</obj_property>
+      <obj_property name="ObjectShortName">NMI_edge</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/ad/bramNum">
+      <obj_property name="ElementShortName">bramNum[1:0]</obj_property>
+      <obj_property name="ObjectShortName">bramNum[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/ad/outBramNum">
+      <obj_property name="ElementShortName">outBramNum[1:0]</obj_property>
+      <obj_property name="ObjectShortName">outBramNum[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/ad/outBramAddr">
+      <obj_property name="ElementShortName">outBramAddr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">outBramAddr[15:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/clk_3KHz">
+      <obj_property name="ElementShortName">clk_3KHz</obj_property>
+      <obj_property name="ObjectShortName">clk_3KHz</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/vggo">
+      <obj_property name="ElementShortName">vggo</obj_property>
+      <obj_property name="ObjectShortName">vggo</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/vgrst">
+      <obj_property name="ElementShortName">vgrst</obj_property>
+      <obj_property name="ObjectShortName">vgrst</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/avgc/startX">
+      <obj_property name="ElementShortName">startX[12:0]</obj_property>
+      <obj_property name="ObjectShortName">startX[12:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/avgc/endX">
+      <obj_property name="ElementShortName">endX[12:0]</obj_property>
+      <obj_property name="ObjectShortName">endX[12:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/avgc/startY">
+      <obj_property name="ElementShortName">startY[12:0]</obj_property>
+      <obj_property name="ObjectShortName">startY[12:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/avgc/endY">
+      <obj_property name="ElementShortName">endY[12:0]</obj_property>
+      <obj_property name="ObjectShortName">endY[12:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/avgc/lrWrite">
+      <obj_property name="ElementShortName">lrWrite</obj_property>
+      <obj_property name="ObjectShortName">lrWrite</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/avgc/inst">
+      <obj_property name="ElementShortName">inst[15:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/vgaRed">
+      <obj_property name="ElementShortName">vgaRed[3:0]</obj_property>
+      <obj_property name="ObjectShortName">vgaRed[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/vgaBlue">
+      <obj_property name="ElementShortName">vgaBlue[3:0]</obj_property>
+      <obj_property name="ObjectShortName">vgaBlue[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/vgaGreen">
+      <obj_property name="ElementShortName">vgaGreen[3:0]</obj_property>
+      <obj_property name="ObjectShortName">vgaGreen[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/en_w">
+      <obj_property name="ElementShortName">en_w</obj_property>
+      <obj_property name="ObjectShortName">en_w</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/fbc/state">
+      <obj_property name="ElementShortName">state[1:0]</obj_property>
+      <obj_property name="ObjectShortName">state[1:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/fbc/color_in_a">
+      <obj_property name="ElementShortName">color_in_a[3:0]</obj_property>
+      <obj_property name="ObjectShortName">color_in_a[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/fbc/color_in_b">
+      <obj_property name="ElementShortName">color_in_b[3:0]</obj_property>
+      <obj_property name="ObjectShortName">color_in_b[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/fbc/color_in_c">
+      <obj_property name="ElementShortName">color_in_c[3:0]</obj_property>
+      <obj_property name="ObjectShortName">color_in_c[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/fbc/color_out_a">
+      <obj_property name="ElementShortName">color_out_a[3:0]</obj_property>
+      <obj_property name="ObjectShortName">color_out_a[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/fbc/color_out_b">
+      <obj_property name="ElementShortName">color_out_b[3:0]</obj_property>
+      <obj_property name="ObjectShortName">color_out_b[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/fbc/color_out_c">
+      <obj_property name="ElementShortName">color_out_c[3:0]</obj_property>
+      <obj_property name="ObjectShortName">color_out_c[3:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/fbc/switch">
+      <obj_property name="ElementShortName">switch</obj_property>
+      <obj_property name="ObjectShortName">switch</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/fbc/lastDone">
+      <obj_property name="ElementShortName">lastDone</obj_property>
+      <obj_property name="ObjectShortName">lastDone</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/fbc/clear_addr">
+      <obj_property name="ElementShortName">clear_addr[18:0]</obj_property>
+      <obj_property name="ObjectShortName">clear_addr[18:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/fbc/clearCC">
+      <obj_property name="ElementShortName">clearCC</obj_property>
+      <obj_property name="ObjectShortName">clearCC</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/rast/goodPixel">
+      <obj_property name="ElementShortName">goodPixel</obj_property>
+      <obj_property name="ObjectShortName">goodPixel</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/rast/rastReady">
+      <obj_property name="ElementShortName">rastReady</obj_property>
+      <obj_property name="ObjectShortName">rastReady</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/core/AXYS">
+      <obj_property name="ElementShortName">AXYS[3:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">AXYS[3:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/clk_3KHz">
+      <obj_property name="ElementShortName">clk_3KHz</obj_property>
+      <obj_property name="ObjectShortName">clk_3KHz</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/NMI">
+      <obj_property name="ElementShortName">NMI</obj_property>
+      <obj_property name="ObjectShortName">NMI</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="logic" fp_name="/top/nmiC/count">
+      <obj_property name="ElementShortName">count</obj_property>
+      <obj_property name="ObjectShortName">count</obj_property>
+   </wvobject>
+</wave_config>

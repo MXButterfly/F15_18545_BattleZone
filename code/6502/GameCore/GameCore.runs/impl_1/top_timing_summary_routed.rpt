@@ -1,0 +1,2281 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
+| Date         : Fri Nov  6 15:19:07 2015
+| Host         : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
+| Command      : report_timing_summary -warn_on_violation -max_paths 10 -file top_timing_summary_routed.rpt -rpx top_timing_summary_routed.rpx
+| Design       : top
+| Device       : 7a100t-csg324
+| Speed File   : -1  PRODUCTION 1.14 2014-09-11
+-----------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock
+2. checking constant_clock
+3. checking pulse_width_clock
+4. checking unconstrained_internal_endpoints
+5. checking no_input_delay
+6. checking no_output_delay
+7. checking multiple_clock
+8. checking generated_clocks
+9. checking loops
+10. checking partial_input_delay
+11. checking partial_output_delay
+12. checking latch_loops
+
+1. checking no_clock
+--------------------
+ There are 156 register/latch pins with no clock driven by root clock pin: avgc/clkCount_reg[3]/C (HIGH)
+
+ There are 4 register/latch pins with no clock driven by root clock pin: counter3KHz_reg[14]/C (HIGH)
+
+ There are 139 register/latch pins with no clock driven by root clock pin: counter3MHz_reg[4]/C (HIGH)
+
+ There are 77 register/latch pins with no clock driven by root clock pin: fbc/state_reg[0]/C (HIGH)
+
+ There are 77 register/latch pins with no clock driven by root clock pin: fbc/state_reg[1]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[0]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[10]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[11]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[12]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[1]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[2]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[3]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[4]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[5]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[6]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[7]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[8]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endXBank/Q_reg[9]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[0]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[10]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[11]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[12]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[1]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[2]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[3]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[4]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[5]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[6]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[7]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[8]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/endYBank/Q_reg[9]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[0]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[10]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[11]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[12]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[1]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[2]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[3]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[4]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[5]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[6]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[7]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[8]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/majorCounter/Q_reg[9]/C (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: rast/rasterControl/current_reg[0]/C (HIGH)
+
+ There are 5 register/latch pins with no clock driven by root clock pin: rast/rasterControl/current_reg[1]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[0]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[10]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[11]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[12]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[1]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[2]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[3]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[4]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[5]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[6]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[7]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[8]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startXBank/Q_reg[9]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[0]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[10]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[11]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[12]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[1]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[2]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[3]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[4]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[5]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[6]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[7]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[8]/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: rast/startYBank/Q_reg[9]/C (HIGH)
+
+ There are 657 register/latch pins with no clock driven by root clock pin: syncRstRegB/Q_reg[0]/C (HIGH)
+
+ There are 22 register/latch pins with no clock driven by root clock pin: vfsm/clk_25_reg/C (HIGH)
+
+ There is 1 register/latch pin with no clock driven by root clock pin: vfsm/clk_50_reg/C (HIGH)
+
+
+2. checking constant_clock
+--------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock
+-----------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints
+--------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay
+--------------------------
+ There is 1 input port with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay
+---------------------------
+ There are 14 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock
+--------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks
+----------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops
+-----------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay
+--------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay
+---------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops
+------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+     -5.336     -135.275                     40                 2169        0.096        0.000                      0                 2169        4.500        0.000                       0                  1287  
+
+
+Timing constraints are not met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock        Waveform(ns)       Period(ns)      Frequency(MHz)
+-----        ------------       ----------      --------------
+sys_clk_pin  {0.000 5.000}      10.000          100.000         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+sys_clk_pin        -5.336     -135.275                     40                 2168        0.096        0.000                      0                 2168        4.500        0.000                       0                  1287  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group         From Clock         To Clock               WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------         ----------         --------               -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+**async_default**  sys_clk_pin        sys_clk_pin              5.185        0.000                      0                    1        1.593        0.000                      0                    1  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :           40  Failing Endpoints,  Worst Slack       -5.336ns,  Total Violation     -135.275ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.096ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        4.500ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (VIOLATED) :        -5.336ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[12]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.318ns  (logic 9.178ns (59.915%)  route 6.140ns (40.085%))
+  Logic Levels:           28  (CARRY4=20 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.044ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.677ns = ( 14.677 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    19.841 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.841    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_1
+    SLICE_X63Y109        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    19.955 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.955    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1_n_1
+    SLICE_X63Y110        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    20.069 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    20.069    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1_n_1
+    SLICE_X63Y111        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    20.292 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[12]_i_2/O[0]
+                         net (fo=1, routed)           0.000    20.292    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[12]_i_2_n_8
+    SLICE_X63Y111        FDRE                                         r  rast/rasterCore/errBank/Q_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.492    14.677    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y111        FDRE                                         r  rast/rasterCore/errBank/Q_reg[12]/C
+                         clock pessimism              0.252    14.929    
+                         clock uncertainty           -0.035    14.894    
+    SLICE_X63Y111        FDRE (Setup_fdre_C_D)        0.062    14.956    rast/rasterCore/errBank/Q_reg[12]
+  -------------------------------------------------------------------
+                         required time                         14.956    
+                         arrival time                         -20.292    
+  -------------------------------------------------------------------
+                         slack                                 -5.336    
+
+Slack (VIOLATED) :        -5.332ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[9]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.315ns  (logic 9.175ns (59.907%)  route 6.140ns (40.093%))
+  Logic Levels:           27  (CARRY4=19 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.678ns = ( 14.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    19.841 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.841    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_1
+    SLICE_X63Y109        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    19.955 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.955    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1_n_1
+    SLICE_X63Y110        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    20.289 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1/O[1]
+                         net (fo=1, routed)           0.000    20.289    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1_n_7
+    SLICE_X63Y110        FDRE                                         r  rast/rasterCore/errBank/Q_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.493    14.678    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y110        FDRE                                         r  rast/rasterCore/errBank/Q_reg[9]/C
+                         clock pessimism              0.252    14.930    
+                         clock uncertainty           -0.035    14.895    
+    SLICE_X63Y110        FDRE (Setup_fdre_C_D)        0.062    14.957    rast/rasterCore/errBank/Q_reg[9]
+  -------------------------------------------------------------------
+                         required time                         14.957    
+                         arrival time                         -20.289    
+  -------------------------------------------------------------------
+                         slack                                 -5.332    
+
+Slack (VIOLATED) :        -5.311ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[11]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.294ns  (logic 9.154ns (59.852%)  route 6.140ns (40.148%))
+  Logic Levels:           27  (CARRY4=19 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.678ns = ( 14.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    19.841 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.841    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_1
+    SLICE_X63Y109        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    19.955 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.955    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1_n_1
+    SLICE_X63Y110        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    20.268 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1/O[3]
+                         net (fo=1, routed)           0.000    20.268    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1_n_5
+    SLICE_X63Y110        FDRE                                         r  rast/rasterCore/errBank/Q_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.493    14.678    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y110        FDRE                                         r  rast/rasterCore/errBank/Q_reg[11]/C
+                         clock pessimism              0.252    14.930    
+                         clock uncertainty           -0.035    14.895    
+    SLICE_X63Y110        FDRE (Setup_fdre_C_D)        0.062    14.957    rast/rasterCore/errBank/Q_reg[11]
+  -------------------------------------------------------------------
+                         required time                         14.957    
+                         arrival time                         -20.268    
+  -------------------------------------------------------------------
+                         slack                                 -5.311    
+
+Slack (VIOLATED) :        -5.237ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[10]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.220ns  (logic 9.080ns (59.657%)  route 6.140ns (40.343%))
+  Logic Levels:           27  (CARRY4=19 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.678ns = ( 14.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    19.841 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.841    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_1
+    SLICE_X63Y109        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    19.955 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.955    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1_n_1
+    SLICE_X63Y110        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    20.194 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1/O[2]
+                         net (fo=1, routed)           0.000    20.194    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1_n_6
+    SLICE_X63Y110        FDRE                                         r  rast/rasterCore/errBank/Q_reg[10]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.493    14.678    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y110        FDRE                                         r  rast/rasterCore/errBank/Q_reg[10]/C
+                         clock pessimism              0.252    14.930    
+                         clock uncertainty           -0.035    14.895    
+    SLICE_X63Y110        FDRE (Setup_fdre_C_D)        0.062    14.957    rast/rasterCore/errBank/Q_reg[10]
+  -------------------------------------------------------------------
+                         required time                         14.957    
+                         arrival time                         -20.194    
+  -------------------------------------------------------------------
+                         slack                                 -5.237    
+
+Slack (VIOLATED) :        -5.221ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[8]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.204ns  (logic 9.064ns (59.615%)  route 6.140ns (40.385%))
+  Logic Levels:           27  (CARRY4=19 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.678ns = ( 14.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    19.841 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.841    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_1
+    SLICE_X63Y109        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    19.955 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.955    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1_n_1
+    SLICE_X63Y110        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    20.178 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1/O[0]
+                         net (fo=1, routed)           0.000    20.178    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[11]_i_1_n_8
+    SLICE_X63Y110        FDRE                                         r  rast/rasterCore/errBank/Q_reg[8]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.493    14.678    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y110        FDRE                                         r  rast/rasterCore/errBank/Q_reg[8]/C
+                         clock pessimism              0.252    14.930    
+                         clock uncertainty           -0.035    14.895    
+    SLICE_X63Y110        FDRE (Setup_fdre_C_D)        0.062    14.957    rast/rasterCore/errBank/Q_reg[8]
+  -------------------------------------------------------------------
+                         required time                         14.957    
+                         arrival time                         -20.178    
+  -------------------------------------------------------------------
+                         slack                                 -5.221    
+
+Slack (VIOLATED) :        -5.218ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.201ns  (logic 9.061ns (59.607%)  route 6.140ns (40.393%))
+  Logic Levels:           26  (CARRY4=18 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.678ns = ( 14.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    19.841 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.841    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_1
+    SLICE_X63Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    20.175 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1/O[1]
+                         net (fo=1, routed)           0.000    20.175    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1_n_7
+    SLICE_X63Y109        FDRE                                         r  rast/rasterCore/errBank/Q_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.493    14.678    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y109        FDRE                                         r  rast/rasterCore/errBank/Q_reg[5]/C
+                         clock pessimism              0.252    14.930    
+                         clock uncertainty           -0.035    14.895    
+    SLICE_X63Y109        FDRE (Setup_fdre_C_D)        0.062    14.957    rast/rasterCore/errBank/Q_reg[5]
+  -------------------------------------------------------------------
+                         required time                         14.957    
+                         arrival time                         -20.175    
+  -------------------------------------------------------------------
+                         slack                                 -5.218    
+
+Slack (VIOLATED) :        -5.197ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.180ns  (logic 9.040ns (59.551%)  route 6.140ns (40.449%))
+  Logic Levels:           26  (CARRY4=18 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.678ns = ( 14.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    19.841 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.841    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_1
+    SLICE_X63Y109        CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.313    20.154 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1/O[3]
+                         net (fo=1, routed)           0.000    20.154    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1_n_5
+    SLICE_X63Y109        FDRE                                         r  rast/rasterCore/errBank/Q_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.493    14.678    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y109        FDRE                                         r  rast/rasterCore/errBank/Q_reg[7]/C
+                         clock pessimism              0.252    14.930    
+                         clock uncertainty           -0.035    14.895    
+    SLICE_X63Y109        FDRE (Setup_fdre_C_D)        0.062    14.957    rast/rasterCore/errBank/Q_reg[7]
+  -------------------------------------------------------------------
+                         required time                         14.957    
+                         arrival time                         -20.154    
+  -------------------------------------------------------------------
+                         slack                                 -5.197    
+
+Slack (VIOLATED) :        -5.123ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.106ns  (logic 8.966ns (59.353%)  route 6.140ns (40.647%))
+  Logic Levels:           26  (CARRY4=18 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.678ns = ( 14.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    19.841 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.841    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_1
+    SLICE_X63Y109        CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.239    20.080 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1/O[2]
+                         net (fo=1, routed)           0.000    20.080    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1_n_6
+    SLICE_X63Y109        FDRE                                         r  rast/rasterCore/errBank/Q_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.493    14.678    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y109        FDRE                                         r  rast/rasterCore/errBank/Q_reg[6]/C
+                         clock pessimism              0.252    14.930    
+                         clock uncertainty           -0.035    14.895    
+    SLICE_X63Y109        FDRE (Setup_fdre_C_D)        0.062    14.957    rast/rasterCore/errBank/Q_reg[6]
+  -------------------------------------------------------------------
+                         required time                         14.957    
+                         arrival time                         -20.080    
+  -------------------------------------------------------------------
+                         slack                                 -5.123    
+
+Slack (VIOLATED) :        -5.107ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        15.090ns  (logic 8.950ns (59.310%)  route 6.140ns (40.690%))
+  Logic Levels:           26  (CARRY4=18 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.043ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.678ns = ( 14.678 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    19.841 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/CO[3]
+                         net (fo=1, routed)           0.000    19.841    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_1
+    SLICE_X63Y109        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.223    20.064 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1/O[0]
+                         net (fo=1, routed)           0.000    20.064    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[7]_i_1_n_8
+    SLICE_X63Y109        FDRE                                         r  rast/rasterCore/errBank/Q_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.493    14.678    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y109        FDRE                                         r  rast/rasterCore/errBank/Q_reg[4]/C
+                         clock pessimism              0.252    14.930    
+                         clock uncertainty           -0.035    14.895    
+    SLICE_X63Y109        FDRE (Setup_fdre_C_D)        0.062    14.957    rast/rasterCore/errBank/Q_reg[4]
+  -------------------------------------------------------------------
+                         required time                         14.957    
+                         arrival time                         -20.064    
+  -------------------------------------------------------------------
+                         slack                                 -5.107    
+
+Slack (VIOLATED) :        -4.973ns  (required time - arrival time)
+  Source:                 rast/startXBank/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            rast/rasterCore/errBank/Q_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        14.957ns  (logic 8.817ns (58.948%)  route 6.140ns (41.052%))
+  Logic Levels:           25  (CARRY4=17 LUT1=1 LUT2=3 LUT3=1 LUT4=2 LUT6=1)
+  Clock Path Skew:        -0.042ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.679ns = ( 14.679 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.973ns
+    Clock Pessimism Removal (CPR):    0.252ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.615     4.973    rast/startXBank/clk_IBUF_BUFG
+    SLICE_X59Y101        FDRE                                         r  rast/startXBank/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y101        FDRE (Prop_fdre_C_Q)         0.456     5.429 f  rast/startXBank/Q_reg[0]/Q
+                         net (fo=6, routed)           0.347     5.776    rast/startXBank/Q[0]
+    SLICE_X60Y100        LUT1 (Prop_lut1_I0_O)        0.124     5.900 r  rast/startXBank/Q[7]_i_43/O
+                         net (fo=1, routed)           0.420     6.320    rast/startXBank/Q[7]_i_43_n_1
+    SLICE_X62Y100        CARRY4 (Prop_carry4_CYINIT_CO[3])
+                                                      0.595     6.915 r  rast/startXBank/Q_reg[7]_i_37/CO[3]
+                         net (fo=1, routed)           0.000     6.915    rast/startXBank/Q_reg[7]_i_37_n_1
+    SLICE_X62Y101        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     7.134 r  rast/startXBank/Q_reg[11]_i_43/O[0]
+                         net (fo=1, routed)           0.710     7.845    rast/xSub/subtraction/p_1_out[4]
+    SLICE_X62Y104        LUT2 (Prop_lut2_I1_O)        0.295     8.140 r  rast/xSub/subtraction/Q[7]_i_34/O
+                         net (fo=1, routed)           0.000     8.140    rast/xSub/subtraction/Q[7]_i_34_n_1
+    SLICE_X62Y104        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.533     8.673 r  rast/xSub/subtraction/Q_reg[7]_i_27/CO[3]
+                         net (fo=1, routed)           0.000     8.673    rast/xSub/subtraction/Q_reg[7]_i_27_n_1
+    SLICE_X62Y105        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117     8.790 r  rast/xSub/subtraction/Q_reg[11]_i_28/CO[3]
+                         net (fo=1, routed)           0.000     8.790    rast/xSub/subtraction/Q_reg[11]_i_28_n_1
+    SLICE_X62Y106        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.219     9.009 r  rast/xSub/subtraction/Q_reg[11]_i_29/O[0]
+                         net (fo=12, routed)          0.499     9.507    p_0_in_35
+    SLICE_X62Y107        LUT2 (Prop_lut2_I1_O)        0.287     9.794 r  Q[3]_i_23/O
+                         net (fo=1, routed)           0.000     9.794    Q[3]_i_23_n_1
+    SLICE_X62Y107        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.471    10.265 r  xSub/magnitude/Q_reg[3]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.265    xSub/magnitude/Q_reg[3]_i_13_n_1
+    SLICE_X62Y108        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.117    10.382 r  xSub/magnitude/Q_reg[7]_i_13/CO[3]
+                         net (fo=1, routed)           0.000    10.382    xSub/magnitude/Q_reg[7]_i_13_n_1
+    SLICE_X62Y109        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.323    10.705 r  xSub/magnitude/Q_reg[11]_i_13/O[1]
+                         net (fo=10, routed)          0.875    11.580    I0[9]
+    SLICE_X64Y108        LUT4 (Prop_lut4_I0_O)        0.306    11.886 r  loopEn_reg_i_30/O
+                         net (fo=1, routed)           0.000    11.886    loopEn_reg_i_30_n_1
+    SLICE_X64Y108        CARRY4 (Prop_carry4_S[0]_CO[2])
+                                                      0.536    12.422 r  loopEn_reg_i_11/CO[2]
+                         net (fo=78, routed)          0.736    13.158    rast/rasterCore/errBank/Q_reg[11]_0[0]
+    SLICE_X64Y111        LUT4 (Prop_lut4_I2_O)        0.313    13.471 r  rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9/O
+                         net (fo=1, routed)           0.000    13.471    rast/rasterCore/errBank/rCore/errAdder/Q[7]_i_9_n_1
+    SLICE_X64Y111        CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550    14.021 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.021    rast/rasterCore/errBank/rCore/errAdder/Q_reg[7]_i_2_n_1
+    SLICE_X64Y112        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    14.135 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2/CO[3]
+                         net (fo=1, routed)           0.000    14.135    rast/rasterCore/errBank/rCore/errAdder/Q_reg[11]_i_2_n_1
+    SLICE_X64Y113        CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222    14.357 r  rast/rasterCore/errBank/rCore/errAdder/Q_reg[12]_i_4/O[0]
+                         net (fo=13, routed)          0.811    15.168    rast_n_23
+    SLICE_X65Y110        LUT2 (Prop_lut2_I0_O)        0.293    15.461 r  rasterCore/errMagnitude/Q[0]_i_72/O
+                         net (fo=1, routed)           0.000    15.461    rasterCore/errMagnitude/Q[0]_i_72_n_1
+    SLICE_X65Y110        CARRY4 (Prop_carry4_DI[0]_CO[3])
+                                                      0.483    15.944 r  rasterCore/errMagnitude/Q_reg[0]_i_47/CO[3]
+                         net (fo=1, routed)           0.000    15.944    rasterCore/errMagnitude/Q_reg[0]_i_47_n_1
+    SLICE_X65Y111        CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114    16.058 r  rasterCore/errMagnitude/Q_reg[0]_i_46/CO[3]
+                         net (fo=1, routed)           0.000    16.058    rasterCore/errMagnitude/Q_reg[0]_i_46_n_1
+    SLICE_X65Y112        CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334    16.392 r  rasterCore/errMagnitude/Q_reg[0]_i_29/O[1]
+                         net (fo=2, routed)           0.761    17.153    rast/ySub/A[9]
+    SLICE_X67Y106        LUT6 (Prop_lut6_I1_O)        0.303    17.456 r  rast/ySub/Q[0]_i_15/O
+                         net (fo=1, routed)           0.329    17.785    rast/rasterCore/errBank/DI[0]
+    SLICE_X64Y106        CARRY4 (Prop_carry4_DI[0]_CO[2])
+                                                      0.540    18.325 r  rast/rasterCore/errBank/Q_reg[0]_i_3__4/CO[2]
+                         net (fo=14, routed)          0.653    18.978    rast/rasterCore/errBank/CO[0]
+    SLICE_X63Y108        LUT3 (Prop_lut3_I1_O)        0.313    19.291 r  rast/rasterCore/errBank/Q[3]_i_5__3/O
+                         net (fo=1, routed)           0.000    19.291    rast/rasterCore/errBank/Q[3]_i_5__3_n_1
+    SLICE_X63Y108        CARRY4 (Prop_carry4_S[1]_O[3])
+                                                      0.640    19.931 r  rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1/O[3]
+                         net (fo=1, routed)           0.000    19.931    rast/rasterCore/errBank/rCore/errSubtract/Q_reg[3]_i_1_n_5
+    SLICE_X63Y108        FDRE                                         r  rast/rasterCore/errBank/Q_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.494    14.679    rast/rasterCore/errBank/clk_IBUF_BUFG
+    SLICE_X63Y108        FDRE                                         r  rast/rasterCore/errBank/Q_reg[3]/C
+                         clock pessimism              0.252    14.931    
+                         clock uncertainty           -0.035    14.896    
+    SLICE_X63Y108        FDRE (Setup_fdre_C_D)        0.062    14.958    rast/rasterCore/errBank/Q_reg[3]
+  -------------------------------------------------------------------
+                         required time                         14.958    
+                         arrival time                         -19.931    
+  -------------------------------------------------------------------
+                         slack                                 -4.973    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.096ns  (arrival time - required time)
+  Source:                 avgc/clkCount_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            avgc/rst_reg/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.452ns  (logic 0.226ns (50.013%)  route 0.226ns (49.987%))
+  Logic Levels:           1  (LUT6=1)
+  Clock Path Skew:        0.265ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.901ns
+    Source Clock Delay      (SCD):    1.400ns
+    Clock Pessimism Removal (CPR):    0.235ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.567     1.400    avgc/clk_IBUF_BUFG
+    SLICE_X49Y98         FDRE                                         r  avgc/clkCount_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X49Y98         FDRE (Prop_fdre_C_Q)         0.128     1.528 r  avgc/clkCount_reg[3]/Q
+                         net (fo=4, routed)           0.226     1.754    core/ALU/clkCount_reg[3][0]
+    SLICE_X49Y100        LUT6 (Prop_lut6_I3_O)        0.098     1.852 r  core/ALU/rst_i_1/O
+                         net (fo=1, routed)           0.000     1.852    avgc/clkCount_reg[3]_0
+    SLICE_X49Y100        FDRE                                         r  avgc/rst_reg/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.831     1.901    avgc/clk_IBUF_BUFG
+    SLICE_X49Y100        FDRE                                         r  avgc/rst_reg/C
+                         clock pessimism             -0.235     1.665    
+    SLICE_X49Y100        FDRE (Hold_fdre_C_D)         0.091     1.756    avgc/rst_reg
+  -------------------------------------------------------------------
+                         required time                         -1.756    
+                         arrival time                           1.852    
+  -------------------------------------------------------------------
+                         slack                                  0.096    
+
+Slack (MET) :             0.176ns  (arrival time - required time)
+  Source:                 fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.259ns  (logic 0.141ns (54.442%)  route 0.118ns (45.558%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.901ns
+    Source Clock Delay      (SCD):    1.393ns
+    Clock Pessimism Removal (CPR):    0.494ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.560     1.393    fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X68Y139        FDRE                                         r  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X68Y139        FDRE (Prop_fdre_C_Q)         0.141     1.534 r  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/Q
+                         net (fo=1, routed)           0.118     1.652    fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[0]
+    SLICE_X69Y139        FDRE                                         r  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.831     1.901    fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X69Y139        FDRE                                         r  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]/C
+                         clock pessimism             -0.494     1.406    
+    SLICE_X69Y139        FDRE (Hold_fdre_C_D)         0.070     1.476    fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]
+  -------------------------------------------------------------------
+                         required time                         -1.476    
+                         arrival time                           1.652    
+  -------------------------------------------------------------------
+                         slack                                  0.176    
+
+Slack (MET) :             0.179ns  (arrival time - required time)
+  Source:                 lrq/numFilled_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lrq/numFilled_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.323ns  (logic 0.189ns (58.590%)  route 0.134ns (41.410%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.893ns
+    Source Clock Delay      (SCD):    1.388ns
+    Clock Pessimism Removal (CPR):    0.491ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.555     1.388    lrq/clk_IBUF_BUFG
+    SLICE_X57Y113        FDRE                                         r  lrq/numFilled_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y113        FDRE (Prop_fdre_C_Q)         0.141     1.529 r  lrq/numFilled_reg[0]/Q
+                         net (fo=8, routed)           0.134     1.663    lrq/numFilled_reg[0]
+    SLICE_X56Y113        LUT5 (Prop_lut5_I1_O)        0.048     1.711 r  lrq/numFilled[3]_i_1__0/O
+                         net (fo=1, routed)           0.000     1.711    lrq/numFilled[3]_i_1__0_n_1
+    SLICE_X56Y113        FDRE                                         r  lrq/numFilled_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.823     1.893    lrq/clk_IBUF_BUFG
+    SLICE_X56Y113        FDRE                                         r  lrq/numFilled_reg[3]/C
+                         clock pessimism             -0.491     1.401    
+    SLICE_X56Y113        FDRE (Hold_fdre_C_D)         0.131     1.532    lrq/numFilled_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.532    
+                         arrival time                           1.711    
+  -------------------------------------------------------------------
+                         slack                                  0.179    
+
+Slack (MET) :             0.181ns  (arrival time - required time)
+  Source:                 fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.260ns  (logic 0.141ns (54.227%)  route 0.119ns (45.773%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.901ns
+    Source Clock Delay      (SCD):    1.393ns
+    Clock Pessimism Removal (CPR):    0.494ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.560     1.393    fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X68Y139        FDRE                                         r  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X68Y139        FDRE (Prop_fdre_C_Q)         0.141     1.534 r  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[1]/Q
+                         net (fo=1, routed)           0.119     1.653    fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[1]
+    SLICE_X69Y139        FDRE                                         r  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.831     1.901    fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X69Y139        FDRE                                         r  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]/C
+                         clock pessimism             -0.494     1.406    
+    SLICE_X69Y139        FDRE (Hold_fdre_C_D)         0.066     1.472    fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.472    
+                         arrival time                           1.653    
+  -------------------------------------------------------------------
+                         slack                                  0.181    
+
+Slack (MET) :             0.184ns  (arrival time - required time)
+  Source:                 fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.254ns  (logic 0.141ns (55.511%)  route 0.113ns (44.489%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.936ns
+    Source Clock Delay      (SCD):    1.428ns
+    Clock Pessimism Removal (CPR):    0.507ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.595     1.428    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X73Y94         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X73Y94         FDRE (Prop_fdre_C_Q)         0.141     1.569 r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]/Q
+                         net (fo=1, routed)           0.113     1.682    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[4]
+    SLICE_X73Y94         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.867     1.936    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X73Y94         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[4]/C
+                         clock pessimism             -0.507     1.428    
+    SLICE_X73Y94         FDRE (Hold_fdre_C_D)         0.070     1.498    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -1.498    
+                         arrival time                           1.682    
+  -------------------------------------------------------------------
+                         slack                                  0.184    
+
+Slack (MET) :             0.187ns  (arrival time - required time)
+  Source:                 lrq/numFilled_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lrq/numFilled_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.320ns  (logic 0.186ns (58.201%)  route 0.134ns (41.799%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.893ns
+    Source Clock Delay      (SCD):    1.388ns
+    Clock Pessimism Removal (CPR):    0.491ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.555     1.388    lrq/clk_IBUF_BUFG
+    SLICE_X57Y113        FDRE                                         r  lrq/numFilled_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y113        FDRE (Prop_fdre_C_Q)         0.141     1.529 r  lrq/numFilled_reg[0]/Q
+                         net (fo=8, routed)           0.134     1.663    lrq/numFilled_reg[0]
+    SLICE_X56Y113        LUT4 (Prop_lut4_I0_O)        0.045     1.708 r  lrq/numFilled[2]_i_1__0/O
+                         net (fo=1, routed)           0.000     1.708    lrq/numFilled[2]_i_1__0_n_1
+    SLICE_X56Y113        FDRE                                         r  lrq/numFilled_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.823     1.893    lrq/clk_IBUF_BUFG
+    SLICE_X56Y113        FDRE                                         r  lrq/numFilled_reg[2]/C
+                         clock pessimism             -0.491     1.401    
+    SLICE_X56Y113        FDRE (Hold_fdre_C_D)         0.120     1.521    lrq/numFilled_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.521    
+                         arrival time                           1.708    
+  -------------------------------------------------------------------
+                         slack                                  0.187    
+
+Slack (MET) :             0.190ns  (arrival time - required time)
+  Source:                 lrq/numFilled_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            lrq/numFilled_reg[1]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.324ns  (logic 0.186ns (57.482%)  route 0.138ns (42.518%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.013ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.893ns
+    Source Clock Delay      (SCD):    1.388ns
+    Clock Pessimism Removal (CPR):    0.491ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.555     1.388    lrq/clk_IBUF_BUFG
+    SLICE_X57Y113        FDRE                                         r  lrq/numFilled_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X57Y113        FDRE (Prop_fdre_C_Q)         0.141     1.529 r  lrq/numFilled_reg[0]/Q
+                         net (fo=8, routed)           0.138     1.667    lrq/numFilled_reg[0]
+    SLICE_X56Y113        LUT3 (Prop_lut3_I0_O)        0.045     1.712 r  lrq/numFilled[1]_i_1__0/O
+                         net (fo=1, routed)           0.000     1.712    lrq/numFilled[1]_i_1__0_n_1
+    SLICE_X56Y113        FDRE                                         r  lrq/numFilled_reg[1]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.823     1.893    lrq/clk_IBUF_BUFG
+    SLICE_X56Y113        FDRE                                         r  lrq/numFilled_reg[1]/C
+                         clock pessimism             -0.491     1.401    
+    SLICE_X56Y113        FDRE (Hold_fdre_C_D)         0.121     1.522    lrq/numFilled_reg[1]
+  -------------------------------------------------------------------
+                         required time                         -1.522    
+                         arrival time                           1.712    
+  -------------------------------------------------------------------
+                         slack                                  0.190    
+
+Slack (MET) :             0.190ns  (arrival time - required time)
+  Source:                 fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.256ns  (logic 0.141ns (55.114%)  route 0.115ns (44.886%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.935ns
+    Source Clock Delay      (SCD):    1.427ns
+    Clock Pessimism Removal (CPR):    0.507ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.594     1.427    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X72Y92         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X72Y92         FDRE (Prop_fdre_C_Q)         0.141     1.568 r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[3]/Q
+                         net (fo=1, routed)           0.115     1.683    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[3]
+    SLICE_X72Y92         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.866     1.935    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X72Y92         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3]/C
+                         clock pessimism             -0.507     1.427    
+    SLICE_X72Y92         FDRE (Hold_fdre_C_D)         0.066     1.493    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[3]
+  -------------------------------------------------------------------
+                         required time                         -1.493    
+                         arrival time                           1.683    
+  -------------------------------------------------------------------
+                         slack                                  0.190    
+
+Slack (MET) :             0.191ns  (arrival time - required time)
+  Source:                 fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[5]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.257ns  (logic 0.141ns (54.828%)  route 0.116ns (45.172%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.936ns
+    Source Clock Delay      (SCD):    1.428ns
+    Clock Pessimism Removal (CPR):    0.507ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.595     1.428    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X73Y94         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X73Y94         FDRE (Prop_fdre_C_Q)         0.141     1.569 r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[5]/Q
+                         net (fo=1, routed)           0.116     1.685    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[5]
+    SLICE_X73Y94         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[5]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.867     1.936    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X73Y94         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[5]/C
+                         clock pessimism             -0.507     1.428    
+    SLICE_X73Y94         FDRE (Hold_fdre_C_D)         0.066     1.494    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[5]
+  -------------------------------------------------------------------
+                         required time                         -1.494    
+                         arrival time                           1.685    
+  -------------------------------------------------------------------
+                         slack                                  0.191    
+
+Slack (MET) :             0.191ns  (arrival time - required time)
+  Source:                 fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]/D
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             sys_clk_pin
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        0.257ns  (logic 0.141ns (54.828%)  route 0.116ns (45.172%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.000ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.935ns
+    Source Clock Delay      (SCD):    1.427ns
+    Clock Pessimism Removal (CPR):    0.507ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.594     1.427    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X73Y92         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X73Y92         FDRE (Prop_fdre_C_Q)         0.141     1.568 r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[2]/Q
+                         net (fo=1, routed)           0.116     1.684    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/sel_pipe[2]
+    SLICE_X73Y92         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.866     1.935    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/clka
+    SLICE_X73Y92         FDRE                                         r  fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]/C
+                         clock pessimism             -0.507     1.427    
+    SLICE_X73Y92         FDRE (Hold_fdre_C_D)         0.066     1.493    fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]
+  -------------------------------------------------------------------
+                         required time                         -1.493    
+                         arrival time                           1.684    
+  -------------------------------------------------------------------
+                         slack                                  0.191    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         sys_clk_pin
+Waveform(ns):       { 0.000 5.000 }
+Period(ns):         10.000
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location       Pin
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.944         10.000      7.056      RAMB36_X1Y20   vecRam/vector_ram_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKBWRCLK  n/a            2.944         10.000      7.056      RAMB36_X1Y19   vecRam/vector_ram_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/prim_init.ram/DEVICE_7SERIES.NO_BMM_INFO.TRUE_DP.SIMPLE_PRIM36.ram/CLKBWRCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X0Y16   fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X0Y17   fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y8    fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y9    fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y14   fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X1Y15   fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[12].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y5    fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B/CLKARDCLK
+Min Period        n/a     RAMB36E1/CLKARDCLK  n/a            2.892         10.000      7.108      RAMB36_X2Y6    fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_T/CLKARDCLK
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X49Y100  avgc/rst_reg/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X49Y100  avgc/vggoCap_reg/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X36Y49   fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[10].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B_cooolgate_en_gate_8_cooolDelFlop/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X48Y61   fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[13].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B_cooolgate_en_gate_15_cooolDelFlop/C
+Low Pulse Width   Fast    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X64Y61   fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B_cooolgate_en_gate_22_cooolDelFlop/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X72Y93   fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X73Y94   fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[4]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X73Y94   fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[5]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X72Y93   fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+Low Pulse Width   Fast    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X73Y94   fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[4]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X28Y107  counter3KHz_reg[12]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X28Y107  counter3KHz_reg[13]/C
+High Pulse Width  Slow    FDSE/C              n/a            0.500         5.000       4.500      SLICE_X28Y107  counter3KHz_reg[14]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X60Y79   fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[5]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X60Y79   fbc/bramA/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[6]/C
+High Pulse Width  Slow    FDCE/C              n/a            0.500         5.000       4.500      SLICE_X78Y88   fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/fbc/bramB/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[14].ram.r/prim_noinit.ram/DEVICE_7SERIES.NO_BMM_INFO.SP.CASCADED_PRIM36.ram_B_cooolgate_en_gate_50_cooolDelFlop/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y139  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[0]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X69Y139  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[1]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X68Y139  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_norm_sel2.has_mem_regs.WITHOUT_ECC_PIPE.ce_pri.sel_pipe_d1_reg[2]/C
+High Pulse Width  Slow    FDRE/C              n/a            0.500         5.000       4.500      SLICE_X68Y139  fbc/bramC/fbRAM_i/blk_mem_gen_0/U0/inst_blk_mem_gen/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_a.A/no_softecc_sel_reg.ce_pri.sel_pipe_reg[0]/C
+
+
+
+---------------------------------------------------------------------------------------------------
+Path Group:  **async_default**
+From Clock:  sys_clk_pin
+  To Clock:  sys_clk_pin
+
+Setup :            0  Failing Endpoints,  Worst Slack        5.185ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        1.593ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             5.185ns  (required time - arrival time)
+  Source:                 syncRstRegB/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            vfsm/clk_50_reg/PRE
+                            (recovery check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             **async_default**
+  Path Type:              Recovery (Max at Slow Process Corner)
+  Requirement:            10.000ns  (sys_clk_pin rise@10.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        4.318ns  (logic 0.580ns (13.432%)  route 3.738ns (86.568%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        -0.103ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    4.693ns = ( 14.693 - 10.000 ) 
+    Source Clock Delay      (SCD):    4.968ns
+    Clock Pessimism Removal (CPR):    0.173ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.482     1.482 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.780     3.262    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.096     3.358 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.610     4.968    syncRstRegB/clk_IBUF_BUFG
+    SLICE_X48Y116        FDRE                                         r  syncRstRegB/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y116        FDRE (Prop_fdre_C_Q)         0.456     5.424 r  syncRstRegB/Q_reg[0]/Q
+                         net (fo=4, routed)           1.172     6.596    syncRstRegB_n_1
+    SLICE_X51Y98         LUT1 (Prop_lut1_I0_O)        0.124     6.720 f  queue_reg[31][7]_i_4/O
+                         net (fo=1050, routed)        2.566     9.286    vfsm/rst
+    SLICE_X59Y90         FDPE                                         f  vfsm/clk_50_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                     10.000    10.000 r  
+    E3                                                0.000    10.000 r  clk (IN)
+                         net (fo=0)                   0.000    10.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         1.411    11.411 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           1.683    13.094    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.091    13.185 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        1.507    14.693    vfsm/clk_IBUF_BUFG
+    SLICE_X59Y90         FDPE                                         r  vfsm/clk_50_reg/C
+                         clock pessimism              0.173    14.866    
+                         clock uncertainty           -0.035    14.830    
+    SLICE_X59Y90         FDPE (Recov_fdpe_C_PRE)     -0.359    14.471    vfsm/clk_50_reg
+  -------------------------------------------------------------------
+                         required time                         14.471    
+                         arrival time                          -9.286    
+  -------------------------------------------------------------------
+                         slack                                  5.185    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             1.593ns  (arrival time - required time)
+  Source:                 syncRstRegB/Q_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            vfsm/clk_50_reg/PRE
+                            (removal check against rising-edge clock sys_clk_pin  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             **async_default**
+  Path Type:              Removal (Min at Fast Process Corner)
+  Requirement:            0.000ns  (sys_clk_pin rise@0.000ns - sys_clk_pin rise@0.000ns)
+  Data Path Delay:        1.779ns  (logic 0.186ns (10.454%)  route 1.593ns (89.546%))
+  Logic Levels:           1  (LUT1=1)
+  Clock Path Skew:        0.281ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    1.905ns
+    Source Clock Delay      (SCD):    1.388ns
+    Clock Pessimism Removal (CPR):    0.235ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.250     0.250 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.558     0.808    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.026     0.834 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.555     1.388    syncRstRegB/clk_IBUF_BUFG
+    SLICE_X48Y116        FDRE                                         r  syncRstRegB/Q_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X48Y116        FDRE (Prop_fdre_C_Q)         0.141     1.529 r  syncRstRegB/Q_reg[0]/Q
+                         net (fo=4, routed)           0.472     2.001    syncRstRegB_n_1
+    SLICE_X51Y98         LUT1 (Prop_lut1_I0_O)        0.045     2.046 f  queue_reg[31][7]_i_4/O
+                         net (fo=1050, routed)        1.121     3.168    vfsm/rst
+    SLICE_X59Y90         FDPE                                         f  vfsm/clk_50_reg/PRE
+  -------------------------------------------------------------------    -------------------
+
+                         (clock sys_clk_pin rise edge)
+                                                      0.000     0.000 r  
+    E3                                                0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    E3                   IBUF (Prop_ibuf_I_O)         0.438     0.438 r  clk_IBUF_inst/O
+                         net (fo=1, routed)           0.603     1.040    clk_IBUF
+    BUFGCTRL_X0Y16       BUFG (Prop_bufg_I_O)         0.029     1.069 r  clk_IBUF_BUFG_inst/O
+                         net (fo=1286, routed)        0.836     1.905    vfsm/clk_IBUF_BUFG
+    SLICE_X59Y90         FDPE                                         r  vfsm/clk_50_reg/C
+                         clock pessimism             -0.235     1.669    
+    SLICE_X59Y90         FDPE (Remov_fdpe_C_PRE)     -0.095     1.574    vfsm/clk_50_reg
+  -------------------------------------------------------------------
+                         required time                         -1.574    
+                         arrival time                           3.168    
+  -------------------------------------------------------------------
+                         slack                                  1.593    
+
+
+
+
+
