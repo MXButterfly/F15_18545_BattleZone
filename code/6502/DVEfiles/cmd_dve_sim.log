@@ -1,0 +1,2 @@
+ucliGUI::start /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/simv -ucligui 
+set ucliGUI::state

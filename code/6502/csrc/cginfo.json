@@ -1,0 +1,102 @@
+{
+    "MlibObjs": {},
+    "LVLData": [
+        "SIM"
+    ],
+    "PrevCompiledModules": {
+        "std": {
+            "reYIK_d": {
+                "bytes": 34314,
+                "mod": "std",
+                "mode": 4,
+                "out": "objs/reYIK_d.o"
+            }
+        },
+        "test": {
+            "x9Hvb_d": {
+                "bytes": 33853,
+                "mod": "test",
+                "out": "objs/x9Hvb_d.o",
+                "mode": 4
+            }
+        },
+        "...MASTER...": {
+            "amcQw_d": {
+                "bytes": 8662,
+                "mod": "...MASTER...",
+                "out": "objs/amcQw_d.o",
+                "mode": 4
+            }
+        },
+        "NMICounter": {
+            "KqxgG_d": {
+                "bytes": 8181,
+                "mod": "NMICounter",
+                "mode": 4,
+                "out": "objs/KqxgG_d.o"
+            }
+        },
+        "addrDecoder": {
+            "sqNgr_d": {
+                "bytes": 16814,
+                "mod": "addrDecoder",
+                "mode": 4,
+                "out": "objs/sqNgr_d.o"
+            }
+        }
+    },
+    "CompileStrategy": "fullobj",
+    "PEModules": [],
+    "NameTable": {
+        "std": [
+            "std",
+            "reYIK",
+            "module"
+        ],
+        "addrDecoder": [
+            "addrDecoder",
+            "sqNgr",
+            "module"
+        ],
+        "NMICounter": [
+            "NMICounter",
+            "KqxgG",
+            "module"
+        ],
+        "...MASTER...": [
+            "SIM",
+            "amcQw",
+            "module"
+        ],
+        "test": [
+            "test",
+            "x9Hvb",
+            "module"
+        ]
+    },
+    "CurCompileModules": [
+        "...MASTER...",
+        "test"
+    ],
+    "CurCompileUdps": {},
+    "SIMBData": {
+        "out": "amcQwB.o",
+        "bytes": 91468
+    },
+    "stat": {
+        "nMops": 1918
+    },
+    "CompileProcesses": [
+        "cgproc.2140.json"
+    ],
+    "Misc": {
+        "csrc_abs": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/csrc",
+        "cwd": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502",
+        "daidir_abs": "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/simv.daidir",
+        "csrc": "csrc",
+        "daidir": "simv.daidir",
+        "default_output_dir": "csrc",
+        "archive_dir": "archive.5"
+    },
+    "CompileStatus": "Successful"
+}

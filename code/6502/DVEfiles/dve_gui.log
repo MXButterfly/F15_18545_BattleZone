@@ -1,0 +1,15 @@
+Chronologic VCS simulator copyright 1991-2014
+Contains Synopsys proprietary information.
+Compiler version J-2014.12-SP3-1_Full64; Runtime version J-2014.12-SP3-1_Full64;  Nov 11 12:18 2015
+VCD+ Writer J-2014.12-SP3-1_Full64 Copyright (c) 1991-2014 by Synopsys Inc.
+The file '/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/inter.vpd' was opened successfully.
+Releasing License for VC-SIM-RUNTIME-BASE at Wed Nov 11 12:19:11
+Releasing License for VCSRuntime_Net at Wed Nov 11 12:19:11
+Attempting to Re-Acquire License for VC-SIM-RUNTIME-BASE at Wed Nov 11 12:19:13
+Re-Acquired License for VC-SIM-RUNTIME-BASE at Wed Nov 11 12:19:13, continuing....
+Attempting to Re-Acquire License for VCSRuntime_Net at Wed Nov 11 12:19:13
+Re-Acquired License for VCSRuntime_Net at Wed Nov 11 12:19:13, continuing....
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 326417200
+CPU Time:     13.280 seconds;       Data structure size:   0.0Mb
+Wed Nov 11 12:23:55 2015
