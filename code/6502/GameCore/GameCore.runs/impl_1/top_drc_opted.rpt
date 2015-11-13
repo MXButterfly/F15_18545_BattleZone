@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Nov  6 15:18:19 2015
+| Date         : Thu Nov 12 17:16:53 2015
 | Host         : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
 | Command      : report_drc
 -----------------------------------------------------------------------------------------------------------
@@ -49,7 +49,7 @@ Related violations: <none>
 
 DPIP-1#3 Warning
 Input pipelining  
-DSP fbc/r_addr input A B C is not pipelined. Pipelining DSP48 input will improve performance.
+DSP fbt/r_addr input A B C is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 DPOP-1#1 Warning
@@ -64,7 +64,7 @@ Related violations: <none>
 
 DPOP-1#3 Warning
 Output pipelining  
-DSP fbc/r_addr output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
+DSP fbt/r_addr output P is not pipelined. Pipelining DSP48 output will improve performance. Both multiplier/adder output can be pipelined.
 Related violations: <none>
 
 

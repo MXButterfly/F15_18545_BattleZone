@@ -1,0 +1,27 @@
+{
+    "Modules": {
+        "test": {
+            "Compiled": "Yes",
+            "Compiled Times": 6
+        },
+        "...MASTER...": {},
+        "std": {},
+        "addrDecoder": {},
+        "NMICounter": {}
+    },
+    "ObjArchives": [],
+    "CompUnits": {
+        "amcQw_d": {
+            "mod": "...MASTER...",
+            "out": "objs/amcQw_d.o",
+            "bytes": 8662,
+            "mode": 4
+        },
+        "x9Hvb_d": {
+            "mod": "test",
+            "out": "objs/x9Hvb_d.o",
+            "bytes": 33697,
+            "mode": 4
+        }
+    }
+}

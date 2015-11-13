@@ -1,0 +1,3 @@
+12:33:53    560 --> ...                                          [tcl] ucliGUI::start /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/simv -ucligui 
+12:33:53    561 --> ...                                              [tcl] set ucliGUI::state
+12:33:53    562 --> ...                                                  [tcl] gui_update_simulator_buttons

@@ -3,11 +3,11 @@
 
 # XDC: new/Nexys4_Master.xdc
 
-# Block Designs: bd/fbRAM/fbRAM.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fbRAM || ORIG_REF_NAME==fbRAM}]
+# Block Designs: bd/bramDualPort/bramDualPort.bd
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bramDualPort || ORIG_REF_NAME==bramDualPort}]
 
-# IP: bd/fbRAM/ip/fbRAM_blk_mem_gen_0_0/fbRAM_blk_mem_gen_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==fbRAM_blk_mem_gen_0_0 || ORIG_REF_NAME==fbRAM_blk_mem_gen_0_0}]
+# IP: bd/bramDualPort/ip/bramDualPort_blk_mem_gen_0_0/bramDualPort_blk_mem_gen_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==bramDualPort_blk_mem_gen_0_0 || ORIG_REF_NAME==bramDualPort_blk_mem_gen_0_0}]
 
 # Block Designs: bd/vector_ram/vector_ram.bd
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==vector_ram || ORIG_REF_NAME==vector_ram}]
@@ -27,9 +27,9 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prog_RAM || ORI
 # IP: bd/prog_RAM/ip/prog_RAM_blk_mem_gen_0_0/prog_RAM_blk_mem_gen_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==prog_RAM_blk_mem_gen_0_0 || ORIG_REF_NAME==prog_RAM_blk_mem_gen_0_0}]
 
-# XDC: bd/fbRAM/ip/fbRAM_blk_mem_gen_0_0/fbRAM_blk_mem_gen_0_0_ooc.xdc
+# XDC: bd/bramDualPort/ip/bramDualPort_blk_mem_gen_0_0/bramDualPort_blk_mem_gen_0_0_ooc.xdc
 
-# XDC: bd/fbRAM/fbRAM_ooc.xdc
+# XDC: bd/bramDualPort/bramDualPort_ooc.xdc
 
 # XDC: bd/vector_ram/ip/vector_ram_blk_mem_gen_0_0/vector_ram_blk_mem_gen_0_0_ooc.xdc
 

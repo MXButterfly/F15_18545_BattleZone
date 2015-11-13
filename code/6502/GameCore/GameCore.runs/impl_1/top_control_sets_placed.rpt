@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Nov  6 15:18:36 2015
+| Date         : Thu Nov 12 17:17:14 2015
 | Host         : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
 | Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
 | Design       : top
@@ -22,8 +22,8 @@ Table of Contents
 +-------------------------------------------------------------------+-------+
 |                               Status                              | Count |
 +-------------------------------------------------------------------+-------+
-| Number of unique control sets                                     |    90 |
-| Minimum Number of register sites lost to control set restrictions |   340 |
+| Number of unique control sets                                     |    87 |
+| Minimum Number of register sites lost to control set restrictions |   331 |
 +-------------------------------------------------------------------+-------+
 
 
@@ -33,12 +33,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             246 |          105 |
+| No           | No                    | No                     |             160 |           69 |
 | No           | No                    | Yes                    |               2 |            2 |
-| No           | Yes                   | No                     |             101 |           36 |
-| Yes          | No                    | No                     |              90 |           38 |
-| Yes          | No                    | Yes                    |               6 |            4 |
-| Yes          | Yes                   | No                     |            1703 |          760 |
+| No           | Yes                   | No                     |              88 |           30 |
+| Yes          | No                    | No                     |              46 |           25 |
+| Yes          | No                    | Yes                    |               6 |            6 |
+| Yes          | Yes                   | No                     |            1719 |          626 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -48,96 +48,93 @@ Table of Contents
 +-------------------------------------------+--------------------------------------------+---------------------------+------------------+----------------+
 |                Clock Signal               |                Enable Signal               |      Set/Reset Signal     | Slice Load Count | Bel Load Count |
 +-------------------------------------------+--------------------------------------------+---------------------------+------------------+----------------+
-|  rast/rasterControl/idleReady_reg_i_2_n_1 |                                            |                           |                1 |              1 |
-|  vfsm/clk_50                              |                                            | rst                       |                1 |              1 |
+|  rast/rasterControl/idleReady_reg_i_2_n_0 |                                            |                           |                1 |              1 |
+|  vfsm/clk_50                              |                                            | syncRstRegB/SR[0]         |                1 |              1 |
 | ~clkCount_reg[3]_BUFG                     |                                            |                           |                1 |              1 |
-|  clk_IBUF_BUFG                            | lrq/wrIndex[3]_i_1__0_n_1                  | rst                       |                1 |              4 |
-|  clk_3MHz_BUFG                            | core/p_1_in                                | core/cli_i_1_n_1          |                1 |              4 |
-|  clk_3MHz_BUFG                            | core/p_1_in                                | core/sei_i_1_n_1          |                1 |              4 |
+|  clk_3MHz_BUFG                            | core/p_1_in                                | core/sei_i_1_n_0          |                1 |              4 |
+|  rast/rasterControl/loopEn_reg_i_2_n_0    |                                            |                           |                1 |              4 |
 |  clk_IBUF_BUFG                            |                                            | avgc/rst                  |                1 |              4 |
-|  clk_3KHz                                 |                                            | rst                       |                1 |              4 |
-|  rast/rasterControl/loopEn_reg_i_2_n_1    |                                            |                           |                1 |              4 |
-|  clk_IBUF_BUFG                            | lrq/sel                                    | rst                       |                2 |              5 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/vecRamWrEn                            |                           |                2 |              5 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/wrIndex[4]_i_1_n_1                    |                           |                2 |              5 |
-|  clk_IBUF_BUFG                            | lrq/reIndex[3]_i_1__0_n_1                  | rst                       |                2 |              6 |
-|  clk_3MHz_BUFG                            | core/FSM_sequential_state[5]_i_1_n_1       | coreReset                 |                4 |              6 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/numFilled[5]_i_1_n_1                  |                           |                2 |              6 |
-|  clk_3MHz_BUFG                            | core/IRHOLD[7]_i_1_n_1                     |                           |                2 |              8 |
+|  clk_3MHz_BUFG                            | core/p_1_in                                | core/cli_i_1_n_0          |                2 |              4 |
+|  clk_IBUF_BUFG                            | lrq/wrIndex[3]_i_1__0_n_0                  | syncRstRegB/SR[0]         |                1 |              4 |
+|  clk_3KHz                                 |                                            | syncRstRegB/SR[0]         |                1 |              4 |
+|  clk_IBUF_BUFG                            | memQ/E[0]                                  | syncRstRegB/SR[0]         |                3 |              5 |
+|  clk_IBUF_BUFG                            | memQ/wrIndex[4]_i_1_n_0                    | syncRstRegB/SR[0]         |                4 |              5 |
+|  clk_IBUF_BUFG                            | lrq/sel                                    | syncRstRegB/SR[0]         |                2 |              5 |
+|  clk_3MHz_BUFG                            | core/FSM_sequential_state[5]_i_1_n_0       | coreReset                 |                6 |              6 |
+|  clk_IBUF_BUFG                            | lrq/reIndex[3]_i_1__0_n_0                  | syncRstRegB/SR[0]         |                1 |              6 |
+|  clk_IBUF_BUFG                            | memQ/numFilled[5]_i_1_n_0                  | syncRstRegB/SR[0]         |                2 |              6 |
 |  clk_3MHz_BUFG                            | core/p_1_in                                |                           |                5 |              8 |
+|  clk_3MHz_BUFG                            |                                            | syncRstRegB/SR[0]         |                3 |              8 |
+|  clk_3MHz_BUFG                            | core/IRHOLD[7]_i_1_n_0                     |                           |                7 |              8 |
 |  clk_3MHz_BUFG                            | core/write_register                        |                           |                2 |              8 |
-|  vfsm/clk_25_reg_n_1                      | vfsm/hCounter/E[0]                         | rst                       |                4 |             10 |
-| ~clkCount_reg[3]_BUFG                     | avgc/countReg/E[0]                         | avgc/rs/top_reg[2]_0[0]   |                3 |             11 |
-|  vfsm/clk_25_reg_n_1                      |                                            | rst                       |                7 |             12 |
-| ~clkCount_reg[3]_BUFG                     | avgc/countReg/Q_reg[12][0]                 | avgc/rs/top_reg[2]_0[0]   |                4 |             13 |
-| ~clkCount_reg[3]_BUFG                     | avgc/rs/stack[1][12]_i_1_n_1               | avgc/rs/top_reg[2]_0[0]   |                6 |             13 |
-| ~clkCount_reg[3]_BUFG                     | avgc/rs/stack[2][12]_i_1_n_1               | avgc/rs/top_reg[2]_0[0]   |                3 |             13 |
-|  clk_IBUF_BUFG                            | rast/rasterControl/Q_reg[12]_0             | rst                       |                4 |             13 |
-|  clk_IBUF_BUFG                            | rast/rasterControl/Q_reg[12]_1             | rst                       |                4 |             13 |
+|  vfsm/clk_25_reg_n_0                      | vfsm/hCounter/E[0]                         | syncRstRegB/SR[0]         |                2 |             10 |
+| ~clkCount_reg[3]_BUFG                     | avgc/countReg/E[0]                         | avgc/rs/top_reg[2]_0[0]   |                6 |             11 |
+|  vfsm/clk_25_reg_n_0                      |                                            | syncRstRegB/SR[0]         |                7 |             12 |
+| ~clkCount_reg[3]_BUFG                     | avgc/rs/stack[0][12]_i_1_n_0               | avgc/rs/top_reg[2]_0[0]   |                4 |             13 |
+| ~clkCount_reg[3]_BUFG                     | avgc/rs/stack[1][12]_i_1_n_0               | avgc/rs/top_reg[2]_0[0]   |                2 |             13 |
+| ~clkCount_reg[3]_BUFG                     | avgc/rs/stack[2][12]_i_1_n_0               | avgc/rs/top_reg[2]_0[0]   |                5 |             13 |
+| ~clkCount_reg[3]_BUFG                     | avgc/rs/stack[3][12]_i_1_n_0               | avgc/rs/top_reg[2]_0[0]   |                3 |             13 |
+|  clk_IBUF_BUFG                            | rast/rasterControl/Q_reg[12]_0             | syncRstRegB/SR[0]         |                4 |             13 |
+|  clk_IBUF_BUFG                            | rast/rasterControl/Q_reg[12]_1             | syncRstRegB/SR[0]         |                4 |             13 |
 |  clk_IBUF_BUFG                            | rast/rasterControl/E[0]                    | rast/rasterControl/SR[0]  |                4 |             13 |
-| ~clkCount_reg[3]_BUFG                     | avgc/rs/stack[3][12]_i_1_n_1               | avgc/rs/top_reg[2]_0[0]   |                3 |             13 |
-| ~clkCount_reg[3]_BUFG                     | avgc/rs/stack[0][12]_i_1_n_1               | avgc/rs/top_reg[2]_0[0]   |                4 |             13 |
-|  clk_IBUF_BUFG                            | fbc/en_a                                   |                           |                6 |             14 |
-|  clk_IBUF_BUFG                            | fbc/en_b                                   |                           |                5 |             14 |
-|  clk_IBUF_BUFG                            | fbc/en_c                                   |                           |                6 |             14 |
-| ~clkCount_reg[3]_BUFG                     | avgc/countReg/Q_reg[15][0]                 | avgc/rs/top_reg[2]_0[0]   |                5 |             16 |
-|  clk_3MHz_BUFG                            | core/ABL[7]_i_1_n_1                        |                           |                8 |             16 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[4][7]_0                     | core/ALU/queue_reg[4][7]  |                6 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[23][7]_0                    | core/ALU/queue_reg[23][7] |                6 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[9][7]_0                     | core/ALU/queue_reg[9][7]  |                5 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[8][7]_0                     | core/ALU/queue_reg[8][7]  |                8 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[7][7]_0                     | core/ALU/queue_reg[7][7]  |                4 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[6][7]_0                     | core/ALU/queue_reg[6][7]  |                8 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[5][7]_0                     | core/ALU/queue_reg[5][7]  |                6 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[24][7]_0                    | core/ALU/queue_reg[24][7] |                8 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[3][7]_0                     | core/ALU/queue_reg[3][7]  |                7 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[31][7]_0                    | core/ALU/queue_reg[31][7] |                5 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[30][7]_0                    | core/ALU/queue_reg[30][7] |                7 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[2][7]_0                     | core/ALU/queue_reg[2][7]  |                7 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[29][7]_0                    | core/ALU/queue_reg[29][7] |                6 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[28][7]_0                    | core/ALU/queue_reg[28][7] |                5 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[27][7]_0                    | core/ALU/queue_reg[27][7] |                9 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[26][7]_0                    | core/ALU/queue_reg[26][7] |                6 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[25][7]_0                    | core/ALU/queue_reg[25][7] |                5 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[17][7]_0                    | core/ALU/queue_reg[17][7] |                8 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[0][7]_0                     | core/ALU/queue_reg[0][7]  |               10 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[10][7]_0                    | core/ALU/queue_reg[10][7] |                8 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[11][7]_0                    | core/ALU/queue_reg[11][7] |                7 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[12][7]_0                    | core/ALU/queue_reg[12][7] |                6 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[13][7]_0                    | core/ALU/queue_reg[13][7] |                8 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[14][7]_0                    | core/ALU/queue_reg[14][7] |                5 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[15][7]_0                    | core/ALU/queue_reg[15][7] |               10 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[16][7]_0                    | core/ALU/queue_reg[16][7] |                6 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[18][7]_0                    | core/ALU/queue_reg[18][7] |                6 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[19][7]_0                    | core/ALU/queue_reg[19][7] |                5 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[1][7]_0                     | core/ALU/queue_reg[1][7]  |                9 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[20][7]_0                    | core/ALU/queue_reg[20][7] |                6 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[21][7]_0                    | core/ALU/queue_reg[21][7] |                7 |             18 |
-| ~syncRstRegB_n_1_BUFG                     | memQ/queue_reg[22][7]_0                    | core/ALU/queue_reg[22][7] |                7 |             18 |
-|  clk_IBUF_BUFG                            |                                            |                           |               17 |             20 |
+| ~clkCount_reg[3]_BUFG                     | avgc/countReg/Q_reg[12][0]                 | avgc/rs/top_reg[2]_0[0]   |                5 |             13 |
+|  clk_IBUF_BUFG                            | vfsm/hCounter/en_r                         |                           |                4 |             14 |
+|  clk_3MHz_BUFG                            | core/ABL[7]_i_1_n_0                        |                           |                9 |             16 |
+| ~clkCount_reg[3]_BUFG                     | avgc/countReg/Q_reg[15][0]                 | avgc/rs/top_reg[2]_0[0]   |                6 |             16 |
+|  clk_IBUF_BUFG                            | memQ/queue[22][7]_i_2_n_0                  | memQ/queue[22][7]_i_1_n_0 |                6 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[28][7]_i_2_n_0                  | memQ/queue[28][7]_i_1_n_0 |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[27][7]_i_2_n_0                  | memQ/queue[27][7]_i_1_n_0 |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[26][7]_i_2_n_0                  | memQ/queue[26][7]_i_1_n_0 |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[25][7]_i_2_n_0                  | memQ/queue[25][7]_i_1_n_0 |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[24][7]_i_2_n_0                  | memQ/queue[24][7]_i_1_n_0 |                7 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[29][7]_i_2_n_0                  | memQ/queue[29][7]_i_1_n_0 |                5 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[2][7]_i_2_n_0                   | memQ/queue[2][7]_i_1_n_0  |                8 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[30][7]_i_2_n_0                  | memQ/queue[30][7]_i_1_n_0 |                8 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[31][7]_i_2_n_0                  | memQ/queue[31][7]_i_1_n_0 |                6 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[3][7]_i_2_n_0                   | memQ/queue[3][7]_i_1_n_0  |                7 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[4][7]_i_2_n_0                   | memQ/queue[4][7]_i_1_n_0  |                5 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[5][7]_i_2_n_0                   | memQ/queue[5][7]_i_1_n_0  |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[6][7]_i_2_n_0                   | memQ/queue[6][7]_i_1_n_0  |                3 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[7][7]_i_2_n_0                   | memQ/queue[7][7]_i_1_n_0  |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[8][7]_i_2_n_0                   | memQ/queue[8][7]_i_1_n_0  |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[16][7]_i_2_n_0                  | memQ/queue[16][7]_i_1_n_0 |                7 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[9][7]_i_2_n_0                   | memQ/queue[9][7]_i_1_n_0  |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[21][7]_i_2_n_0                  | memQ/queue[21][7]_i_1_n_0 |                8 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[20][7]_i_2_n_0                  | memQ/queue[20][7]_i_1_n_0 |                5 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[1][7]_i_2_n_0                   | memQ/queue[1][7]_i_1_n_0  |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[19][7]_i_2_n_0                  | memQ/queue[19][7]_i_1_n_0 |                5 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[18][7]_i_2_n_0                  | memQ/queue[18][7]_i_1_n_0 |                7 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[17][7]_i_2_n_0                  | memQ/queue[17][7]_i_1_n_0 |                5 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[15][7]_i_2_n_0                  | memQ/queue[15][7]_i_1_n_0 |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[14][7]_i_2_n_0                  | memQ/queue[14][7]_i_1_n_0 |                8 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[13][7]_i_2_n_0                  | memQ/queue[13][7]_i_1_n_0 |                5 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[12][7]_i_2_n_0                  | memQ/queue[12][7]_i_1_n_0 |                4 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[11][7]_i_2_n_0                  | memQ/queue[11][7]_i_1_n_0 |                7 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[10][7]_i_2_n_0                  | memQ/queue[10][7]_i_1_n_0 |                6 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[0][7]_i_2_n_0                   | memQ/queue[0][7]_i_1_n_0  |                9 |             18 |
+|  clk_IBUF_BUFG                            | memQ/queue[23][7]_i_2_n_0                  | memQ/queue[23][7]_i_1_n_0 |                6 |             18 |
+|  clk_IBUF_BUFG                            |                                            | syncRstRegB/SR[0]         |                9 |             26 |
 | ~clkCount_reg[3]_BUFG                     | avgc/ir/E[0]                               | avgc/rs/top_reg[2]_0[0]   |               10 |             28 |
-| ~clkCount_reg[3]_BUFG                     |                                            | avgc/rs/top_reg[2]_0[0]   |               13 |             35 |
-|  clk_IBUF_BUFG                            |                                            | rst                       |               15 |             47 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[8].l1/QStartX[12]_i_1__6_n_1   | rst                       |               28 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[1].l1/QStartX[12]_i_1_n_1      | rst                       |               30 |             55 |
-|  clk_IBUF_BUFG                            | rast/rasterControl/idleReady               | rst                       |               27 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[7].l1/QStartX[12]_i_1__5_n_1   | rst                       |               27 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[6].l1/QStartX[12]_i_1__4_n_1   | rst                       |               24 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[9].l1/QStartX[12]_i_1__7_n_1   | rst                       |               27 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[5].l1/QStartX[12]_i_1__3_n_1   | rst                       |               29 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[4].l1/QStartX[12]_i_1__2_n_1   | rst                       |               28 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[3].l1/QStartX[12]_i_1__1_n_1   | rst                       |               26 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[2].l1/QStartX[12]_i_1__0_n_1   | rst                       |               29 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[15].l1/QStartX[12]_i_1__13_n_1 | rst                       |               28 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[14].l1/QStartX[12]_i_1__12_n_1 | rst                       |               30 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[13].l1/QStartX[12]_i_1__11_n_1 | rst                       |               32 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[12].l1/QStartX[12]_i_1__10_n_1 | rst                       |               31 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[11].l1/QStartX[12]_i_1__9_n_1  | rst                       |               31 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[10].l1/QStartX[12]_i_1__8_n_1  | rst                       |               27 |             55 |
-|  clk_IBUF_BUFG                            | lrq/genblk1[0].l1/QStartX[12]_i_1__14_n_1  | rst                       |               29 |             55 |
-| ~syncRstRegB_n_1_BUFG                     |                                            |                           |               18 |             65 |
-|  n_0_1999_BUFG                            |                                            |                           |               32 |             77 |
-|  clk_3MHz_BUFG                            |                                            |                           |               35 |             78 |
+| ~clkCount_reg[3]_BUFG                     |                                            | avgc/rs/top_reg[2]_0[0]   |               10 |             35 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[15].l1/QStartX[12]_i_1__13_n_0 | syncRstRegB/SR[0]         |               19 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[13].l1/QStartX[12]_i_1__11_n_0 | syncRstRegB/SR[0]         |               24 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[14].l1/QStartX[12]_i_1__12_n_0 | syncRstRegB/SR[0]         |               23 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[8].l1/QStartX[12]_i_1__6_n_0   | syncRstRegB/SR[0]         |               24 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[12].l1/QStartX[12]_i_1__10_n_0 | syncRstRegB/SR[0]         |               26 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[11].l1/QStartX[12]_i_1__9_n_0  | syncRstRegB/SR[0]         |               24 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[10].l1/QStartX[12]_i_1__8_n_0  | syncRstRegB/SR[0]         |               21 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[0].l1/QStartX[12]_i_1__14_n_0  | syncRstRegB/SR[0]         |               28 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[1].l1/QStartX[12]_i_1_n_0      | syncRstRegB/SR[0]         |               21 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[2].l1/QStartX[12]_i_1__0_n_0   | syncRstRegB/SR[0]         |               22 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[3].l1/QStartX[12]_i_1__1_n_0   | syncRstRegB/SR[0]         |               20 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[4].l1/QStartX[12]_i_1__2_n_0   | syncRstRegB/SR[0]         |               22 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[5].l1/QStartX[12]_i_1__3_n_0   | syncRstRegB/SR[0]         |               22 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[6].l1/QStartX[12]_i_1__4_n_0   | syncRstRegB/SR[0]         |               21 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[7].l1/QStartX[12]_i_1__5_n_0   | syncRstRegB/SR[0]         |               24 |             55 |
+|  clk_IBUF_BUFG                            | lrq/genblk1[9].l1/QStartX[12]_i_1__7_n_0   | syncRstRegB/SR[0]         |               19 |             55 |
+|  clk_IBUF_BUFG                            | rast/rasterControl/idleReady               | syncRstRegB/SR[0]         |               18 |             55 |
+|  clk_IBUF_BUFG                            |                                            |                           |               29 |             76 |
+|  clk_3MHz_BUFG                            |                                            |                           |               37 |             78 |
 +-------------------------------------------+--------------------------------------------+---------------------------+------------------+----------------+
 
 

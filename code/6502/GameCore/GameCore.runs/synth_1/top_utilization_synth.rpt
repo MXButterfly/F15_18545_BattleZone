@@ -1,7 +1,7 @@
 Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2015.2 (lin64) Build 1266856 Fri Jun 26 16:35:25 MDT 2015
-| Date         : Fri Nov  6 15:17:43 2015
+| Date         : Thu Nov 12 17:16:19 2015
 | Host         : crystal.andrew.cmu.edu running 64-bit Red Hat Enterprise Linux Server release 7.1 (Maipo)
 | Command      : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
 | Design       : top
@@ -30,15 +30,15 @@ Table of Contents
 +----------------------------+------+-------+-----------+-------+
 |          Site Type         | Used | Fixed | Available | Util% |
 +----------------------------+------+-------+-----------+-------+
-| Slice LUTs*                | 2081 |     0 |     63400 |  3.28 |
-|   LUT as Logic             | 2073 |     0 |     63400 |  3.27 |
+| Slice LUTs*                | 2164 |     0 |     63400 |  3.41 |
+|   LUT as Logic             | 2156 |     0 |     63400 |  3.40 |
 |   LUT as Memory            |    8 |     0 |     19000 |  0.04 |
 |     LUT as Distributed RAM |    8 |     0 |           |       |
 |     LUT as Shift Register  |    0 |     0 |           |       |
-| Slice Registers            | 2136 |     0 |    126800 |  1.68 |
-|   Register as Flip Flop    | 2054 |     0 |    126800 |  1.62 |
-|   Register as Latch        |   82 |     0 |    126800 |  0.06 |
-| F7 Muxes                   |  188 |     0 |     31700 |  0.59 |
+| Slice Registers            | 2031 |     0 |    126800 |  1.60 |
+|   Register as Flip Flop    | 2026 |     0 |    126800 |  1.60 |
+|   Register as Latch        |    5 |     0 |    126800 | <0.01 |
+| F7 Muxes                   |  192 |     0 |     31700 |  0.61 |
 | F8 Muxes                   |   71 |     0 |     15850 |  0.45 |
 +----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
@@ -57,24 +57,24 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 3     |          Yes |           - |          Set |
-| 87    |          Yes |           - |        Reset |
-| 4     |          Yes |         Set |            - |
-| 2042  |          Yes |       Reset |            - |
+| 10    |          Yes |           - |        Reset |
+| 3     |          Yes |         Set |            - |
+| 2015  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
 2. Memory
 ---------
 
-+-------------------+-------+-------+-----------+-------+
-|     Site Type     |  Used | Fixed | Available | Util% |
-+-------------------+-------+-------+-----------+-------+
-| Block RAM Tile    | 121.5 |     0 |       135 | 90.00 |
-|   RAMB36/FIFO*    |   117 |     0 |       135 | 86.67 |
-|     RAMB36E1 only |   117 |       |           |       |
-|   RAMB18          |     9 |     0 |       270 |  3.33 |
-|     RAMB18E1 only |     9 |       |           |       |
-+-------------------+-------+-------+-----------+-------+
++-------------------+------+-------+-----------+-------+
+|     Site Type     | Used | Fixed | Available | Util% |
++-------------------+------+-------+-----------+-------+
+| Block RAM Tile    | 46.5 |     0 |       135 | 34.44 |
+|   RAMB36/FIFO*    |   45 |     0 |       135 | 33.33 |
+|     RAMB36E1 only |   45 |       |           |       |
+|   RAMB18          |    3 |     0 |       270 |  1.11 |
+|     RAMB18E1 only |    3 |       |           |       |
++-------------------+------+-------+-----------+-------+
 * Note: Each Block RAM Tile only has one FIFO logic available and therefore can accommodate only one FIFO36E1 or one FIFO18E1. However, if a FIFO18E1 occupies a Block RAM Tile, that tile can still accommodate a RAMB18E1
 
 
@@ -118,7 +118,7 @@ Table of Contents
 +------------+------+-------+-----------+-------+
 |  Site Type | Used | Fixed | Available | Util% |
 +------------+------+-------+-----------+-------+
-| BUFGCTRL   |    3 |     0 |        32 |  9.38 |
+| BUFGCTRL   |    2 |     0 |        32 |  6.25 |
 | BUFIO      |    0 |     0 |        24 |  0.00 |
 | MMCME2_ADV |    0 |     0 |         6 |  0.00 |
 | PLLE2_ADV  |    0 |     0 |         6 |  0.00 |
@@ -152,27 +152,27 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 2042 |        Flop & Latch |
-| LUT6     |  989 |                 LUT |
-| LUT2     |  363 |                 LUT |
-| LUT5     |  354 |                 LUT |
-| LUT4     |  308 |                 LUT |
-| LUT3     |  292 |                 LUT |
-| MUXF7    |  188 |               MuxFx |
-| CARRY4   |  133 |          CarryLogic |
-| RAMB36E1 |  117 |        Block Memory |
-| LUT1     |  101 |                 LUT |
-| LDCE     |   82 |        Flop & Latch |
+| FDRE     | 2015 |        Flop & Latch |
+| LUT6     | 1207 |                 LUT |
+| LUT3     |  290 |                 LUT |
+| LUT2     |  286 |                 LUT |
+| LUT5     |  278 |                 LUT |
+| LUT4     |  248 |                 LUT |
+| MUXF7    |  192 |               MuxFx |
+| CARRY4   |  128 |          CarryLogic |
+| LUT1     |  100 |                 LUT |
 | MUXF8    |   71 |               MuxFx |
+| RAMB36E1 |   45 |        Block Memory |
 | OBUF     |   16 |                  IO |
-| RAMB18E1 |    9 |        Block Memory |
 | RAMS32   |    8 |  Distributed Memory |
+| LDCE     |    5 |        Flop & Latch |
 | FDCE     |    5 |        Flop & Latch |
-| FDSE     |    4 |        Flop & Latch |
+| RAMB18E1 |    3 |        Block Memory |
+| FDSE     |    3 |        Flop & Latch |
 | FDPE     |    3 |        Flop & Latch |
 | DSP48E1  |    3 |    Block Arithmetic |
-| BUFG     |    3 |               Clock |
 | IBUF     |    2 |                  IO |
+| BUFG     |    2 |               Clock |
 +----------+------+---------------------+
 
 

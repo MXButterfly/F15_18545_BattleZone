@@ -4,7 +4,7 @@ module memStoreQueue(output logic [7:0]  Q,
                      output logic        writeOut, 
                      input  logic [7:0]  D, 
                      input  logic [15:0] addr,
-                     input  logic        canWrite, we, clk_3KHz, clk, rst);
+                     input  logic        canWrite, we, clk, rst);
     
     parameter DEPTH = 32; //must be power of 2
 
@@ -16,6 +16,8 @@ module memStoreQueue(output logic [7:0]  Q,
     logic [$clog2(DEPTH):0] numFilled;
 
     logic lastWrite;
+
+    logic empty, full;
 
     always_ff @(posedge clk) begin
         if(rst) begin
@@ -56,17 +58,17 @@ module memStoreQueue(output logic [7:0]  Q,
 endmodule
 
 module addrDecoder(output logic  [7:0] dataToCore, 
-                   output logic  [2:0] [15:0] addrToBram, 
-                   output logic  [2:0] [7:0] dataToBram,
-                   output logic  [2:0] weEnBram,
+                   output logic  [3:0] [15:0] addrToBram, 
+                   output logic  [3:0] [7:0] dataToBram,
+                   output logic  [3:0] weEnBram,
                    output logic        vggo, vgrst, 
                    
                    input  logic  [7:0] dataFromCore,
                    input  logic [15:0] addr,
-                   input  logic  [2:0] [7:0] dataFromBram,
+                   input  logic  [3:0] [7:0] dataFromBram,
                    input  logic        we, halt, clk_3KHz, clk);
 
-    logic [1:0] bramNum, outBramNum;
+    logic [2:0] bramNum, outBramNum;
 
     logic [15:0] outBramAddr;
 
@@ -81,8 +83,9 @@ module addrDecoder(output logic  [7:0] dataToCore,
     always_comb begin
         if(addr < 16'h0400) bramNum = `BRAM_PROG_RAM;
         else if(16'h2000 <= addr && addr < 16'h3000) bramNum = `BRAM_VECTOR;
-        else if(16'h5000 <= addr && addr < 16'h8000) bramNum = `BRAM_PROG_ROM;   
-        else bramNum = 3; //error code
+        else if(16'h5000 <= addr && addr < 16'h8000) bramNum = `BRAM_PROG_ROM;
+        else if(16'h3000 <= addr && addr < 16'h3800) bramNum = `BRAM_MATH_ROM;  
+        else bramNum = 4; //error code
     end
 
     always_comb begin
@@ -94,7 +97,7 @@ module addrDecoder(output logic  [7:0] dataToCore,
         dataToBram[bramNum] = dataFromCore;
         addrToBram[bramNum] = addr;
     
-        if(outBramNum < 3) begin
+        if(outBramNum < 4) begin
             dataToCore = dataFromBram[outBramNum];
         end
         else begin

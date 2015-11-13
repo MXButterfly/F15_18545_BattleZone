@@ -4,6 +4,7 @@
 
 set_param xicom.use_bs_reader 1
 debug::add_scope template.lib 1
+set_msg_config -id {Common-41} -limit 4294967295
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 create_project -in_memory -part xc7a100tcsg324-1
@@ -22,10 +23,10 @@ read_verilog {
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/avg_defines.vh
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/coreInterface.vh
 }
-add_files /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/fbRAM/fbRAM.bd
-set_property used_in_implementation false [get_files -all /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/fbRAM/ip/fbRAM_blk_mem_gen_0_0/fbRAM_blk_mem_gen_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/fbRAM/fbRAM_ooc.xdc]
-set_property is_locked true [get_files /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/fbRAM/fbRAM.bd]
+add_files /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/bramDualPort/bramDualPort.bd
+set_property used_in_implementation false [get_files -all /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/bramDualPort/ip/bramDualPort_blk_mem_gen_0_0/bramDualPort_blk_mem_gen_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/bramDualPort/bramDualPort_ooc.xdc]
+set_property is_locked true [get_files /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/bramDualPort/bramDualPort.bd]
 
 add_files /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/vector_ram/vector_ram.bd
 set_property used_in_implementation false [get_files -all /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/vector_ram/ip/vector_ram_blk_mem_gen_0_0/vector_ram_blk_mem_gen_0_0_ooc.xdc]
@@ -45,16 +46,16 @@ set_property is_locked true [get_files /afs/ece.cmu.edu/usr/ashresth/Private/545
 read_verilog -library xil_defaultlib -sv {
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/avg_decode.sv
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/matoro.sv
+  /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/new/fb_temp.sv
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/avg.sv
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/coreInterface.sv
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/VGA_fsm.sv
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/rasterizer.sv
-  /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/fb_controller.sv
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/new/top.sv
 }
 read_verilog -library xil_defaultlib {
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/ALU.v
-  /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/fbRAM/hdl/fbRAM_wrapper.v
+  /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/bramDualPort/hdl/bramDualPort_wrapper.v
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/vector_ram/hdl/vector_ram_wrapper.v
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/prog_ROM/hdl/prog_ROM_wrapper.v
   /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.srcs/sources_1/bd/prog_RAM/hdl/prog_RAM_wrapper.v
