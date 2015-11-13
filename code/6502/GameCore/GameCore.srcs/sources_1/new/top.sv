@@ -40,10 +40,11 @@ module top(   input logic clk, btnCpuReset,
     logic rst_l;
     logic vggo, vgrst;
 
-    //assign rst = (~btnCpuReset);
 
-    m_register #(1) vggolatch(.Q(led[0]), .D(vggo), .clr(1'b0), .en(vggo), .clk(clk));
-    m_register #(1) vgrstlatch(.Q(led[1]), .D(vgrst), .clr(1'b0), .en(vgrst), .clk(clk));
+    //m_register #(1) vggolatch(.Q(led[0]), .D(vggo), .clr(1'b0), .en(vggo), .clk(clk));
+    //m_register #(1) vgrstlatch(.Q(led[1]), .D(vgrst), .clr(1'b0), .en(vgrst), .clk(clk));
+    assign led[0] = vggo;
+    assign led[1] = vgrst;
     assign rst = ~rst_l;
     assign readyLine = ~empty;
 
