@@ -100,7 +100,7 @@ module addrDecoder(output logic  [7:0] dataToCore,
         else begin
             case(outBramAddr)
                 16'h800: dataToCore = {clk_3KHz, halt, 6'b11_1111};
-                16'ha00: dataToCore = 8'b0001_0101;
+                16'ha00: dataToCore = 8'b0000_0011;
                 16'hc00: dataToCore = 8'b0000_0011;
                 //16'h1800: dataToCore = 8'b11111111;
                 default: dataToCore = 8'd0;
