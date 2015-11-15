@@ -100,20 +100,19 @@ module top(   input logic clk, btnCpuReset,
 
     prog_RAM_wrapper progRam(addrToBram[`BRAM_PROG_RAM], clk_3MHz, dataToBram[`BRAM_PROG_RAM], 
                              dataFromBram[`BRAM_PROG_RAM], weEnBram[`BRAM_PROG_RAM]); 
+    vram_2_wrapper vecRam2(.addr(addrToBram[`BRAM_VECTOR]-16'h2000), .clk(clk_3MHz), .dataIn(dataToBram[`BRAM_VECTOR]), .dataOut(dataFromBram[`BRAM_VECTOR]), .we(weEnBram[`BRAM_VECTOR]));
 
-    logic [7:0] mathboxData; // hook up this and second read port to mathbox...
+    //logic [7:0] mathboxData; // hook up this and second read port to mathbox...
 
-    mathBoxROM_wrapper mathRom(.addr_a(addrToBram[`BRAM_MATH_ROM]-16'h3000), .addr_b(16'h0), .clk(clk), .data_a(dataFromBram[`BRAM_MATH_ROM]), .data_b(mathboxData)); 
+    //mathBoxROM_wrapper mathRom(.addr_a(addrToBram[`BRAM_MATH_ROM]-16'h3000), .addr_b(16'h0), .clk(clk), .data_a(dataFromBram[`BRAM_MATH_ROM]), .data_b(mathboxData)); 
 
     assign qCanWrite = avg_halt;
     assign vecRamAddr2 = qCanWrite ? vecRamWrAddr : pc + 1;
     vector_ram_wrapper vecRam(pc-16'h2000, vecRamAddr2-16'h2000, clk, 16'h0, vecRamWrData, inst[15:8], inst[7:0], 1'b0, vecRamWrEn);                               
-                  
+
     memStoreQueue memQ(vecRamWrData, vecRamWrAddr, vecRamWrEn, dataToBram[`BRAM_VECTOR], addrToBram[`BRAM_VECTOR], qCanWrite, weEnBram[`BRAM_VECTOR], clk, rst);                 
 
     NMICounter nmiC(NMI, clk_3KHz, rst);
-
-    register #(8) vramOut(.Q(dataFromBram[`BRAM_VECTOR]), .D(inst[7:0]), .enable(1'b1), .clk(clk_3MHz), .rst(rst));
 
     assign IRQ = 0;
     assign RDY = 1;
@@ -136,12 +135,12 @@ module top(   input logic clk, btnCpuReset,
                     
     VGA_fsm vfsm(.clk(clk), .rst(rst), .row(row), .col(col), .Hsync(Hsync), .Vsync(Vsync), .en_r(en_r));
 
-   /* fb_controller fbc(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(vggo||vgrst), .clk(clk), .rst(rst), 
+    fb_controller fbc(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(vggo), .clk(clk), .rst(rst), 
                       .row(row), .col(col), .color_in(color_in),
                       .red_out(vgaRed), .blue_out(vgaBlue), .green_out(vgaGreen), .ready(readyFrame));
-    */
-    fb_temp fbt(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(vggo||vgrst), .clk(clk), .rst(rst), 
-                         .row(row), .col(col), .color_in(color_in),
-                         .red_out(vgaRed), .blue_out(vgaBlue), .green_out(vgaGreen), .ready(readyFrame));
+    
+   // fb_temp fbt(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(vggo||vgrst), .clk(clk), .rst(rst), 
+     //                    .row(row), .col(col), .color_in(color_in),
+      //                   .red_out(vgaRed), .blue_out(vgaBlue), .green_out(vgaGreen), .ready(readyFrame));
       
 endmodule
