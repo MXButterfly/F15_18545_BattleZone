@@ -24,7 +24,8 @@
 
 module POKEY
   (
-   inout logic [7:0] D,
+   input logic [7:0] Din,
+   output logic [7:0] Dout,
    input logic [3:0] A,
    input logic [7:0] P,
    input logic 	     phi2,
@@ -60,9 +61,10 @@ module POKEY
    
    assign clr = (skCtl[1:0] == 2'b00);
 
-   assign dataOut = 8'h00;
-   tristateDriver #(8) triDrv(.i(dataOut), .o(D), .en(readHighWriteLow));
-   assign dataIn = D;
+
+//   tristateDriver #(8) triDrv(.i(dataOut), .o(D), .en(readHighWriteLow));
+   assign dataIn = Din;
+   assign Dout = dataOut;
 
 
    wave15kGen w15k(.clk(clk), .clr(clr), .wave(wave15k), .pulse(pulse15k));
