@@ -1,7 +1,7 @@
 
 
 module avg_core(output logic [12:0] startX, startY, endX, endY, 
-                output logic [2:0]  color, 
+                output logic [3:0]  intensity, 
                 output logic        lrWrite,
                 output logic [15:0] pcOut,
                 output logic        halt, 
@@ -22,6 +22,7 @@ module avg_core(output logic [12:0] startX, startY, endX, endY,
     logic retValid;
 
     logic run;
+    logic [3:0] color;
 
     logic decHalt;
 
@@ -99,6 +100,8 @@ module avg_core(output logic [12:0] startX, startY, endX, endY,
     /*             EXECUTE             */
     /***********************************/
 
+    assign intensity = (useZReg && ~blank) ? zVal : decZVal;
+
     register #(14) xReg(currX, nextX, (center || vector) && run, clk, rst || vggoCap);
     register #(14) yReg(currY, nextY, (center || vector) && run, clk, rst || vggoCap);
 
@@ -127,8 +130,8 @@ module avg_core(output logic [12:0] startX, startY, endX, endY,
             dY_buf[12:0] = dY;
             linScale_buf[21:8] = 14'd0;
             linScale_buf[7:0] = linScale;
-            nextX_scaled = ((currX + ((((dX_buf * 2 * (21'd256 - linScale_buf)) / 21'd256) >> binScale) * 1) / 1) );
-            nextY_scaled = ((currY + ((((dY_buf * 2 * (21'd256 - linScale_buf)) / 21'd256) >> binScale) * 1) / 1) );
+            nextX_scaled = ((currX + ((((dX_buf * 2 * (21'd256 - linScale_buf)) / 21'd256) >> binScale) * 1) / 1));
+            nextY_scaled = ((currY + ((((dY_buf * 2 * (21'd256 - linScale_buf)) / 21'd256) >> binScale) * 1) / 1));
                         
             nextX = nextX_scaled[13:0];
             nextY = nextY_scaled[13:0];
@@ -218,10 +221,10 @@ module retStack(output logic [15:0] retAddr,
 endmodule
 
 module lineReg(output logic [12:0] QStartX, QEndX, QStartY, QEndY, 
-               output logic [2:0]  QColor, 
+               output logic [3:0]  QIntensity, 
                output logic        valid,
                input  logic [12:0] DStartX, DEndX, DStartY, DEndY, 
-               input  logic [2:0]  DColor, 
+               input  logic [3:0]  DIntensity, 
                input  logic        writeEn, clk, rst);
 
     always_ff @(posedge clk) begin
@@ -231,7 +234,7 @@ module lineReg(output logic [12:0] QStartX, QEndX, QStartY, QEndY,
             QStartY <= 0;
             QEndY <= 0;
             valid <= 0;
-            QColor <= 0;
+            QIntensity <= 0;
         end
         else begin
             if(writeEn) begin
@@ -240,7 +243,7 @@ module lineReg(output logic [12:0] QStartX, QEndX, QStartY, QEndY,
                 QStartY <= DStartY;
                 QEndY <= DEndY;
                 valid <= 1;
-                QColor <= DColor;
+                QIntensity <= DIntensity;
             end
         end
     end
@@ -249,10 +252,10 @@ endmodule
 
 
 module lineRegQueue(output logic [12:0] QStartX, QEndX, QStartY, QEndY, 
-                    output logic [2:0]  QColor, 
+                    output logic [3:0]  QIntensity, 
                     output logic full, empty,  
                     input  logic [12:0] DStartX, DEndX, DStartY, DEndY, 
-                    input  logic [2:0]  DColor, 
+                    input  logic [3:0]  DIntensity, 
                     input  logic read,  currWrite, clk, rst);
 
     parameter DEPTH = 16;
@@ -261,7 +264,7 @@ module lineRegQueue(output logic [12:0] QStartX, QEndX, QStartY, QEndY,
     logic [DEPTH-1:0] [12:0] startX, startY, endX, endY; 
     logic [DEPTH-1:0] valid;
     logic [DEPTH-1:0] writeEn;
-    logic [DEPTH-1:0] [2:0] color;
+    logic [DEPTH-1:0] [3:0] intensity;
 
     logic [$clog2(DEPTH)-1:0] wrIndex, reIndex;
     logic [$clog2(DEPTH):0] numFilled;
@@ -270,10 +273,10 @@ module lineRegQueue(output logic [12:0] QStartX, QEndX, QStartY, QEndY,
     generate
         for(i = 0; i < DEPTH; i++) begin
             lineReg l1(startX[i], endX[i], startY[i], endY[i], 
-                       color[i], 
+                       intensity[i], 
                        valid[i], 
                        DStartX, DEndX, DStartY, DEndY,
-                       DColor,  
+                       DIntensity,  
                        writeEn[i], clk, rst);
         end
     endgenerate 
@@ -313,7 +316,7 @@ module lineRegQueue(output logic [12:0] QStartX, QEndX, QStartY, QEndY,
     assign QEndX = endX[reIndex];
     assign QStartY = startY[reIndex];
     assign QEndY = endY[reIndex];
-    assign QColor = color[reIndex];
+    assign QIntensity = intensity[reIndex];
 
     always_comb begin
         writeEn = 0;

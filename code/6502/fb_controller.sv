@@ -64,7 +64,7 @@ module fb_controller(
     assign r_addr = row*640 + col;
     
     //assign colors       
-    assign red_out[0] = color_out[2]; 
+    /*assign red_out[0] = color_out[2]; 
     assign red_out[1] = color_out[2];
     assign red_out[2] = color_out[2];
     assign red_out[3] = color_out[2];
@@ -76,9 +76,20 @@ module fb_controller(
     assign blue_out[1] = color_out[0];
     assign blue_out[2] = color_out[0];
     assign blue_out[3] = color_out[0];
-    
+    */
     //switch between brams
     always_comb begin
+        if(row >= 0 && row <= 120) begin
+            red_out = color_out;
+            green_out = 4'b0000;
+            blue_out = 4'b0000;
+        end
+        else begin
+            red_out = 4'b0000;
+            green_out = color_out;
+            blue_out = 4'b0000;
+        end
+    
         case(state)
             READ_A: begin //sel A for read, B for write, C for clear
                 //mux

@@ -6,7 +6,7 @@ module memStoreQueue(output logic [7:0]  Q,
                      input  logic [15:0] addr,
                      input  logic        canWrite, we, clk, rst);
     
-    parameter DEPTH = 8; //must be power of 2
+    parameter DEPTH = 32; //must be power of 2
 
     logic [DEPTH-1:0] [7:0] queue;
     logic [DEPTH-1:0] [15:0] addrQueue;
@@ -61,7 +61,7 @@ module addrDecoder(output logic  [7:0] dataToCore,
                    output logic  [3:0] [15:0] addrToBram, 
                    output logic  [3:0] [7:0] dataToBram,
                    output logic  [3:0] weEnBram,
-                   output logic        vggo, vgrst, 
+                   output logic        vggo, vgrst, pokeyEn, 
                    
                    input  logic  [7:0] dataFromCore,
                    input  logic [15:0] addr,
@@ -84,8 +84,7 @@ module addrDecoder(output logic  [7:0] dataToCore,
         if(addr < 16'h0400) bramNum = `BRAM_PROG_RAM;
         else if(16'h2000 <= addr && addr < 16'h4000) bramNum = `BRAM_VECTOR;
         else if(16'h5000 <= addr && addr < 16'h8000) bramNum = `BRAM_PROG_ROM;
-        else if(16'h1820 <= addr && addr < 16'h1830) bramNum = `BRAM_PCB;  
-        else if(16'h1840 == addr) bramNum = `BRAM_PCB;  
+        //else if(16'h1800 <= addr && addr < 16'h1840) bramNum = `BRAM_PCB;  
         else bramNum = 4; //error code
     end
 
@@ -105,11 +104,13 @@ module addrDecoder(output logic  [7:0] dataToCore,
         if(outBramNum < 4) begin
             dataToCore = dataFromBram[outBramNum];
         end
+        if(outBramNum == `BRAM_PCB) pokeyEn = 1'b1;
+        
         else begin
             case(outBramAddr)
                 16'h800: dataToCore = {clk_3KHz, halt, 6'b11_1111};
-                16'ha00: dataToCore = 8'b0001_0101;
-                16'hc00: dataToCore = 8'b0000_0000;
+                16'ha00: dataToCore = 8'b0000_0011;
+                16'hc00: dataToCore = 8'b0000_0011;
                 //16'h1800: dataToCore = 8'b11111111;
                 default: begin
                     if(outBramAddr != 16'h1400) unmappedAccess = 1;

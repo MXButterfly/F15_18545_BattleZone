@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="5" Path="/afs/ece.cmu.edu/usr/htay/18545/6502/GameCore/GameCore.xpr">
+<Project Version="7" Minor="5" Path="/afs/ece.cmu.edu/usr/htay/18545/F15_18545_BattleZone/code/6502/GameCore/GameCore.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="2b87322c6ff44fa3be084cae8e8f2018"/>
@@ -18,31 +18,50 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/bd/fbRAM/fbRAM.bd">
+      <File Path="$PSRCDIR/sources_1/bd/bramDualPort/bramDualPort.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hdl/fbRAM.hwdef"/>
-        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hw_handoff/fbRAM_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hw_handoff/fbRAM.hwh"/>
-        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="fbRAM_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hdl/fbRAM.v"/>
+<<<<<<< HEAD
         <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="ip/fbRAM_blk_mem_gen_0_0/fbRAM_blk_mem_gen_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hdl/fbRAM.v"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="fbRAM_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hw_handoff/fbRAM.hwh"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hw_handoff/fbRAM_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hdl/fbRAM.hwdef"/>
+=======
+        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="ip/bramDualPort_blk_mem_gen_0_0/bramDualPort_blk_mem_gen_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="hdl/bramDualPort.hwdef"/>
+        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="bramDualPort_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="hw_handoff/bramDualPort.hwh"/>
+        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="hw_handoff/bramDualPort_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="hdl/bramDualPort.v"/>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/vram_2/vram_2.bd">
+      <File Path="$PSRCDIR/sources_1/bd/mathBoxROM/mathBoxROM.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="hdl/vram_2.hwdef"/>
-        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="hw_handoff/vram_2_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="hw_handoff/vram_2.hwh"/>
-        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="ip/vram_2_blk_mem_gen_0_0/vram_2_blk_mem_gen_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="hdl/vram_2.v"/>
-        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="vram_2_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="mathBoxROM.bd" FileRelPathName="hdl/mathBoxROM.v"/>
+        <CompFileExtendedInfo CompFileName="mathBoxROM.bd" FileRelPathName="ip/mathBoxROM_blk_mem_gen_0_0/mathBoxROM_blk_mem_gen_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="mathBoxROM.bd" FileRelPathName="mathBoxROM_ooc.xdc"/>
+>>>>>>> 380a6947ab2daa5557b5240535edb1fb53824934
+      </File>
+      <File Path="$PPRDIR/../avg_defines.vh">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../avg_decode.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/vector_ram/vector_ram.bd">
         <FileInfo>
@@ -50,12 +69,21 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+<<<<<<< HEAD
+        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="vector_ram_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hw_handoff/vector_ram.hwh"/>
+        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hw_handoff/vector_ram_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hdl/vector_ram.hwdef"/>
+        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="ip/vector_ram_blk_mem_gen_0_0/vector_ram_blk_mem_gen_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hdl/vector_ram.v"/>
+=======
         <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hdl/vector_ram.hwdef"/>
         <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hw_handoff/vector_ram_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hw_handoff/vector_ram.hwh"/>
         <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="vector_ram_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hdl/vector_ram.v"/>
         <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="ip/vector_ram_blk_mem_gen_0_0/vector_ram_blk_mem_gen_0_0.xci"/>
+>>>>>>> 380a6947ab2daa5557b5240535edb1fb53824934
       </File>
       <File Path="$PSRCDIR/sources_1/bd/prog_ROM/prog_ROM.bd">
         <FileInfo>
@@ -83,26 +111,6 @@
         <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="hdl/prog_RAM.v"/>
         <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="ip/prog_RAM_blk_mem_gen_0_0/prog_RAM_blk_mem_gen_0_0.xci"/>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/fbRAM/hdl/fbRAM_wrapper.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../avg_defines.vh">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../avg_decode.sv">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PPRDIR/../ALU.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -117,14 +125,28 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../POKEY.sv">
+      <File Path="$PSRCDIR/sources_1/bd/bramDualPort/hdl/bramDualPort_wrapper.v">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/vram_2/hdl/vram_2_wrapper.v">
+      <File Path="$PSRCDIR/sources_1/bd/mathBoxROM/hdl/mathBoxROM_wrapper.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/fb_temp.sv">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../avg.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -132,13 +154,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/vector_ram/hdl/vector_ram_wrapper.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../rasterizer.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -153,13 +168,6 @@
         </FileInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/prog_RAM/hdl/prog_RAM_wrapper.v">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/../fb_controller.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -186,14 +194,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../avg.sv">
+      <File Path="$PPRDIR/../VGA_fsm.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PPRDIR/../VGA_fsm.sv">
+      <File Path="$PPRDIR/../rasterizer.sv">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
@@ -207,33 +215,35 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/bramDualPort/bramDualPort.bd">
+      <File Path="$PSRCDIR/sources_1/bd/fbRAM/fbRAM.bd">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="hdl/bramDualPort.hwdef"/>
-        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="hw_handoff/bramDualPort_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="hw_handoff/bramDualPort.hwh"/>
-        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="bramDualPort_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="hdl/bramDualPort.v"/>
-        <CompFileExtendedInfo CompFileName="bramDualPort.bd" FileRelPathName="ip/bramDualPort_blk_mem_gen_0_0/bramDualPort_blk_mem_gen_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hdl/fbRAM.hwdef"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hw_handoff/fbRAM_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hw_handoff/fbRAM.hwh"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="fbRAM_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="hdl/fbRAM.v"/>
+        <CompFileExtendedInfo CompFileName="fbRAM.bd" FileRelPathName="ip/fbRAM_blk_mem_gen_0_0/fbRAM_blk_mem_gen_0_0.xci"/>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/mathBoxROM/mathBoxROM.bd">
+      <File Path="$PSRCDIR/sources_1/bd/fbRAM/hdl/fbRAM_wrapper.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="mathBoxROM.bd" FileRelPathName="hdl/mathBoxROM.hwdef"/>
-        <CompFileExtendedInfo CompFileName="mathBoxROM.bd" FileRelPathName="hw_handoff/mathBoxROM_bd.tcl"/>
-        <CompFileExtendedInfo CompFileName="mathBoxROM.bd" FileRelPathName="hw_handoff/mathBoxROM.hwh"/>
-        <CompFileExtendedInfo CompFileName="mathBoxROM.bd" FileRelPathName="mathBoxROM_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="mathBoxROM.bd" FileRelPathName="hdl/mathBoxROM.v"/>
-        <CompFileExtendedInfo CompFileName="mathBoxROM.bd" FileRelPathName="ip/mathBoxROM_blk_mem_gen_0_0/mathBoxROM_blk_mem_gen_0_0.xci"/>
+      </File>
+      <File Path="$PPRDIR/../fb_controller.sv">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
       </File>
       <File Path="$PPRDIR/../prog_rom.coe">
         <FileInfo>

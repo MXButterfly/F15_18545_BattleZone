@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<Runs Version="1" Minor="0">
-	<Run Id="blk_mem_gen_0_impl_1" LaunchDir="/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.runs/blk_mem_gen_0_impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="route_design"/>
-</Runs>
-

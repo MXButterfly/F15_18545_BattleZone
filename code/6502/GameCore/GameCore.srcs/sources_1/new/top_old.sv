@@ -23,7 +23,7 @@
 module top(   input logic clk, btnCpuReset,
               input logic[7:0] sw,
               output logic[3:0] vgaRed, vgaBlue, vgaGreen,
-              output logic[7:0] led,
+              output logic[1:0] led,
               output logic Hsync, Vsync,
               output logic ampPWM, ampSD);
               
@@ -37,11 +37,16 @@ module top(   input logic clk, btnCpuReset,
     logic lrWrite, full, empty, rst; 
     logic[15:0] pc;
     logic[15:0] inst;
-    logic[3:0] dIntensity;
+    logic[3:0] dColor;
     logic[12:0] pixelX, pixelY;
     logic rst_l;
     logic vggo, vgrst;
 
+
+    //m_register #(1) vggolatch(.Q(led[0]), .D(vggo), .clr(1'b0), .en(vggo), .clk(clk));
+    //m_register #(1) vgrstlatch(.Q(led[1]), .D(vgrst), .clr(1'b0), .en(vgrst), .clk(clk));
+    assign led[0] = vggo;
+    assign led[1] = vgrst;
     assign rst = ~rst_l;
     assign readyLine = ~empty;
 
@@ -71,6 +76,8 @@ module top(   input logic clk, btnCpuReset,
 
     logic avg_halt;
 
+    logic pokeyEn;
+
     always_ff @(posedge clk) begin
         if(rst) begin
             counter3MHz <= 16;
@@ -91,7 +98,7 @@ module top(   input logic clk, btnCpuReset,
 
     cpu core(.clk(clk_3MHz), .reset(coreReset), .AB(address), .DI(dataIn), .DO(dataOut), .WE(WE), .IRQ(IRQ), .NMI(NMI), .RDY(RDY));
 
-    addrDecoder ad(dataIn, addrToBram, dataToBram, weEnBram, vggo, vgrst, dataOut, {1'b0, address[14:0]}, dataFromBram, WE, avg_halt, clk_3KHz, clk_3MHz);  
+    addrDecoder ad(dataIn, addrToBram, dataToBram, weEnBram, vggo, vgrst, pokeyEn, dataOut, {1'b0, address[14:0]}, dataFromBram, WE, avg_halt, clk_3KHz, clk_3MHz);  
 
     prog_ROM_wrapper progRom(addrToBram[`BRAM_PROG_ROM]-16'h5000, clk_3MHz, dataFromBram[`BRAM_PROG_ROM]);
 
@@ -115,13 +122,13 @@ module top(   input logic clk, btnCpuReset,
     assign RDY = 1;
 
     avg_core avgc(.startX(dStartX), .startY(dStartY), .endX(dEndX), .endY(dEndY), 
-                  .intensity(dIntensity), .lrWrite(lrWrite), .pcOut(pc), .halt(avg_halt), .inst(inst), .clk_in(clk), 
+                  .color(dColor), .lrWrite(lrWrite), .pcOut(pc), .halt(avg_halt), .inst(inst), .clk_in(clk), 
                   .rst_in(rst || vgrst), .vggo(vggo));
                     
     lineRegQueue lrq(.QStartX(startX), .QStartY(startY), .QEndX(endX), .QEndY(endY), 
-                     .QIntensity(lineColor), .full(full), .empty(empty), 
+                     .QColor(lineColor), .full(full), .empty(empty), 
                      .DStartX(dStartX), .DStartY(dStartY), .DEndX(dEndX), .DEndY(dEndY),
-                                     .DIntensity(dIntensity), .read(lineDone), .currWrite(lrWrite), 
+                                     .DColor(dColor), .read(lineDone), .currWrite(lrWrite), 
                                      .clk(clk), .rst(rst));
 
     
@@ -132,7 +139,7 @@ module top(   input logic clk, btnCpuReset,
                     
     VGA_fsm vfsm(.clk(clk), .rst(rst), .row(row), .col(col), .Hsync(Hsync), .Vsync(Vsync), .en_r(en_r));
 
-    fb_controller fbc(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(vggo), .clk(clk), .rst(rst), 
+    fb_controller fbc(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(vgrst), .clk(clk), .rst(rst), 
                       .row(row), .col(col), .color_in(color_in),
                       .red_out(vgaRed), .blue_out(vgaBlue), .green_out(vgaGreen), .ready(readyFrame));
     
@@ -140,30 +147,18 @@ module top(   input logic clk, btnCpuReset,
      //                    .row(row), .col(col), .color_in(color_in),
       //                   .red_out(vgaRed), .blue_out(vgaBlue), .green_out(vgaGreen), .ready(readyFrame));
       
-      logic[7:0] outputLatch;
-       
-      //sound
+     tri[7:0] datainout;
+     logic[7:0] buttons;
       
-      assign buttons = 8'b1000_0000;
-      assign pokeyEn = ~(addrToBram[`BRAM_PCB] >= 16'h1820 && addrToBram[`BRAM_PCB] < 16'h1830);
-      
-      //output latch for POKEY
-      always_ff @(posedge clk_3MHz) begin
-        if(rst) begin
-            outputLatch <= 'b0;
-        end
-        if(addrToBram[`BRAM_PCB] == 16'h1840 && weEnBram[`BRAM_PCB]) begin
-            outputLatch <= dataToBram[`BRAM_PCB];
-        end
-        else begin
-            outputLatch <= outputLatch;
-        end
-      end
-      assign ampSD = outputLatch[5];
-      assign led = outputLatch;
-      
-      POKEY pokey(.Din(dataToBram[`BRAM_PCB] ), .Dout(dataFromBram[`BRAM_PCB]), .A(addrToBram[`BRAM_PCB][3:0]), .P(sw), .phi2(clk_3MHz), .readHighWriteLow(~weEnBram[`BRAM_PCB]),
-                  .cs0Bar(pokeyEn), .aud(ampPWM), .clk(clk));
-      
+     //sound
+     /*
+     assign buttons = sw;
+     assign ampSD = 1'b0;
+     assign datainout = (~weEnBram[`BRAM_PCB]) ? dataToBram[`BRAM_PCB] : 'bz;
+     assign dataFromBram[`BRAM_PCB] = datainout;
+     
+     POKEY pokey(.D(datainout), .A(addrToBram[`BRAM_PCB][3:0]), .P(buttons), .phi2(clk_3MHz), .readHighWriteLow(~weEnBram[`BRAM_PCB]),
+                 .cs0Bar(pokeyEn), .aud(ampPWM), .clk(clk));
+     */
       
 endmodule

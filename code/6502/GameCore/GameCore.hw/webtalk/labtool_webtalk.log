@@ -4,9 +4,6 @@
   **** IP Build 1264090 on Wed Jun 24 14:22:01 MDT 2015
     ** Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
 
-source /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.hw/webtalk/labtool_webtalk.tcl -notrace
-
-    while executing
-"webtalk_transmit -clientid 4265765123 -regid "174679548_176449548_210570730_342" -xml /afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZo..."
-    (file "/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.hw/webtalk/labtool_webtalk.tcl" line 27)
-INFO: [Common 17-206] Exiting Webtalk at Wed Nov 11 11:50:41 2015...
+source /afs/ece.cmu.edu/usr/htay/18545/6502/GameCore/GameCore.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-186] '/afs/ece.cmu.edu/usr/htay/18545/6502/GameCore/GameCore.hw/webtalk/usage_statistics_ext_labtool.xml' has been successfully sent to Xilinx on Fri Nov 20 14:02:21 2015. For additional details about this file, please refer to the WebTalk help file at /afs/ece/support/xilinx/xilinx.release/Vivado/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Fri Nov 20 14:02:21 2015...
