@@ -411,7 +411,7 @@ endmodule: polyCounter5
 
 module polyCounter17
   (
-   input logic 	clk, pulse179m, clr
+   input logic 	clk, pulse179m, clr,
    input logic 	reduce9,
    output logic rand17,
    output logic [7:0] rngVal
