@@ -1,5 +1,6 @@
 
-`define BRAM_PROG_RAM 2'b00
-`define BRAM_VECTOR   2'b01
-`define BRAM_PROG_ROM 2'b10
-`define BRAM_PCB 2'b11
+`define BRAM_PROG_RAM 3'b000
+`define BRAM_VECTOR   3'b001
+`define BRAM_PROG_ROM 3'b010
+`define BRAM_POKEY 3'b011
+`define BRAM_MATH 3'b100

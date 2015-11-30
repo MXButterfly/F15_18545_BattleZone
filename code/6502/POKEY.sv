@@ -71,9 +71,9 @@ module POKEY
    wave64kGen w64k(.clk(clk), .clr(clr), .wave(wave64k), .pulse(pulse64k));
    wave179mGen w179m(.clk(clk), .clr(clr), .wave(wave179m), .pulse(pulse179m));   
 
-   polyCounter4 pc4(.clk(clk), .pulse179m(pulse179m), .rand4(rand4));
-   polyCounter5 pc5(.clk(clk), .pulse179m(pulse179m), .rand5(rand5));
-   polyCounter17 pc17(.clk(clk), .pulse179m(pulse179m), .reduce9(reduce9), .rand17(rand17), .rngVal(rngRead));
+   polyCounter4 pc4(.clk(clk), .pulse179m(pulse179m), .rand4(rand4), .clr(clr));
+   polyCounter5 pc5(.clk(clk), .pulse179m(pulse179m), .rand5(rand5), .clr(clr));
+   polyCounter17 pc17(.clk(clk), .pulse179m(pulse179m), .reduce9(reduce9), .rand17(rand17), .rngVal(rngRead), .clr(clr));
 
 
    risingDetector risingPhi(.clk(clk), .clr(clr), .signalIn(phi2), .risingEdge(phi2Rising));
@@ -377,14 +377,14 @@ endmodule: wave179mGen
 
 module polyCounter4
   (
-   input logic 	clk, pulse179m,
+   input logic 	clk, pulse179m, clr,
    output logic rand4    
    );
    
    logic [3:0] 	regValue;
    logic 	feedbackVal;
    
-   m_shift_register #(4) polyShifter(.Q(regValue), .clk(clk), .en(pulse179m), .left(1'b0), .s_in(feedbackVal));
+   m_shift_register #(4) polyShifter(.Q(regValue), .clk(clk), .en(pulse179m), .left(1'b0), .s_in(feedbackVal), .clr(clr));
    
    assign feedbackVal = !(regValue[3] ^ regValue[2]);
    assign rand4 = regValue[3];
@@ -394,14 +394,14 @@ endmodule: polyCounter4
 
 module polyCounter5
   (
-   input logic 	clk, pulse179m,
+   input logic 	clk, pulse179m, clr,
    output logic rand5    
    );
    
    logic [4:0] 	regValue;
    logic 	feedbackVal;
    
-   m_shift_register #(5) polyShifter(.Q(regValue), .clk(clk), .en(pulse179m), .left(1'b1), .s_in(feedbackVal));
+   m_shift_register #(5) polyShifter(.Q(regValue), .clk(clk), .en(pulse179m), .left(1'b1), .s_in(feedbackVal), .clr(clr));
    
    assign feedbackVal = !(regValue[4] ^ regValue[2]);
    assign rand5 = regValue[4];
@@ -411,7 +411,7 @@ endmodule: polyCounter5
 
 module polyCounter17
   (
-   input logic 	clk, pulse179m,
+   input logic 	clk, pulse179m, clr,
    input logic 	reduce9,
    output logic rand17,
    output logic [7:0] rngVal
@@ -420,8 +420,8 @@ module polyCounter17
    logic [16:0] regValue;
    logic 	feedbackVal;
    
-   m_shift_register #(9) polyShifterUpper(.Q(regValue[16:8]), .clk(clk), .en(pulse179m), .left(1'b1), .s_in(reduce9 ? feedbackVal : regValue[7]));
-   m_shift_register #(8) polyShifterLower(.Q(regValue[7:0]), .clk(clk), .en(pulse179m), .left(1'b1), .s_in(feedbackVal));
+   m_shift_register #(9) polyShifterUpper(.Q(regValue[16:8]), .clk(clk), .en(pulse179m), .left(1'b1), .s_in(reduce9 ? feedbackVal : regValue[7]), .clr(clr));
+   m_shift_register #(8) polyShifterLower(.Q(regValue[7:0]), .clk(clk), .en(pulse179m), .left(1'b1), .s_in(feedbackVal), .clr(clr));
    
    assign feedbackVal = !(regValue[16] ^ regValue[11]);
    assign rand17 = regValue[16];

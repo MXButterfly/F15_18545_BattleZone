@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 `include "coreInterface.vh"
 module memStoreQueue(output logic [7:0]  Q, 
                      output logic [15:0] writeAddr, 
@@ -58,20 +59,21 @@ module memStoreQueue(output logic [7:0]  Q,
 endmodule
 
 module addrDecoder(output logic  [7:0] dataToCore, 
-                   output logic  [3:0] [15:0] addrToBram, 
-                   output logic  [3:0] [7:0] dataToBram,
-                   output logic  [3:0] weEnBram,
+                   output logic  [4:0] [15:0] addrToBram, 
+                   output logic  [4:0] [7:0] dataToBram,
+                   output logic  [4:0] weEnBram,
                    output logic        vggo, vgrst, 
                    
                    input  logic  [7:0] dataFromCore,
                    input  logic [15:0] addr,
-                   input  logic  [3:0] [7:0] dataFromBram,
+                   input  logic  [4:0] [7:0] dataFromBram,
                    input  logic        we, halt, clk_3KHz, clk);
 
     logic [2:0] bramNum, outBramNum;
 
     logic [15:0] outBramAddr;
 
+    logic sound_access;
     always_ff @(posedge clk) begin
         outBramNum <= bramNum;
         outBramAddr <= addr;
@@ -81,17 +83,23 @@ module addrDecoder(output logic  [7:0] dataToCore,
     assign vgrst = (addr == 16'h1600) && we;
 
     always_comb begin
+        sound_access = 1'b0;
         if(addr < 16'h0400) bramNum = `BRAM_PROG_RAM;
         else if(16'h2000 <= addr && addr < 16'h4000) bramNum = `BRAM_VECTOR;
         else if(16'h5000 <= addr && addr < 16'h8000) bramNum = `BRAM_PROG_ROM;
-        else if(16'h1820 <= addr && addr < 16'h1830) bramNum = `BRAM_PCB;  
-        else if(16'h1840 == addr) bramNum = `BRAM_PCB;  
-        else bramNum = 4; //error code
+        else if(16'h1820 <= addr && addr < 16'h1830) bramNum = `BRAM_POKEY;  
+        else if(16'h1840 == addr) begin 
+            bramNum = `BRAM_POKEY;
+            sound_access = 1'b1;
+        end
+        else if(addr == 16'h1800 || addr == 16'h1810 || addr == 16'h1818 || (16'h1860 <= addr && addr <= 16'h187f)) bramNum = `BRAM_MATH;  
+        else bramNum = 5; //error code
     end
 
-    logic unmappedAccess, vramWrite, unmappedRead;
+    logic unmappedAccess, vramWrite, unmappedRead, mathboxAccess;
 
     always_comb begin
+        mathboxAccess = bramNum == `BRAM_MATH;
         addrToBram = 0;
         dataToBram = 0;
         unmappedAccess = 0;
@@ -102,7 +110,7 @@ module addrDecoder(output logic  [7:0] dataToCore,
         dataToBram[bramNum] = dataFromCore;
         addrToBram[bramNum] = addr;
     
-        if(outBramNum < 4) begin
+        if(outBramNum < 5) begin
             dataToCore = dataFromBram[outBramNum];
         end
         else begin

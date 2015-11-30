@@ -110,10 +110,13 @@ endmodule: m_counter
 module m_shift_register
   #(parameter WIDTH = 6)
    (output logic [WIDTH-1:0] Q,
-    input logic clk, en, left, s_in);
+    input logic clk, en, left, s_in, clr);
 
    always_ff @(posedge clk)
-     if(en) begin
+     if (clr) begin
+	Q <= 'd0;
+     end
+     else if(en) begin
 	if(left) begin
 	   Q <= (Q << 1);
 	   Q[0] <= s_in;

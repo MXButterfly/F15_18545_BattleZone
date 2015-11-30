@@ -1,4 +1,4 @@
-
+`timescale 1ns / 1ps
 
 module avg_core(output logic [12:0] startX, startY, endX, endY, 
                 output logic [3:0]  intensity, 

@@ -31,6 +31,7 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
         linScale = 0; binScale = 0;
         color = 3'b010;
         instLength = 0;
+        zVal = 4'b0000;
         case(dcd_op) 
             `OP_VCTR: begin
                 //DEMO

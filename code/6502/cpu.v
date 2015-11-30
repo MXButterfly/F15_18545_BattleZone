@@ -1,3 +1,4 @@
+`timescale 1ns / 1ps
 /*
  * verilog model of 6502 CPU.
  *

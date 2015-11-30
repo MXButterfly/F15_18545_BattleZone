@@ -52,9 +52,9 @@ module top(   input logic clk, btnCpuReset,
     logic [7:0] dataIn, dataOut;
     logic WE, IRQ, NMI, RDY;
 
-    logic [3:0] [7:0] dataToBram, dataFromBram;
-    logic [3:0] [15:0] addrToBram;
-    logic [3:0] weEnBram;
+    logic [4:0] [7:0] dataToBram, dataFromBram;
+    logic [4:0] [15:0] addrToBram;
+    logic [4:0] weEnBram;
 
     logic [4:0] counter3MHz;
     logic [14:0] counter3KHz;
@@ -132,7 +132,7 @@ module top(   input logic clk, btnCpuReset,
                     
     VGA_fsm vfsm(.clk(clk), .rst(rst), .row(row), .col(col), .Hsync(Hsync), .Vsync(Vsync), .en_r(en_r));
 
-    fb_controller fbc(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(vggo), .clk(clk), .rst(rst), 
+    fb_controller fbc(.w_addr(w_addr), .en_w(en_w), .en_r(en_r), .done(avg_halt), .clk(clk), .rst(rst), 
                       .row(row), .col(col), .color_in(color_in),
                       .red_out(vgaRed), .blue_out(vgaBlue), .green_out(vgaGreen), .ready(readyFrame));
     
@@ -140,29 +140,44 @@ module top(   input logic clk, btnCpuReset,
      //                    .row(row), .col(col), .color_in(color_in),
       //                   .red_out(vgaRed), .blue_out(vgaBlue), .green_out(vgaGreen), .ready(readyFrame));
       
-      logic[7:0] outputLatch;
+      
+      //mathbox
+      //logic[4:0] unmappedMBLatch;
+      
+      mathBox mb(addrToBram[`BRAM_MATH][7:0], dataToBram[`BRAM_MATH], weEnBram[`BRAM_MATH], clk_3MHz, rst, 
+              dataFromBram[`BRAM_MATH]);
+      
+      
+      //assign led[11:8] = unmappedMBLatch;
+      //m_register #(1) mbLatch_0(.Q(led[8]), .D(unmappedMBLatch[0]), .clr(rst), .en(unmappedMBLatch[0]), .clk(clk));
+      //m_register #(1) mbLatch_1(.Q(led[9]), .D(unmappedMBLatch[1]), .clr(rst), .en(unmappedMBLatch[1]), .clk(clk));
+      //m_register #(1) mbLatch_2(.Q(led[10]), .D(unmappedMBLatch[2]), .clr(rst), .en(unmappedMBLatch[2]), .clk(clk));
+      //m_register #(1) mbLatch_3(.Q(led[11]), .D(unmappedMBLatch[3]), .clr(rst), .en(unmappedMBLatch[3]), .clk(clk));
+      //m_register #(1) mbLatch_4(.Q(led[12]), .D(unmappedMBLatch[4]), .clr(rst), .en(unmappedMBLatch[4]), .clk(clk));
+      
+      logic[7:0] outputLatch, buttons;
        
       //sound
       
-      assign buttons = 8'b1000_0000;
-      assign pokeyEn = ~(addrToBram[`BRAM_PCB] >= 16'h1820 && addrToBram[`BRAM_PCB] < 16'h1830);
+      assign buttons = 8'b0000_0000;
+      assign pokeyEn = ~(addrToBram[`BRAM_POKEY] >= 16'h1820 && addrToBram[`BRAM_POKEY] < 16'h1830);
       
       //output latch for POKEY
       always_ff @(posedge clk_3MHz) begin
         if(rst) begin
             outputLatch <= 'b0;
         end
-        if(addrToBram[`BRAM_PCB] == 16'h1840 && weEnBram[`BRAM_PCB]) begin
-            outputLatch <= dataToBram[`BRAM_PCB];
+        if(addrToBram[`BRAM_POKEY] == 16'h1840 && weEnBram[`BRAM_POKEY]) begin
+            outputLatch <= dataToBram[`BRAM_POKEY];
         end
         else begin
             outputLatch <= outputLatch;
         end
       end
       assign ampSD = outputLatch[5];
-      assign led = outputLatch;
+      assign led[7:0] = outputLatch;
       
-      POKEY pokey(.Din(dataToBram[`BRAM_PCB] ), .Dout(dataFromBram[`BRAM_PCB]), .A(addrToBram[`BRAM_PCB][3:0]), .P(sw), .phi2(clk_3MHz), .readHighWriteLow(~weEnBram[`BRAM_PCB]),
+      POKEY pokey(.Din(dataToBram[`BRAM_POKEY] ), .Dout(dataFromBram[`BRAM_POKEY]), .A(addrToBram[`BRAM_POKEY][3:0]), .P(buttons), .phi2(clk_3MHz), .readHighWriteLow(~weEnBram[`BRAM_POKEY]),
                   .cs0Bar(pokeyEn), .aud(ampPWM), .clk(clk));
       
       
