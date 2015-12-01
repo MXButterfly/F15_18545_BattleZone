@@ -35,7 +35,7 @@ module mathBox(input  logic [7:0] addr,
 
     logic [7:0] status;
 
-    enum {IDLE, C0B, S048A, S048B, C12A, C12B, C13, C14, S0BFA, S0BFB, S0BFC, C11} state, nextState;
+    enum {IDLE, C0B, S048A, S048B, C12A, C12B, C13, C14, S0BFA, S0BFB, S0BFC, C11, C1D, C1EA, C1EB} state, nextState;
 
     always_ff @(posedge clk) begin
         if(rst) state <= IDLE;
@@ -352,6 +352,60 @@ module mathBox(input  logic [7:0] addr,
                 mbRegEn[15] = 2'b11;
             end
 
+            C1D: begin
+                
+                if($signed(mbRegQ[2] - mbRegQ[0]) < 0) begin
+                    mbRegD[2] = mbRegQ[0] - mbRegQ[2]; //inverted for mult by neg 1
+                    mbRegEn[2] = 2'b11;
+                end
+                else begin
+                    mbRegD[2] = mbRegQ[2] - mbRegQ[0];
+                    mbRegEn[2] = 2'b11;
+                end
+
+                if($signed({dataIn, mbRegQ[3][7:0]} - mbRegQ[1]) < 0) begin
+                    mbRegD[3] = mbRegQ[1] - {dataIn, mbRegQ[3][7:0]}; //inverted for mult by neg 1
+                    mbRegEn[3] = 2'b11;
+                end
+                else begin
+                    mbRegD[3] = {dataIn, mbRegQ[3][7:0]} - mbRegQ[1];
+                    mbRegEn[3] = 2'b11;
+                end
+
+            end
+
+            C1EA: begin
+                if($signed(mbRegQ[3]) >= $signed(mbRegQ[2])) begin
+                    mbRegD[12] = mbRegQ[2];
+                    mbRegEn[12] = 2'b11;
+
+                    mbRegD[13] = mbRegQ[3];
+                    mbRegEn[13] = 2'b11;
+                end
+                else begin
+                    mbRegD[13] = mbRegQ[2];
+                    mbRegEn[13] = 2'b11;
+                    
+                    mbRegD[12] = mbRegQ[3];
+                    mbRegEn[12] = 2'b11;
+                end
+            end
+
+            C1EB: begin
+                mbRegD[12] = $signed(mbRegQ[12]) >>> 3;
+                mbRegEn[12] = 2'b11;
+                
+                workRegA = $signed(mbRegQ[12]) >>> 2;
+                workRegB = $signed(mbRegQ[12]) >>> 3;
+
+                mbRegD[13] = ( mbRegQ[13] + workRegA + workRegB );
+
+                mbRegEn[13] = 2'b11;
+
+                mbOutD = mbRegD[13];
+                mbOutEn = 1'b1;
+            end
+
         endcase 
     end
 
@@ -366,6 +420,8 @@ module mathBox(input  logic [7:0] addr,
                         8'h73: nextState = C13;
                         8'h74: nextState = C14;
                         8'h71: nextState = C11;
+                        8'h7D: nextState = C1D;
+                        8'h7E: nextState = C1EA;
                         default: nextState = IDLE;
                     endcase
                 end
@@ -383,6 +439,9 @@ module mathBox(input  logic [7:0] addr,
             S0BFB: nextState = ($signed(mbRegQ[15]) > 0) ? S0BFB : S0BFC;
             S0BFC: nextState = IDLE;
             C11: nextState = S048A;
+            C1D: nextState = C1EA;
+            C1EA: nextState = C1EB;
+            C1EB: nextState = IDLE;
         endcase
     end
 
@@ -405,7 +464,7 @@ module mbReg(input  logic [7:0] dHigh, dLow,
 
 endmodule
 
-/*module register(Q, D, enable, clk, rst);
+module register(Q, D, enable, clk, rst);
 
     parameter WIDTH = 8, startVal = 0;
 
@@ -419,4 +478,6 @@ endmodule
     end
                 
 
-endmodule*/
+endmodule
+
+
