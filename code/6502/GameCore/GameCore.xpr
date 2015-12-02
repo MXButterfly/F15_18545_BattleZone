@@ -50,12 +50,12 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="hdl/prog_RAM.hwdef"/>
         <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="hdl/prog_RAM.v"/>
         <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="ip/prog_RAM_blk_mem_gen_0_0/prog_RAM_blk_mem_gen_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="hw_handoff/prog_RAM.hwh"/>
-        <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="hw_handoff/prog_RAM_bd.tcl"/>
         <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="prog_RAM_ooc.xdc"/>
+        <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="hw_handoff/prog_RAM_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="hw_handoff/prog_RAM.hwh"/>
+        <CompFileExtendedInfo CompFileName="prog_RAM.bd" FileRelPathName="hdl/prog_RAM.hwdef"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/fbRAM/hdl/fbRAM_wrapper.v">
         <FileInfo>
@@ -70,12 +70,12 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="vram_2_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="hdl/vram_2.v"/>
         <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="ip/vram_2_blk_mem_gen_0_0/vram_2_blk_mem_gen_0_0.xci"/>
+        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="vram_2_ooc.xdc"/>
         <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="hdl/vram_2.hwdef"/>
-        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="hw_handoff/vram_2.hwh"/>
         <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="hw_handoff/vram_2_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="vram_2.bd" FileRelPathName="hw_handoff/vram_2.hwh"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/vector_ram/vector_ram.bd">
         <FileInfo>
@@ -83,12 +83,12 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hw_handoff/vector_ram.hwh"/>
         <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hdl/vector_ram.v"/>
         <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="ip/vector_ram_blk_mem_gen_0_0/vector_ram_blk_mem_gen_0_0.xci"/>
-        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="vector_ram_ooc.xdc"/>
-        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hw_handoff/vector_ram.hwh"/>
-        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hdl/vector_ram.hwdef"/>
         <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hw_handoff/vector_ram_bd.tcl"/>
+        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="hdl/vector_ram.hwdef"/>
+        <CompFileExtendedInfo CompFileName="vector_ram.bd" FileRelPathName="vector_ram_ooc.xdc"/>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/prog_ROM/prog_ROM.bd">
         <FileInfo>
@@ -289,6 +289,12 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/../avg_clean_10.coe">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PPRDIR/../avg_clean2.coe">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>

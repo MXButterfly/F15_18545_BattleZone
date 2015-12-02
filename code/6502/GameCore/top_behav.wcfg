@@ -10,7 +10,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="38" />
+   <WVObjectSize size="16" />
    <wave_markers>
       <marker label="" time="1182963895000000" />
    </wave_markers>
@@ -109,112 +109,29 @@
          <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/dataOut">
-      <obj_property name="ElementShortName">dataOut[7:0]</obj_property>
-      <obj_property name="ObjectShortName">dataOut[7:0]</obj_property>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/mb/workRegA">
+      <obj_property name="ElementShortName">workRegA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">workRegA[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/P">
-      <obj_property name="ElementShortName">P[7:0]</obj_property>
-      <obj_property name="ObjectShortName">P[7:0]</obj_property>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/mb/workRegB">
+      <obj_property name="ElementShortName">workRegB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">workRegB[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/allPot">
-      <obj_property name="ElementShortName">allPot[7:0]</obj_property>
-      <obj_property name="ObjectShortName">allPot[7:0]</obj_property>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/mb/workRegC">
+      <obj_property name="ElementShortName">workRegC[31:0]</obj_property>
+      <obj_property name="ObjectShortName">workRegC[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/rngRead">
-      <obj_property name="ElementShortName">rngRead[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rngRead[7:0]</obj_property>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/mb/mbRegEn">
+      <obj_property name="ElementShortName">mbRegEn[15:0][1:0]</obj_property>
+      <obj_property name="ObjectShortName">mbRegEn[15:0][1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/pc17/rngVal">
-      <obj_property name="ElementShortName">rngVal[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rngVal[7:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/pulse179m">
-      <obj_property name="ElementShortName">pulse179m</obj_property>
-      <obj_property name="ObjectShortName">pulse179m</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/reduce9">
-      <obj_property name="ElementShortName">reduce9</obj_property>
-      <obj_property name="ObjectShortName">reduce9</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/feedbackVal">
-      <obj_property name="ElementShortName">feedbackVal</obj_property>
-      <obj_property name="ObjectShortName">feedbackVal</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/rand17">
-      <obj_property name="ElementShortName">rand17</obj_property>
-      <obj_property name="ObjectShortName">rand17</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/pc17/regValue">
-      <obj_property name="ElementShortName">regValue[16:0]</obj_property>
-      <obj_property name="ObjectShortName">regValue[16:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/pc17/rngVal">
-      <obj_property name="ElementShortName">rngVal[7:0]</obj_property>
-      <obj_property name="ObjectShortName">rngVal[7:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/feedbackVal">
-      <obj_property name="ElementShortName">feedbackVal</obj_property>
-      <obj_property name="ObjectShortName">feedbackVal</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/pc17/polyShifterLower/Q">
-      <obj_property name="ElementShortName">Q[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Q[7:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/polyShifterLower/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/polyShifterLower/en">
-      <obj_property name="ElementShortName">en</obj_property>
-      <obj_property name="ObjectShortName">en</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/polyShifterLower/left">
-      <obj_property name="ElementShortName">left</obj_property>
-      <obj_property name="ObjectShortName">left</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/polyShifterLower/s_in">
-      <obj_property name="ElementShortName">s_in</obj_property>
-      <obj_property name="ObjectShortName">s_in</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/pc17/polyShifterLower/WIDTH">
-      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/pc17/polyShifterUpper/Q">
-      <obj_property name="ElementShortName">Q[8:0]</obj_property>
-      <obj_property name="ObjectShortName">Q[8:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/polyShifterUpper/clk">
-      <obj_property name="ElementShortName">clk</obj_property>
-      <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/polyShifterUpper/en">
-      <obj_property name="ElementShortName">en</obj_property>
-      <obj_property name="ObjectShortName">en</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/polyShifterUpper/left">
-      <obj_property name="ElementShortName">left</obj_property>
-      <obj_property name="ObjectShortName">left</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/pokey/pc17/polyShifterUpper/s_in">
-      <obj_property name="ElementShortName">s_in</obj_property>
-      <obj_property name="ObjectShortName">s_in</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="array" fp_name="/top/pokey/pc17/polyShifterUpper/WIDTH">
-      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
-      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/vggo">
-      <obj_property name="ElementShortName">vggo</obj_property>
-      <obj_property name="ObjectShortName">vggo</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/vgrst">
-      <obj_property name="ElementShortName">vgrst</obj_property>
-      <obj_property name="ObjectShortName">vgrst</obj_property>
-   </wvobject>
-   <wvobject db_ref_id="1" type="logic" fp_name="/top/avg_halt">
-      <obj_property name="ElementShortName">avg_halt</obj_property>
-      <obj_property name="ObjectShortName">avg_halt</obj_property>
+   <wvobject db_ref_id="1" type="array" fp_name="/top/mb/mbRegQ">
+      <obj_property name="ElementShortName">mbRegQ[15:0][15:0]</obj_property>
+      <obj_property name="ObjectShortName">mbRegQ[15:0][15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
 </wave_config>

@@ -179,7 +179,7 @@ module top(   input logic clk, btnCpuReset,
       assign ampSD = outputLatch[5];
       assign led[7:0] = outputLatch;
       
-      POKEY pokey(.Din(dataToBram[`BRAM_POKEY] ), .Dout(dataFromBram[`BRAM_POKEY]), .A(addrToBram[`BRAM_POKEY][3:0]), .P(sw), .phi2(clk_3MHz), .readHighWriteLow(~weEnBram[`BRAM_POKEY]),
+      POKEY pokey(.Din(dataToBram[`BRAM_POKEY] ), .Dout(dataFromBram[`BRAM_POKEY]), .A(addrToBram[`BRAM_POKEY][3:0]), .P(buttons), .phi2(clk_3MHz), .readHighWriteLow(~weEnBram[`BRAM_POKEY]),
                   .cs0Bar(pokeyEn), .aud(ampPWM), .clk(clk));
       
       

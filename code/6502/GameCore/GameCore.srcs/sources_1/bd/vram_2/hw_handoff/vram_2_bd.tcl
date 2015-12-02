@@ -153,7 +153,7 @@ proc create_root_design { parentCell } {
 
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.2 blk_mem_gen_0 ]
-  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Coe_File {../../../../../../../avg_clean_10.coe} CONFIG.Enable_32bit_Address {false} CONFIG.Enable_A {Always_Enabled} CONFIG.Load_Init_File {true} CONFIG.Read_Width_A {8} CONFIG.Read_Width_B {8} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Write_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
+  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Coe_File {../../../../../../../avg_clean2.coe} CONFIG.Enable_32bit_Address {false} CONFIG.Enable_A {Always_Enabled} CONFIG.Load_Init_File {true} CONFIG.Read_Width_A {8} CONFIG.Read_Width_B {8} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Write_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
 
   # Create port connections
   connect_bd_net -net addr_1 [get_bd_ports addr] [get_bd_pins blk_mem_gen_0/addra]

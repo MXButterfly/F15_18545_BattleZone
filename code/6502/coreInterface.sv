@@ -102,7 +102,7 @@ module addrDecoder(output logic  [7:0] dataToCore,
         mathboxAccess = bramNum == `BRAM_MATH;
         addrToBram[0] = 'd0;
         addrToBram[1] = 'd0;
-        addrToBram[2] = 'd0;
+        addrToBram[2] = 'h5000;
         addrToBram[3] = 'd0;
         addrToBram[4] = 'd0;
         dataToBram[0] = 'd0;
