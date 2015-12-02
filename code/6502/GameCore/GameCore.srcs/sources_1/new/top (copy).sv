@@ -61,7 +61,9 @@ module top(   input logic clk, btnCpuReset,
 
     logic clk_3MHz, clk_3KHz;
 
-    logic coreReset;
+    logic coreReset, selfTest;
+    
+    assign selfTest = 1'b1;
                        
     logic [7:0] vecRamWrData;
     logic [15:0] vecRamWrAddr;
@@ -69,9 +71,7 @@ module top(   input logic clk, btnCpuReset,
 
     logic [15:0] vecRamAddr2;
 
-    logic avg_halt, self_test;
-    
-    assign self_test = 1'b0;
+    logic avg_halt;
 
     always_ff @(posedge clk) begin
         if(rst) begin
@@ -93,13 +93,16 @@ module top(   input logic clk, btnCpuReset,
 
     cpu core(.clk(clk_3MHz), .reset(coreReset), .AB(address), .DI(dataIn), .DO(dataOut), .WE(WE), .IRQ(IRQ), .NMI(NMI), .RDY(RDY));
 
-    addrDecoder ad(dataIn, addrToBram, dataToBram, weEnBram, vggo, vgrst, dataOut, {1'b0, address[14:0]}, dataFromBram, WE, avg_halt, clk_3KHz, clk_3MHz, self_test);  
+    addrDecoder ad(.dataToCore(dataIn), .addrToBram(addrToBram), .dataToBram(dataToBram), .weEnBram(weEnBram), 
+                    .vggo(vggo), .vgrst(vgrst), .dataFromCore(dataOut), .addr({1'b0, address[14:0]}), .dataFromBram(dataFromBram), 
+                    .we(WE), .halt(avg_halt), .clk_3KHz(clk_3KHz), .clk(clk_3MHz), .self_test(selfTest));  
+
 
     prog_ROM_wrapper progRom(addrToBram[`BRAM_PROG_ROM]-16'h5000, clk_3MHz, dataFromBram[`BRAM_PROG_ROM]);
 
     prog_RAM_wrapper progRam(addrToBram[`BRAM_PROG_RAM][9:0], clk_3MHz, dataToBram[`BRAM_PROG_RAM], 
                              dataFromBram[`BRAM_PROG_RAM], weEnBram[`BRAM_PROG_RAM]); 
-    vram_2_wrapper vecRam2(.addr(addrToBram[`BRAM_VECTOR]-16'h2000), .clk(clk_3MHz), .dataIn(dataToBram[`BRAM_VECTOR]), .dataOut(dataFromBram[`BRAM_VECTOR]), .we(weEnBram[`BRAM_VECTOR]));
+    vram_2_wrapper vecRam2(.addr(addrToBram[`BRAM_VECTOR][12:0]), .clk(clk_3MHz), .dataIn(dataToBram[`BRAM_VECTOR]), .dataOut(dataFromBram[`BRAM_VECTOR]), .we(weEnBram[`BRAM_VECTOR]));
 
     //logic [7:0] mathboxData; // hook up this and second read port to mathbox...
 
@@ -107,11 +110,11 @@ module top(   input logic clk, btnCpuReset,
 
     assign qCanWrite = avg_halt;
     assign vecRamAddr2 = qCanWrite ? vecRamWrAddr : pc + 1;
-    vector_ram_wrapper vecRam(pc-16'h2000, vecRamAddr2-16'h2000, clk, 16'h0, vecRamWrData, inst[15:8], inst[7:0], 1'b0, vecRamWrEn);                               
+    vector_ram_wrapper vecRam(pc[12:0], vecRamAddr2[12:0], clk, 16'h0, vecRamWrData, inst[15:8], inst[7:0], 1'b0, vecRamWrEn);                               
 
     memStoreQueue memQ(vecRamWrData, vecRamWrAddr, vecRamWrEn, dataToBram[`BRAM_VECTOR], addrToBram[`BRAM_VECTOR], qCanWrite, weEnBram[`BRAM_VECTOR], clk, rst);                 
 
-    NMICounter nmiC(NMI, clk_3KHz, rst, self_test);
+    NMICounter nmiC(NMI, clk_3KHz, rst, selfTest);
 
     assign IRQ = 0;
     assign RDY = 1;
@@ -179,7 +182,7 @@ module top(   input logic clk, btnCpuReset,
       assign ampSD = outputLatch[5];
       assign led[7:0] = outputLatch;
       
-      POKEY pokey(.Din(dataToBram[`BRAM_POKEY] ), .Dout(dataFromBram[`BRAM_POKEY]), .A(addrToBram[`BRAM_POKEY][3:0]), .P(sw), .phi2(clk_3MHz), .readHighWriteLow(~weEnBram[`BRAM_POKEY]),
+      POKEY pokey(.Din(dataToBram[`BRAM_POKEY] ), .Dout(dataFromBram[`BRAM_POKEY]), .A(addrToBram[`BRAM_POKEY][3:0]), .P(buttons), .phi2(clk_3MHz), .readHighWriteLow(~weEnBram[`BRAM_POKEY]),
                   .cs0Bar(pokeyEn), .aud(ampPWM), .clk(clk));
       
       
