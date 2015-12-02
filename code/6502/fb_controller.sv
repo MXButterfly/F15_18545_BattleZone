@@ -39,7 +39,7 @@ module fb_controller(
     logic[18:0] addr_a, addr_b, addr_c, r_addr, clear_addr;
     logic[3:0] color_in_a, color_in_b, color_in_c, color_out_a, color_out_b, color_out_c, color_out;
     logic en_a, en_b, en_c, wen_a, wen_b, wen_c, clearCC;
-    logic switch, lastDone;
+    logic switch, lastDone, clearDoneLatch, startClearLatch;
     
     fbRAM_wrapper bramA(.addr_a(addr_a), .clk(clk), .color_in(color_in_a), .color_out(color_out_a), 
                             .en(en_a), .write_en(wen_a));
@@ -168,7 +168,7 @@ module fb_controller(
     always_comb begin
         case(state)
             READ_A: begin
-                if(switch == 1'b1) begin
+                if(switch == 1'b1 && clearDoneLatch) begin
                     nextState = READ_B;
                 end
                 else begin
@@ -176,7 +176,7 @@ module fb_controller(
                 end
             end
             READ_B: begin
-                if(switch == 1'b1) begin
+                if(switch == 1'b1 && clearDoneLatch) begin
                     nextState = READ_C;
                 end
                 else begin
@@ -184,7 +184,7 @@ module fb_controller(
                 end
             end
             READ_C: begin
-                if(switch == 1'b1) begin
+                if(switch == 1'b1 && clearDoneLatch) begin
                     nextState = READ_A;
                 end
                 else begin
@@ -194,11 +194,30 @@ module fb_controller(
         endcase
     end
     
+   always_ff@(posedge clk)
+      if(rst) begin
+        clearDoneLatch <= 1'b0;
+        startClearLatch <= 1'b0;
+      end
+      else begin
+        if(startClearLatch && clearCC)
+            clearDoneLatch <= 1'b1;
+        else if(!startClearLatch && clear_addr == 'd0) begin
+            startClearLatch <= 1'b1;
+        end
+        else if(nextState != state) begin
+            clearDoneLatch <= 1'b0;
+            startClearLatch <= 1'b0;
+        end
+      end
+    
     //bram state
     always_ff@(posedge clk)
-      if(rst)
+      if(rst) begin
         state <= READ_A;
-      else
+      end
+      else begin
         state <= nextState;
+      end
         
 endmodule
