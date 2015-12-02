@@ -55,17 +55,17 @@ module mathBox(input  logic [7:0] addr,
     logic [31:0] workRegA, workRegB, workRegC;
 
     always_comb begin
-        mbRegD = 0;
-        mbRegEn = 0;
-        scratchRegD = 0;
-        scratchRegEn = 0;
+        mbRegD = 'd0;
+        mbRegEn = 'd0;
+        scratchRegD = 'd0;
+        scratchRegEn = 'd0;
         status = 8'hFF;
-        workRegA = 0;
-        workRegB = 0;
-        workRegC = 0;
+        workRegA = 'd0;
+        workRegB = 'd0;
+        workRegC = 'd0;
         case(state)
             IDLE: begin
-                status = 0;
+                status = 'd0;
                 if(we) begin
                     case(addr)
                         16'h060: begin
@@ -214,7 +214,7 @@ module mathBox(input  logic [7:0] addr,
                 mbRegD[4] = mbRegQ[4] - mbRegQ[2];
                 mbRegEn[4] = 2'b11;
                 
-                mbRegD[5] = {dataIn, mbRegD[5][7:0]} - mbRegQ[3];
+                mbRegD[5] = {dataIn, mbRegQ[5][7:0]} - mbRegQ[3];
                 mbRegEn[5] = 2'b11;
             end
         
@@ -295,7 +295,7 @@ module mathBox(input  logic [7:0] addr,
             S0BFA: begin
                 mbRegD[14] = mbRegQ[7] ^ scratchRegQ;
                 mbRegEn[14] = 2'b11;
-                if(scratchRegQ[15] == 0) begin
+                if(scratchRegQ[15] == 'd0) begin
                     mbRegD[13] = scratchRegQ;
                     scratchRegD = mbRegQ[12];
                     mbRegEn[13] = 2'b11;
@@ -304,7 +304,7 @@ module mathBox(input  logic [7:0] addr,
                 else begin
                     scratchRegD = -1 * $signed(mbRegQ[12]);
                     scratchRegEn = 1'b1;
-                    if($signed(mbRegQ[12]) > 0) begin
+                    if($signed(mbRegQ[12][15]) > 'd0) begin
                         mbRegD[13] = -1*$signed(scratchRegQ);
                         mbRegEn[13] = 2'b11;
                     end
@@ -314,7 +314,7 @@ module mathBox(input  logic [7:0] addr,
                     end
                 end
 
-                mbRegD[12] = (mbRegQ[7][15] == 0) ? mbRegQ[7] : -1*$signed(mbRegQ[7]);
+                mbRegD[12] = (mbRegQ[7][15] == 'd0) ? mbRegQ[7] : -1*$signed(mbRegQ[7]);
                 mbRegEn[12] = 2'b11;
 
                 mbRegD[15] = mbRegQ[6];
@@ -323,8 +323,8 @@ module mathBox(input  logic [7:0] addr,
             end
 
             S0BFB: begin
-                if($signed(mbRegQ[13] - mbRegQ[12]) >= 0) begin
-                    scratchRegD = (scratchRegQ << 1) + 1;
+                if($signed(mbRegQ[13] - mbRegQ[12]) >= 'd0) begin
+                    scratchRegD = (scratchRegQ << 1) + 'd1;
                     scratchRegEn = 1'b1;
                     mbRegD[13] = ((mbRegQ[13] - mbRegQ[12]) << 1) + scratchRegQ[15];
                     mbRegEn[13] = 2'b11;
@@ -354,7 +354,7 @@ module mathBox(input  logic [7:0] addr,
 
             C1D: begin
                 
-                if($signed(mbRegQ[2] - mbRegQ[0]) < 0) begin
+                if($signed(mbRegQ[2] - mbRegQ[0]) < 'd0) begin
                     mbRegD[2] = mbRegQ[0] - mbRegQ[2]; //inverted for mult by neg 1
                     mbRegEn[2] = 2'b11;
                 end
@@ -363,7 +363,7 @@ module mathBox(input  logic [7:0] addr,
                     mbRegEn[2] = 2'b11;
                 end
 
-                if($signed({dataIn, mbRegQ[3][7:0]} - mbRegQ[1]) < 0) begin
+                if($signed({dataIn, mbRegQ[3][7:0]} - mbRegQ[1]) < 'd0) begin
                     mbRegD[3] = mbRegQ[1] - {dataIn, mbRegQ[3][7:0]}; //inverted for mult by neg 1
                     mbRegEn[3] = 2'b11;
                 end
@@ -436,7 +436,7 @@ module mathBox(input  logic [7:0] addr,
             C13: nextState = S0BFA;
             C14: nextState = S0BFA;
             S0BFA: nextState = S0BFB;
-            S0BFB: nextState = ($signed(mbRegQ[15]) > 0) ? S0BFB : S0BFC;
+            S0BFB: nextState = ($signed(mbRegQ[15]) > 'd0) ? S0BFB : S0BFC;
             S0BFC: nextState = IDLE;
             C11: nextState = S048A;
             C1D: nextState = C1EA;

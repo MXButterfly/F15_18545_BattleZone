@@ -145,7 +145,7 @@ proc create_root_design { parentCell } {
   # Create interface ports
 
   # Create ports
-  set Address [ create_bd_port -dir I -from 13 -to 0 Address ]
+  set address [ create_bd_port -dir I -from 9 -to 0 address ]
   set clock [ create_bd_port -dir I clock ]
   set dataIn [ create_bd_port -dir I -from 7 -to 0 dataIn ]
   set dataOut [ create_bd_port -dir O -from 7 -to 0 dataOut ]
@@ -153,10 +153,10 @@ proc create_root_design { parentCell } {
 
   # Create instance: blk_mem_gen_0, and set properties
   set blk_mem_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.2 blk_mem_gen_0 ]
-  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Enable_32bit_Address {false} CONFIG.Enable_A {Always_Enabled} CONFIG.Enable_B {Always_Enabled} CONFIG.Memory_Type {Single_Port_RAM} CONFIG.Operating_Mode_A {NO_CHANGE} CONFIG.Port_B_Clock {0} CONFIG.Port_B_Enable_Rate {0} CONFIG.Port_B_Write_Rate {0} CONFIG.Read_Width_A {8} CONFIG.Read_Width_B {8} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Write_Depth_A {16384} CONFIG.Write_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
+  set_property -dict [ list CONFIG.Byte_Size {9} CONFIG.Enable_32bit_Address {false} CONFIG.Enable_A {Always_Enabled} CONFIG.Enable_B {Always_Enabled} CONFIG.Fill_Remaining_Memory_Locations {true} CONFIG.Memory_Type {Single_Port_RAM} CONFIG.Operating_Mode_A {NO_CHANGE} CONFIG.Port_B_Clock {0} CONFIG.Port_B_Enable_Rate {0} CONFIG.Port_B_Write_Rate {0} CONFIG.Read_Width_A {8} CONFIG.Read_Width_B {8} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Write_Depth_A {1024} CONFIG.Write_Width_A {8} CONFIG.Write_Width_B {8} CONFIG.use_bram_block {Stand_Alone}  ] $blk_mem_gen_0
 
   # Create port connections
-  connect_bd_net -net Address_1 [get_bd_ports Address] [get_bd_pins blk_mem_gen_0/addra]
+  connect_bd_net -net address_1 [get_bd_ports address] [get_bd_pins blk_mem_gen_0/addra]
   connect_bd_net -net blk_mem_gen_0_douta [get_bd_ports dataOut] [get_bd_pins blk_mem_gen_0/douta]
   connect_bd_net -net clock_1 [get_bd_ports clock] [get_bd_pins blk_mem_gen_0/clka]
   connect_bd_net -net dataIn_1 [get_bd_ports dataIn] [get_bd_pins blk_mem_gen_0/dina]
