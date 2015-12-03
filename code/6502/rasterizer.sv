@@ -102,8 +102,8 @@ module doubleRasterizer
 
    assign minorBetaOffset = inc ? ((!cntNeg) ? (13'd1) : (-13'd1)) : 13'd0;
    
-   assign pixelXBeta = pixelXAlpha + ((bZone | xZone) ? minorBetaOffset : 13'd0);
-   assign pixelYBeta = pixelYAlpha + (yZone ? minorBetaOffset : 13'd0);
+   assign pixelXBeta = pixelXAlpha + ((bZone | xZone) ? 13'd1 : minorBetaOffset);
+   assign pixelYBeta = pixelYAlpha + (yZone ? 13'd1 : minorBetaOffset);
 
 
    
