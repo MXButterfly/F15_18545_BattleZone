@@ -14,7 +14,7 @@ module avg_core(output logic [12:0] startX, startY, endX, endY,
     logic signed [12:0] dX, dY;
     logic signed [21:0] dX_buf, dY_buf, nextX_scaled, nextY_scaled, linScale_buf;
     logic [2:0] pcOffset;
-    logic [3:0] zVal, decZVal;
+    logic [7:0] zVal, decZVal;
     logic signed [7:0] linScale, decLinScale;
     logic signed [2:0] binScale, decBinScale;
     logic [15:0] nextPC, pc;
@@ -100,14 +100,19 @@ module avg_core(output logic [12:0] startX, startY, endX, endY,
     /*             EXECUTE             */
     /***********************************/
 
-    assign intensity = (useZReg && ~blank) ? zVal : decZVal;
+    logic [7:0] rawIntensity;
 
+    always_comb begin
+        rawIntensity = (useZReg && ~blank) ? zVal : decZVal;
+        intensity = (rawIntensity >= 7) ? 4'd7 : rawIntensity[3:0];
+    end
+    
     register #(14) xReg(currX, nextX, (center || vector) && run, clk, rst || vggoCap);
     register #(14) yReg(currY, nextY, (center || vector) && run, clk, rst || vggoCap);
 
     retStack rs(retAddr, retValid, oldPC + 16'd2, jsr && run, ret && run, clk, rst || vggoCap);
     
-    register #(4) zReg(zVal, decZVal, zWrEn && run, clk, rst || vggoCap);
+    register #(8) zReg(zVal, decZVal, zWrEn && run, clk, rst || vggoCap);
 
     register #(8, 0) linScaleReg(linScale, decLinScale, scalWrEn && run, clk, rst || vggoCap);
     register #(3) binScaleReg(binScale, decBinScale, scalWrEn && run, clk, rst || vggoCap);
