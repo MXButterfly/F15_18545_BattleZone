@@ -71,7 +71,7 @@ module top(   input logic clk, btnCpuReset,
 
     logic avg_halt, self_test;
     
-    assign self_test = 1'b0;
+    assign self_test = 1'b1;
 
     always_ff @(posedge clk) begin
         if(rst) begin
