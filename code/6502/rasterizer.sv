@@ -142,7 +142,7 @@ module rasterizer
    logic signed [13:0] 	     truncStartX, truncEndX; //EDIT: truncate if out of bounds
    logic signed [13:0] 	     truncStartY, truncEndY;//EDIT: truncate if out of bounds
    
-   logic [13:0] 	     absDeltaX, absDeltaY, numerator, denominator;
+   logic [13:0] 	     absDeltaX, absDeltaY, numerator, denominator, numeratorPrime, denominatorPrime;
 
    logic [13:0] 	     majCnt, minCnt, majCntDummy;
 
@@ -182,8 +182,12 @@ module rasterizer
    xor xorNeg(cntNeg, xNeg, yNeg);
    
    
-   switchMux #(14) recipSwitch(.U(numerator), .V(denominator), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
+   switchMux #(14) recipSwitch(.U(numeratorPrime), .V(denominatorPrime), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
 
+
+   m_register #(14) numerBank(.Q(numerator), .D(numeratorPrime), .clk(clk), .rst(rst), .en(idleReady));
+   m_register #(14) denomBank(.Q(denominator), .D(denominatorPrime), .clk(clk), .rst(rst), .en(idleReady));
+   
 
    m_counter #(14) majorCounter(.Q(majCnt), .D(14'd0), .clk(clk), .clr(rst), .load(idleReady), .up(1'b1), .en(loopEn));
    m_counter #(14) minorCounter(.Q(minCnt), .D(14'd0), .clk(clk), .clr(rst), .load(idleReady), .up(~cntNeg), .en(inc));
