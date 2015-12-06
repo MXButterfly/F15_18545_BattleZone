@@ -101,11 +101,12 @@ module rasterizer
    xor xorNeg(cntNeg, xNeg, yNeg);
    
    
-   switchMux #(14) recipSwitch(.U(numerator), .V(denominator), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
+   switchMux #(14) recipSwitch(.U(numeratorPrime), .V(denominatorPrime), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
 
-   m_counter #(14) majorCounter(.Q(majCnt), .D(14'd0), .clk(clk), .clr(rst), .load(idleReady), .up(1'b1), .en(loopEn));
-   m_counter #(14) minorCounter(.Q(minCnt), .D(14'd0), .clk(clk), .clr(rst), .load(idleReady), .up(~cntNeg), .en(inc));
 
+   m_register #(14) numerBank(.Q(numerator), .D(numeratorPrime), .clk(clk), .rst(rst), .en(idleReady));
+   m_register #(14) denomBank(.Q(denominator), .D(denominatorPrime), .clk(clk), .rst(rst), .en(idleReady));
+   
 
    bresenhamCore rasterCore(.numerator(numerator), .denominator(denominator), .clk(clk), .rst(rst|idleReady), .en(loopEn), .inc(inc));
 
