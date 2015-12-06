@@ -4,7 +4,7 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
                   output logic [15:0] jumpAddr, 
                   output logic  [2:0] pcOffset, 
                   output logic [12:0] dX, dY, 
-                  output logic  [7:0] zVal,
+                  output logic  [3:0] zVal,
                   output logic  [7:0] linScale, 
                   output logic  [2:0] binScale, 
                   output logic  [2:0] color,
@@ -31,7 +31,7 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
         linScale = 0; binScale = 0;
         color = 3'b010;
         instLength = 0;
-        zVal = 8'b0000_0000;
+        zVal = 4'b0000;
         case(dcd_op) 
             `OP_VCTR: begin
                 //DEMO
@@ -40,7 +40,7 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
                 vector = 1;
                 if(inst[7:5] == 3'b000) blank = 1'b1;
                 else if(inst[7:5] == 3'b001) useZReg = 1'b1;
-                else zVal = {4'b0000, (inst[7:5] << 1)};
+                else zVal = {1'b0, inst[7:5]} << 1;
                 pcOffset = 3'h4;
                 instLength = 7;
             end 
@@ -70,7 +70,7 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
                 vector = 1;
                 if(inst[31:29] == 3'b000) blank = 1'b1;
                 else if(inst[31:29] == 3'b001) useZReg = 1'b1;
-                else zVal = {4'b0000, inst[31:29] << 1};
+                else zVal = {1'b0, inst[31:29]} << 1;
                 pcOffset = 3'h2;
                 instLength = 5;
             end
@@ -80,7 +80,7 @@ module avg_decode(output logic        zWrEn, scalWrEn, center, jmp, jsr, ret,
                 case(inst[20]) 
                     1'b0: begin//STAT
                         zWrEn = 1'b1;
-                        zVal = inst[31:24];
+                        zVal = inst[31:28];
                         color = inst[19:16];
                         instLength = 6;
                     end

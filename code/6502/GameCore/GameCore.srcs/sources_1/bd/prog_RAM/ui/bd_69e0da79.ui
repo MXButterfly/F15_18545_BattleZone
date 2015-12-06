@@ -7,11 +7,11 @@ preplace portBus dataIn -pg 1 -y 110 -defaultsOSRD
 preplace portBus address -pg 1 -y 70 -defaultsOSRD
 preplace portBus dataOut -pg 1 -y 200 -defaultsOSRD
 preplace inst blk_mem_gen_0 -pg 1 -lvl 1 -y 100 -defaultsOSRD
-preplace netloc dataIn_1 1 0 1 NJ
-preplace netloc we_1 1 0 1 NJ
+preplace netloc dataIn_1 1 0 1 N
+preplace netloc we_1 1 0 1 N
 preplace netloc blk_mem_gen_0_douta 1 0 2 140 200 NJ
-preplace netloc clock_1 1 0 1 NJ
-preplace netloc address_1 1 0 1 NJ
+preplace netloc clock_1 1 0 1 N
+preplace netloc address_1 1 0 1 N
 levelinfo -pg 1 120 250 380
 ",
 }

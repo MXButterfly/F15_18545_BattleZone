@@ -1,36 +1,29 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <wave_config>
-	<wave_state>
-	</wave_state>
-	<db_ref_list>
-		<db_ref path="/afs/ece.cmu.edu/usr/ashresth/Private/545proj/F15_18545_BattleZone/code/6502/GameCore/GameCore.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1" type="auto">
-			<top_modules>
-				<top_module name="top">
-				</top_module>
-			</top_modules>
-		</db_ref>
-	</db_ref_list>
-	<WVObjectSize size="4">
-	</WVObjectSize>
-	<wvobject fp_name="state" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">state[1:0]</obj_property>
-		<obj_property name="ObjectShortName">state[1:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="pc" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">pc[12:0]</obj_property>
-		<obj_property name="ObjectShortName">pc[12:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="memQ/addressB0" type="array" db_ref_id="1">
-		<obj_property name="ElementShortName">memQ/addressB0[12:0]</obj_property>
-		<obj_property name="ObjectShortName">memQ/addressB0[12:0]</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
-	<wvobject fp_name="vggo" type="logic" db_ref_id="1">
-		<obj_property name="ElementShortName">vggo</obj_property>
-		<obj_property name="ObjectShortName">vggo</obj_property>
-		<obj_property name="Radix">HEXRADIX</obj_property>
-	</wvobject>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/afs/ece.cmu.edu/usr/htay/18545/F15_18545_BattleZone/code/6502/GameCore/GameCore.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="3" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject db_ref_id="1" type="array" fp_name="address">
+      <obj_property name="ElementShortName">address[14:0]</obj_property>
+      <obj_property name="ObjectShortName">address[14:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="core/regfile">
+      <obj_property name="ElementShortName">core/regfile[7:0]</obj_property>
+      <obj_property name="ObjectShortName">core/regfile[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject db_ref_id="1" type="array" fp_name="dataIn">
+      <obj_property name="ElementShortName">dataIn[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dataIn[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
 </wave_config>
-

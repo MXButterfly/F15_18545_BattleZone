@@ -14,7 +14,7 @@ module avg_core(output logic [12:0] startX, startY, endX, endY,
     logic signed [12:0] dX, dY;
     logic signed [21:0] dX_buf, dY_buf, nextX_scaled, nextY_scaled, linScale_buf;
     logic [2:0] pcOffset;
-    logic [7:0] zVal, decZVal;
+    logic [3:0] zVal, decZVal;
     logic signed [7:0] linScale, decLinScale;
     logic signed [2:0] binScale, decBinScale;
     logic [15:0] nextPC, pc;
@@ -100,19 +100,22 @@ module avg_core(output logic [12:0] startX, startY, endX, endY,
     /*             EXECUTE             */
     /***********************************/
 
+    assign intensity = (useZReg && ~blank) ? zVal : decZVal;
+
+    /*
     logic [7:0] rawIntensity;
 
     always_comb begin
         rawIntensity = (useZReg && ~blank) ? zVal : decZVal;
-        intensity = (rawIntensity >= 7) ? 4'd7 : rawIntensity[3:0];
+        intensity = (rawIntensity >= 4'b1111) ? 4'b1111 : rawIntensity[3:0];
     end
-    
+    */
     register #(14) xReg(currX, nextX, (center || vector) && run, clk, rst || vggoCap);
     register #(14) yReg(currY, nextY, (center || vector) && run, clk, rst || vggoCap);
 
     retStack rs(retAddr, retValid, oldPC + 16'd2, jsr && run, ret && run, clk, rst || vggoCap);
     
-    register #(8) zReg(zVal, decZVal, zWrEn && run, clk, rst || vggoCap);
+    register #(4) zReg(zVal, decZVal, zWrEn && run, clk, rst || vggoCap);
 
     register #(8, 0) linScaleReg(linScale, decLinScale, scalWrEn && run, clk, rst || vggoCap);
     register #(3) binScaleReg(binScale, decBinScale, scalWrEn && run, clk, rst || vggoCap);
@@ -263,7 +266,7 @@ module lineRegQueue(output logic [12:0] QStartX, QEndX, QStartY, QEndY,
                     input  logic [3:0]  DIntensity, 
                     input  logic read,  currWrite, clk, rst);
 
-    parameter DEPTH = 16;
+    parameter DEPTH = 32;
 
 
     logic [DEPTH-1:0] [12:0] startX, startY, endX, endY; 
@@ -292,30 +295,30 @@ module lineRegQueue(output logic [12:0] QStartX, QEndX, QStartY, QEndY,
 
     always_ff @(posedge clk) begin
         if(rst) begin
-            wrIndex <= 0;
-            reIndex <= 0;
-            lastWrite <= 0;
-            numFilled <= 0;
+            wrIndex <= 'd0;
+            reIndex <= 'd0;
+            lastWrite <= 'd0;
+            numFilled <= 'd0;
         end
         else begin
             lastWrite <= currWrite;
             if(write && read && !empty) begin
-                wrIndex <= wrIndex + 1;
-                reIndex <= reIndex + 1;
+                wrIndex <= wrIndex + 'd1;
+                reIndex <= reIndex + 'd1;
             end
             else if(write && !full) begin
-                wrIndex <= wrIndex + 1;
-                numFilled <= numFilled + 1;
+                wrIndex <= wrIndex + 'd1;
+                numFilled <= numFilled + 'd1;
             end
             else if(read && !empty) begin
-                reIndex <= reIndex + 1;
-                numFilled <= numFilled - 1;
+                reIndex <= reIndex + 'd1;
+                numFilled <= numFilled - 'd1;
             end
         end
     end
 
     assign full = (numFilled == DEPTH);
-    assign empty = (numFilled == 0);
+    assign empty = (numFilled == 'd0);
 
     assign QStartX = startX[reIndex];
     assign QEndX = endX[reIndex];
@@ -324,7 +327,7 @@ module lineRegQueue(output logic [12:0] QStartX, QEndX, QStartY, QEndY,
     assign QIntensity = intensity[reIndex];
 
     always_comb begin
-        writeEn = 0;
+        writeEn = 'd0;
         writeEn[wrIndex] = write;
     end
 

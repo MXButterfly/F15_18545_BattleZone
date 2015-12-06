@@ -24,7 +24,7 @@ module fb_controller(
 
     input logic[18:0] w_addr,
     input logic en_w, en_r,
-    input logic done, clk, rst,
+    input logic halt, vggo, clk, rst,
     input logic[8:0] row,
     input logic[9:0] col,
     input logic[3:0] color_in,
@@ -34,28 +34,38 @@ module fb_controller(
     output logic ready
     );
     
-    enum logic[1:0] {READ_A = 2'b01, READ_B = 2'b10, READ_C = 2'b11} state, nextState;
+    enum logic[1:0] {READ_A = 2'b00, READ_B = 2'b01, WRITE_A = 2'b10, WRITE_B = 2'b11} state, nextState;
     
-    logic[18:0] addr_a, addr_b, addr_c, r_addr, clear_addr;
-    logic[3:0] color_in_a, color_in_b, color_in_c, color_out_a, color_out_b, color_out_c, color_out;
-    logic en_a, en_b, en_c, wen_a, wen_b, wen_c, clearCC;
-    logic switch, lastDone, clearDoneLatch, startClearLatch;
+    logic[18:0] addr_a, addr_b, r_addr, clear_addr;
+    logic[3:0] color_in_a, color_in_b, color_out_a, color_out_b, color_out;
+    logic en_a, en_b, wen_a, wen_b, clearCC;
+    logic switch, vggolastDone, haltlastDone;
     
     fbRAM_wrapper bramA(.addr_a(addr_a), .clk(clk), .color_in(color_in_a), .color_out(color_out_a), 
                             .en(en_a), .write_en(wen_a));
                             
     fbRAM_wrapper bramB(.addr_a(addr_b), .clk(clk), .color_in(color_in_b), .color_out(color_out_b), 
                             .en(en_b), .write_en(wen_b));
-    fbRAM_wrapper bramC(.addr_a(addr_c), .clk(clk), .color_in(color_in_c), .color_out(color_out_c), 
-                            .en(en_c), .write_en(wen_c));
-
+   
 
     m_counter #(19) clearCounter(.Q(clear_addr), .D(19'd0), .clk(clk), .clr(rst), .load(clearCC), .up(1'b1), .en(1'b1));
 
     //catches edge of vggo/vgreset signals
-    m_register #(1) edgeCatcher(.Q(lastDone), .D(done), .clr(rst), .en(1'b1), .clk(clk));
+    always_ff@(posedge clk)
+      if(rst) begin
+        vggolastDone <= 1'b0;
+        haltlastDone <= 1'b0;
+      end
+      else begin
+          vggolastDone <= vggo;
+          haltlastDone <= halt;
+      end
+    //m_register #(1) vggoEdgeCatcher(.Q(vggolastDone), .D(vggodone), .clr(rst), .en(1'b1), .clk(clk));
+    //m_register #(1) haltEdgeCatcher(.Q(haltlastDone), .D(haltdone), .clr(rst), .en(1'b1), .clk(clk));
     
-    assign switch = (lastDone == 1'b0 && done == 1'b1);
+    
+    assign vggo_switch = (vggolastDone == 1'b0 && vggo == 1'b1);
+    assign halt_switch = (haltlastDone == 1'b0 && halt == 1'b1);
     
     //clear counter when all addresses are cleared
     assign clearCC = (clear_addr > 19'd307200);
@@ -89,9 +99,24 @@ module fb_controller(
             green_out = color_out;
             blue_out = 4'b0000;
         end
-    
+    //clear to b read from a, write to b read from a, clear to a read from b, write to a read from b
         case(state)
-            READ_A: begin //sel A for read, B for write, C for clear
+            READ_A: begin //clear to b read from a
+                //mux
+                color_in_a = 4'd0;
+                addr_a = r_addr;
+                wen_a = 1'b0;
+                en_a = en_r;                
+                
+                color_in_b = 4'd0;
+                addr_b = clear_addr;
+                wen_b = 1'b1;
+                en_b = 1'b1;
+
+                //demux
+                color_out = color_out_a;
+            end
+            WRITE_B: begin //write to b read from a,
                 //mux
                 color_in_a = 4'd0;
                 addr_a = r_addr;
@@ -103,27 +128,15 @@ module fb_controller(
                 wen_b = 1'b1;
                 en_b = en_w;
                 
-                
-                color_in_c = 4'd0;
-                addr_c = clear_addr;
-                wen_c = 1'b1;
-                en_c = 1'b1;
-
                 //demux
                 color_out = color_out_a;
             end
-            READ_B: begin //sel B for read, C for write, A for clear
+            READ_B: begin //sclear to a read from b
                //mux
                 color_in_b = 4'd0;
                 addr_b = r_addr;
                 wen_b = 1'b0;
-                en_b = en_r;
-                            
-                color_in_c = color_in;
-                addr_c = w_addr;
-                wen_c = 1'b1;
-                en_c = en_w;
-                
+                en_b = en_r;                
                 
                 color_in_a = 4'd0;
                 addr_a = clear_addr;
@@ -133,27 +146,20 @@ module fb_controller(
                //demux
                color_out = color_out_b;
            end
-           READ_C: begin //sel C for read, A for write, B for clear
+           WRITE_A: begin //write to a read from b
               //mux
-              color_in_c = 4'd0;
-              addr_c = r_addr;
-              wen_c = 1'b0;
-              en_c = en_r;
-                          
-              color_in_a = color_in;
-              addr_a = w_addr;
-              wen_a = 1'b1;
-              en_a = en_w;
-              
-              
-              color_in_b = 4'd0;
-              addr_b = clear_addr;
-              wen_b = 1'b1;
-              en_b = 1'b1;
-              
-              
+               color_in_b = 4'd0;
+               addr_b = r_addr;
+               wen_b = 1'b0;
+               en_b = en_r;
+                           
+               color_in_a = color_in;
+               addr_a = w_addr;
+               wen_a = 1'b1;
+               en_a = en_w;
+  
               //demux
-              color_out = color_out_c;
+              color_out = color_out_b;
           end
         endcase
         
@@ -168,48 +174,39 @@ module fb_controller(
     always_comb begin
         case(state)
             READ_A: begin
-                if(switch == 1'b1 && clearDoneLatch) begin
-                    nextState = READ_B;
+                if(vggo_switch == 1'b1) begin
+                    nextState = WRITE_B;
                 end
                 else begin
                     nextState = READ_A;
+                end
+            end
+            WRITE_B: begin
+                if(halt_switch == 1'b1) begin
+                    nextState = READ_B;
+                end
+                else begin
+                    nextState = WRITE_B;
                 end
             end
             READ_B: begin
-                if(switch == 1'b1 && clearDoneLatch) begin
-                    nextState = READ_C;
+                if(vggo_switch == 1'b1) begin
+                    nextState = WRITE_A;
                 end
                 else begin
                     nextState = READ_B;
                 end
             end
-            READ_C: begin
-                if(switch == 1'b1 && clearDoneLatch) begin
+            WRITE_A: begin
+                if(halt_switch == 1'b1) begin
                     nextState = READ_A;
                 end
                 else begin
-                    nextState = READ_C;
+                    nextState = WRITE_A;
                 end
             end
         endcase
     end
-    
-   always_ff@(posedge clk)
-      if(rst) begin
-        clearDoneLatch <= 1'b0;
-        startClearLatch <= 1'b0;
-      end
-      else begin
-        if(startClearLatch && clearCC)
-            clearDoneLatch <= 1'b1;
-        else if(!startClearLatch && clear_addr == 'd0) begin
-            startClearLatch <= 1'b1;
-        end
-        else if(nextState != state) begin
-            clearDoneLatch <= 1'b0;
-            startClearLatch <= 1'b0;
-        end
-      end
     
     //bram state
     always_ff@(posedge clk)

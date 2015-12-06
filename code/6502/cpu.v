@@ -73,7 +73,7 @@ wire [7:0] PCL = PC[7:0];
 
 reg NMI_edge = 0;       // captured NMI edge
 
-reg [1:0] regsel;                       // Select A, X, Y or S register
+(* mark_debug = "true" *) reg [1:0] regsel;                       // Select A, X, Y or S register
 wire [7:0] regfile = AXYS[regsel];      // Selected register output
 
 parameter 
@@ -88,10 +88,10 @@ parameter
 
 
 `ifdef SIM
-wire [7:0]   A = AXYS[SEL_A];           // Accumulator
-wire [7:0]   X = AXYS[SEL_X];           // X register
-wire [7:0]   Y = AXYS[SEL_Y];           // Y register 
-wire [7:0]   S = AXYS[SEL_S];           // Stack pointer 
+(* mark_debug = "true" *) wire [7:0]   A = AXYS[SEL_A];           // Accumulator
+(* mark_debug = "true" *) wire [7:0]   X = AXYS[SEL_X];           // X register
+(* mark_debug = "true" *) wire [7:0]   Y = AXYS[SEL_Y];           // Y register 
+(* mark_debug = "true" *) wire [7:0]   S = AXYS[SEL_S];           // Stack pointer 
 `endif
 
 wire [7:0] P = { N, V, 2'b11, D, I, Z, C };

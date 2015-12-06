@@ -21,8 +21,8 @@ module ALU( clk, op, right, AI, BI, CI, CO, BCD, OUT, V, Z, N, HC, RDY );
 	input clk;
 	input right;
 	input [3:0] op;		// operation
-	input [7:0] AI;
-	input [7:0] BI;
+	(* mark_debug = "true" *) input [7:0] AI;
+	(* mark_debug = "true" *) input [7:0] BI;
 	input CI;
 	input BCD;		// BCD style carry
 	output [7:0] OUT;
@@ -33,7 +33,7 @@ module ALU( clk, op, right, AI, BI, CI, CO, BCD, OUT, V, Z, N, HC, RDY );
 	output HC;
 	input RDY;
 
-reg [7:0] OUT;
+(* mark_debug = "true" *) reg [7:0] OUT;
 reg CO;
 wire V;
 wire Z;
