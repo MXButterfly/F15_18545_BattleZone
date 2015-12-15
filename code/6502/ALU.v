@@ -33,7 +33,7 @@ module ALU( clk, op, right, AI, BI, CI, CO, BCD, OUT, V, Z, N, HC, RDY );
 	output HC;
 	input RDY;
 
-(* mark_debug = "true" *) reg [7:0] OUT;
+reg [7:0] OUT;
 reg CO;
 wire V;
 wire Z;

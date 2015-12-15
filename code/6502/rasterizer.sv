@@ -30,7 +30,7 @@ module rasterizer
   logic signed [13:0]        truncStartX, truncEndX; //EDIT: truncate if out of bounds
   logic signed [13:0]        truncStartY, truncEndY;//EDIT: truncate if out of bounds
   
-   logic [13:0]        absDeltaX, absDeltaY, numerator, denominator;
+   logic [13:0]        absDeltaX, absDeltaY, numerator, denominator, numeratorPrime, denominatorPrime;
 
    logic [13:0]        majCnt, minCnt;
 
@@ -39,6 +39,8 @@ module rasterizer
    logic 	       goodTime, goodX, goodY;
 
    logic 	       idleReady;
+   
+   logic pipe1;
    
    wire signed [12:0] halfWidth;
    wire signed [12:0] halfHeight;
@@ -96,21 +98,24 @@ module rasterizer
    
    m_comparator #(14) slopePicker(.A(absDeltaX), .B(absDeltaY), .AgtB(xZone), .AeqB(bZone), .AltB(yZone));
 
-   m_comparator #(14) xDirCmp(.A(adjStartX), .B(adjEndX), .AltB(xNeg));
-   m_comparator #(14) yDirCmp(.A(adjStartY), .B(adjEndY), .AltB(yNeg));
+   m_comparator #(14) xDirCmp(.A(adjStartX), .B(adjEndX), .AltB(xNeg)); //fanout
+   m_comparator #(14) yDirCmp(.A(adjStartY), .B(adjEndY), .AltB(yNeg)); //fanout
    xor xorNeg(cntNeg, xNeg, yNeg);
+   
+   
+   m_register #(14) numerBank(.Q(numerator), .D(numeratorPrime), .clk(clk), .clr(rst), .en(pipe1));
+   m_register #(14) denomBank(.Q(denominator), .D(denominatorPrime), .clk(clk), .clr(rst), .en(pipe1));
    
    
    switchMux #(14) recipSwitch(.U(numeratorPrime), .V(denominatorPrime), .Sel(yZone), .A(absDeltaY), .B(absDeltaX));
 
+   m_counter #(14) majorCounter(.Q(majCnt), .D(14'd0), .clk(clk), .clr(rst), .load(idleReady), .up(1'b1), .en(loopEn));
+   m_counter #(14) minorCounter(.Q(minCnt), .D(14'd0), .clk(clk), .clr(rst), .load(idleReady), .up(~cntNeg), .en(inc));
 
-   m_register #(14) numerBank(.Q(numerator), .D(numeratorPrime), .clk(clk), .rst(rst), .en(idleReady));
-   m_register #(14) denomBank(.Q(denominator), .D(denominatorPrime), .clk(clk), .rst(rst), .en(idleReady));
-   
 
    bresenhamCore rasterCore(.numerator(numerator), .denominator(denominator), .clk(clk), .rst(rst|idleReady), .en(loopEn), .inc(inc));
 
-   rasterFSM rasterControl(.readyIn(readyIn), .denominator(denominator), .majCnt(majCnt), .clk(clk), .rst(rst), .loopEn(loopEn), .done(done), .good(goodTime), .rastReady(rastReady), .idleReady(idleReady));
+   rasterFSM rasterControl(.readyIn(readyIn), .denominator(denominator), .majCnt(majCnt), .clk(clk), .rst(rst), .loopEn(loopEn), .done(done), .good(goodTime), .rastReady(rastReady), .idleReady(idleReady), .pipe1(pipe1));
 
 
    m_mux2to1 #(14) leftXMux(.Y(leftX), .Sel((bZone|xZone) ? xNeg : yNeg), .I0(adjEndX), .I1(adjStartX));
@@ -151,10 +156,10 @@ module rasterFSM
   (input logic readyIn,
    input logic [12:0] denominator, majCnt,
    input logic 	      clk, rst,
-   output logic       loopEn, good, done, rastReady, idleReady
+   output logic       loopEn, good, done, rastReady, idleReady, pipe1
    );
 
-   typedef enum       {IDLE, ITER, DONE} state;
+   typedef enum       {IDLE, ITER, DONE, PIPE} state;
 
    state next, current;
    
@@ -177,7 +182,7 @@ module rasterFSM
 	    begin
 	       if(readyIn)
              begin
-                next = ITER;
+                next = PIPE;
                 idleReady = 1'b1;
              end
 	       else
@@ -188,13 +193,23 @@ module rasterFSM
            done = 1'b0;
            loopEn = 1'b0;
            good = 1'b0;
+           pipe1 = 1'b0;
 	    end
+	  PIPE:
+	   begin
+	       next = ITER;
+	       pipe1 = 1'b1;
+	       done = 1'b0;
+	       loopEn = 1'b0;
+	       good = 1'b0;
+	       idleReady = 1'b0;
+	   end
 	  ITER:
 	    begin
 	       if(denominator == majCnt)begin
               next = DONE;
               loopEn = 1'b0;
-              good = 1'b0;
+              good = 1'b1;
               
 	       end
 	       else begin
@@ -205,7 +220,7 @@ module rasterFSM
 	       end
 	       
 	       done = 1'b0;
-	       
+	       pipe1 = 1'b0;
 	       
 	    end
 	  DONE:
@@ -216,7 +231,7 @@ module rasterFSM
 	       loopEn = 1'b0;
 	       good = 1'b0;
 	       idleReady = 1'b0;
-	       
+	       pipe1=1'b0;
 	       
 	    end
 	endcase // case (current)
@@ -328,4 +343,83 @@ module absVal
    
 
 endmodule: absVal	  
+
+//NOTE: Outdated, need to change 10:0 to 12:0
+module sanityBench();
+
+   logic [10:0]  startX, endX;
+   logic [10:0]  startY, endY;
+   logic 	 clk, rst, readyIn;
+   logic [18:0]  addressOut;
+   logic [10:0]  pixelX, pixelY;
+   
+   logic 	 goodPixel, done;
+
+
+   logic [2:0] 	 valIn, valOut;
+
+
+   logic [10:0]  numerator, denominator;
+   logic 	 inc;
+   
+   
+   logic 	 en;
+   
+   
+
+   rasterizer testee(.*);
+
+
+   absVal #(3) testee2(.*);
+   
+
+   bresenhamCore testee3(.*);
+   
+   initial begin
+      clk = 0;
+      forever #10 clk = ~clk;
+   end
+
+   
+   initial begin
+
+      $monitor("%d: (%d, %d) - %b", $time, pixelX, pixelY, goodPixel);
+      
+      startY = 11'd50;
+      endY = 11'd250;
+      startX = -11'd25;
+      endX = 11'd75;
+      readyIn = 0;
+      rst = 1;
+      @(posedge clk);
+
+      rst = 0;
+      @(posedge clk);
+      
+      readyIn = 1;
+      @(posedge clk);
+      readyIn = 0;
+      
+      $display("Denominator: %d", testee.denominator);
+      
+      
+      do begin
+	 @(posedge clk);
+	 
+      end while(!done);
+      
+      
+      $finish;
+      
+      
+      
+   end
+   
+
+   
+
+   
+endmodule: sanityBench
+
+
 

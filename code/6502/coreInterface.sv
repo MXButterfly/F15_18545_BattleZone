@@ -140,7 +140,9 @@ module addrDecoder(output logic  [7:0] dataToCore,
                    input  logic  [7:0] dataFromCore,
                    input  logic [15:0] addr,
                    input  logic  [4:0] [7:0] dataFromBram,
-                   input  logic        we, halt, clk_3KHz, clk, self_test);
+                   input  logic        we, halt, clk_3KHz, clk, self_test,
+                   input  logic [15:0] option_switch,
+                   input  logic        coin);
 
     logic [2:0] bramNum, outBramNum;
 
@@ -196,9 +198,9 @@ module addrDecoder(output logic  [7:0] dataToCore,
         end
         else begin
             case(outBramAddr)
-                16'h800: dataToCore = {clk_3KHz, halt, 1'b1, self_test, 4'b1111};
-                16'ha00: dataToCore = 8'b0001_0101;
-                16'hc00: dataToCore = 8'b0000_0000;
+                16'h800: dataToCore = {clk_3KHz, halt, 1'b1, self_test, 3'b111, coin};
+                16'ha00: dataToCore = option_switch[7:0];//dataToCore = 8'b0001_0101;
+                16'hc00: dataToCore = option_switch[15:8];
                 //16'h1800: dataToCore = 8'b11111111;
                 default: begin
                     if(outBramAddr != 16'h1400) unmappedAccess = 1;

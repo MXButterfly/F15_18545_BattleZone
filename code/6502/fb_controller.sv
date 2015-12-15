@@ -24,6 +24,7 @@ module fb_controller(
 
     input logic[18:0] w_addr,
     input logic en_w, en_r,
+    input logic lineDone, lrqEmpty,
     input logic halt, vggo, clk, rst,
     input logic[8:0] row,
     input logic[9:0] col,
@@ -35,11 +36,12 @@ module fb_controller(
     );
     
     enum logic[1:0] {READ_A = 2'b00, READ_B = 2'b01, WRITE_A = 2'b10, WRITE_B = 2'b11} state, nextState;
+    enum logic[1:0] {HALTED = 2'b01, WAIT = 2'b00, HALT_EMPTY = 2'b10} switchState, nextSwitchState;
     
     logic[18:0] addr_a, addr_b, r_addr, clear_addr;
     logic[3:0] color_in_a, color_in_b, color_out_a, color_out_b, color_out;
     logic en_a, en_b, wen_a, wen_b, clearCC;
-    logic switch, vggolastDone, haltlastDone;
+    logic read_switch, vggolastDone, haltlastDone;
     
     fbRAM_wrapper bramA(.addr_a(addr_a), .clk(clk), .color_in(color_in_a), .color_out(color_out_a), 
                             .en(en_a), .write_en(wen_a));
@@ -66,6 +68,7 @@ module fb_controller(
     
     assign vggo_switch = (vggolastDone == 1'b0 && vggo == 1'b1);
     assign halt_switch = (haltlastDone == 1'b0 && halt == 1'b1);
+    assign read_switch = (switchState == HALT_EMPTY && nextSwitchState == WAIT);
     
     //clear counter when all addresses are cleared
     assign clearCC = (clear_addr > 19'd307200);
@@ -165,6 +168,31 @@ module fb_controller(
         
     end
     
+    
+    //switching state
+    always_comb begin
+        if(switchState == WAIT && halt_switch == 1'b1) begin
+            nextSwitchState = HALTED;
+        end
+        else if (switchState == HALTED && lrqEmpty == 1'b1) begin
+            nextSwitchState = HALT_EMPTY;
+        end
+        else if (switchState == HALT_EMPTY && lineDone == 1'b1) begin
+            nextSwitchState = WAIT;
+        end
+    end
+    
+    
+    always_ff@(posedge clk)
+      if(rst) begin
+        switchState <= WAIT;
+      end
+      else begin
+        switchState <= nextSwitchState;
+      end
+      
+   
+    
     //DEPRECATED
     always_comb begin
         ready = 1'b0; //done state and changing
@@ -182,7 +210,7 @@ module fb_controller(
                 end
             end
             WRITE_B: begin
-                if(halt_switch == 1'b1) begin
+                if(read_switch == 1'b1) begin
                     nextState = READ_B;
                 end
                 else begin
@@ -198,7 +226,7 @@ module fb_controller(
                 end
             end
             WRITE_A: begin
-                if(halt_switch == 1'b1) begin
+                if(read_switch == 1'b1) begin
                     nextState = READ_A;
                 end
                 else begin

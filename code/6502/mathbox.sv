@@ -214,7 +214,7 @@ module mathBox(input  logic [7:0] addr,
                 mbRegD[4] = mbRegQ[4] - mbRegQ[2];
                 mbRegEn[4] = 2'b11;
                 
-                mbRegD[5] = {dataIn, mbRegD[5][7:0]} - mbRegQ[3];
+                mbRegD[5] = {dataIn, mbRegQ[5][7:0]} - mbRegQ[3];
                 mbRegEn[5] = 2'b11;
             end
         

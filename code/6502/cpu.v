@@ -73,7 +73,7 @@ wire [7:0] PCL = PC[7:0];
 
 reg NMI_edge = 0;       // captured NMI edge
 
-(* mark_debug = "true" *) reg [1:0] regsel;                       // Select A, X, Y or S register
+reg [1:0] regsel;                       // Select A, X, Y or S register
 wire [7:0] regfile = AXYS[regsel];      // Selected register output
 
 parameter 
@@ -490,7 +490,7 @@ always @*
  */
 
 always @(posedge clk)
-    adj_bcd <= adc_sbc & D;     // '1' when doing a BCD instruction
+    adj_bcd <= adc_sbc & (D | sed);     // '1' when doing a BCD instruction ASHISH
 
 reg [3:0] ADJL;
 reg [3:0] ADJH;
@@ -1098,7 +1098,7 @@ always @(posedge clk )
      if( (state == DECODE || state == BRK0) && RDY )
         casex( IR )
                 8'b011x_xx01:   // ADC
-                                adc_bcd <= D;
+                                adc_bcd <= (D | sed);
 
                 default:        adc_bcd <= 0;
         endcase
