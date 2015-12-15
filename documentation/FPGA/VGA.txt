@@ -1,0 +1,8 @@
+8 VGA Port
+The Nexys4 board uses 14 FPGA signals to create a VGA port with 4 bits-per-color and the two standard sync
+signals (HS – Horizontal Sync, and VS – Vertical Sync). The color signals use resistor-divider circuits that work in
+conjunction with the 75-ohm termination resistance of the VGA display to create 16 signal levels each on the red,
+green, and blue VGA signals. This circuit, shown in Fig 11, produces video color signals that proceed in equal
+increments between 0V (fully off) and 0.7V (fully on). Using this circuit, 4096 different colors can be displayed, one
+for each unique 12-bit pattern. A video controller circuit must be created in the FPGA to drive the sync and color
+signals with the correct timing in order to produce a working display system.
